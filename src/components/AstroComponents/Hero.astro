@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import BuyMeIceCream from "../../assets/images/home/buyme.png";
+import "./styles/Hero.scss";
+---
+
+<>
+  <section class="home-title-section">
+    <p class="introduction">Hello! Hola! My name is</p>
+    <h1>Aritra Roy.</h1>
+    <h2 class="sub-header-title">Computing Chemical World!!!</h2>
+    <p class="description-title">
+      I'm a{" "}
+      <span>
+        <b>Computational Chemist</b>
+      </span>{" "}
+      and {" "}
+      <span>
+        <b>Algorithm Enthusiast</b>
+      </span>{" "} based in West Bengal, India. My areas of expertise lie in wide
+      range of software handling, theoretical expertisation and problem solving skill.
+    </p>
+    <div class="AllButtons">
+      <div class="ContactButton">
+        <a class="button-link" href="#Contact">
+          <button class="contact-button">Get In Touch</button>
+        </a>
+        <a
+          class="button-link"
+          href={process.env.PUBLIC_URL + "/CV.pdf"}
+          target="_blank"
+          rel="noreferrer"
+          ><button class="contact-button">Download CV</button></a
+        >
+      </div>
+      <div class="BuyCoffee">
+        <a
+          href="https://www.buymeacoffee.com/aritraroy24"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="button-link"
+        >
+          <Image
+            id="BuyMeIceCream"
+            src={BuyMeIceCream}
+            alt="buymeicecream"
+            height={110}
+          />
+        </a>
+      </div>
+    </div>
+  </section>
+  <div class="orb"></div>
+</>

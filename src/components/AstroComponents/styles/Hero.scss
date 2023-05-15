@@ -1,0 +1,314 @@
+h1 {
+  font-size: 70px !important;
+  line-height: 1;
+  font-family: "Overpass";
+  margin-bottom: 5px;
+  color: rgb(227, 237, 255);
+}
+h2 {
+  margin: 0;
+}
+
+.AllButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#BuyMeIceCream {
+  width: 340px;
+  margin-right: 30px;
+  padding: 18px 15px;
+  margin-top: 60px;
+}
+.ContactButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .button-link {
+    text-decoration: none;
+  }
+}
+
+.home-title-section {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 50px 0;
+}
+
+.introduction {
+  font-size: 18px;
+  color: #fe3e55;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  font-family: "Overpass Mono";
+  transition: all 200ms ease-out;
+}
+
+a:focus {
+  outline: none;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  transition: all 200ms ease-out;
+}
+
+.description-title {
+  margin-top: 35px;
+  font-size: 16.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: "Overpass";
+  max-width: 540px;
+  transition: all 200ms ease-out;
+}
+
+.sub-header-title {
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 200ms ease-out;
+  font-size: 55px;
+}
+
+.contact-button {
+  border: 1px solid #64ffda;
+  color: #ffffff;
+  border-radius: 4px;
+  font-family: "Overpass Mono";
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 30px;
+  padding: 18px 30px;
+  background: rgba(0, 0, 0, 0);
+  margin-top: 60px;
+  transition: all 200ms ease-out;
+
+  &:focus {
+    outline: none;
+    background: #64ffdb18;
+  }
+
+  &:hover {
+    background: #64ffdb18;
+  }
+}
+
+.orb {
+  height: 800px;
+  width: 800px;
+  // background: linear-gradient(
+  //   to left bottom,
+  //   #e100ff,
+  //   #be033b,
+  //   #021e4400,
+  //   #021e4400
+  // );
+  background: url("../../../assets/images/fullerene.png");
+  z-index: -1;
+  position: fixed;
+  // transform: rotate(-15deg);
+  bottom: -320px;
+  right: -150px;
+  // border-radius: 100%;
+  animation-name: orbfloat;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes orbfloat {
+  from {
+    transform: translate(40px, 0px);
+  }
+  50% {
+    transform: translate(0px, -40px);
+  }
+  to {
+    transform: translate(40px, 0px);
+  }
+}
+
+@media only screen and (max-width: 1145px) {
+  .contact-button {
+    font-size: 12.5px;
+  }
+  #BuyMeIceCream {
+    width: 280px;
+    padding: 18px 10px;
+    margin-top: 60px;
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  h1 {
+    font-size: 60px;
+  }
+  .sub-header-title {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .description-title {
+    margin-top: 35px;
+    font-weight: 300;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .home-title-section {
+    padding: 80px 0 50px 0;
+  }
+}
+@media only screen and (max-width: 732px) {
+  h1 {
+    font-size: 50px;
+  }
+  .sub-header-title {
+    font-size: 42px;
+  }
+  p {
+    font-size: 16px;
+  }
+
+  .description-title {
+    margin-top: 35px;
+    font-weight: 300;
+    width: 90%;
+  }
+
+  .introduction {
+    font-size: 14px;
+  }
+  .contact-button {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 18px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .AllButtons {
+    display: flex;
+    flex-direction: column;
+  }
+  #BuyMeIceCream {
+    width: 250px;
+  }
+  .home-title-section {
+    padding: 50px 0 50px 0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  h1 {
+    font-size: 47px;
+  }
+  .sub-header-title {
+    font-size: 38px;
+  }
+  body {
+    padding: 48px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .description-title {
+    font-weight: 300;
+    width: 90%;
+  }
+
+  .home-title-section {
+    padding: 250px 0 50px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 39px;
+  }
+
+  body {
+    padding: 25px;
+  }
+
+  .introduction {
+    font-size: 16px;
+  }
+
+  .sub-header-title {
+    font-size: 31px;
+  }
+
+  .orb {
+    bottom: -600px;
+    right: -275px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  h1 {
+    font-size: 32px;
+  }
+  .sub-header-title {
+    font-size: 26px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+  .description-title {
+    margin-top: 35px;
+    font-weight: 300;
+    font-size: 15px;
+    width: 98%;
+  }
+
+  .introduction {
+    font-size: 12px;
+  }
+
+  .contact-button {
+    border: 1px solid #64ffda;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-right: 30px;
+    padding: 15px 18px;
+    background: rgba(0, 0, 0, 0);
+    margin-top: 50px;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.242);
+    transition: all 200ms ease-out;
+  }
+  .ContactButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .home-title-section {
+    padding: 100px 0 50px 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
+}

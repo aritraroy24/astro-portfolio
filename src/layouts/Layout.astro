@@ -1,0 +1,57 @@
+---
+import "@assets/styles/global.scss";
+export interface LayoutProps {
+  title?: string;
+}
+const { title = "Aritra Roy | Computational Chemist" } =
+  Astro.props as LayoutProps;
+// import { Planets } from "react-preloaders2";
+import GoogleAnalytics from "@components/Meta/GoogleAnalytics.astro";
+import LinkedDataJson from "@components/Meta/LinkedDataJson.astro";
+import Header from "@components/AstroIslands/Header";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <GoogleAnalytics />
+
+    <!-- Linked Data Json -->
+    <LinkedDataJson />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="I'm a Theoretical Computational Chemist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill."
+    />
+    <link rel="icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Overpass:400,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Overpass+Mono:400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <Header client:load />
+      <slot />
+    </div>
+    <!-- <Planets client:only color={"#f7f7f7"} background="#021e44" time={10000} /> -->
+  </body>
+</html>
