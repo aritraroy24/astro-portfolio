@@ -1,0 +1,31 @@
+---
+// component import
+import BlogHeader from "@components/AstroComponents/BlogHeader.astro";
+import ShareComment from "../components/AstroIslands/ShareComment";
+import Layout from "../layouts/Layout.astro";
+import "../assets/styles/BlogSinglePost.scss";
+
+const { frontmatter } = Astro.props;
+// console.log(frontmatter);
+const { title, subtitle, description, pubDate, tags, duration, cover } =
+  frontmatter;
+---
+
+<Layout {title} {description}>
+  <BlogHeader
+    {title}
+    {subtitle}
+    {description}
+    {pubDate}
+    {tags}
+    {cover}
+    {duration}
+  />
+  <div class="post-content">
+    <div class="content">
+      <slot />
+    </div>
+    <div class="sidebar"></div>
+  </div>
+  <ShareComment client:only="react" />
+</Layout>

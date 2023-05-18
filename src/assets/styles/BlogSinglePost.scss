@@ -1,0 +1,167 @@
+.post-content {
+  text-align: justify;
+  margin-bottom: 50px;
+  .biggerParagraph {
+    text-align: center;
+    font-size: 22px;
+  }
+  .citationBlockquote {
+    padding-left: 23px;
+    box-shadow: inset 3px 0 0 0 var(--slate);
+    display: flex;
+    align-items: start;
+  }
+  .sectionDivider {
+    text-align: center;
+    margin-bottom: 30px !important;
+  }
+  .refLink {
+    text-decoration: none;
+    .refContainer {
+      border: 0.25px solid var(--slate);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0;
+      .refLeft {
+        text-align: center;
+        padding: 30px;
+        flex: 75%;
+        margin: 0;
+        h4 {
+          margin: 0;
+          font-size: 1.5rem;
+        }
+        h6 {
+          margin: 0;
+          padding-top: 15px;
+          font-size: 0.9rem;
+        }
+      }
+      .refRight {
+        flex: 25%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        p {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          img {
+            padding: 10px;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .refLink:hover {
+    h4,
+    h6 {
+      color: var(--green) !important;
+    }
+  }
+  .refLink:focus {
+    h4,
+    h6 {
+      color: var(--green) !important;
+    }
+  }
+  font-size: 16.5px;
+  h2 {
+    margin-top: 30px;
+  }
+  h4 {
+    margin-top: 20px;
+  }
+  a {
+    text-decoration: underline;
+  }
+  img {
+    width: 40vw;
+    height: auto;
+  }
+  div div div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    div {
+      margin-bottom: 30px;
+      width: 50vw;
+      text-align: center;
+      p {
+        margin: 0 !important;
+      }
+      sup {
+        font-size: 12px;
+      }
+    }
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2px solid var(--slate);
+  }
+
+  th {
+    padding: 3px;
+    border: 2px solid var(--slate);
+  }
+
+  td {
+    padding: 2px;
+    border: 0.25px solid var(--slate);
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .post-content {
+    .refLeft {
+      flex: 100%;
+    }
+    .refRight {
+      display: none !important;
+    }
+  }
+  .refLink {
+    h4 {
+      font-size: 1.2rem !important;
+    }
+    h6 {
+      padding-top: 15px;
+      font-size: 0.7rem !important;
+    }
+  }
+}
+@media only screen and (max-width: 730px) {
+  .post-content {
+    text-align: left;
+  }
+  .post-content div div div div {
+    width: 70vw;
+  }
+  .refLink {
+    h4 {
+      font-size: 1.1rem !important;
+    }
+    h6 {
+      padding-top: 15px;
+      font-size: 0.7rem !important;
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .refLink {
+    h4 {
+      font-size: 15px !important;
+    }
+    h6 {
+      padding-top: 15px;
+      font-size: 10px !important;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+---
+// library imports
+import { Image } from "astro:assets";
+import OtherHeader from "@components/AstroIslands/OtherHeader";
+import "./styles/BlogHeader.scss";
+
+const { tags, title, subtitle, duration, pubDate, cover } = Astro.props;
+---
+
+<>
+  <OtherHeader client:only="react" />
+  <header class="blogHeaderContainer">
+    <div class="blogHeaderElements">
+      <h1 class="title">{title}</h1>
+      <h3 class="subtitle">{subtitle}</h3>
+      <p class="tagsContainer">
+        {duration} • {
+          pubDate.toLocaleString("en-US", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+          })
+        }
+      </p>
+      <p class="tagsContainer">
+        {
+          tags.map((tag: string) => (
+            <a href={`/tutorial/blogs/tag/${tag}`}>
+              <span class="tagBadge">#{tag}</span>
+            </a>
+          ))
+        }
+      </p>
+    </div>
+    <Image
+      src={cover.src}
+      alt={title}
+      width={1200}
+      height={400}
+      class="blogCoverImg"
+    />
+  </header>
+</>

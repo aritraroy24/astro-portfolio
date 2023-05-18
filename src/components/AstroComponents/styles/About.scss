@@ -1,0 +1,232 @@
+.AboutMe {
+  width: 100%;
+  min-height: 750px;
+  padding: 170px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    width: 65%;
+  }
+  .number-heading {
+    font-family: "Overpass Mono";
+    font-size: 22px;
+    color: #64ffda;
+    margin-right: -3px;
+    padding-right: 10px;
+    padding-top: 4px;
+  }
+  h2 {
+    color: rgba(255, 255, 255, 0.932);
+    margin-bottom: 5px;
+    font-family: "Overpass";
+    font-size: 30px;
+    position: relative;
+    top: -24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease-out;
+
+    span {
+      font-family: "Overpass Mono";
+      font-size: 23px;
+      color: #64ffda;
+      margin-right: -3px;
+    }
+  }
+
+  .es6 {
+    font-size: 70%;
+    position: relative;
+    bottom: 1px;
+    right: 3px;
+  }
+
+  .about-box {
+    display: flex;
+    max-width: 950px;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+
+  .hyperlink {
+    text-decoration: none;
+    color: #64ffda;
+    border-radius: 2px;
+    padding: 2px 2px;
+    transition: all 200ms ease-out;
+
+    &:hover {
+      color: #64ffda;
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 17px;
+    width: 100%;
+    font-family: "Overpass";
+    color: #e4f3ff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: all 200ms ease-out;
+  }
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  img {
+    width: 300px;
+    border-radius: 3px;
+    transition: all 200ms ease-out;
+    // margin-right: 40px;
+    margin-top: 105px;
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  .beacon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+      margin-top: 30px;
+      color: rgba(100, 255, 218, 0.8);
+      text-align: center;
+    }
+  }
+  #beaconQR {
+    width: 100px;
+  }
+
+  @keyframes floating {
+    from {
+      box-shadow: 15px 15px 0 #00ffdd54;
+    }
+    50% {
+      box-shadow: 15px 15px 0 #64ffdbd8;
+    }
+    to {
+      box-shadow: 15px 15px 0 #00ffea54;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  padding-top: 0px;
+
+  ul {
+    margin-right: 40px;
+    min-width: 160px;
+  }
+
+  li {
+    list-style-type: none;
+    line-height: 1.8;
+    font-family: "Overpass Mono";
+    font-size: 14px;
+    color: #c9dae4;
+
+    span {
+      color: #64ffda;
+      padding-right: 0px;
+    }
+  }
+}
+
+.about-description {
+  padding-top: 50px;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+  .about-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .AboutMe {
+    img {
+      width: 250px;
+    }
+  }
+
+  .about-description {
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills {
+    padding-left: 0px;
+    margin-left: 0px;
+    justify-content: flex-start;
+
+    ul {
+      min-width: 133px;
+      font-size: 15px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .AboutMe {
+    img {
+      width: 250px;
+      margin-right: 20px;
+    }
+
+    h2 {
+      font-size: 25px;
+      // top: 20px;
+    }
+
+    .about-description {
+      padding-right: 3px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 350px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+  }
+  .AboutMe {
+    img {
+      width: 200px;
+      margin-right: 15px;
+    }
+    .about-description {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+@media only screen and (max-width: 330px) {
+  .AboutMe {
+    h2,
+    .number-heading {
+      font-size: 19px;
+    }
+  }
+}

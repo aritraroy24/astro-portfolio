@@ -1,0 +1,166 @@
+---
+import headshot from "@assets/images/about/headshot.jpg";
+import beaconQR from "@assets/images/about/beaconQR.jpg";
+import { Image } from "astro:assets";
+import "./styles/About.scss";
+---
+
+<main class="AboutMe" id="about" data-name="AboutMe">
+  <h2>
+    <span class="number-heading">01.</span>About Me
+  </h2>
+  <section class="about-box">
+    <section class="about-description">
+      <p>
+        I, Aritra Roy, an aspiring Theoretical Computational Chemist, have
+        completed my M.Sc. Chemistry (3<sup>rd</sup> position) from {" "}
+        <a
+          href="https://www.pondiuni.edu.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hyperlink"
+        >
+          Pondicherry University
+        </a>
+        , India with a passion for exploring different section of computational chemistry
+        in Aug, 2021.
+      </p>
+      <p>
+        Currently, I am looking for a <span
+          ><b>PhD position in a European country</b></span
+        >, and working with {" "}
+        <span><b>four</b></span> collaborative project. In one of them I'm working
+        with {" "}
+        <a
+          href="https://www.felipefantuzzi.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hyperlink"
+        >
+          Dr. Felipe Fantuzzi
+        </a> from <span><b>Kent University</b></span> [Computational Part], and {
+          " "
+        }
+        <a
+          href="https://www.braunschweiggroup.de/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hyperlink"
+        >
+          Prof. Holger Braunschweig Group
+        </a> [Experimental Part].
+      </p>
+      <p>
+        While doing my M.Sc. Project at {" "}
+        <a
+          href="https://sites.google.com/view/cis-laboratory/home"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hyperlink"
+        >
+          CIS Lab
+        </a>
+        {" "} under my project advisory {" "}
+        <a
+          href="https://www.pondiuni.edu.in/faculy_profiles/dr-m-m-balakrishna-rajan/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hyperlink"
+        >
+          Dr. M. M. Balakrishnarajan
+        </a>
+        , I learned to work in different computational aspects with different softwares
+        in quantum chemistry field. I work on fast-paced, cross-functional platforms
+        using different computational tools like {" "}
+        <a
+          href="https://gaussian.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hyperlink"
+        >
+          Gaussian
+        </a>, {" "}
+        <a
+          href="https://www.3ds.com/products-services/biovia/products/molecular-modeling-simulation/biovia-materials-studio/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hyperlink"
+        >
+          Materials Studio
+        </a>, {" "}
+        <a
+          href="https://orcaforum.kofo.mpg.de/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hyperlink"
+        >
+          ORCA
+        </a>, {" "}
+        <a
+          href="http://sobereva.com/multiwfn/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hyperlink"
+        >
+          Multiwfn
+        </a> etc.
+      </p>
+      <p>Here are a few computational tools I've been working with recently:</p>
+      <section class="skills">
+        <ul>
+          <li>
+            <span>▹</span> Gaussian <span class="es6">16</span>
+          </li>
+          <li>
+            <span>▹</span> GaussView <span class="es6">6.0</span>
+          </li>
+          <li>
+            <span>▹</span> Materials Studio <span class="es6">2017</span>
+          </li>
+          <li>
+            <span>▹</span> ChemDraw Pro <span class="es6">19</span>
+          </li>
+          <li>
+            <span>▹</span> Origin Pro <span class="es6">2018</span>
+          </li>
+          <li>
+            <span>▹</span> Math Editor
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <span>▹</span> ORCA <span class="es6">5.0</span>
+          </li>
+          <li>
+            <span>▹</span> Spartan <span class="es6">'14</span>
+          </li>
+          <li>
+            <span>▹</span> Avogadro
+          </li>
+          <li>
+            <span>▹</span> WinCACAO
+          </li>
+          <li>
+            <span>▹</span> EndNote <span class="es6">X9</span>
+          </li>
+          <li>
+            <span>▹</span> Multiwfn
+          </li>
+        </ul>
+      </section>
+    </section>
+    <section class="img-container">
+      <Image src={headshot} alt="Aritra Face" width={300} height={300} />
+      <div class="beacon">
+        <Image
+          id="beaconQR"
+          src={beaconQR}
+          alt="Beacon QR Code"
+          width={100}
+          height={100}
+        />
+        <p>Beacons QR</p>
+      </div>
+    </section>
+  </section>
+</main>

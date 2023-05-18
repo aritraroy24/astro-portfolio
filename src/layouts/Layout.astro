@@ -2,13 +2,15 @@
 import "@assets/styles/global.scss";
 export interface LayoutProps {
   title?: string;
+  description?: string;
 }
-const { title = "Aritra Roy | Computational Chemist" } =
-  Astro.props as LayoutProps;
-// import { Planets } from "react-preloaders2";
+const {
+  title = "Aritra Roy | Computational Chemist",
+  description = "I'm a Theoretical Computational Chemist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill.",
+} = Astro.props as LayoutProps;
+
 import GoogleAnalytics from "@components/Meta/GoogleAnalytics.astro";
 import LinkedDataJson from "@components/Meta/LinkedDataJson.astro";
-import Header from "@components/AstroIslands/Header";
 ---
 
 <!DOCTYPE html>
@@ -22,11 +24,9 @@ import Header from "@components/AstroIslands/Header";
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="I'm a Theoretical Computational Chemist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill."
-    />
+    <meta name="description" content={description} />
     <link rel="icon" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,11 +47,12 @@ import Header from "@components/AstroIslands/Header";
     <title>{title}</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript
+      >You need to enable JavaScript to run all the functionality of this
+      website.</noscript
+    >
     <div id="root">
-      <Header client:load />
       <slot />
     </div>
-    <!-- <Planets client:only color={"#f7f7f7"} background="#021e44" time={10000} /> -->
   </body>
 </html>

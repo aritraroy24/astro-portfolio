@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+const { title, url, image, tags, duration, pubDate } = Astro.props;
+---
+
+<div class="BlogCard">
+  <a href={`/tutorial${url}`} target="_blank" rel="noopener noreferrer">
+    <Image
+      src={image}
+      alt={`Screenshot of ${title}`}
+      width={216}
+      height={355}
+    />
+  </a>
+  <section class="card-text">
+    <h3>
+      <a href={`/tutorial${url}`} target="_blank" rel="noopener noreferrer">
+        <span>{title}</span>{" "}
+      </a>
+    </h3>
+    <section class="tech">
+      <ul>
+        {
+          tags.map((tag: string) => (
+            <li>
+              <a href={`/tutorial/blogs/tag/${tag}`}>{tag}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <div class="github-hyperlinks">
+      {pubDate.toLocaleDateString()} ● {duration}
+    </div>
+  </section>
+</div>

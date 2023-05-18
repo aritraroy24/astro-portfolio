@@ -1,10 +1,17 @@
 ---
-// import About from "@components/About";
+import About from "@components/AstroComponents/About.astro";
 import Hero from "@components/AstroComponents/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import MainHeader from "@components/AstroIslands/MainHeader";
+
+const {
+  title = "Aritra Roy | Computational Chemist",
+  description = "I'm a Theoretical Computational Chemist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill.",
+} = Astro.props;
 ---
 
-<Layout title="Aritra Roy | Computational Chemist">
+<Layout title={title} description="" {description}>
+  <MainHeader client:only="react" />
   <Hero />
-  <!-- <About client:visible /> -->
+  <About />
 </Layout>

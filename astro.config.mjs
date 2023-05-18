@@ -1,11 +1,18 @@
 import { defineConfig } from 'astro/config';
-
 import react from "@astrojs/react";
+import mdx from '@astrojs/mdx';
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
+  integrations: [react(), mdx()],
   experimental: {
     assets: true
-  }
+  },
+  markdown: {
+    shikiConfig: {
+      theme: 'min-dark',
+      langs: [],
+      wrap: true,
+    },
+  },
+  site: 'http://localhost:3000/'
 });

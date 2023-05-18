@@ -1,5 +1,5 @@
 h1 {
-  font-size: 70px !important;
+  font-size: 64px !important;
   line-height: 1;
   font-family: "Overpass";
   margin-bottom: 5px;
@@ -40,6 +40,21 @@ h2 {
   flex-direction: column;
   justify-content: center;
   padding: 0 0 50px 0;
+  animation: 2s ease-out 0s 1 slideInFromBottom;
+}
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(2%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(2%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .introduction {
@@ -105,20 +120,11 @@ p {
 .orb {
   height: 800px;
   width: 800px;
-  // background: linear-gradient(
-  //   to left bottom,
-  //   #e100ff,
-  //   #be033b,
-  //   #021e4400,
-  //   #021e4400
-  // );
   background: url("../../../assets/images/fullerene.png");
   z-index: -1;
   position: fixed;
-  // transform: rotate(-15deg);
   bottom: -320px;
   right: -150px;
-  // border-radius: 100%;
   animation-name: orbfloat;
   animation-duration: 12s;
   animation-iteration-count: infinite;
