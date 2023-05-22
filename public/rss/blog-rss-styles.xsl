@@ -135,10 +135,6 @@ This file is in BETA. Please test and contribute to the discussion:
               <small class="text-gray">
               <xsl:variable name="pubDate" select="substring(pubDate, 6, 11)" />
               Published: <xsl:value-of select="concat(substring($pubDate, 1, 2), ' ', substring($pubDate, 4, 3), ', ', substring(pubDate, 12, 5), ' (', substring(pubDate, 1, 3), ')')" /> 
-              • 
-              <xsl:variable name="duration" select="//item/p[contains(., 'Duration:')]" />
-              <xsl:variable name="durationValue" select="substring-after($duration, '⏱ ')" />
-              <xsl:value-of select="$durationValue" />
               </small>
             </div>
           </xsl:for-each>

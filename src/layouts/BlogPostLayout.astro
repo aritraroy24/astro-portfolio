@@ -4,11 +4,23 @@ import BlogHeader from "@components/AstroComponents/BlogHeader.astro";
 import ShareComment from "../components/AstroIslands/ShareComment";
 import Layout from "../layouts/Layout.astro";
 import "../assets/styles/BlogSinglePost.scss";
+import { formatBlogPosts } from "../assets/js/utils";
+import { getCollection } from "astro:content";
+import RelatedBlogs from "@components/AstroComponents/RelatedBlogs.astro";
 
 const { frontmatter } = Astro.props;
-// console.log(frontmatter);
 const { title, subtitle, description, pubDate, tags, duration, cover } =
   frontmatter;
+
+const allBlogs = await getCollection("blogs");
+const formattedBlogs = formatBlogPosts(allBlogs, {
+  sortByDate: false,
+});
+const relatedBlogs = formattedBlogs
+  .filter(
+    (blog: any) => blog.data.tags.includes(tags[0]) && blog.data.title !== title
+  )
+  .slice(0, 3);
 ---
 
 <Layout {title} {description}>
@@ -28,4 +40,5 @@ const { title, subtitle, description, pubDate, tags, duration, cover } =
     <div class="sidebar"></div>
   </div>
   <ShareComment client:only="react" />
+  <RelatedBlogs {relatedBlogs} />
 </Layout>

@@ -1,0 +1,24 @@
+---
+import { formatDate, slugify } from "../../assets/js/utils";
+const { relatedBlogs } = Astro.props;
+import "./styles/RelatedBlogs.scss";
+---
+
+<div class="relatedBlogsContainer">
+  <h2>Related Blogs</h2>
+  <div class="relatedBlogs">
+    {
+      relatedBlogs.map((blog: any) => (
+        <div>
+          {console.log(blog.slug)}
+          <h4>
+            <a href={`/tutorial/blogs/${blog.slug}`}>{blog.data.title}</a>
+          </h4>
+          <small>
+            {blog.data.duration} • {formatDate(blog.data.pubDate)}
+          </small>
+        </div>
+      ))
+    }
+  </div>
+</div>

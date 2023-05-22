@@ -1,3 +1,29 @@
+export function slugify(text) {
+    return text
+        .toString()
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w-]+/g, '')
+        .replace(/--+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
+}
+
+export function deslugify(slug) {
+    return slug
+        .replace(/-/g, ' ')
+        .replace(/(?:^|\s)\S/g, function (match) {
+            return match.toUpperCase();
+        });
+}
+export function formatDate(date) {
+    return new Date(date).toLocaleString("en-US", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+    })
+}
+
 export function formatBlogPosts(blogs, {
     filterOutDrafts = true,
     filterOutFuturePosts = true,
@@ -24,9 +50,11 @@ export function formatBlogPosts(blogs, {
         return acc;
     }, [])
 
-    // sortByDate
+    // sortByDate or randomize
     if (sortByDate) {
         filteredPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate))
+    } else {
+        filteredPosts.sort(() => Math.random() - 0.5)
     }
 
     // limit if number is passed

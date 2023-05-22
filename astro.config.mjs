@@ -14,5 +14,5 @@ export default defineConfig({
       wrap: true,
     },
   },
-  site: 'http://localhost:3000/'
+  site: 'https://valid-rss-hosted-styled.netlify.app/'
 });

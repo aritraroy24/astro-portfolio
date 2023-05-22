@@ -1,0 +1,84 @@
+---
+import Layout from "../../../../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import BlogCard from "@components/AstroComponents/BlogCard.astro";
+import { formatBlogPosts } from "../../../../../assets/js/utils";
+import Pagination from "@components/AstroComponents/Pagination.astro";
+import "../../../../../assets/styles/blogs.scss";
+import OtherHeader from "@components/AstroIslands/OtherHeader";
+import Button from "@components/AstroComponents/Button.astro";
+import { slugify, deslugify } from "../../../../../assets/js/utils";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const allBlogs = await getCollection("blogs");
+  const formattedBlogs = formatBlogPosts(allBlogs);
+  const uniqueTags = [
+    ...new Set(formattedBlogs.map((blog: any) => blog.data.tags).flat()),
+  ];
+
+  return uniqueTags.map((tag: any) => {
+    const filteredPosts = formattedBlogs.filter((blog: any) =>
+      blog.data.tags.includes(tag)
+    );
+    return paginate(filteredPosts, {
+      params: { tag: slugify(tag) },
+      pageSize: 3,
+    });
+  });
+}) satisfies GetStaticPaths;
+
+const params = Astro.params;
+const { page } = Astro.props;
+
+function capitalizeWords(text: string) {
+  return text.replace(/(?:^|\s)\S/g, function (firstChar) {
+    return firstChar.toUpperCase();
+  });
+}
+---
+
+<Layout
+  title={`All Blogs | Tag: ${
+    params.tag ? capitalizeWords(deslugify(params.tag)) : ""
+  }`}
+>
+  <OtherHeader client:only="react" />
+  <div class="blosNavigationDiv">
+    <h1>
+      Blogs about <span class="highlightedText"
+        >{params.tag ? capitalizeWords(deslugify(params.tag)) : ""}</span
+      >
+    </h1>
+    <Button
+      text="Back"
+      href="/tutorial/blogs"
+      customStyle="padding: 10px 18px;"
+      icon={{
+        name: "tabler:arrow-big-left-line",
+        side: "left",
+      }}
+    />
+    <div class="allBlogsContainer">
+      {
+        page.data.map((blog: any) => (
+          <BlogCard
+            url={blog.slug}
+            title={blog.data.title}
+            image={blog.data.cover}
+            pubDate={blog.data.pubDate}
+            duration={blog.data.duration}
+            tags={blog.data.tags}
+          />
+        ))
+      }
+    </div>
+    <Pagination
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      totalPage={page.lastPage}
+      currentPage={page.currentPage}
+      urlPrefix={`/tutorial/blogs/tag/${params.tag}/`}
+    />
+  </div>
+</Layout>

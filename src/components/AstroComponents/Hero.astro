@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import BuyMeIceCream from "../../assets/images/home/buyme.png";
 import "./styles/Hero.scss";
+import Button from "./Button.astro";
 ---
 
 <>
@@ -22,23 +23,24 @@ import "./styles/Hero.scss";
     </p>
     <div class="AllButtons">
       <div class="ContactButton">
-        <a class="button-link" href="#Contact">
-          <button class="contact-button">Get In Touch</button>
-        </a>
-        <a
-          class="button-link"
-          href={process.env.PUBLIC_URL + "/CV.pdf"}
+        <Button
+          href="#contact"
+          text="Get In Touch"
+          customStyle="margin:10px;"
+        />
+        <Button
+          href="/cv.pdf"
           target="_blank"
           rel="noreferrer"
-          ><button class="contact-button">Download CV</button></a
-        >
+          text="Download CV"
+          customStyle="margin:10px;"
+        />
       </div>
-      <div class="BuyCoffee">
+      <div>
         <a
           href="https://www.buymeacoffee.com/aritraroy24"
           target="_blank"
           rel="noopener noreferrer"
-          class="button-link"
         >
           <Image
             id="BuyMeIceCream"

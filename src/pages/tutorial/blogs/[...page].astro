@@ -1,0 +1,51 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import type { GetStaticPaths } from "astro";
+import { Image } from "astro:assets";
+import OtherHeader from "@components/AstroIslands/OtherHeader";
+import BlogCard from "@components/AstroComponents/BlogCard.astro";
+import Button from "@components/AstroComponents/Button.astro";
+import { formatBlogPosts } from "../../../assets/js/utils";
+import "../../../assets/styles/blogs.scss";
+import Pagination from "@components/AstroComponents/Pagination.astro";
+
+const pageTitle = "Aritra Roy | All Blog Posts";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const allBlogs = await getCollection("blogs");
+  const formattedBlogs = formatBlogPosts(allBlogs);
+  return paginate(formattedBlogs, {
+    pageSize: 6,
+  });
+}) satisfies GetStaticPaths;
+const { page } = Astro.props;
+---
+
+<Layout title={pageTitle}>
+  <OtherHeader client:only="react" />
+  <div class="blosNavigationDiv">
+    <h1 style="margin-bottom: 0;">All Blogs</h1>
+    <div class="allBlogsContainer">
+      {
+        page.data.map((blog: any) => (
+          <BlogCard
+            url={blog.slug}
+            title={blog.data.title}
+            image={blog.data.cover}
+            pubDate={blog.data.pubDate}
+            duration={blog.data.duration}
+            tags={blog.data.tags}
+          />
+        ))
+      }
+    </div>
+    <Pagination
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      totalPage={page.lastPage}
+      currentPage={page.currentPage}
+      urlPrefix="/tutorial/blogs/"
+    />
+  </div>
+</Layout>

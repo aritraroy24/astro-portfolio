@@ -1,12 +1,12 @@
 ---
 isDraft: false
-title: "This is the 4th test chemistry blog title"
+title: "This is the 1st test chemistry blog title"
 subtitle: "“This is the subtitle"
 description: "Unleash the power of Googling in computational chemistry research: accelerating discoveries, solving puzzles, and revolutionizing molecular understanding."
 duration: "9 Mins"
 cover: "./link-9999-google-search.webp"
 # imageExactPath: "https://astro-portfolio-demo.netlify.app/"
-imageSize: 6486
+imageSize: 59755
 tags: ["google", "power", "chemistry", "search", "research"]
 pubDate: 2020-08-22
 ---

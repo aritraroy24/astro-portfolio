@@ -1,0 +1,14 @@
+.relatedBlogsContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+  .relatedBlogs {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    div {
+      padding: 30px;
+    }
+  }
+}

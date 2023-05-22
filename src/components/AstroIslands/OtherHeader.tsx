@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './styles/OtherHeder.scss';
 import Fade from 'react-reveal/Fade';
-import { Link } from 'react-scroll';
 import Headroom from 'react-headroom';
 import '../../../types/imagetypes.d.ts';
 import NavLogo from '../../assets/images/NavLogo.png'
@@ -17,7 +16,6 @@ const OtherHeder = () => {
             <div className={`nav-wrapper-mobile`}></div>
             <div className='nav-wrapper'>
                 <Headroom disableInlineStyles>
-                    {/* <Sticky> */}
                     <Fade>
                         <nav className='NavContainer'>
                             <div
@@ -69,7 +67,6 @@ const OtherHeder = () => {
                             </Fade>
                         </nav>
                     </Fade>
-                    {/* </Sticky> */}
                 </Headroom>
             </div>
         </>

@@ -17,16 +17,17 @@ h2 {
 }
 
 #BuyMeIceCream {
-  width: 340px;
-  margin-right: 30px;
-  padding: 18px 15px;
-  margin-top: 60px;
+  width: 300px;
+  height: auto;
 }
 .ContactButton {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
   .button-link {
     text-decoration: none;
   }
@@ -94,29 +95,6 @@ p {
   font-size: 55px;
 }
 
-.contact-button {
-  border: 1px solid #64ffda;
-  color: #ffffff;
-  border-radius: 4px;
-  font-family: "Overpass Mono";
-  font-size: 15px;
-  cursor: pointer;
-  margin-right: 30px;
-  padding: 18px 30px;
-  background: rgba(0, 0, 0, 0);
-  margin-top: 60px;
-  transition: all 200ms ease-out;
-
-  &:focus {
-    outline: none;
-    background: #64ffdb18;
-  }
-
-  &:hover {
-    background: #64ffdb18;
-  }
-}
-
 .orb {
   height: 800px;
   width: 800px;
@@ -144,14 +122,11 @@ p {
 }
 
 @media only screen and (max-width: 1145px) {
-  .contact-button {
+  .customButton {
     font-size: 12.5px;
   }
   #BuyMeIceCream {
-    width: 280px;
-    padding: 18px 10px;
-    margin-top: 60px;
-    margin-right: 0px;
+    width: 240px;
   }
 }
 
@@ -197,22 +172,13 @@ p {
   .introduction {
     font-size: 14px;
   }
-  .contact-button {
-    margin-right: 15px;
-    margin-left: 15px;
-    padding: 18px 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
 
   .AllButtons {
     display: flex;
     flex-direction: column;
   }
   #BuyMeIceCream {
-    width: 250px;
+    width: 210px;
   }
   .home-title-section {
     padding: 50px 0 50px 0;
@@ -252,6 +218,9 @@ p {
   body {
     padding: 25px;
   }
+  #BuyMeIceCream {
+    width: 180px;
+  }
 
   .introduction {
     font-size: 16px;
@@ -271,6 +240,9 @@ p {
   h1 {
     font-size: 32px;
   }
+  #BuyMeIceCream {
+    width: 150px;
+  }
   .sub-header-title {
     font-size: 26px;
   }
@@ -289,19 +261,6 @@ p {
     font-size: 12px;
   }
 
-  .contact-button {
-    border: 1px solid #64ffda;
-    color: #ffffff;
-    border-radius: 4px;
-    font-size: 11px;
-    cursor: pointer;
-    margin-right: 30px;
-    padding: 15px 18px;
-    background: rgba(0, 0, 0, 0);
-    margin-top: 50px;
-    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.242);
-    transition: all 200ms ease-out;
-  }
   .ContactButton {
     display: flex;
     justify-content: center;

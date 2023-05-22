@@ -1,36 +1,40 @@
 ---
 import { Image } from "astro:assets";
 const { title, url, image, tags, duration, pubDate } = Astro.props;
+import "./styles/BlogCard.scss";
+import Button from "./Button.astro";
+import { slugify, formatDate } from "../../assets/js/utils";
 ---
 
-<div class="BlogCard">
-  <a href={`/tutorial${url}`} target="_blank" rel="noopener noreferrer">
-    <Image
-      src={image}
-      alt={`Screenshot of ${title}`}
-      width={216}
-      height={355}
-    />
-  </a>
-  <section class="card-text">
-    <h3>
-      <a href={`/tutorial${url}`} target="_blank" rel="noopener noreferrer">
-        <span>{title}</span>{" "}
+<>
+  <div class="blogCard">
+    <a href={"/tutorial/blogs/" + url}>
+      <Image alt={title} src={image} width={300} height={150} />
+    </a>
+    <div>
+      <a href={"/tutorial/blogs/" + url}>
+        <h4>{title}</h4>
       </a>
-    </h3>
-    <section class="tech">
-      <ul>
+      <div>
+        <p class="dateDurationBlogCard">
+          {formatDate(pubDate)}
+          • {duration}
+        </p>
+      </div>
+      <p>
         {
           tags.map((tag: string) => (
-            <li>
-              <a href={`/tutorial/blogs/tag/${tag}`}>{tag}</a>
-            </li>
+            <a href={`/tutorial/blogs/tag/${slugify(tag)}`}>
+              <small>#{slugify(tag)}</small>
+            </a>
           ))
         }
-      </ul>
-    </section>
-    <div class="github-hyperlinks">
-      {pubDate.toLocaleDateString()} ● {duration}
+      </p>
+      <Button
+        href={"/tutorial/blogs/" + url}
+        text="Read Post"
+        customStyle="padding: 12px 18px;"
+      />
     </div>
-  </section>
-</div>
+  </div>
+</>

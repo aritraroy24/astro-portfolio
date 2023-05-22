@@ -3,6 +3,8 @@
 import { Image } from "astro:assets";
 import OtherHeader from "@components/AstroIslands/OtherHeader";
 import "./styles/BlogHeader.scss";
+import Button from "./Button.astro";
+import { slugify, formatDate } from "../../assets/js/utils";
 
 const { tags, title, subtitle, duration, pubDate, cover } = Astro.props;
 ---
@@ -10,23 +12,26 @@ const { tags, title, subtitle, duration, pubDate, cover } = Astro.props;
 <>
   <OtherHeader client:only="react" />
   <header class="blogHeaderContainer">
+    <Button
+      text="Back"
+      href="/tutorial/blogs"
+      customStyle="margin-bottom:30px; padding: 15px 22px;"
+      icon={{
+        name: "tabler:arrow-big-left-line",
+        side: "left",
+      }}
+    />
     <div class="blogHeaderElements">
       <h1 class="title">{title}</h1>
       <h3 class="subtitle">{subtitle}</h3>
       <p class="tagsContainer">
-        {duration} • {
-          pubDate.toLocaleString("en-US", {
-            day: "numeric",
-            month: "short",
-            year: "numeric",
-          })
-        }
+        ⏱ {duration} • {formatDate(pubDate)}
       </p>
       <p class="tagsContainer">
         {
           tags.map((tag: string) => (
-            <a href={`/tutorial/blogs/tag/${tag}`}>
-              <span class="tagBadge">#{tag}</span>
+            <a href={`/tutorial/blogs/tag/${slugify(tag)}`}>
+              <span class="tagBadge">#{slugify(tag)}</span>
             </a>
           ))
         }

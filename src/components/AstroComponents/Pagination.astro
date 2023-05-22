@@ -1,0 +1,57 @@
+---
+import Button from "@components/AstroComponents/Button.astro";
+const { prevUrl, nextUrl, totalPage, urlPrefix } = Astro.props;
+var { currentPage } = Astro.props;
+currentPage = currentPage.toString();
+console.log(typeof currentPage);
+const pages = [];
+for (let i = 1; i <= totalPage; i++) {
+  const page = {
+    id: i.toString(),
+    page: i === 1 ? urlPrefix : `${urlPrefix}${i}`,
+  };
+  pages.push(page);
+}
+---
+
+<nav aria-label="Blog pagination" style="display:flex; flex-wrap:wrap;">
+  {
+    prevUrl && (
+      <Button
+        href={prevUrl}
+        text=""
+        customStyle={"border:none;padding: 5px 10px;margin-right: 5px;"}
+        icon={{
+          name: "tabler:arrow-big-left-line",
+          side: "left",
+        }}
+      />
+    )
+  }
+  {
+    pages.map((item) => (
+      <Button
+        href={item.page}
+        text={item.id}
+        customStyle={
+          item.id === currentPage
+            ? "padding: 5px 8px;margin: 0 3px;"
+            : "border:none;padding: 5px 8px;margin: 0 3px;"
+        }
+      />
+    ))
+  }
+  {
+    nextUrl && (
+      <Button
+        href={nextUrl}
+        text=""
+        customStyle={"border:none;padding: 5px 10px;margin-left: 5px;"}
+        icon={{
+          name: "tabler:arrow-big-right-line",
+          side: "right",
+        }}
+      />
+    )
+  }
+</nav>

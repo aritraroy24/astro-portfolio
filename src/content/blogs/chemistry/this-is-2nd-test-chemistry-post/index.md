@@ -1,13 +1,13 @@
 ---
 isDraft: false
-title: "This is the 4th test chemistry blog title"
+title: "Retrieving Email and Phone No. for a Desktop App from Google Contacts using Python and Gmail API "
 subtitle: "“This is the subtitle"
 description: "Unleash the power of Googling in computational chemistry research: accelerating discoveries, solving puzzles, and revolutionizing molecular understanding."
 duration: "9 Mins"
 cover: "./link-9999-google-search.webp"
 # imageExactPath: "https://astro-portfolio-demo.netlify.app/"
-imageSize: 6486
-tags: ["google", "power", "chemistry", "search", "research"]
+imageSize: 9375
+tags: ["hello", "power", "chemistry test", "search", "research"]
 pubDate: 2020-08-22
 ---
 
