@@ -1,16 +1,22 @@
 ---
+// metadata import
+import GoogleAnalytics from "@components/Meta/GoogleAnalytics.astro";
+import LinkedDataJson from "@components/Meta/LinkedDataJson.astro";
+
+// style import
 import "@assets/styles/global.scss";
+
+// defining type of title and description of the page
 export interface LayoutProps {
   title?: string;
   description?: string;
 }
+
+// default values of title and description of the page
 const {
   title = "Aritra Roy | Computational Chemist",
   description = "I'm a Theoretical Computational Chemist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill.",
 } = Astro.props as LayoutProps;
-
-import GoogleAnalytics from "@components/Meta/GoogleAnalytics.astro";
-import LinkedDataJson from "@components/Meta/LinkedDataJson.astro";
 ---
 
 <!DOCTYPE html>
@@ -22,11 +28,14 @@ import LinkedDataJson from "@components/Meta/LinkedDataJson.astro";
     <!-- Linked Data Json -->
     <LinkedDataJson />
 
+    <!-- metadata section -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content={description} />
+
+    <!-- favicon, font and other stylesheets import -->
     <link rel="icon" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

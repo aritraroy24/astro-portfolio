@@ -1,11 +1,16 @@
 ---
-// library imports
+// component import
 import { Image } from "astro:assets";
-import OtherHeader from "@components/AstroIslands/OtherHeader";
-import "./styles/BlogHeader.scss";
-import Button from "./Button.astro";
-import { slugify, formatDate } from "../../assets/js/utils";
+import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Button from "@components/AstroComponents/Common/Button.astro";
 
+// function import
+import { slugify, formatDate } from "@js/utils";
+
+// style import
+import "./styles/BlogHeader.scss";
+
+// // destructuring astro properties
 const { tags, title, subtitle, duration, pubDate, cover } = Astro.props;
 ---
 

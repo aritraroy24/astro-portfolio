@@ -1,6 +1,11 @@
 ---
-import { formatDate, slugify } from "../../assets/js/utils";
+// function import
+import { formatDate } from "@js/utils";
+
+// // destructuring astro properties
 const { relatedBlogs } = Astro.props;
+
+// style import
 import "./styles/RelatedBlogs.scss";
 ---
 
@@ -10,7 +15,6 @@ import "./styles/RelatedBlogs.scss";
     {
       relatedBlogs.map((blog: any) => (
         <div>
-          {console.log(blog.slug)}
           <h4>
             <a href={`/tutorial/blogs/${blog.slug}`}>{blog.data.title}</a>
           </h4>

@@ -1,16 +1,20 @@
 ---
+// layout import
+import Layout from "@layouts/Layout.astro";
+
+// component import
 import About from "@components/AstroComponents/About.astro";
 import Hero from "@components/AstroComponents/Hero.astro";
-import Layout from "../layouts/Layout.astro";
-import MainHeader from "@components/AstroIslands/MainHeader";
+import MainHeader from "@components/AstroIslands/Common/MainHeader";
 
+// title & description value to pass to the layout
 const {
-  title = "Aritra Roy | Computational Chemist",
-  description = "I'm a Theoretical Computational Chemist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill.",
+  pageTitle = "Aritra Roy | Computational Chemist",
+  pageDescription = "I'm a Theoretical Computational Chemist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill.",
 } = Astro.props;
 ---
 
-<Layout title={title} description="" {description}>
+<Layout title={pageTitle} description={pageDescription}>
   <MainHeader client:only="react" />
   <Hero />
   <About />

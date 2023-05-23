@@ -1,15 +1,29 @@
 ---
+// layout import
+import Layout from "@layouts/Layout.astro";
+
+// asset import
 import PageNotFoundImage from "@assets/images/404 Page.gif";
-import "../assets/styles/404.scss";
+
+// style import
+import "@styles/404.scss";
+
+// title & description value to pass to the layout
+const {
+  pageTitle = "Aritra Roy | 404 Page",
+  pageDescription = "Oops! The page you're looking for seems to be missing. Take a moment to explore my portfolio and discover a world of captivating projects and valuable experiences.",
+} = Astro.props;
 ---
 
-<div class="PageNotFound">
-  <img
-    id="PageNotFoundImage"
-    src={PageNotFoundImage.src}
-    alt="Page Not Found"
-  />
-  <a rel="noopener noreferrer" class="button-link" href="/">
-    <button type="button" id="backToHome">Back to Home</button>
-  </a>
-</div>
+<Layout title={pageTitle} description={pageDescription}>
+  <div class="PageNotFound">
+    <img
+      id="PageNotFoundImage"
+      src={PageNotFoundImage.src}
+      alt="Page Not Found"
+    />
+    <a rel="noopener noreferrer" class="button-link" href="/">
+      <button type="button" id="backToHome">Back to Home</button>
+    </a>
+  </div>
+</Layout>

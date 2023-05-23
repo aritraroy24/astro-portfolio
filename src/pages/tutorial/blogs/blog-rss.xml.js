@@ -1,8 +1,11 @@
+// package import
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
 import sanitizeHtml from 'sanitize-html';
 import { marked } from 'marked';
-import { formatBlogPosts } from '../../../assets/js/utils'
+
+// function import
+import { getCollection } from 'astro:content';
+import { formatBlogPosts } from '@js/utils'
 
 export async function get(context) {
     const allBlogs = await getCollection("blogs");

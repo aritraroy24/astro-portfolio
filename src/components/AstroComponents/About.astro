@@ -1,7 +1,12 @@
 ---
-import headshot from "@assets/images/about/headshot.jpg";
-import beaconQR from "@assets/images/about/beaconQR.jpg";
+// component import
 import { Image } from "astro:assets";
+
+// asset import
+import headshot from "@images/about/headshot.jpg";
+import beaconQR from "@images/about/beaconQR.jpg";
+
+// style import
 import "./styles/About.scss";
 ---
 
@@ -10,6 +15,7 @@ import "./styles/About.scss";
     <span class="number-heading">01.</span>About Me
   </h2>
   <section class="about-box">
+    <!-- about description - left section -->
     <section class="about-description">
       <p>
         I, Aritra Roy, an aspiring Theoretical Computational Chemist, have
@@ -149,6 +155,7 @@ import "./styles/About.scss";
         </ul>
       </section>
     </section>
+    <!-- about image - right section -->
     <section class="img-container">
       <Image src={headshot} alt="Aritra Face" width={300} height={300} />
       <div class="beacon">

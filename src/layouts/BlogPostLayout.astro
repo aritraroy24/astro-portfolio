@@ -1,17 +1,25 @@
 ---
-// component import
-import BlogHeader from "@components/AstroComponents/BlogHeader.astro";
-import ShareComment from "../components/AstroIslands/ShareComment";
-import Layout from "../layouts/Layout.astro";
-import "../assets/styles/BlogSinglePost.scss";
-import { formatBlogPosts } from "../assets/js/utils";
-import { getCollection } from "astro:content";
-import RelatedBlogs from "@components/AstroComponents/RelatedBlogs.astro";
+// layout import
+import Layout from "@layouts/Layout.astro";
 
+// component import
+import BlogHeader from "@components/AstroComponents/Blogs/BlogHeader.astro";
+import RelatedBlogs from "@components/AstroComponents/Blogs/RelatedBlogs.astro";
+import ShareComment from "@components/AstroIslands/Blogs/ShareComment";
+
+// function import
+import { formatBlogPosts } from "@js/utils";
+import { getCollection } from "astro:content";
+
+// style import
+import "@styles/BlogSinglePost.scss";
+
+// destructuring astro properties
 const { frontmatter } = Astro.props;
 const { title, subtitle, description, pubDate, tags, duration, cover } =
   frontmatter;
 
+// getting related blog posts related to first tag of the current blog
 const allBlogs = await getCollection("blogs");
 const formattedBlogs = formatBlogPosts(allBlogs, {
   sortByDate: false,
@@ -24,6 +32,7 @@ const relatedBlogs = formattedBlogs
 ---
 
 <Layout {title} {description}>
+  <!-- blog heading section -->
   <BlogHeader
     {title}
     {subtitle}
@@ -33,12 +42,15 @@ const relatedBlogs = formattedBlogs
     {cover}
     {duration}
   />
+  <!-- blog post content section -->
   <div class="post-content">
     <div class="content">
       <slot />
     </div>
     <div class="sidebar"></div>
   </div>
+  <!-- comment using giscus -->
   <ShareComment client:only="react" />
+  <!-- related blog posts section -->
   <RelatedBlogs {relatedBlogs} />
 </Layout>

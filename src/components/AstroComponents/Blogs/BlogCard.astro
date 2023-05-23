@@ -1,9 +1,16 @@
 ---
+// component import
 import { Image } from "astro:assets";
+import Button from "@components/AstroComponents/Common/Button.astro";
+
+// function import
+import { slugify, formatDate } from "@js/utils";
+
+// destructuring astro properties
 const { title, url, image, tags, duration, pubDate } = Astro.props;
+
+// style import
 import "./styles/BlogCard.scss";
-import Button from "./Button.astro";
-import { slugify, formatDate } from "../../assets/js/utils";
 ---
 
 <>

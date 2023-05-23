@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './styles/OtherHeder.scss';
 import Fade from 'react-reveal/Fade';
 import Headroom from 'react-headroom';
-import '../../../types/imagetypes.d.ts';
-import NavLogo from '../../assets/images/NavLogo.png'
+import NavLogo from '@images/NavLogo.png'
 
 const OtherHeder = () => {
     const [isActive, handleIsActive] = useState(false);

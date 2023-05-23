@@ -1,9 +1,13 @@
 ---
-import Button from "@components/AstroComponents/Button.astro";
+// component import
+import Button from "@components/AstroComponents/Common/Button.astro";
+
+// destructuring astro properties
 const { prevUrl, nextUrl, totalPage, urlPrefix } = Astro.props;
 var { currentPage } = Astro.props;
+
+// getting the array of page numbers and corresponding URLs
 currentPage = currentPage.toString();
-console.log(typeof currentPage);
 const pages = [];
 for (let i = 1; i <= totalPage; i++) {
   const page = {
@@ -15,6 +19,7 @@ for (let i = 1; i <= totalPage; i++) {
 ---
 
 <nav aria-label="Blog pagination" style="display:flex; flex-wrap:wrap;">
+  <!-- button to previous page in pagination section -->
   {
     prevUrl && (
       <Button
@@ -28,6 +33,7 @@ for (let i = 1; i <= totalPage; i++) {
       />
     )
   }
+  <!-- buttons with all the page numbers in pagination section -->
   {
     pages.map((item) => (
       <Button
@@ -41,6 +47,7 @@ for (let i = 1; i <= totalPage; i++) {
       />
     ))
   }
+  <!-- button to next page in pagination section -->
   {
     nextUrl && (
       <Button

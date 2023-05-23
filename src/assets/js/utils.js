@@ -1,3 +1,4 @@
+// creating custom slug from the original text
 export function slugify(text) {
     return text
         .toString()
@@ -9,6 +10,7 @@ export function slugify(text) {
         .replace(/-+$/, '');
 }
 
+// generating the original text from the slugified text
 export function deslugify(slug) {
     return slug
         .replace(/-/g, ' ')
@@ -16,6 +18,8 @@ export function deslugify(slug) {
             return match.toUpperCase();
         });
 }
+
+// formatting the date
 export function formatDate(date) {
     return new Date(date).toLocaleString("en-US", {
         day: "numeric",
@@ -24,11 +28,18 @@ export function formatDate(date) {
     })
 }
 
+// capitalizing first letters of each word of the text
+export function capitalizeWords(text) {
+    return text.replace(/(?:^|\s)\S/g, function (firstChar) {
+        return firstChar.toUpperCase();
+    });
+}
+
+// formatting blog posts w.r.t. date, draft, future-post and randomization
 export function formatBlogPosts(blogs, {
     filterOutDrafts = true,
     filterOutFuturePosts = true,
     sortByDate = true,
-    limit = undefined,
 } = {}) {
 
     const filteredPosts = blogs.reduce((acc, blog) => {
@@ -57,10 +68,6 @@ export function formatBlogPosts(blogs, {
         filteredPosts.sort(() => Math.random() - 0.5)
     }
 
-    // limit if number is passed
-    if (typeof limit === "number") {
-        return filteredPosts.slice(0, limit);
-    }
     return filteredPosts;
 
 }

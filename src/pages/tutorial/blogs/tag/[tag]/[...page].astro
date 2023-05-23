@@ -1,15 +1,29 @@
 ---
-import Layout from "../../../../../layouts/Layout.astro";
-import { getCollection } from "astro:content";
-import type { GetStaticPaths } from "astro";
-import BlogCard from "@components/AstroComponents/BlogCard.astro";
-import { formatBlogPosts } from "../../../../../assets/js/utils";
-import Pagination from "@components/AstroComponents/Pagination.astro";
-import "../../../../../assets/styles/blogs.scss";
-import OtherHeader from "@components/AstroIslands/OtherHeader";
-import Button from "@components/AstroComponents/Button.astro";
-import { slugify, deslugify } from "../../../../../assets/js/utils";
+// layout import
+import Layout from "@layouts/Layout.astro";
 
+// component import
+import BlogCard from "@components/AstroComponents/Blogs/BlogCard.astro";
+import Pagination from "@components/AstroComponents/Common/Pagination.astro";
+import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Button from "@components/AstroComponents/Common/Button.astro";
+
+// style import
+import "@assets/styles/blogs.scss";
+
+// function import
+import { getCollection } from "astro:content";
+import {
+  slugify,
+  deslugify,
+  capitalizeWords,
+  formatBlogPosts,
+} from "@js/utils";
+
+// type import
+import type { GetStaticPaths } from "astro";
+
+// getting all blog posts with a specified tag (6 posts per page)
 export const getStaticPaths = (async ({ paginate }) => {
   const allBlogs = await getCollection("blogs");
   const formattedBlogs = formatBlogPosts(allBlogs);
@@ -23,32 +37,24 @@ export const getStaticPaths = (async ({ paginate }) => {
     );
     return paginate(filteredPosts, {
       params: { tag: slugify(tag) },
-      pageSize: 3,
+      pageSize: 6,
     });
   });
 }) satisfies GetStaticPaths;
-
 const params = Astro.params;
 const { page } = Astro.props;
 
-function capitalizeWords(text: string) {
-  return text.replace(/(?:^|\s)\S/g, function (firstChar) {
-    return firstChar.toUpperCase();
-  });
-}
+const tag = params.tag ? capitalizeWords(deslugify(params.tag)) : "";
+const pageTitle = `All Blogs | Tag: ${tag}`;
+const pageDescription = `Discover the essence of ${tag} through captivating articles, insights, and expertise. Explore a curated collection of ${tag} content, tailored just for you.`;
 ---
 
-<Layout
-  title={`All Blogs | Tag: ${
-    params.tag ? capitalizeWords(deslugify(params.tag)) : ""
-  }`}
->
+<Layout title={pageTitle} description={pageDescription}>
   <OtherHeader client:only="react" />
   <div class="blosNavigationDiv">
+    <!-- blogs with specific tag heading section -->
     <h1>
-      Blogs about <span class="highlightedText"
-        >{params.tag ? capitalizeWords(deslugify(params.tag)) : ""}</span
-      >
+      Blogs about <span class="highlightedText">{tag}</span>
     </h1>
     <Button
       text="Back"
@@ -59,6 +65,7 @@ function capitalizeWords(text: string) {
         side: "left",
       }}
     />
+    <!-- all blogs with one specific tag -->
     <div class="allBlogsContainer">
       {
         page.data.map((blog: any) => (
@@ -73,6 +80,7 @@ function capitalizeWords(text: string) {
         ))
       }
     </div>
+    <!-- pagination section -->
     <Pagination
       prevUrl={page.url.prev}
       nextUrl={page.url.next}

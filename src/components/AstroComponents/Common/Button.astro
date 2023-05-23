@@ -1,8 +1,11 @@
 ---
 // library imports
-import "./styles/Button.scss";
 import { Icon } from "astro-icon";
 
+// style import
+import "./styles/Button.scss";
+
+// type declaration
 interface Props {
   text: string;
   href?: string;
@@ -15,6 +18,7 @@ interface Props {
   };
 }
 
+// destructuring astro properties
 const { text, href, target, rel, customStyle, icon, ...rest } =
   Astro.props as Props;
 ---
@@ -27,12 +31,14 @@ const { text, href, target, rel, customStyle, icon, ...rest } =
   style={customStyle}
   {...rest}
 >
+  <!-- icon for left side -->
   {
     icon && icon.side === "left" && (
       <Icon name={icon.name} height="24" width="24" />
     )
   }
   <button class="customButton">{text}</button>
+  <!-- icon for right side -->
   {
     icon && icon.side === "right" && (
       <Icon name={icon.name} height="24" width="24" />
