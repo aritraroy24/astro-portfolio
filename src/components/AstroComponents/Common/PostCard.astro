@@ -7,23 +7,23 @@ import Button from "@components/AstroComponents/Common/Button.astro";
 import { slugify, formatDate } from "@js/utils";
 
 // destructuring astro properties
-const { title, url, image, tags, duration, pubDate } = Astro.props;
+const { title, url, image, tags, duration, pubDate, urlPrefix, buttonText } = Astro.props;
 
 // style import
-import "./styles/BlogCard.scss";
+import "./styles/PostCard.scss";
 ---
 
 <>
-  <div class="blogCard">
-    <a href={"/tutorial/blogs/" + url}>
+  <div class="postCard">
+    <a href={`${urlPrefix}${url}`}>
       <Image alt={title} src={image} width={300} height={150} />
     </a>
     <div>
-      <a href={"/tutorial/blogs/" + url}>
+      <a href={`${urlPrefix}${url}`}>
         <h4>{title}</h4>
       </a>
       <div>
-        <p class="dateDurationBlogCard">
+        <p class="dateDurationPostCard">
           {formatDate(pubDate)}
           • {duration}
         </p>
@@ -31,15 +31,15 @@ import "./styles/BlogCard.scss";
       <p>
         {
           tags.map((tag: string) => (
-            <a href={`/tutorial/blogs/tag/${slugify(tag)}`}>
+            <a href={`${urlPrefix}tag/${slugify(tag)}`}>
               <small>#{slugify(tag)}</small>
             </a>
           ))
         }
       </p>
       <Button
-        href={"/tutorial/blogs/" + url}
-        text="Read Post"
+        href={`${urlPrefix}${url}`}
+        text={buttonText}
         customStyle="padding: 12px 18px;"
       />
     </div>

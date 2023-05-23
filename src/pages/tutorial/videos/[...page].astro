@@ -17,41 +17,41 @@ import type { GetStaticPaths } from "astro";
 // style import
 import "@assets/styles/posts.scss";
 
-// getting all blogs with 6 blogs per page
+// getting all videos with 6 videos per page
 export const getStaticPaths = (async ({ paginate }) => {
-  const allBlogs = await getCollection("blogs");
-  const formattedBlogs = formatPosts(allBlogs);
-  return paginate(formattedBlogs, {
+  const allVideos = await getCollection("videos");
+  const formattedVideos = formatPosts(allVideos);
+  return paginate(formattedVideos, {
     pageSize: 6,
   });
 }) satisfies GetStaticPaths;
 const { page } = Astro.props;
 
-// defining page title and description for all blogs page
-const pageTitle = "Aritra Roy | All Blog Posts";
+// defining page title and description for all videos page
+const pageTitle = "Aritra Roy | All video Posts";
 const pageDescription =
-  "Discover insightful blogs on computational chemistry, programming, and more. Explore my extensive collection for the latest insights and discoveries.";
+  "Discover insightful youtube videos on computational chemistry, programming, and more. Explore my extensive collection for the latest insights and discoveries.";
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
   <OtherHeader client:only="react" />
   <div class="postsNavigationDiv">
-    <!-- blogs  heading section -->
-    <h1 style="margin-bottom: 0;">All Blogs</h1>
-    <!-- all blogs -->
+    <!-- videos  heading section -->
+    <h1 style="margin-bottom: 0;">All Videos</h1>
+    <!-- all videos -->
     <div class="allPostsContainer">
       {
-        page.data.map((blog: any) => (
-          <PostCard
-            url={blog.slug}
-            title={blog.data.title}
-            image={blog.data.cover}
-            pubDate={blog.data.pubDate}
-            duration={blog.data.duration}
-            tags={blog.data.tags}
-            urlPrefix="/tutorial/blogs/"
-            buttonText="Read Post"
-          />
+        page.data.map((video: any) => (
+            <PostCard
+              url={video.slug}
+              title={video.data.title}
+              image={video.data.cover}
+              pubDate={video.data.pubDate}
+              duration={video.data.duration}
+              tags={video.data.tags}
+              urlPrefix="/tutorial/videos/"
+              buttonText="View Post"
+            />
         ))
       }
     </div>
@@ -61,7 +61,7 @@ const pageDescription =
       nextUrl={page.url.next}
       totalPage={page.lastPage}
       currentPage={page.currentPage}
-      urlPrefix="/tutorial/blogs/"
+      urlPrefix="/tutorial/videos/"
     />
   </div>
 </Layout>

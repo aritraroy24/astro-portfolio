@@ -12,7 +12,18 @@ const blogCollection = defineCollection({
       duration: z.string(),
       cover: image(),
       imageSize: z.number(),
-      // imageExactPath: z.string(),
+      tags: z.array(z.string()),
+      pubDate: z.date(),
+    }),
+});
+const videoCollection = defineCollection({
+  schema:({ image }) =>
+    z.object({
+      title: z.string(),
+      videoId: z.string(),
+      description: z.string(),
+      duration: z.string(),
+      cover: image(),
       tags: z.array(z.string()),
       pubDate: z.date(),
     }),
@@ -20,5 +31,6 @@ const blogCollection = defineCollection({
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
-  blogs: blogCollection,
+  'blogs': blogCollection,
+  'videos': videoCollection,
 };

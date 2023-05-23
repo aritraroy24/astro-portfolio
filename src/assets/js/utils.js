@@ -35,15 +35,15 @@ export function capitalizeWords(text) {
     });
 }
 
-// formatting blog posts w.r.t. date, draft, future-post and randomization
-export function formatBlogPosts(blogs, {
+// formatting posts w.r.t. date, draft, future-post and randomization
+export function formatPosts(posts, {
     filterOutDrafts = true,
     filterOutFuturePosts = true,
     sortByDate = true,
 } = {}) {
 
-    const filteredPosts = blogs.reduce((acc, blog) => {
-        const { pubDate, isDraft } = blog.data;
+    const filteredPosts = posts.reduce((acc, post) => {
+        const { pubDate, isDraft } = post.data;
 
         // filterOutDrafts if true
         if (filterOutDrafts && isDraft) {
@@ -55,8 +55,8 @@ export function formatBlogPosts(blogs, {
             return acc;
         }
 
-        // add blog to acc
-        acc.push(blog)
+        // add post to acc
+        acc.push(post)
 
         return acc;
     }, [])

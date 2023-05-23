@@ -5,11 +5,11 @@ import { marked } from 'marked';
 
 // function import
 import { getCollection } from 'astro:content';
-import { formatBlogPosts } from '@js/utils'
+import { formatPosts } from '@js/utils'
 
 export async function get(context) {
     const allBlogs = await getCollection("blogs");
-    const formattedBlogs = formatBlogPosts(allBlogs);
+    const formattedBlogs = formatPosts(allBlogs);
     return rss({
         xmlns: { atom: "http://www.w3.org/2005/Atom" },
         title: 'Aritra Roy | Blogs',

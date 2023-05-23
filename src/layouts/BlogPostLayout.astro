@@ -5,14 +5,14 @@ import Layout from "@layouts/Layout.astro";
 // component import
 import BlogHeader from "@components/AstroComponents/Blogs/BlogHeader.astro";
 import RelatedBlogs from "@components/AstroComponents/Blogs/RelatedBlogs.astro";
-import ShareComment from "@components/AstroIslands/Blogs/ShareComment";
+import ShareComment from "@components/AstroIslands/Common/ShareComment";
 
 // function import
-import { formatBlogPosts } from "@js/utils";
+import { formatPosts } from "@js/utils";
 import { getCollection } from "astro:content";
 
 // style import
-import "@styles/BlogSinglePost.scss";
+import "@styles/single-post.scss";
 
 // destructuring astro properties
 const { frontmatter } = Astro.props;
@@ -21,7 +21,7 @@ const { title, subtitle, description, pubDate, tags, duration, cover } =
 
 // getting related blog posts related to first tag of the current blog
 const allBlogs = await getCollection("blogs");
-const formattedBlogs = formatBlogPosts(allBlogs, {
+const formattedBlogs = formatPosts(allBlogs, {
   sortByDate: false,
 });
 const relatedBlogs = formattedBlogs

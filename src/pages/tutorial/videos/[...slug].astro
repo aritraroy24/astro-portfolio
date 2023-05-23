@@ -1,0 +1,22 @@
+---
+// videopost layout import
+import VideoPostLayout from "@layouts/VideoPostLayout.astro";
+
+// function import
+import { getCollection } from "astro:content";
+
+// getting all videos
+export async function getStaticPaths() {
+  const videoEntries = await getCollection("videos");
+  return videoEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<VideoPostLayout frontmatter={entry.data}>
+  <Content />
+</VideoPostLayout>

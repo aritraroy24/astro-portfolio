@@ -1,0 +1,48 @@
+---
+// layout import
+import Layout from "@layouts/Layout.astro";
+
+// component import
+import VideoHeader from "@components/AstroComponents/Videos/VideoHeader.astro";
+import RelatedVideos from "@components/AstroComponents/Videos/RelatedVideos.astro";
+import ShareComment from "@components/AstroIslands/Common/ShareComment";
+
+// function import
+import { formatPosts } from "@js/utils";
+import { getCollection } from "astro:content";
+
+// style import
+import "@styles/single-post.scss";
+
+// destructuring astro properties
+const { frontmatter } = Astro.props;
+const { title, description, pubDate, tags, duration, videoId } = frontmatter;
+
+// getting related video posts related to first tag of the current video
+const allVideos = await getCollection("videos");
+const formattedVideos = formatPosts(allVideos, {
+  sortByDate: false,
+});
+const relatedVideos = formattedVideos
+  .filter(
+    (video: any) =>
+      video.data.tags.includes(tags[0]) && video.data.title !== title
+  )
+  .slice(0, 3);
+---
+
+<Layout {title} {description}>
+  <!-- video heading section -->
+  <VideoHeader {title} {description} {pubDate} {tags} {videoId} {duration} />
+  <!-- video post content section -->
+  <div class="post-content">
+    <div class="content">
+      <slot />
+    </div>
+    <div class="sidebar"></div>
+  </div>
+  <!-- comment using giscus -->
+  <ShareComment client:only="react" />
+  <!-- related video posts section -->
+  <RelatedVideos {relatedVideos} />
+</Layout>

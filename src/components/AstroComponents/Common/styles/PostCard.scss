@@ -1,14 +1,13 @@
-.blogCard {
+.postCard {
   width: 350px;
   margin: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-height: 450px;
   background: #2d344157;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.24);
   transition: all 200ms ease-out;
-  padding: 15px;
+  padding: 0 15px 15px 15px;
   border-radius: 4px;
   img {
     width: 350px;
@@ -27,7 +26,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    .dateDurationBlogCard {
+    .dateDurationPostCard {
       font-size: smaller;
       margin-bottom: 8px !important;
     }

@@ -1,7 +1,7 @@
 .headroom-wrapper {
   position: fixed !important;
 }
-.blosNavigationDiv {
+.postsNavigationDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@
   .highlightedText {
     color: var(--red);
   }
-  .allBlogsContainer {
+  .allPostsContainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
