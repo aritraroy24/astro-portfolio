@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 
 // component import
 import BlogHeader from "@components/AstroComponents/Blogs/BlogHeader.astro";
-import RelatedBlogs from "@components/AstroComponents/Blogs/RelatedBlogs.astro";
+import RelatedPosts from "@components/AstroComponents/Common/RelatedPosts.astro";
 import ShareComment from "@components/AstroIslands/Common/ShareComment";
 
 // function import
@@ -24,10 +24,24 @@ const allBlogs = await getCollection("blogs");
 const formattedBlogs = formatPosts(allBlogs, {
   sortByDate: false,
 });
-const relatedBlogs = formattedBlogs
-  .filter(
-    (blog: any) => blog.data.tags.includes(tags[0]) && blog.data.title !== title
-  )
+// filtering based on common tags
+const tagsFilteredBlogs: any[] = [];
+var flag = 0;
+formattedBlogs.forEach((item: any) => {
+  var tempTags = item.data.tags;
+  tempTags.forEach((tag: string) => {
+    if (tags.includes(tag)) {
+      flag = 1;
+    }
+  });
+  if (flag === 1) {
+    tagsFilteredBlogs.push(item);
+  }
+  flag = 0;
+});
+// removing the same post itself (we don't want to show the same post as similar post suggestion)
+const relatedBlogs = tagsFilteredBlogs
+  .filter((blog: any) => blog.data.title !== title)
   .slice(0, 3);
 ---
 
@@ -52,5 +66,9 @@ const relatedBlogs = formattedBlogs
   <!-- comment using giscus -->
   <ShareComment client:only="react" />
   <!-- related blog posts section -->
-  <RelatedBlogs {relatedBlogs} />
+  <RelatedPosts
+    relatedPosts={relatedBlogs}
+    text="Blogs"
+    urlPrefix="/tutorial/blogs/"
+  />
 </Layout>

@@ -18,5 +18,17 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px 0;
+    .projectSectionLinks {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 30px 50px 10px 50px;
+    }
+    .noDataFoundContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -50px;
+    }
   }
 }

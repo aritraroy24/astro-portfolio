@@ -28,9 +28,27 @@ const videoCollection = defineCollection({
       pubDate: z.date(),
     }),
 });
+const chemProjectCollection = defineCollection({
+  schema: ({ image }) => 
+    z.object({
+      title: z.string(),
+      status: z.string(),
+      duration: z.string(),
+      tags: z.array(z.string()),
+      pubDate: z.date(),
+      cover: image(),
+      description: z.string(),
+      journalName: z.string().nullable(),
+      journalUrl: z.string().nullable(),
+      codeUrl: z.string().nullable(),
+      newsUrl: z.string().nullable(),
+      galleryImages: z.array(image()).nullable()
+    }),
+})
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   'blogs': blogCollection,
   'videos': videoCollection,
+  'chemistry': chemProjectCollection,
 };

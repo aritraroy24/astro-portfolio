@@ -1,0 +1,68 @@
+---
+// layout import
+import Layout from "@layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+// component import
+import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+
+// style import
+import "@assets/styles/posts.scss";
+
+// asset import
+import ongoingProjects from "@images/content/chemistry/ongoing-projects.svg";
+import completedProjects from "@images/content/chemistry/completed-projects.svg";
+import submittedProjects from "@images/content/chemistry/submitted-projects.svg";
+import allProjects from "@images/content/chemistry/all-projects.svg";
+
+// defining page title and description for all publications page
+const pageTitle = "Aritra Roy | All Publications";
+const pageDescription =
+    "Delve into my extensive collection of computational chemistry journal papers, showcasing groundbreaking research and the latest advancements in the field.";
+
+const imgData = [
+    {
+        src: ongoingProjects,
+        alt: "Ongoing Projects",
+        url: "ongoing",
+        text: "Ongoing",
+    },
+    {
+        src: completedProjects,
+        alt: "Completed Projects",
+        url: "completed",
+        text: "Completed",
+    },
+    {
+        src: submittedProjects,
+        alt: "Submitted Projects",
+        url: "submitted",
+        text: "Submitted",
+    },
+    {
+        src: allProjects,
+        alt: "Published",
+        url: "all-publications",
+        text: "All Projects",
+    },
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <OtherHeader client:only="react" />
+    <div class="postsNavigationDiv">
+        <!-- publications  heading section -->
+        <h1 style="margin-bottom: 0;">All Chemistry Projects</h1>
+        <!-- all publications -->
+        <div class="allPostsContainer">
+            {
+                imgData.map((img: any) => (
+                    <a class="projectSectionLinks" href={img.url}>
+                        <img src={img.src.src} alt={img.alt} width={300} />
+                        <h3>{img.text}</h3>
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</Layout>

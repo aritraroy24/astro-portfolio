@@ -2,8 +2,12 @@
 // layout import
 import Layout from "@layouts/Layout.astro";
 
+// component import
+import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Button from "@components/AstroComponents/Common/Button.astro";
+
 // asset import
-import PageNotFoundImage from "@assets/images/404 Page.gif";
+import PageNotFoundImage from "@assets/images/404.svg";
 
 // style import
 import "@styles/404.scss";
@@ -16,14 +20,19 @@ const {
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
+  <OtherHeader client:only="react" />
   <div class="PageNotFound">
     <img
       id="PageNotFoundImage"
       src={PageNotFoundImage.src}
       alt="Page Not Found"
+      width={600}
     />
-    <a rel="noopener noreferrer" class="button-link" href="/">
-      <button type="button" id="backToHome">Back to Home</button>
-    </a>
+    <h1>Lost In Research</h1>
+    <p>
+      You have reached the dead-end of a possibility. Maybe a start from the
+      scratch?
+    </p>
+    <Button href="/" text="Go to Home" rel="noopener noreferrer" />
   </div>
 </Layout>

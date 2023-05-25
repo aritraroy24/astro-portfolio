@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 
 // component import
 import VideoHeader from "@components/AstroComponents/Videos/VideoHeader.astro";
-import RelatedVideos from "@components/AstroComponents/Videos/RelatedVideos.astro";
+import RelatedPosts from "@components/AstroComponents/Common/RelatedPosts.astro";
 import ShareComment from "@components/AstroIslands/Common/ShareComment";
 
 // function import
@@ -23,11 +23,24 @@ const allVideos = await getCollection("videos");
 const formattedVideos = formatPosts(allVideos, {
   sortByDate: false,
 });
-const relatedVideos = formattedVideos
-  .filter(
-    (video: any) =>
-      video.data.tags.includes(tags[0]) && video.data.title !== title
-  )
+// filtering based on common tags
+const tagsFilteredVideos: any[] = [];
+var flag = 0;
+formattedVideos.forEach((item: any) => {
+  var tempTags = item.data.tags;
+  tempTags.forEach((tag: string) => {
+    if (tags.includes(tag)) {
+      flag = 1;
+    }
+  });
+  if (flag === 1) {
+    tagsFilteredVideos.push(item);
+  }
+  flag = 0;
+});
+// removing the same post itself (we don't want to show the same post as similar post suggestion)
+const relatedVideos = tagsFilteredVideos
+  .filter((video: any) => video.data.title !== title)
   .slice(0, 3);
 ---
 
@@ -44,5 +57,9 @@ const relatedVideos = formattedVideos
   <!-- comment using giscus -->
   <ShareComment client:only="react" />
   <!-- related video posts section -->
-  <RelatedVideos {relatedVideos} />
+  <RelatedPosts
+    relatedPosts={relatedVideos}
+    text="Vidoes"
+    urlPrefix="/tutorial/videos/"
+  />
 </Layout>

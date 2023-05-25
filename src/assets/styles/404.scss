@@ -14,27 +14,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 90vh;
-}
-#PageNotFoundImage {
-  height: 70vh;
-}
-#backToHome {
-  border: 1px solid #64ffda;
-  color: #ffffff;
-  border-radius: 4px;
-  font-family: "Overpass";
-  font-size: 15px;
-  cursor: pointer;
-  padding: 18px 30px;
-  background: #64ffdb18;
-  transition: all 200ms ease-out;
-  &:focus {
-    outline: none;
-    background: rgba(0, 0, 0, 0);
-  }
-
-  &:hover {
-    background: rgba(0, 0, 0, 0);
+  h1 {
+    color: var(--red);
   }
 }
 

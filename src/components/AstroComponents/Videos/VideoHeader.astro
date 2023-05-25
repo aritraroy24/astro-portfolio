@@ -2,7 +2,7 @@
 // component import
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
 import Button from "@components/AstroComponents/Common/Button.astro";
-import VideoPlayer from "@components/AstroIslands/Videos/VideoPlayer"
+import VideoPlayer from "@components/AstroIslands/Videos/VideoPlayer";
 
 // function import
 import { slugify, formatDate } from "@js/utils";
@@ -12,7 +12,6 @@ import "./styles/VideoHeader.scss";
 
 // // destructuring astro properties
 const { tags, title, videoId, duration, pubDate } = Astro.props;
-// console.log(title)
 ---
 
 <>

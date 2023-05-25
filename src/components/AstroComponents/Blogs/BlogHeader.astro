@@ -1,6 +1,7 @@
 ---
 // component import
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
 import Button from "@components/AstroComponents/Common/Button.astro";
 
@@ -30,7 +31,15 @@ const { tags, title, subtitle, duration, pubDate, cover } = Astro.props;
       <h1 class="title">{title}</h1>
       <h3 class="subtitle">{subtitle}</h3>
       <p class="tagsContainer">
-        ⏱ {duration} • {formatDate(pubDate)}
+        <Icon
+          name="octicon:stopwatch-16"
+          class="customIcon"
+          height="24"
+          width="24"
+        />
+        {duration} •
+        <Icon name="mdi:calendar" class="customIcon" height="24" width="24" />
+        {formatDate(pubDate)}
       </p>
       <p class="tagsContainer">
         {

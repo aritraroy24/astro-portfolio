@@ -7,7 +7,8 @@ import Button from "@components/AstroComponents/Common/Button.astro";
 import { slugify, formatDate } from "@js/utils";
 
 // destructuring astro properties
-const { title, url, image, tags, duration, pubDate, urlPrefix, buttonText } = Astro.props;
+const { title, url, image, tags, duration, pubDate, urlPrefix, buttonText } =
+  Astro.props;
 
 // style import
 import "./styles/PostCard.scss";
@@ -32,7 +33,7 @@ import "./styles/PostCard.scss";
         {
           tags.map((tag: string) => (
             <a href={`${urlPrefix}tag/${slugify(tag)}`}>
-              <small>#{slugify(tag)}</small>
+              <small class="tagBadge">#{slugify(tag)}</small>
             </a>
           ))
         }

@@ -9,11 +9,14 @@ import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
 import Button from "@components/AstroComponents/Common/Button.astro";
 
 // style import
-import "@assets/styles/posts.scss";
+import "@styles/posts.scss";
+
+// asset import
+import NoData from "@images/No data.svg"
 
 // function import
 import { getCollection } from "astro:content";
-import { slugify, deslugify, capitalizeWords, formatPosts } from "@js/utils";
+import { slugify, deslugify, formatPosts } from "@js/utils";
 
 // type import
 import type { GetStaticPaths } from "astro";
@@ -39,7 +42,7 @@ export const getStaticPaths = (async ({ paginate }) => {
 const params = Astro.params;
 const { page } = Astro.props;
 
-const tag = params.tag ? capitalizeWords(deslugify(params.tag)) : "";
+const tag = params.tag ? deslugify(params.tag).toUpperCase() : "";
 const pageTitle = `All Blogs | Tag: ${tag}`;
 const pageDescription = `Discover the essence of ${tag} through captivating articles, insights, and expertise. Explore a curated collection of ${tag} content, tailored just for you.`;
 ---
@@ -63,27 +66,44 @@ const pageDescription = `Discover the essence of ${tag} through captivating arti
     <!-- all blogs with one specific tag -->
     <div class="allPostsContainer">
       {
-        page.data.map((blog: any) => (
-          <PostCard
-            url={blog.slug}
-            title={blog.data.title}
-            image={blog.data.cover}
-            pubDate={blog.data.pubDate}
-            duration={blog.data.duration}
-            tags={blog.data.tags}
-            urlPrefix="/tutorial/blogs/"
-            buttonText="View Post"
-          />
-        ))
+        page.data.length > 0 ? (
+          page.data.map((blog: any) => (
+            <PostCard
+              url={blog.slug}
+              title={blog.data.title}
+              image={blog.data.cover}
+              pubDate={blog.data.pubDate}
+              duration={blog.data.duration}
+              tags={blog.data.tags}
+              urlPrefix="/tutorial/blogs/"
+              buttonText="View Post"
+            />
+          ))
+        ):(
+          <div class="noDataFoundContainer">
+            <img
+              id="noDataFound"
+              src={NoData.src}
+              alt="No Data Found"
+              width={500}
+            />
+            <h2>No Records Found</h2>
+            <p>
+              There is no blog in this section at this moment.. Maybe explore other projects?
+            </p>
+          </div>
+        )
       }
     </div>
     <!-- pagination section -->
-    <Pagination
-      prevUrl={page.url.prev}
-      nextUrl={page.url.next}
-      totalPage={page.lastPage}
-      currentPage={page.currentPage}
-      urlPrefix={`/tutorial/blogs/tag/${params.tag}/`}
-    />
+    {page.lastPage === 1 ? (<></>) : (
+      <Pagination
+        prevUrl={page.url.prev}
+        nextUrl={page.url.next}
+        totalPage={page.lastPage}
+        currentPage={page.currentPage}
+        urlPrefix={`/tutorial/blogs/tag/${params.tag}/`}
+      />
+    )}
   </div>
 </Layout>

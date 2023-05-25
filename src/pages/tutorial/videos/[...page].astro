@@ -15,7 +15,10 @@ import { formatPosts } from "@js/utils";
 import type { GetStaticPaths } from "astro";
 
 // style import
-import "@assets/styles/posts.scss";
+import "@styles/posts.scss";
+
+// asset import 
+import NoData from "@images/No data.svg"
 
 // getting all videos with 6 videos per page
 export const getStaticPaths = (async ({ paginate }) => {
@@ -41,7 +44,8 @@ const pageDescription =
     <!-- all videos -->
     <div class="allPostsContainer">
       {
-        page.data.map((video: any) => (
+        page.data.length > 0 ? (
+          page.data.map((video: any) => (
             <PostCard
               url={video.slug}
               title={video.data.title}
@@ -52,16 +56,33 @@ const pageDescription =
               urlPrefix="/tutorial/videos/"
               buttonText="View Post"
             />
-        ))
+          )) 
+        ):(
+          <div class="noDataFoundContainer">
+            <img
+              id="noDataFound"
+              src={NoData.src}
+              alt="No Data Found"
+              width={500}
+            />
+            <h2>No Records Found</h2>
+            <p>
+              There is no video in this section at this moment.. Maybe explore other projects?
+            </p>
+          </div>
+        )
+
       }
     </div>
     <!-- pagination section -->
-    <Pagination
-      prevUrl={page.url.prev}
-      nextUrl={page.url.next}
-      totalPage={page.lastPage}
-      currentPage={page.currentPage}
-      urlPrefix="/tutorial/videos/"
-    />
+    {page.lastPage === 1 ? (<></>) : (
+      <Pagination
+        prevUrl={page.url.prev}
+        nextUrl={page.url.next}
+        totalPage={page.lastPage}
+        currentPage={page.currentPage}
+        urlPrefix="/tutorial/videos/"
+      />
+    )}
   </div>
 </Layout>

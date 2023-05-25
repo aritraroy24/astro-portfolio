@@ -15,7 +15,10 @@ import { formatPosts } from "@js/utils";
 import type { GetStaticPaths } from "astro";
 
 // style import
-import "@assets/styles/posts.scss";
+import "@styles/posts.scss";
+
+// asset import
+import NoData from "@images/No data.svg"
 
 // getting all blogs with 6 blogs per page
 export const getStaticPaths = (async ({ paginate }) => {
@@ -41,27 +44,44 @@ const pageDescription =
     <!-- all blogs -->
     <div class="allPostsContainer">
       {
-        page.data.map((blog: any) => (
-          <PostCard
-            url={blog.slug}
-            title={blog.data.title}
-            image={blog.data.cover}
-            pubDate={blog.data.pubDate}
-            duration={blog.data.duration}
-            tags={blog.data.tags}
-            urlPrefix="/tutorial/blogs/"
-            buttonText="Read Post"
-          />
-        ))
+        page.data.length > 0 ? (
+          page.data.map((blog: any) => (
+            <PostCard
+              url={blog.slug}
+              title={blog.data.title}
+              image={blog.data.cover}
+              pubDate={blog.data.pubDate}
+              duration={blog.data.duration}
+              tags={blog.data.tags}
+              urlPrefix="/tutorial/blogs/"
+              buttonText="Read Post"
+            />
+          ))
+        ):(
+          <div class="noDataFoundContainer">
+            <img
+              id="noDataFound"
+              src={NoData.src}
+              alt="No Data Found"
+              width={500}
+            />
+            <h2>No Records Found</h2>
+            <p>
+              There is no blog in this section at this moment.. Maybe explore other projects?
+            </p>
+          </div>
+        )
       }
     </div>
     <!-- pagination section -->
-    <Pagination
-      prevUrl={page.url.prev}
-      nextUrl={page.url.next}
-      totalPage={page.lastPage}
-      currentPage={page.currentPage}
-      urlPrefix="/tutorial/blogs/"
-    />
+    {page.lastPage === 1 ? (<></>) : (
+      <Pagination
+        prevUrl={page.url.prev}
+        nextUrl={page.url.next}
+        totalPage={page.lastPage}
+        currentPage={page.currentPage}
+        urlPrefix="/tutorial/blogs/"
+      />
+    )}
   </div>
 </Layout>

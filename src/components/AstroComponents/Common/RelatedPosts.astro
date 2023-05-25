@@ -1,0 +1,39 @@
+---
+// function import
+import { formatDate } from "@js/utils";
+
+// // destructuring astro properties
+const { relatedPosts, text, urlPrefix } = Astro.props;
+
+// style import
+import "./styles/RelatedPosts.scss";
+---
+
+<div class="relatedPostsContainer">
+  <h2>Related {text}</h2>
+  <div class="relatedPosts">
+    {
+      relatedPosts.map((post: any) => (
+        <div>
+          <h4>
+            <a href={`${urlPrefix}${post.slug}`}>{post.data.title}</a>
+          </h4>
+          {/* if journalName data is available journalName data will be shown, otherwise if journalName data is null (for ongoing projects) it will show project status. For blogs and videos publication date will be shown. Duration is common for all. */}
+          {post.data.journalName ? (
+            <small>
+              {post.data.duration} • {post.data.journalName}
+            </small>
+          ) : post.data.journalName === null ? (
+            <small>
+              {post.data.duration} • {post.data.status}
+            </small>
+          ) : (
+            <small>
+              {post.data.duration} • {formatDate(post.data.pubDate)}
+            </small>
+          )}
+        </div>
+      ))
+    }
+  </div>
+</div>

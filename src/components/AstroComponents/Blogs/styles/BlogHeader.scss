@@ -15,9 +15,14 @@
       display: flex;
       flex-wrap: wrap;
       font-size: 1.1rem;
+      .customIcon {
+        height: 18px;
+        padding: 1px;
+        margin: 0 2px;
+        width: unset;
+      }
       .tagBadge {
         padding: 4px;
-        color: var(--green);
       }
     }
   }

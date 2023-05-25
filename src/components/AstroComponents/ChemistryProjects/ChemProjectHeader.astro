@@ -1,0 +1,79 @@
+---
+// component import
+import { Icon } from "astro-icon";
+import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Button from "@components/AstroComponents/Common/Button.astro";
+
+// function import
+import { slugify, formatDate, capitalizeWords } from "@js/utils";
+
+// style import
+import "./styles/ChemProjectHeader.scss";
+
+// // destructuring astro properties
+const {   title, status, duration, tags, pubDate, journalName, journalUrl, codeUrl, newsUrl } = Astro.props;
+
+const currentDate = new Date();
+---
+
+<>
+  <OtherHeader client:only="react" />
+  <header class="chemProjectHeaderContainer">
+    <Button
+      text="Back"
+      href="/projects/chemistry/all-publications"
+      customStyle="margin-bottom:30px; padding: 15px 22px;"
+      icon={{
+        name: "tabler:arrow-big-left-line",
+        side: "left",
+      }}
+    />
+    <div class="chemProjectHeaderElements">
+      <h1 class="title">{title}</h1>
+      <p class="tagsContainer">
+        {
+          tags.map((tag: string) => (
+            <a href={`/projects/chemistry/tag/${slugify(tag)}`}>
+              <span class="tagBadge">#{slugify(tag)}</span>
+            </a>
+          ))
+        }
+      </p>
+      <p class="tagsContainer">
+        <Icon
+          name="ion:hourglass-outline"
+          class="customIcon"
+          height="24"
+          width="24"
+        />
+        {duration} {
+          currentDate > pubDate ? (
+            <> •
+              <Icon name="mdi:calendar" class="customIcon" height="24" width="24" />
+              {formatDate(pubDate)}
+            </>
+            ) : (<></>)
+          }
+      </p>
+      <p><strong>Status:</strong> {capitalizeWords(status)}</p>
+      {journalName && (<h4>{journalName}</h4>) }
+      <div>
+        {journalUrl && (
+          <a href={journalUrl} class="pubRelatedLinks" target="_blank" >
+            <Icon name="tabler:external-link" height="30" width="30" />
+          </a>
+        )}
+        {codeUrl && (
+          <a href={codeUrl} class="pubRelatedLinks" target="_blank" >
+            <Icon name="mdi:github" height="30" width="30" />
+          </a>
+        )}
+        {newsUrl && (
+          <a href={newsUrl} class="pubRelatedLinks" target="_blank" >
+            <Icon name="emojione-monotone:newspaper" height="30" width="30" />
+          </a>
+        )}
+      </div>
+    </div>
+  </header>
+</>

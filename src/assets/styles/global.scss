@@ -10,6 +10,13 @@
   font-style: normal;
   font-display: auto;
 }
+@font-face {
+  src: url("/src/assets/fonts/OverpassMono-Regular.ttf");
+  font-family: "Overpass Mono";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
 
 html {
   box-sizing: border-box;
@@ -86,14 +93,10 @@ html {
   --shadow-sm: 0.2px 0.5px 0.6px hsl(var(--_shadow) / var(--_shadow-strength)),
     0.3px 0.8px 1px -1.2px hsl(var(--_shadow) / var(--_shadow-strength)),
     0.8px 1.9px 2.3px -2.5px hsl(var(--_shadow) / var(--_shadow-strength));
-  --shadow-md: 0.2px 0.5px 0.6px
-      hsl(var(--_shadow) / calc(var(--_shadow-strength) + 0.04)),
-    0.6px 1.5px 1.8px -0.8px hsl(var(--_shadow) /
-          calc(var(--_shadow-strength) + 0.04)),
-    1.6px 3.8px 4.6px -1.7px hsl(var(--_shadow) /
-          calc(var(--_shadow-strength) + 0.04)),
-    3.9px 9.3px 11.3px -2.5px hsl(var(--_shadow) /
-          calc(var(--_shadow-strength) + 0.04));
+  --shadow-md: 0.2px 0.5px 0.6px hsl(var(--_shadow) / calc(var(--_shadow-strength) + 0.04)),
+    0.6px 1.5px 1.8px -0.8px hsl(var(--_shadow) / calc(var(--_shadow-strength) + 0.04)),
+    1.6px 3.8px 4.6px -1.7px hsl(var(--_shadow) / calc(var(--_shadow-strength) + 0.04)),
+    3.9px 9.3px 11.3px -2.5px hsl(var(--_shadow) / calc(var(--_shadow-strength) + 0.04));
   --shadow-lg: 0.2px 0.5px 0.6px hsl(var(--_shadow) / var(--_shadow-strength)),
     1.1px 2.7px 3.3px -0.4px hsl(var(--_shadow) / var(--_shadow-strength)),
     2.1px 5px 6.1px -0.7px hsl(var(--_shadow) / var(--_shadow-strength)),
@@ -131,6 +134,17 @@ html {
     font-size: smaller;
     line-height: 1.6;
     border: 0.25px solid var(--slate);
+  }
+
+  // post (any) related global styling
+  .tagBadge {
+    color: var(--green);
+    opacity: 0.5;
+    transition: all 200ms ease-out;
+    font-family: "Overpass Mono";
+  }
+  .tagBadge:hover {
+    opacity: 1;
   }
 }
 body {
@@ -264,29 +278,25 @@ ol {
 .fadeup-enter {
   opacity: 0.01;
   transform: translateY(20px);
-  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .fadeup-enter-active {
   opacity: 1;
   transform: translateY(0px);
-  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .fadedown-enter {
   opacity: 0.01;
   transform: translateY(-20px);
-  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .fadedown-enter-active {
   opacity: 1;
   transform: translateY(0px);
-  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
-    transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1), transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .fade-enter {

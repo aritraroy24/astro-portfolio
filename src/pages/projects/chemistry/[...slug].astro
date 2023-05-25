@@ -1,0 +1,22 @@
+---
+// chemistry project post layout import
+import ChemProjectLayout from "@layouts/ChemProjectLayout.astro";
+
+// function import
+import { getCollection } from "astro:content";
+
+// getting all chemistry projects
+export async function getStaticPaths() {
+  const chemistryProjectEntries = await getCollection("chemistry");
+  return chemistryProjectEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<ChemProjectLayout frontmatter={entry.data}>
+  <Content />
+</ChemProjectLayout>
