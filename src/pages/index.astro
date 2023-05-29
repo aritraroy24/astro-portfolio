@@ -3,9 +3,12 @@
 import Layout from "@layouts/Layout.astro";
 
 // component import
-import About from "@components/AstroComponents/About.astro";
-import Hero from "@components/AstroComponents/Hero.astro";
 import MainHeader from "@components/AstroIslands/Common/MainHeader";
+import Hero from "@components/AstroComponents/Hero.astro";
+import About from "@components/AstroComponents/About.astro";
+import Projects from "@components/AstroComponents/Projects.astro";
+import Portfolio from "@components/AstroComponents/Portfolio.astro";
+import Testimonial from "@components/AstroIslands/Testimonial";
 
 // title & description value to pass to the layout
 const {
@@ -18,4 +21,7 @@ const {
   <MainHeader client:only="react" />
   <Hero />
   <About />
+  <Projects />
+  <Portfolio />
+  <Testimonial client:only="react" />
 </Layout>

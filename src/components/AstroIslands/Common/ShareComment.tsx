@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { GrFacebookOption } from 'react-icons/gr';
 import { HiRss } from 'react-icons/hi';
 import { IoLogoTumblr } from 'react-icons/io';
@@ -7,12 +7,16 @@ import { FaLinkedinIn, FaPinterestP, FaTumblr } from 'react-icons/fa'
 import Giscus from '@giscus/react';
 import "./styles/ShareComment.scss";
 
-const ShareComment = () => {
+interface ShareCommentProps {
+  postType: string;
+}
+
+const ShareComment: React.FC<ShareCommentProps> = ({ postType }) => {
   const currentURL = window.location.href;
   const encodedUrl = encodeURIComponent(currentURL);
   return (
     <>
-      <p className="shareText">---&nbsp;&nbsp; Share This Post Via&nbsp;&nbsp; ---</p>
+      <p className="shareText">---&nbsp;&nbsp; Share This {postType} Via&nbsp;&nbsp; ---</p>
       <div className="shareBtnContainer">
         <a title="hello" target="_blank" href={`https://twitter.com/share?url=${encodedUrl}`}>
           <AiOutlineTwitter className="shareIcon" />

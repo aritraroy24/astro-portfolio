@@ -55,7 +55,7 @@ const relatedVideos = tagsFilteredVideos
     <div class="sidebar"></div>
   </div>
   <!-- comment using giscus -->
-  <ShareComment client:only="react" />
+  <ShareComment client:only="react" postType="Video" />
   <!-- related video posts section -->
   <RelatedPosts
     relatedPosts={relatedVideos}

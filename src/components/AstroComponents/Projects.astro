@@ -1,0 +1,66 @@
+---
+// component import
+import Button from "@components/AstroComponents/Common/Button.astro";
+import ChemProjectCard from "@components/AstroComponents/ChemistryProjects/ChemProjectCard.astro";
+
+// function import
+import { getCollection } from "astro:content";
+import { formatPosts } from "@js/utils";
+
+// style import
+import "./styles/Projects.scss";
+
+// asset import
+import NoData from "@images/No data.svg";
+
+const allPublications = await getCollection("chemistry");
+const formattedPublications = formatPosts(allPublications, {
+  filterOutFuturePosts: false,
+}).slice(0, 2);
+---
+
+<main class="Projects" id="about" data-name="AboutMe">
+  <h2>
+    <span class="number-heading">02.</span>Projects
+  </h2>
+  <section class="chemprojects-container">
+    <div class="allPostsContainer">
+      {
+        formattedPublications.length > 0 ? (
+          formattedPublications.map((publication: any) => (
+            <ChemProjectCard
+              url={publication.slug}
+              title={publication.data.title}
+              journalName={publication.data.journalName}
+              image={publication.data.cover}
+              duration={publication.data.duration}
+              status={publication.data.status}
+              tags={publication.data.tags}
+              urlPrefix="/projects/chemistry/"
+              buttonText="View Paper"
+            />
+          ))
+        ) : (
+          <div class="noDataFoundContainer">
+            <img
+              id="noDataFound"
+              src={NoData.src}
+              alt="No Data Found"
+              width={500}
+            />
+            <h2>No Records Found</h2>
+            <p>
+              There is no project in this section at this moment.. Maybe explore
+              other projects?
+            </p>
+          </div>
+        )
+      }
+    </div>
+    <Button
+      text="Explore More..."
+      href="/projects/chemistry"
+      customStyle="margin-top:-60px;"
+    />
+  </section>
+</main>

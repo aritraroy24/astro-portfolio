@@ -1,0 +1,25 @@
+---
+// style import
+import "./styles/Portfolio.scss";
+import Tab from "@components/AstroComponents/Common/Tab.astro";
+// import RightTab from "@components/AstroComponents/Common/RightTab.astro";
+import education from "@assets/js/data/education";
+import research from "@assets/js/data/research";
+---
+
+<main class="Portfolio" id="portfolio" data-name="Portfolio">
+  <h2>
+    <span class="number-heading">03.</span>Portfolio
+  </h2>
+  <section class="portfolio-container">
+    <div class="section-heading">
+      <h4>Research</h4>
+    </div>
+    <!-- setting the height is kinda necessary in these tabs -->
+    <Tab data={research} side="left" customStyle="min-height:200px;" />
+    <div class="section-heading">
+      <h4>Education</h4>
+    </div>
+    <Tab data={education} side="left2" customStyle="min-height:850px;" />
+  </section>
+</main>

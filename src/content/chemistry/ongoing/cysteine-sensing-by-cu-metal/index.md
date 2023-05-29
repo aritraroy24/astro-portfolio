@@ -7,9 +7,12 @@ pubDate: 2024-05-24
 cover: ./cysteine-sensing-by-cu-metal.jpg
 description: "Synthesis and characterization of a simple copper complex using L-Cysteine to use as a vital antioxidant to protect cells and tissues from oxidation."
 journalName: 
-journalUrl:
-codeUrl:
-newsUrl:
+isOpenAccess: 
+journalUrl: 
+codeUrl: 
+runUrl: 
+dockerUrl: 
+newsUrl: 
 galleryImages: 
 ---
 # This is a test file

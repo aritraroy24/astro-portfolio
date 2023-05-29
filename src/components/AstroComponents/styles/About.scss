@@ -24,7 +24,7 @@
     font-family: "Overpass";
     font-size: 30px;
     position: relative;
-    top: -24px;
+    top: -15px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -85,6 +85,7 @@
 
   img {
     width: 300px;
+    height: auto;
     border-radius: 3px;
     transition: all 200ms ease-out;
     // margin-right: 40px;
@@ -127,7 +128,7 @@
   padding-top: 0px;
 
   ul {
-    margin-right: 40px;
+    margin-right: 40px !important;
     min-width: 160px;
   }
 
@@ -198,15 +199,13 @@
     }
 
     .about-description {
-      padding-right: 3px;
-
       p {
         font-size: 14px;
       }
     }
   }
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 380px) {
   .skills {
     display: flex;
     flex-direction: column;

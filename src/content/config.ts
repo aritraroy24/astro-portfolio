@@ -1,4 +1,5 @@
 // 1. Import utilities from `astro:content`
+import { string } from "astro/zod";
 import { z, defineCollection } from "astro:content";
 
 // 2. Define your collection(s)
@@ -39,10 +40,17 @@ const chemProjectCollection = defineCollection({
       cover: image(),
       description: z.string(),
       journalName: z.string().nullable(),
+      isOpenAccess: z.boolean().nullable(),
       journalUrl: z.string().nullable(),
       codeUrl: z.string().nullable(),
+      runUrl: z.string().nullable(),
+      dockerUrl: z.string().nullable(),
       newsUrl: z.string().nullable(),
-      galleryImages: z.array(image()).nullable()
+      galleryImages: z.array(z.object({
+        imgSrc: image(),
+        imgAlt: z.string(),
+        imgDetails: z.string()
+      })).nullable()
     }),
 })
 // 3. Export a single `collections` object to register your collection(s)

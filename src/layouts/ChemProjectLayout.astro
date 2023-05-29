@@ -6,7 +6,7 @@ import Layout from "@layouts/Layout.astro";
 import ChemProjectHeader from "@components/AstroComponents/ChemistryProjects/ChemProjectHeader.astro";
 import RelatedPosts from "@components/AstroComponents/Common/RelatedPosts.astro";
 import ShareComment from "@components/AstroIslands/Common/ShareComment";
-import Gallery from "@components/AstroIslands/ChemistryProjects/Gallery";
+import SwiperGallery from "@components/AstroIslands/ChemistryProjects/SwiperGallery";
 
 // function import
 import { formatPosts } from "@js/utils";
@@ -24,8 +24,11 @@ const {
   tags,
   pubDate,
   journalName,
+  isOpenAccess,
   journalUrl,
   codeUrl,
+  runUrl,
+  dockerUrl,
   newsUrl,
   description,
   galleryImages,
@@ -67,8 +70,11 @@ const relatedChemProjects = tagsFilteredChemProjects
     {tags}
     {pubDate}
     {journalName}
+    {isOpenAccess}
     {journalUrl}
     {codeUrl}
+    {runUrl}
+    {dockerUrl}
     {newsUrl}
   />
   <!-- blog post content section -->
@@ -77,9 +83,9 @@ const relatedChemProjects = tagsFilteredChemProjects
       <slot />
     </div>
   </div>
-  <Gallery client:only="react" galleryImages={galleryImages} />
+  <SwiperGallery client:only="react" galleryImages={galleryImages} />
   <!-- comment using giscus -->
-  <ShareComment client:only="react" />
+  <ShareComment client:only="react" postType="Publication" />
   <!-- related blog posts section -->
   <RelatedPosts
     relatedPosts={relatedChemProjects}

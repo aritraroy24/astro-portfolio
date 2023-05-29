@@ -25,6 +25,18 @@
         padding: 4px;
       }
     }
+    .journalDetailsDiv {
+      display: flex;
+      h4 {
+        margin: 10px 0 0 0;
+      }
+      svg {
+        height: 40px;
+        width: unset;
+        padding: 5px;
+        color: var(--white);
+      }
+    }
     .pubRelatedLinks {
       background-color: black;
       padding: 10px 20px;

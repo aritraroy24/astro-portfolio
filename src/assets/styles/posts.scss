@@ -1,6 +1,9 @@
 .headroom-wrapper {
   position: fixed !important;
 }
+#tutorialDiv {
+  margin-top: -80vh;
+}
 .postsNavigationDiv {
   display: flex;
   flex-direction: column;
@@ -30,5 +33,10 @@
       align-items: center;
       margin-top: -50px;
     }
+  }
+}
+@media screen and (max-width: 1539px) {
+  #tutorialDiv {
+    margin-top: 100px;
   }
 }

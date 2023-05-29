@@ -43,6 +43,7 @@
   top: -100px;
   left: 0;
   background: #021e43d8;
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   z-index: 3;
   transition: all 200ms ease-out;
@@ -58,6 +59,7 @@
   position: fixed;
   left: 0;
   top: 0;
+  -webkit-backdrop-filter: blur(0px) brightness(100%);
   backdrop-filter: blur(0px) brightness(100%);
   backface-visibility: hidden;
   z-index: -2;
@@ -221,6 +223,7 @@
   }
 
   .blur-show {
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     backface-visibility: hidden;
     z-index: 3;

@@ -59,3 +59,34 @@
     }
   }
 }
+
+@media screen and (max-width: 550px) {
+  .chemCard {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .chemCard {
+    width: 300px;
+    .chemImgTextContainer {
+      flex-direction: column;
+      img {
+        padding-right: unset;
+      }
+      .chemTextContainer {
+        padding-left: unset;
+        #status {
+          margin: 10px 0 5px 0 !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .chemCard {
+    width: 250px;
+    h4 {
+      font-size: 15px;
+    }
+  }
+}

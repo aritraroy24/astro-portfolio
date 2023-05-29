@@ -7,10 +7,13 @@ pubDate: 2024-05-10
 cover: ./electronic-structure-and-reactivity-of-an-allyl-like-trialuminium-compound.png
 description: "Investigating the electronic structure and reactivity of an allyl-like trialuminium compound, an intriguing study in organometallic chemistry."
 journalName: 
+isOpenAccess: 
 journalUrl: 
-codeUrl:
-newsUrl:
-galleryImages:
+codeUrl: 
+runUrl: 
+dockerUrl: 
+newsUrl: 
+galleryImages: 
 ---
 # This is a test file
 abstract: 

@@ -1,0 +1,54 @@
+---
+// library imports
+import { Icon } from "astro-icon";
+
+// style import
+import "./styles/Button.scss";
+
+// type declaration
+interface Props {
+    text: string;
+    href?: string;
+    customStyle?: string;
+    target?: string;
+    rel?: string;
+    icon?: {
+        name: string;
+        side: "left" | "right";
+    };
+}
+
+// destructuring astro properties
+const { text, href, target, rel, customStyle, icon, ...rest } =
+    Astro.props as Props;
+---
+
+<a
+    href={href}
+    target={target}
+    rel={rel}
+    class="button-link"
+    id="go-back"
+    style={customStyle}
+    {...rest}
+>
+    <!-- icon for left side -->
+    {
+        icon && icon.side === "left" && (
+            <Icon name={icon.name} height="24" width="24" />
+        )
+    }
+    <button class="customButton">{text}</button>
+    <!-- icon for right side -->
+    {
+        icon && icon.side === "right" && (
+            <Icon name={icon.name} height="24" width="24" />
+        )
+    }
+</a>
+
+<script>
+    document.getElementById("go-back")?.addEventListener("click", () => {
+        history.back();
+    });
+</script>

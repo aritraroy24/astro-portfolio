@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './styles/OtherHeder.scss';
 import Fade from 'react-reveal/Fade';
 import Headroom from 'react-headroom';
@@ -38,28 +38,24 @@ const OtherHeder = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/#projects">
+                                        <a href="/projects/chemistry">
                                             <span>02.</span>Projects
+
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/tutorial">
-                                            <span>03.</span>Tutorial
+                                        <a href="/#portfolio">
+                                            <span>03.</span>Portfolio
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/#education">
-                                            <span>04.</span>Education
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/#testimonial">
-                                            <span>05.</span>Testimonial
+                                        <a href="/tutorials">
+                                            <span>04.</span>Tutorials
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/#contact">
-                                            <span>06.</span>Contact
+                                            <span>05.</span>Contact
                                         </a>
                                     </li>
                                 </ul>

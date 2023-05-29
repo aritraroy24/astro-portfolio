@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './styles/MainHeader.scss';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
@@ -51,14 +51,25 @@ const MainHeader = () => {
                                         </li>
                                     </Link>
                                     <Link
-                                        to='chemProjects'
+                                        to='Projects'
                                         spy={true}
                                         smooth={true}
                                         offset={-50}
                                         ignoreCancelEvents={true}
                                         duration={1200}>
-                                        <li onClick={() => handleIsActive(false)}>
+                                        <li onClick={() => handleIsActive(false)} className='projects-menu' >
                                             <span>02.</span>Projects
+                                        </li>
+                                    </Link>
+                                    <Link
+                                        to='Portfolio'
+                                        spy={true}
+                                        smooth={true}
+                                        offset={0}
+                                        ignoreCancelEvents={true}
+                                        duration={1200}>
+                                        <li onClick={() => handleIsActive(false)}>
+                                            <span>03.</span>Portfolio
                                         </li>
                                     </Link>
                                     <Link
@@ -68,30 +79,8 @@ const MainHeader = () => {
                                         offset={0}
                                         ignoreCancelEvents={true}
                                         duration={1200}>
-                                        <li onClick={() => handleIsActive(false)}>
-                                            <span>03.</span>Tutorials
-                                        </li>
-                                    </Link>
-                                    <Link
-                                        to='Career'
-                                        spy={true}
-                                        smooth={true}
-                                        offset={0}
-                                        ignoreCancelEvents={true}
-                                        duration={1200}>
-                                        <li onClick={() => handleIsActive(false)}>
-                                            <span>04.</span>Education
-                                        </li>
-                                    </Link>
-                                    <Link
-                                        to='Testimonial'
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-70}
-                                        ignoreCancelEvents={true}
-                                        duration={1200}>
-                                        <li onClick={() => handleIsActive(false)}>
-                                            <span>05.</span>Testimonials
+                                        <li onClick={() => handleIsActive(false)} className='projects-menu' >
+                                            <span>04.</span>Tutorials
                                         </li>
                                     </Link>
                                     <Link
@@ -102,7 +91,7 @@ const MainHeader = () => {
                                         ignoreCancelEvents={true}
                                         duration={1200}>
                                         <li onClick={() => handleIsActive(false)}>
-                                            <span>06.</span>Contact
+                                            <span>05.</span>Contact
                                         </li>
                                     </Link>
                                 </ul>
