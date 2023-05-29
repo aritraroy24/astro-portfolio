@@ -18,7 +18,7 @@ const { data, side, customStyle } = Astro.props;
         ))}
       </ul>
 
-      <div class="detailsContainerDivLeft" style={customStyle}>
+      <div class="detailsContainerDivLeft">
         {data.map((dataItem: any) => (
           <div>
             <h4>
@@ -50,7 +50,7 @@ const { data, side, customStyle } = Astro.props;
 }
 {
   side === "left2" && (
-    <div class="tabsContainerDivLeft2">
+    <div class="tabsContainerDivLeft2" style={customStyle}>
       <ul role="tablist" class="listLeft2">
         {data.map((dataItem: any) => (
           <li class="listItemLeft2">

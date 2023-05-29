@@ -5,6 +5,7 @@ import Tab from "@components/AstroComponents/Common/Tab.astro";
 // import RightTab from "@components/AstroComponents/Common/RightTab.astro";
 import education from "@assets/js/data/education";
 import research from "@assets/js/data/research";
+import Testimonial from "@components/AstroIslands/Testimonial";
 ---
 
 <main class="Portfolio" id="portfolio" data-name="Portfolio">
@@ -20,6 +21,10 @@ import research from "@assets/js/data/research";
     <div class="section-heading">
       <h4>Education</h4>
     </div>
-    <Tab data={education} side="left2" customStyle="min-height:850px;" />
+    <Tab data={education} side="left2" customStyle="min-height:260px;" />
+    <div class="section-heading">
+      <h4>Testimonials</h4>
+    </div>
+    <Testimonial client:only="react" />
   </section>
 </main>

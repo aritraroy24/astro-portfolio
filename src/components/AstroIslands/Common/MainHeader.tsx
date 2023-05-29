@@ -65,7 +65,7 @@ const MainHeader = () => {
                                         to='Portfolio'
                                         spy={true}
                                         smooth={true}
-                                        offset={0}
+                                        offset={-120}
                                         ignoreCancelEvents={true}
                                         duration={1200}>
                                         <li onClick={() => handleIsActive(false)}>

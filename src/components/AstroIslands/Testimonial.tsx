@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
-import Fade from 'react-reveal/Fade';
 import { FaQuoteRight } from 'react-icons/fa';
 import testimonals from '../../assets/js/data/testimonials';
 import './styles/Testimonial.scss'
@@ -28,11 +27,6 @@ function Testimonial() {
 
     return (
         <section className='Testimonial'>
-            <Fade bottom>
-                <h2>
-                    <span className='number-heading'>05. </span>Testimonials
-                </h2>
-            </Fade>
             <div className='section-center'>
                 {people.map((person, personIndex) => {
                     const { id, image, name, title, quote } = person;
