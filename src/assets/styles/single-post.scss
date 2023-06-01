@@ -1,4 +1,5 @@
 .post-content {
+  padding: 0 220px;
   text-align: justify;
   margin-bottom: 50px;
   .biggerParagraph {
@@ -120,6 +121,7 @@
 }
 @media only screen and (max-width: 1050px) {
   .post-content {
+    padding: 0 80px;
     .refLeft {
       flex: 100%;
     }
@@ -140,6 +142,10 @@
 @media only screen and (max-width: 730px) {
   .post-content {
     text-align: left;
+    padding: 0 40px;
+    img {
+      width: 60vw;
+    }
   }
   .post-content div div div div {
     width: 70vw;
@@ -155,6 +161,11 @@
   }
 }
 @media only screen and (max-width: 480px) {
+  .post-content {
+    img {
+      width: 80vw;
+    }
+  }
   .refLink {
     h4 {
       font-size: 15px !important;
@@ -163,5 +174,10 @@
       padding-top: 15px;
       font-size: 10px !important;
     }
+  }
+}
+@media only screen and (max-width: 420px) {
+  .post-content {
+    padding: 0 22px;
   }
 }

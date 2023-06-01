@@ -1,3 +1,7 @@
+.shareCommentContainer {
+  padding: 0 220px;
+  margin-bottom: 10px;
+}
 .shareText {
   text-align: center;
 }
@@ -19,7 +23,15 @@
 #comments {
   margin-bottom: 50px;
 }
+@media only screen and (max-width: 1050px) {
+  .shareCommentContainer {
+    padding: 0 80px;
+  }
+}
 @media only screen and (max-width: 730px) {
+  .shareCommentContainer {
+    padding: 0 40px;
+  }
   .shareBtnContainer a {
     width: 30px;
     .shareIcon {
@@ -28,10 +40,14 @@
   }
 }
 @media only screen and (max-width: 420px) {
+  .shareCommentContainer {
+    padding: 0 22px;
+  }
   .shareBtnContainer a {
+    margin: 5px;
     width: 18px;
     .shareIcon {
-      width: 0.75rem;
+      width: 1rem;
     }
   }
 }

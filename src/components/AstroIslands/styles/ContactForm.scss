@@ -1,0 +1,212 @@
+.ContactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #09356e81, #083979);
+    padding: 10px 25px 24px 25px;
+    border-radius: 4px;
+    box-shadow: 0 5px 30px -16px rgba(0, 0, 0, 0.548);
+    position: relative;
+    top: 70px;
+    z-index: 1;
+    // height: 540px;
+    margin-bottom: 80px;
+
+    .captchaDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .captchaCanvas {
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        color: #64ffda !important;
+                        font-family: "Overpass Mono";
+                        font-size: 25px;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+        .capthaInput {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #user_captcha_input {
+                    letter-spacing: 3px;
+                    width: 80%;
+                }
+                #user_captcha_input::placeholder {
+                    letter-spacing: 1px;
+                    font-size: 14px;
+                }
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // #sendMsgBtn {
+    //   display: none;
+    // }
+
+    label {
+        width: 100%;
+        color: rgba(255, 255, 255, 0.712);
+        margin-bottom: 4px;
+        margin-top: 10px;
+        font-family: "Overpass Mono";
+        font-size: 14px;
+    }
+
+    button:disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    .message {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+        height: 35px;
+        width: 370px;
+        border-radius: 3px;
+        border: none;
+        margin-bottom: 15px;
+        padding-left: 10px;
+        font-size: 18px;
+        background: #2c6bb393;
+        color: white;
+        box-shadow: 0 5px 30px -25px rgb(0, 0, 0);
+    }
+
+    h4 {
+        width: 100%;
+        background: #1f549193;
+        padding: 5px 10px;
+        color: rgba(255, 255, 255, 0.822);
+        border-radius: 3px 3px 0 0;
+        margin-top: 8px;
+        font-weight: 400;
+        cursor: default;
+    }
+
+    input {
+        background: none;
+        border-radius: 0;
+        border-bottom: 1px solid #64ffdbcc;
+        padding-left: 0;
+        transition: 0.2s;
+        border-radius: 2px 2px 0 0;
+
+        &:focus {
+            outline: none;
+            background: rgba(7, 26, 78, 0.678);
+            padding-left: 8px;
+        }
+    }
+
+    ::placeholder {
+        color: rgba(255, 255, 255, 0.377);
+    }
+
+    button {
+        border: 1px solid #64ffda;
+        color: #ffffff;
+        border-radius: 4px;
+        font-family: "Overpass Mono";
+        font-size: 16px;
+        cursor: pointer;
+        padding: 10px 40px;
+        width: 60%;
+        background: rgba(0, 0, 0, 0);
+        margin-top: 10px;
+        transition: all 200ms ease-out;
+
+        &:focus {
+            outline: none;
+            background: #64ffdb18;
+        }
+
+        &:hover {
+            background: #64ffdb18;
+        }
+    }
+
+    p {
+        margin-top: 20px;
+        width: 100%;
+        font-size: 15px;
+        color: #ffffffcc;
+    }
+
+    textarea {
+        height: 80px;
+        padding-top: 8px;
+        font-size: 16px;
+        resize: none;
+        font-family: "Overpass";
+        height: fit-content;
+        min-height: 100px;
+        border-radius: 0 0 3px 3px;
+        border: 1px solid transparent;
+        transition: 0.2s;
+
+        &:focus {
+            outline: none;
+            border: 1px solid #c2dbd5c4;
+        }
+    }
+    #error_msg {
+        color: #fe3e55;
+    }
+    #success_msg {
+        color: #6efcdb;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .ContactForm {
+        input,
+        textarea {
+            width: 300px;
+        }
+    }
+}
+@media only screen and (max-width: 349px) {
+    .ContactForm {
+        input,
+        textarea {
+            width: 220px;
+        }
+        button {
+            padding: 10px 20px;
+        }
+    }
+}
+@media only screen and (max-width: 314px) {
+    .ContactForm {
+        left: 1vw;
+        input,
+        textarea {
+            width: 200px;
+        }
+    }
+}

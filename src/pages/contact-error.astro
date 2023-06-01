@@ -1,0 +1,40 @@
+---
+// layout import
+import Layout from "@layouts/Layout.astro";
+
+// component import
+import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Button from "@components/AstroComponents/Common/Button.astro";
+
+// asset import
+import ContactRedirectImage from "@assets/images/contactError.svg";
+
+// style import
+import "@styles/contact-redirect.scss";
+
+// title & description value to pass to the layout
+const {
+    pageTitle = "Aritra Roy | Error Form Submission",
+    pageDescription = "Encountered an issue with your contact form submission? Apologies for the inconvenience! Please bear with me as I resolve the error promptly. Thank you for your understanding.",
+} = Astro.props;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <OtherHeader client:only="react" />
+    <div class="ContactRedirect">
+        <img
+            id="ContactRedirectImage"
+            src={ContactRedirectImage.src}
+            alt="Page Not Found"
+            height={400}
+        />
+        <h1>Oops, Something Terrible Happened</h1>
+        <p>
+            Encountered an issue with your contact form submission? Apologies
+            for the inconvenience! Till the fix you can learn more about me or
+            knock me at
+            <a href="mailto:aritraroy24@gmail.com">aritraroy24@gmail.com</a>
+        </p>
+        <Button href="/" text="Go to Home" rel="noopener noreferrer" />
+    </div>
+</Layout>

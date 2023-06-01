@@ -6,7 +6,9 @@ import Layout from "@layouts/Layout.astro";
 import PostCard from "@components/AstroComponents/Common/PostCard.astro";
 import Pagination from "@components/AstroComponents/Common/Pagination.astro";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
-import Button from "@components/AstroComponents/Common/Button.astro";
+import BackButton from "@components/AstroComponents/Common/BackButton.astro";
+import Socials from "@components/AstroComponents/Socials.astro";
+import Footer from "@components/AstroComponents/Footer.astro";
 
 // style import
 import "@styles/posts.scss";
@@ -51,14 +53,14 @@ const pageDescription = `Discover the essence of ${tag} through captivating chem
 
 <Layout title={pageTitle} description={pageDescription}>
   <OtherHeader client:only="react" />
+  <Socials />
   <div class="postsNavigationDiv">
     <!-- chemistry projects with specific tag heading section -->
     <h1>
       Chemistry Projects about <span class="highlightedText">{tag}</span>
     </h1>
-    <Button
+    <BackButton
       text="Back"
-      href="/projects/chemistry/all-publications"
       customStyle="padding: 10px 18px;"
       icon={{
         name: "tabler:arrow-big-left-line",
@@ -109,4 +111,5 @@ const pageDescription = `Discover the essence of ${tag} through captivating chem
       )
     }
   </div>
+  <Footer />
 </Layout>

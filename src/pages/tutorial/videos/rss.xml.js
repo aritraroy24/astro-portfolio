@@ -19,7 +19,7 @@ export async function get(context) {
         commentsUrl: "https://github.com/aritraroy24/astro-portfolio-comments/discussions",
         source: {
             title: "Aritra Roy | YouTube Videos RSS Feed",
-            url: "https://valid-rss-hosted-styled.netlify.app/tutorial/videos/video-rss.xml"
+            url: "https://aritraroy.live/tutorial/videos/rss.xml"
         },
         items: formattedVideos.map((video) => ({
             title: video.data.title,
@@ -29,7 +29,7 @@ export async function get(context) {
             categories: ["Computational", "Chemistry", "Research", "PhD", "Post-doc", "CompChem", "Programming", "Coding", "Technology", "Update", "Tutorial", "YouTube Video"],
             content: `${[sanitizeHtml(marked.parse(video.body)) + sanitizeHtml(marked.parse("Duration: " + video.data.duration)) + sanitizeHtml(marked.parse("Tags: " + video.data.tags))]}`,
         })),
-        customData: `<atom:link href="https://valid-rss-hosted-styled.netlify.app/tutorial/videos/video-rss.xml" rel="self" type="application/rss+xml" />`,
+        customData: `<atom:link href="https://aritraroy.live/tutorial/videos/rss.xml" rel="self" type="application/rss+xml" />`,
         stylesheet: '/rss/video-rss-styles.xsl',
     });
 }

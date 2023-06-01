@@ -14,5 +14,5 @@ export default defineConfig({
       wrap: true,
     },
   },
-  site: 'https://valid-rss-hosted-styled.netlify.app/'
+  site: 'https://aritraroy.live/'
 });

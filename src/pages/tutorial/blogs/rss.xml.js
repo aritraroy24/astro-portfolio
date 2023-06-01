@@ -19,7 +19,7 @@ export async function get(context) {
         commentsUrl: "https://github.com/aritraroy24/astro-portfolio-comments/discussions",
         source: {
             title: "Aritra Roy | Blog RSS Feed",
-            url: "https://valid-rss-hosted-styled.netlify.app/tutorial/blogs/blog-rss.xml"
+            url: "https://aritraroy.live/tutorial/blogs/rss.xml"
         },
         items: formattedBlogs.map((blog) => ({
             title: blog.data.title,
@@ -29,7 +29,7 @@ export async function get(context) {
             categories: ["Computational", "Chemistry", "Research", "PhD", "Post-doc", "CompChem", "Programming", "Coding", "Technology", "Update"],
             content: `${[sanitizeHtml(marked.parse(blog.body)) + sanitizeHtml(marked.parse("Subtitle: " + blog.data.subtitle)) + sanitizeHtml(marked.parse("Duration: " + blog.data.duration)) + sanitizeHtml(marked.parse("Tags: " + blog.data.tags))]}`,
         })),
-        customData: `<atom:link href="https://valid-rss-hosted-styled.netlify.app/tutorial/blogs/blog-rss.xml" rel="self" type="application/rss+xml" />`,
+        customData: `<atom:link href="https://aritraroy.live/tutorial/blogs/rss.xml" rel="self" type="application/rss+xml" />`,
         stylesheet: '/rss/blog-rss-styles.xsl',
     });
 }

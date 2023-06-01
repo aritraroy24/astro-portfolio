@@ -1,6 +1,7 @@
 ---
 // chemistry project post layout import
 import ChemProjectLayout from "@layouts/ChemProjectLayout.astro";
+import FooterWithoutSocial from "@components/AstroComponents/FooterWithoutSocial.astro";
 
 // function import
 import { getCollection } from "astro:content";
@@ -20,3 +21,4 @@ const { Content } = await entry.render();
 <ChemProjectLayout frontmatter={entry.data}>
   <Content />
 </ChemProjectLayout>
+<FooterWithoutSocial />

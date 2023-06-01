@@ -1,24 +1,38 @@
 const research = [
     {
-        id: 2,
+        id: 3,
         title: 'Research Collaborator',
         institution: 'National Institute of Technology Silchar',
         duration: 'Nov, 2022 - Present',
-        url: '',
+        url: 'http://www.nits.ac.in/',
         description: [
-            'Metal Sensing',
-            'L-Cysteine'
+            'Metal Sensing using amino acids',
+            'L-Cysteine and Histidine',
+            'With Dr B. Ghosh & Dr F. Fantuzzi'
+        ]
+    },
+    {
+        id: 2,
+        title: 'Guest Researcher',
+        institution: 'Fantuzzi Group, Kent University',
+        duration: 'Jun, 2022 - Present',
+        url: 'https://www.felipefantuzzi.org/',
+        description: [
+            'C-C activation for organometallic compounds',
+            'Allyl-like trialuminium compound',
+            'With Dr F. Fantuzzi & Dr D. Dhar'
         ]
     },
     {
         id: 1,
-        title: 'Guest Researcher',
-        institution: 'Kent University',
-        duration: 'Jun, 2022 - Present',
-        url: 'https://www.felipefantuzzi.org/current-members#comp-l4tsr8kv',
+        title: 'M.Sc. Project',
+        institution: 'CIS Laboratory (Pondicherry University)',
+        duration: 'Dec, 2020 - Jul, 2021',
+        url: 'https://sites.google.com/view/cis-laboratory',
         description: [
-            'C-C Activation',
-            'Trialuminium Compound'
+            'Semiconductor borophene',
+            'Boron two-dimensional sheet',
+            'Under Dr M. M. Balakrishnarajan'
         ]
     }
 ];

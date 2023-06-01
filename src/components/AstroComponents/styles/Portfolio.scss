@@ -1,13 +1,12 @@
 .Portfolio {
     width: 100%;
-    // min-height: 750px;
     margin-top: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
-
+    padding: 0 220px;
+    margin-bottom: 80px;
     .number-heading {
         font-family: "Overpass Mono";
         font-size: 22px;
@@ -52,57 +51,35 @@
         }
     }
 }
-// @media only screen and (max-width: 1150px) {
-//     .Portfolio {
-//         .portfolio-container {
-//             padding: 30px 0 10px 0;
-//         }
-//     }
-// }
-
-// @media only screen and (max-width: 900px) {
-//     .Portfolio {
-//         .portfolio-container {
-//             padding: 30px 0 10px 0;
-//         }
-//     }
-// }
-
-// @media only screen and (max-width: 730px) {
-//     .Portfolio {
-//         .portfolio-container {
-//             padding: 40px 0;
-//         }
-//     }
-// }
-
-// @media only screen and (max-width: 450px) {
-//     .Portfolio {
-//         h2 {
-//             font-size: 25px;
-//         }
-//     }
-// }
-
-// @media only screen and (max-width: 420px) {
-//     .Portfolio {
-//         h2 {
-//             font-size: 25px;
-//             top: 20px;
-//         }
-//     }
-//     .chemProjectsDiv {
-//         h4 {
-//             color: #64ffda;
-//             font-size: 17px;
-//         }
-//     }
-// }
-// @media only screen and (max-width: 330px) {
-//     .Portfolio {
-//         h2,
-//         .number-heading {
-//             font-size: 19px;
-//         }
-//     }
-// }
+@media only screen and (max-width: 1050px) {
+    .Portfolio {
+        padding: 0 80px;
+        margin-bottom: unset;
+    }
+}
+@media only screen and (max-width: 730px) {
+    .Portfolio {
+        padding: 0 40px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .Portfolio h2 {
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .Portfolio {
+        padding: 0 22px;
+    }
+}
+@media only screen and (max-width: 330px) {
+    .Portfolio {
+        h2,
+        .number-heading {
+            font-size: 19px;
+        }
+        h4 {
+            font-size: 17.5px !important;
+        }
+    }
+}

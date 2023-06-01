@@ -3,7 +3,7 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
-import Button from "@components/AstroComponents/Common/Button.astro";
+import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 
 // function import
 import { slugify, formatDate } from "@js/utils";
@@ -18,9 +18,8 @@ const { tags, title, subtitle, duration, pubDate, cover } = Astro.props;
 <>
   <OtherHeader client:only="react" />
   <header class="blogHeaderContainer">
-    <Button
+    <BackButton
       text="Back"
-      href="/tutorial/blogs"
       customStyle="margin-bottom:30px; padding: 15px 22px;"
       icon={{
         name: "tabler:arrow-big-left-line",

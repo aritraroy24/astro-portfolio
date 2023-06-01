@@ -15,11 +15,97 @@ import NoData from "@images/No data.svg";
 
 const allBlogs = await getCollection("blogs");
 const formattedBlogs = formatPosts(allBlogs).slice(0, 2);
+
+const allVideos = await getCollection("videos");
+const formattedVideos = formatPosts(allVideos).slice(0, 2);
 ---
 
 <main class="Tutorials" id="tutorials" data-name="Tutorials">
   <h2>
     <span class="number-heading">04.</span>Tutorials
   </h2>
-  <section class="chemprojects-container"></section>
+  <section class="tutorials-container">
+    <div class="section-heading">
+      <h4>Blogs</h4>
+    </div>
+    <div class="allPostsContainer">
+      {
+        formattedBlogs.length > 0 ? (
+          formattedBlogs.map((blog: any) => (
+            <PostCard
+              url={blog.slug}
+              title={blog.data.title}
+              journalName={blog.data.journalName}
+              image={blog.data.cover}
+              duration={blog.data.duration}
+              status={blog.data.status}
+              tags={blog.data.tags}
+              urlPrefix="/tutorial/blogs/"
+              buttonText="Read Post"
+            />
+          ))
+        ) : (
+          <div class="noDataFoundContainer">
+            <img
+              id="noDataFound"
+              src={NoData.src}
+              alt="No Data Found"
+              width={500}
+            />
+            <h2>No Records Found</h2>
+            <p>
+              There is no project in this section at this moment.. Maybe explore
+              other projects?
+            </p>
+          </div>
+        )
+      }
+    </div>
+    <Button
+      text="Explore More..."
+      href="/tutorial/blogs"
+      customStyle="margin-bottom: 75px;"
+    />
+    <div class="section-heading">
+      <h4>YouTube Videos</h4>
+    </div>
+    <div class="allPostsContainer">
+      {
+        formattedVideos.length > 0 ? (
+          formattedVideos.map((video: any) => (
+            <PostCard
+              url={video.slug}
+              title={video.data.title}
+              journalName={video.data.journalName}
+              image={video.data.cover}
+              duration={video.data.duration}
+              status={video.data.status}
+              tags={video.data.tags}
+              urlPrefix="/tutorial/videos/"
+              buttonText="View Post"
+            />
+          ))
+        ) : (
+          <div class="noDataFoundContainer">
+            <img
+              id="noDataFound"
+              src={NoData.src}
+              alt="No Data Found"
+              width={500}
+            />
+            <h2>No Records Found</h2>
+            <p>
+              There is no project in this section at this moment.. Maybe explore
+              other projects?
+            </p>
+          </div>
+        )
+      }
+    </div>
+    <Button
+      text="Explore More..."
+      href="/tutorial/videos"
+      customStyle="margin-bottom: 75px;"
+    />
+  </section>
 </main>

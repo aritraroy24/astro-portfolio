@@ -6,6 +6,8 @@ import Layout from "@layouts/Layout.astro";
 import ChemProjectCard from "@components/AstroComponents/ChemistryProjects/ChemProjectCard.astro";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
 import Pagination from "@components/AstroComponents/Common/Pagination.astro";
+import Socials from "@components/AstroComponents/Socials.astro";
+import Footer from "@components/AstroComponents/Footer.astro";
 
 // function import
 import { getCollection } from "astro:content";
@@ -40,6 +42,7 @@ const pageDescription =
 
 <Layout title={pageTitle} description={pageDescription}>
   <OtherHeader client:only="react" />
+  <Socials />
   <div class="postsNavigationDiv">
     <!-- publications  heading section -->
     <h1 style="margin-bottom: 0;">All Publications</h1>
@@ -89,4 +92,5 @@ const pageDescription =
       )
     }
   </div>
+  <Footer />
 </Layout>

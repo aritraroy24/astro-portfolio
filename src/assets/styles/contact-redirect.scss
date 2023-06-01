@@ -9,13 +9,13 @@ body {
   background-color: #011b43;
   padding: 0 220px;
 }
-.PageNotFound {
+.ContactRedirect {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
   text-align: center;
+  height: 90vh;
   h1 {
     color: var(--red);
   }
@@ -30,10 +30,24 @@ body {
     padding: 0 40px;
   }
 }
-@media only screen and (max-width: 550px) {
-  #PageNotFoundImage {
+@media only screen and (max-width: 650px) {
+  #ContactRedirectImage {
     width: 80vw;
     height: unset;
+  }
+  #backToHome {
+    font-size: 11px;
+    padding: 15px 18px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .ContactRedirect {
+    h1 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 13px;
+    }
   }
   #backToHome {
     font-size: 11px;

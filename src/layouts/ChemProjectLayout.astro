@@ -85,7 +85,11 @@ const relatedChemProjects = tagsFilteredChemProjects
   </div>
   <SwiperGallery client:only="react" galleryImages={galleryImages} />
   <!-- comment using giscus -->
-  <ShareComment client:only="react" postType="Publication" />
+  <ShareComment
+    client:only="react"
+    postType="Publication"
+    rssUrl="/projects/chemistry/rss.xml"
+  />
   <!-- related blog posts section -->
   <RelatedPosts
     relatedPosts={relatedChemProjects}

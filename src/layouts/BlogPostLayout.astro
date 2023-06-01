@@ -64,7 +64,11 @@ const relatedBlogs = tagsFilteredBlogs
     <div class="sidebar"></div>
   </div>
   <!-- comment using giscus -->
-  <ShareComment client:only="react" postType="Blog Post" />
+  <ShareComment
+    client:only="react"
+    postType="Blog Post"
+    rssUrl="/tutorial/blogs/rss.xml"
+  />
   <!-- related blog posts section -->
   <RelatedPosts
     relatedPosts={relatedBlogs}

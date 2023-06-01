@@ -27,8 +27,11 @@
     flex-direction: column;
     width: 100%;
     .dateDurationPostCard {
-      font-size: smaller;
+      font-size: 16px;
       margin-bottom: 8px !important;
+    }
+    a h4 {
+      font-size: 20px;
     }
     a h4:hover {
       color: var(--green) !important;
@@ -36,6 +39,37 @@
     }
     p a {
       margin: 0 10px 0 0;
+    }
+  }
+}
+@media only screen and (max-width: 1230px) {
+  .postCard {
+    width: 265px;
+    margin: 17.5px;
+    img {
+      width: 265px;
+      height: 160px;
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .postCard {
+    div {
+      a h4 {
+        font-size: 18px;
+      }
+      .dateDurationPostCard {
+        font-size: 13px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 300px) {
+  .postCard {
+    width: 240px;
+    img {
+      width: 240px;
+      height: 130px;
     }
   }
 }

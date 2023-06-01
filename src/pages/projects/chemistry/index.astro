@@ -4,6 +4,8 @@ import Layout from "@layouts/Layout.astro";
 
 // component import
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Socials from "@components/AstroComponents/Socials.astro";
+import Footer from "@components/AstroComponents/Footer.astro";
 
 // style import
 import "@assets/styles/posts.scss";
@@ -23,25 +25,25 @@ const imgData = [
     {
         src: ongoingProjects,
         alt: "Ongoing Projects",
-        url: "chemistry/ongoing",
+        url: "ongoing",
         text: "Ongoing",
     },
     {
         src: completedProjects,
         alt: "Completed Projects",
-        url: "chemistry/completed",
+        url: "completed",
         text: "Completed",
     },
     {
         src: submittedProjects,
         alt: "Submitted Projects",
-        url: "chemistry/submitted",
+        url: "submitted",
         text: "Submitted",
     },
     {
         src: allProjects,
         alt: "Published",
-        url: "chemistry/all-publications",
+        url: "all-publications",
         text: "All Projects",
     },
 ];
@@ -49,6 +51,7 @@ const imgData = [
 
 <Layout title={pageTitle} description={pageDescription}>
     <OtherHeader client:only="react" />
+    <Socials />
     <div class="postsNavigationDiv">
         <!-- publications  heading section -->
         <h1 style="margin-bottom: 0;">All Chemistry Projects</h1>
@@ -64,4 +67,5 @@ const imgData = [
             }
         </div>
     </div>
+    <Footer />
 </Layout>

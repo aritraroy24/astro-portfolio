@@ -1,15 +1,12 @@
 .AboutMe {
   width: 100%;
-  min-height: 750px;
-  padding: 170px 0;
+  padding: 0 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 150px;
 
-  div {
-    width: 65%;
-  }
   .number-heading {
     font-family: "Overpass Mono";
     font-size: 22px;
@@ -50,7 +47,6 @@
     display: flex;
     max-width: 950px;
     justify-content: space-between;
-    margin-bottom: 80px;
   }
 
   .hyperlink {
@@ -88,26 +84,40 @@
     height: auto;
     border-radius: 3px;
     transition: all 200ms ease-out;
-    // margin-right: 40px;
-    margin-top: 105px;
-    animation-name: floating;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    // margin-top: 70px;
+    animation: floating 5s infinite ease-in-out;
   }
-  .beacon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    p {
-      margin-top: 30px !important;
-      color: rgba(100, 255, 218, 0.8);
-      text-align: center;
+
+  .iconsContainerMobile {
+    display: none;
+  }
+  .iconsContainer {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: rgba(45, 52, 65, 0.5);
+    .langIcons {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      p {
+        margin: 0 !important;
+      }
+      div {
+        display: flex;
+        margin-bottom: 15px;
+        a {
+          width: 100%;
+          padding: 3px;
+          svg {
+            color: var(--green);
+            opacity: 0.6;
+          }
+        }
+        a svg:hover {
+          opacity: 1;
+        }
+      }
     }
-  }
-  #beaconQR {
-    width: 100px;
   }
 
   @keyframes floating {
@@ -152,6 +162,34 @@
   padding-left: 20px;
   width: 50%;
 }
+@media only screen and (max-width: 1050px) {
+  .AboutMe {
+    padding: 0 80px;
+    .about-box {
+      justify-content: space-around;
+    }
+  }
+  .img-container {
+    img {
+      width: 225px;
+    }
+  }
+  .iconsContainer {
+    margin-top: 80px;
+    padding: 20px;
+    background-color: rgba(45, 52, 65, 0.5);
+    .langIcons {
+      div {
+        a {
+          padding: 2px;
+          svg {
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 900px) {
   .about-box {
@@ -184,25 +222,73 @@
       margin-right: 20px;
     }
   }
+  .iconsContainer {
+    display: none;
+  }
+  .iconsContainerMobile {
+    display: flex !important;
+    margin: 80px 0;
+    padding: 20px;
+    background-color: rgba(45, 52, 65, 0.5);
+    .langIcons {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      p {
+        margin: 0 !important;
+      }
+      div {
+        display: flex;
+        margin-bottom: 15px;
+        a {
+          width: 100%;
+          padding: 3px;
+          svg {
+            color: var(--green);
+            opacity: 0.6;
+          }
+        }
+        a svg:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
-
+@media only screen and (max-width: 730px) {
+  .AboutMe {
+    padding: 0 40px;
+  }
+  .langIcons {
+    div {
+      a {
+        padding: 2.5px;
+        svg {
+          width: 17.5px;
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 450px) {
   .AboutMe {
     img {
       width: 250px;
       margin-right: 20px;
     }
-
     h2 {
       font-size: 25px;
-      // top: 20px;
     }
-
     .about-description {
       p {
         font-size: 14px;
       }
     }
+  }
+}
+@media only screen and (max-width: 420px) {
+  .AboutMe {
+    padding: 0 22px;
   }
 }
 @media only screen and (max-width: 380px) {
@@ -226,6 +312,16 @@
     h2,
     .number-heading {
       font-size: 19px;
+    }
+  }
+  .langIcons {
+    div {
+      a {
+        padding: 1.5px;
+        svg {
+          width: 13px;
+        }
+      }
     }
   }
 }

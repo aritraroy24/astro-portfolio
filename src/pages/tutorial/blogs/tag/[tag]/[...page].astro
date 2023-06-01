@@ -6,7 +6,7 @@ import Layout from "@layouts/Layout.astro";
 import PostCard from "@components/AstroComponents/Common/PostCard.astro";
 import Pagination from "@components/AstroComponents/Common/Pagination.astro";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
-import Button from "@components/AstroComponents/Common/Button.astro";
+import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 
 // style import
 import "@styles/posts.scss";
@@ -54,9 +54,8 @@ const pageDescription = `Discover the essence of ${tag} through captivating arti
     <h1>
       Blogs about <span class="highlightedText">{tag}</span>
     </h1>
-    <Button
+    <BackButton
       text="Back"
-      href="/tutorial/blogs"
       customStyle="padding: 10px 18px;"
       icon={{
         name: "tabler:arrow-big-left-line",

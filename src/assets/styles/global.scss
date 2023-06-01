@@ -148,8 +148,8 @@ html {
   }
 }
 body {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0 220px;
   width: 100%;
   min-height: 100%;
   overflow-x: hidden;
@@ -313,6 +313,7 @@ ol {
 // customizing the scrollbar
 ::-webkit-scrollbar {
   width: 0.35rem;
+  height: 0.2rem;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -335,23 +336,8 @@ ol {
 }
 
 // media queries
-@media only screen and (max-width: 1050px) {
-  body {
-    padding: 0 80px;
-  }
-}
-@media only screen and (max-width: 730px) {
-  body {
-    padding: 0 40px;
-  }
-}
 @media only screen and (max-width: 480px) {
   body {
     font-size: var(--font-size-lg);
-  }
-}
-@media only screen and (max-width: 420px) {
-  body {
-    padding: 0 22px;
   }
 }

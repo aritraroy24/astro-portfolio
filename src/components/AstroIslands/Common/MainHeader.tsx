@@ -43,7 +43,7 @@ const MainHeader = () => {
                                         to='AboutMe'
                                         spy={true}
                                         smooth={true}
-                                        offset={50}
+                                        offset={-220}
                                         ignoreCancelEvents={true}
                                         duration={1200}>
                                         <li onClick={() => handleIsActive(false)}>
@@ -54,7 +54,7 @@ const MainHeader = () => {
                                         to='Projects'
                                         spy={true}
                                         smooth={true}
-                                        offset={-50}
+                                        offset={-150}
                                         ignoreCancelEvents={true}
                                         duration={1200}>
                                         <li onClick={() => handleIsActive(false)} className='projects-menu' >
@@ -65,7 +65,7 @@ const MainHeader = () => {
                                         to='Portfolio'
                                         spy={true}
                                         smooth={true}
-                                        offset={-120}
+                                        offset={-150}
                                         ignoreCancelEvents={true}
                                         duration={1200}>
                                         <li onClick={() => handleIsActive(false)}>
@@ -73,10 +73,10 @@ const MainHeader = () => {
                                         </li>
                                     </Link>
                                     <Link
-                                        to='Blogs'
+                                        to='Tutorials'
                                         spy={true}
                                         smooth={true}
-                                        offset={0}
+                                        offset={-150}
                                         ignoreCancelEvents={true}
                                         duration={1200}>
                                         <li onClick={() => handleIsActive(false)} className='projects-menu' >
@@ -87,7 +87,7 @@ const MainHeader = () => {
                                         to='Contact'
                                         spy={true}
                                         smooth={true}
-                                        offset={30}
+                                        offset={-150}
                                         ignoreCancelEvents={true}
                                         duration={1200}>
                                         <li onClick={() => handleIsActive(false)}>

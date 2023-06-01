@@ -1,0 +1,38 @@
+---
+// layout import
+import Layout from "@layouts/Layout.astro";
+
+// component import
+import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Button from "@components/AstroComponents/Common/Button.astro";
+
+// asset import
+import ContactRedirectImage from "@assets/images/contactSuccess.svg";
+
+// style import
+import "@styles/contact-redirect.scss";
+
+// title & description value to pass to the layout
+const {
+    pageTitle = "Aritra Roy | Successful Form Submission",
+    pageDescription = "Yaay, you submitted my contact form successfully. I'll reach you out as soon as possible. It'll not be too long, I promise. Till then you can learn more about me.",
+} = Astro.props;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+    <OtherHeader client:only="react" />
+    <div class="ContactRedirect">
+        <img
+            id="ContactRedirectImage"
+            src={ContactRedirectImage.src}
+            alt="Page Not Found"
+            height={500}
+        />
+        <h1>Yaay, You Made It</h1>
+        <p>
+            Thanks for contacting. I'll reach you out as soon as possible. Till
+            then you can learn more about me.
+        </p>
+        <Button href="/" text="Go to Home" rel="noopener noreferrer" />
+    </div>
+</Layout>

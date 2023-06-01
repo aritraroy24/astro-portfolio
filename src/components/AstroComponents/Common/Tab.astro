@@ -2,12 +2,12 @@
 import "./styles/Tab.scss";
 const activeTextColor = "#64ffda";
 
-const { data, side, customStyle } = Astro.props;
+const { data, side } = Astro.props;
 ---
 
 {
   side === "left" && (
-    <div class="tabsContainerDivLeft" style={customStyle}>
+    <div class="tabsContainerDivLeft">
       <ul role="tablist" class="listLeft">
         {data.map((dataItem: any) => (
           <li class="listItemLeft">
@@ -50,7 +50,7 @@ const { data, side, customStyle } = Astro.props;
 }
 {
   side === "left2" && (
-    <div class="tabsContainerDivLeft2" style={customStyle}>
+    <div class="tabsContainerDivLeft2">
       <ul role="tablist" class="listLeft2">
         {data.map((dataItem: any) => (
           <li class="listItemLeft2">
@@ -91,110 +91,115 @@ const { data, side, customStyle } = Astro.props;
   )
 }
 <script define:vars={{ activeTextColor }}>
-  // Left Tab ----------------
-  // Get the tabsContainerDiv and detailsContainerDiv elements.
-  const tabsContainerDivLeft = document.querySelector(".tabsContainerDivLeft");
-  const detailsContainerDivLeft = document.querySelector(
-    ".detailsContainerDivLeft"
-  );
+  document.addEventListener("DOMContentLoaded", function () {
+    // Left Tab ----------------
+    // Get the tabsContainerDiv and detailsContainerDiv elements.
+    const tabsContainerDivLeft = document.querySelector(
+      ".tabsContainerDivLeft"
+    );
+    const detailsContainerDivLeft = document.querySelector(
+      ".detailsContainerDivLeft"
+    );
 
-  // Get the list items in the tabsContainerDiv.
-  const listItemsLeft = tabsContainerDivLeft.querySelectorAll(".listItemLeft");
+    // Get the list items in the tabsContainerDiv.
+    const listItemsLeft =
+      tabsContainerDivLeft.querySelectorAll(".listItemLeft");
 
-  // Set the first list item as selected.
-  listItemsLeft[0].classList.add("selected");
-  listItemsLeft[0].style.color = "#64ffda";
-  listItemsLeft[0].style.background = "rgba(51, 63, 88, 0.75)";
+    // Set the first list item as selected.
+    listItemsLeft[0].classList.add("selected");
+    listItemsLeft[0].style.color = "#64ffda";
+    listItemsLeft[0].style.background = "rgba(51, 63, 88, 0.75)";
 
-  // Show the first details div.
-  const firstDetailsDivLeft =
-    detailsContainerDivLeft.querySelector(`div:nth-child(1)`);
-  firstDetailsDivLeft.style.display = "block";
+    // Show the first details div.
+    const firstDetailsDivLeft =
+      detailsContainerDivLeft.querySelector(`div:nth-child(1)`);
+    firstDetailsDivLeft.style.display = "block";
 
-  // Hide all of the details divs except the first one.
-  detailsContainerDivLeft.querySelectorAll("div").forEach((div) => {
-    if (div !== firstDetailsDivLeft) {
-      div.style.display = "none";
-    }
-  });
-  // Loop through the list items and add an onclick event listener to each one.
-  for (let i = 0; i < listItemsLeft.length; i++) {
-    listItemsLeft[i].addEventListener("click", () => {
-      // Hide all of the details divs.
-      detailsContainerDivLeft
-        .querySelectorAll("div")
-        .forEach((div) => (div.style.display = "none"));
-
-      // Show the details div that corresponds to the clicked list item.
-      const detailsDivLeft = detailsContainerDivLeft.querySelector(
-        `div:nth-child(${i + 1})`
-      );
-      detailsDivLeft.style.display = "block";
-      listItemsLeft[i].style.color = "#64ffda";
-      listItemsLeft[i].style.background = "rgba(51, 63, 88, 0.75)";
-
-      // removing all the selected style from other elements
-      for (let j = 0; j < listItemsLeft.length; j++) {
-        if (i != j) {
-          listItemsLeft[j].style.color = "#8892b0";
-          listItemsLeft[j].style.background = "transparent";
-        }
+    // Hide all of the details divs except the first one.
+    detailsContainerDivLeft.querySelectorAll("div").forEach((div) => {
+      if (div !== firstDetailsDivLeft) {
+        div.style.display = "none";
       }
     });
-  }
+    // Loop through the list items and add an onclick event listener to each one.
+    for (let i = 0; i < listItemsLeft.length; i++) {
+      listItemsLeft[i].addEventListener("click", () => {
+        // Hide all of the details divs.
+        detailsContainerDivLeft
+          .querySelectorAll("div")
+          .forEach((div) => (div.style.display = "none"));
 
-  // Left2 Tab ------------------
-  // Get the tabsContainerDiv and detailsContainerDiv elements.
-  const tabsContainerDivLeft2 = document.querySelector(
-    ".tabsContainerDivLeft2"
-  );
-  const detailsContainerDivLeft2 = document.querySelector(
-    ".detailsContainerDivLeft2"
-  );
+        // Show the details div that corresponds to the clicked list item.
+        const detailsDivLeft = detailsContainerDivLeft.querySelector(
+          `div:nth-child(${i + 1})`
+        );
+        detailsDivLeft.style.display = "block";
+        listItemsLeft[i].style.color = "#64ffda";
+        listItemsLeft[i].style.background = "rgba(51, 63, 88, 0.75)";
 
-  // Get the list items in the tabsContainerDiv.
-  const listItemsLeft2 =
-    tabsContainerDivLeft2.querySelectorAll(".listItemLeft2");
-
-  // Set the first list item as selected.
-  listItemsLeft2[0].classList.add("selected");
-  listItemsLeft2[0].style.color = "#64ffda";
-  listItemsLeft2[0].style.background = "rgba(51, 63, 88, 0.75)";
-
-  // Show the first details div.
-  const firstDetailsDivLeft2 =
-    detailsContainerDivLeft2.querySelector(`div:nth-child(1)`);
-  firstDetailsDivLeft2.style.display = "block";
-
-  // Hide all of the details divs except the first one.
-  detailsContainerDivLeft2.querySelectorAll("div").forEach((div) => {
-    if (div !== firstDetailsDivLeft2) {
-      div.style.display = "none";
-    }
-  });
-  // Loop through the list items and add an onclick event listener to each one.
-  for (let i = 0; i < listItemsLeft2.length; i++) {
-    listItemsLeft2[i].addEventListener("click", () => {
-      // Hide all of the details divs.
-      detailsContainerDivLeft2
-        .querySelectorAll("div")
-        .forEach((div) => (div.style.display = "none"));
-
-      // Show the details div that corresponds to the clicked list item.
-      const detailsDivLeft2 = detailsContainerDivLeft2.querySelector(
-        `div:nth-child(${i + 1})`
-      );
-      detailsDivLeft2.style.display = "block";
-      listItemsLeft2[i].style.color = "#64ffda";
-      listItemsLeft2[i].style.background = "rgba(51, 63, 88, 0.75)";
-
-      // removing all the selected style from other elements
-      for (let j = 0; j < listItemsLeft2.length; j++) {
-        if (i != j) {
-          listItemsLeft2[j].style.color = "#8892b0";
-          listItemsLeft2[j].style.background = "transparent";
+        // removing all the selected style from other elements
+        for (let j = 0; j < listItemsLeft.length; j++) {
+          if (i != j) {
+            listItemsLeft[j].style.color = "#8892b0";
+            listItemsLeft[j].style.background = "transparent";
+          }
         }
+      });
+    }
+
+    // Left2 Tab ------------------
+    // Get the tabsContainerDiv and detailsContainerDiv elements.
+    const tabsContainerDivLeft2 = document.querySelector(
+      ".tabsContainerDivLeft2"
+    );
+    const detailsContainerDivLeft2 = document.querySelector(
+      ".detailsContainerDivLeft2"
+    );
+
+    // Get the list items in the tabsContainerDiv.
+    const listItemsLeft2 =
+      tabsContainerDivLeft2.querySelectorAll(".listItemLeft2");
+
+    // Set the first list item as selected.
+    listItemsLeft2[0].classList.add("selected");
+    listItemsLeft2[0].style.color = "#64ffda";
+    listItemsLeft2[0].style.background = "rgba(51, 63, 88, 0.75)";
+
+    // Show the first details div.
+    const firstDetailsDivLeft2 =
+      detailsContainerDivLeft2.querySelector(`div:nth-child(1)`);
+    firstDetailsDivLeft2.style.display = "block";
+
+    // Hide all of the details divs except the first one.
+    detailsContainerDivLeft2.querySelectorAll("div").forEach((div) => {
+      if (div !== firstDetailsDivLeft2) {
+        div.style.display = "none";
       }
     });
-  }
+    // Loop through the list items and add an onclick event listener to each one.
+    for (let i = 0; i < listItemsLeft2.length; i++) {
+      listItemsLeft2[i].addEventListener("click", () => {
+        // Hide all of the details divs.
+        detailsContainerDivLeft2
+          .querySelectorAll("div")
+          .forEach((div) => (div.style.display = "none"));
+
+        // Show the details div that corresponds to the clicked list item.
+        const detailsDivLeft2 = detailsContainerDivLeft2.querySelector(
+          `div:nth-child(${i + 1})`
+        );
+        detailsDivLeft2.style.display = "block";
+        listItemsLeft2[i].style.color = "#64ffda";
+        listItemsLeft2[i].style.background = "rgba(51, 63, 88, 0.75)";
+
+        // removing all the selected style from other elements
+        for (let j = 0; j < listItemsLeft2.length; j++) {
+          if (i != j) {
+            listItemsLeft2[j].style.color = "#8892b0";
+            listItemsLeft2[j].style.background = "transparent";
+          }
+        }
+      });
+    }
+  });
 </script>

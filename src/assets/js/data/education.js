@@ -8,8 +8,7 @@ const education = [
         description: [
             '8.88 CGPA',
             'Completed in 2021',
-            'Under Pondicherry Central University',
-            'Done project work on Borophene in CIS Laboratory (Computational Chemistry)'
+            'Under Pondicherry Central University'
         ]
     },
     {
