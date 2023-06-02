@@ -10,7 +10,7 @@ const { data, side } = Astro.props;
     <div class="tabsContainerDivLeft">
       <ul role="tablist" class="listLeft">
         {data.map((dataItem: any) => (
-          <li class="listItemLeft">
+          <li class="listItemLeft" role="tab">
             <button>
               <span>{dataItem.institution}</span>
             </button>
@@ -53,7 +53,7 @@ const { data, side } = Astro.props;
     <div class="tabsContainerDivLeft2">
       <ul role="tablist" class="listLeft2">
         {data.map((dataItem: any) => (
-          <li class="listItemLeft2">
+          <li class="listItemLeft2" role="tab">
             <button>
               <span>{dataItem.institution}</span>
             </button>

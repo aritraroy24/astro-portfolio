@@ -8,7 +8,7 @@
   margin-bottom: 150px;
 
   .number-heading {
-    font-family: "Overpass Mono";
+    font-family: "Overpass Mono", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px;
     color: #64ffda;
     margin-right: -3px;
@@ -18,7 +18,7 @@
   h2 {
     color: rgba(255, 255, 255, 0.932);
     margin-bottom: 5px;
-    font-family: "Overpass";
+    font-family: "Overpass", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
     position: relative;
     top: -15px;
@@ -29,7 +29,7 @@
     transition: all 200ms ease-out;
 
     span {
-      font-family: "Overpass Mono";
+      font-family: "Overpass Mono", Verdana, Geneva, Tahoma, sans-serif;
       font-size: 23px;
       color: #64ffda;
       margin-right: -3px;
@@ -66,7 +66,7 @@
     font-weight: 400;
     font-size: 17px;
     width: 100%;
-    font-family: "Overpass";
+    font-family: "Overpass", Verdana, Geneva, Tahoma, sans-serif;
     color: #e4f3ff;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -145,7 +145,7 @@
   li {
     list-style-type: none;
     line-height: 1.8;
-    font-family: "Overpass Mono";
+    font-family: "Overpass Mono", Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
     color: #c9dae4;
 
@@ -176,15 +176,14 @@
   }
   .iconsContainer {
     margin-top: 80px;
-    padding: 20px;
+    padding: 80px;
     background-color: rgba(45, 52, 65, 0.5);
     .langIcons {
       div {
+        flex-wrap: nowrap;
         a {
+          width: 40px;
           padding: 2px;
-          svg {
-            width: 15px;
-          }
         }
       }
     }
@@ -316,11 +315,10 @@
   }
   .langIcons {
     div {
+      flex-wrap: wrap;
       a {
+        width: 40px !important;
         padding: 1.5px;
-        svg {
-          width: 13px;
-        }
       }
     }
   }

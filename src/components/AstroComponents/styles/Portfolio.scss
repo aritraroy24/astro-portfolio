@@ -8,7 +8,7 @@
     padding: 0 220px;
     margin-bottom: 80px;
     .number-heading {
-        font-family: "Overpass Mono";
+        font-family: "Overpass Mono", Verdana, Geneva, Tahoma, sans-serif;
         font-size: 22px;
         color: #64ffda;
         margin-right: -3px;
@@ -19,13 +19,13 @@
     h2 {
         color: rgba(255, 255, 255, 0.932);
         margin-bottom: 5px;
-        font-family: "Overpass";
+        font-family: "Overpass", Verdana, Geneva, Tahoma, sans-serif;
         font-size: 30px;
         position: relative;
         top: -15px;
 
         span {
-            font-family: "Overpass Mono";
+            font-family: "Overpass Mono", Verdana, Geneva, Tahoma, sans-serif;
             font-size: 22px;
             color: #64ffda;
             margin-right: -3px;

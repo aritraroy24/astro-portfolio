@@ -13,6 +13,7 @@
     }
     .tagsContainer {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
       font-size: 1.1rem;
       .tagBadge {
@@ -36,11 +37,6 @@
     .subtitle {
       font-size: 1.2rem;
     }
-    .videoHeaderElements {
-      .tagsContainer {
-        font-size: 0.9rem;
-      }
-    }
     .videoCoverImg {
       width: 100%;
     }
@@ -53,11 +49,6 @@
     }
     .subtitle {
       font-size: 1rem;
-    }
-    .videoHeaderElements {
-      .tagsContainer {
-        font-size: 0.7rem;
-      }
     }
   }
 }

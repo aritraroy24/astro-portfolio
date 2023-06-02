@@ -1,8 +1,8 @@
-import mmbk from '../../images/testimonials/mmbk.jpg'
-import gaurav from '../../images/testimonials/gaurav.jpg'
-import tarak from '../../images/testimonials/tarak.jpg'
-import abhijit from '../../images/testimonials/abhijit.jpg'
-import ssr from '../../images/testimonials/ssr.jpg'
+import mmbk from '../../images/testimonials/mmbk.webp'
+import gaurav from '../../images/testimonials/gaurav.webp'
+import tarak from '../../images/testimonials/tarak.webp'
+import abhijit from '../../images/testimonials/abhijit.webp'
+import ssr from '../../images/testimonials/ssr.webp'
 
 const people = [
     {

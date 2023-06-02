@@ -3,7 +3,7 @@ import './styles/MainHeader.scss';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import Headroom from 'react-headroom';
-import NavLogo from '@images/NavLogo.png'
+import NavLogo from '@images/NavLogo.webp'
 
 const MainHeader = () => {
     const [isActive, handleIsActive] = useState(false);
@@ -38,62 +38,67 @@ const MainHeader = () => {
                                 <ul
                                     className={`navigation-ul ${isActive &&
                                         'navigation-ul-active'}`}>
-                                    <Link
-                                        activeClass='active-scroll'
-                                        to='AboutMe'
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-220}
-                                        ignoreCancelEvents={true}
-                                        duration={1200}>
-                                        <li onClick={() => handleIsActive(false)}>
+                                    <li onClick={() => handleIsActive(false)}>
+                                        <Link
+                                            href='/#about'
+                                            activeClass='active-scroll'
+                                            to='AboutMe'
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-220}
+                                            ignoreCancelEvents={true}
+                                            duration={1200}>
                                             <span>01.</span>About
-                                        </li>
-                                    </Link>
-                                    <Link
-                                        to='Projects'
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-150}
-                                        ignoreCancelEvents={true}
-                                        duration={1200}>
-                                        <li onClick={() => handleIsActive(false)} className='projects-menu' >
+                                        </Link>
+                                    </li>
+                                    <li onClick={() => handleIsActive(false)} className='projects-menu' >
+                                        <Link
+                                            href='/#project'
+                                            to='Projects'
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-150}
+                                            ignoreCancelEvents={true}
+                                            duration={1200}>
                                             <span>02.</span>Projects
-                                        </li>
-                                    </Link>
-                                    <Link
-                                        to='Portfolio'
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-150}
-                                        ignoreCancelEvents={true}
-                                        duration={1200}>
-                                        <li onClick={() => handleIsActive(false)}>
+                                        </Link>
+                                    </li>
+                                    <li onClick={() => handleIsActive(false)}>
+                                        <Link
+                                            href='/#portfolio'
+                                            to='Portfolio'
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-150}
+                                            ignoreCancelEvents={true}
+                                            duration={1200}>
                                             <span>03.</span>Portfolio
-                                        </li>
-                                    </Link>
-                                    <Link
-                                        to='Tutorials'
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-150}
-                                        ignoreCancelEvents={true}
-                                        duration={1200}>
-                                        <li onClick={() => handleIsActive(false)} className='projects-menu' >
+                                        </Link>
+                                    </li>
+                                    <li onClick={() => handleIsActive(false)} className='projects-menu' >
+                                        <Link
+                                            href="/#tutorials"
+                                            to='Tutorials'
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-150}
+                                            ignoreCancelEvents={true}
+                                            duration={1200}>
                                             <span>04.</span>Tutorials
-                                        </li>
-                                    </Link>
-                                    <Link
-                                        to='Contact'
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-150}
-                                        ignoreCancelEvents={true}
-                                        duration={1200}>
-                                        <li onClick={() => handleIsActive(false)}>
+                                        </Link>
+                                    </li>
+                                    <li onClick={() => handleIsActive(false)}>
+                                        <Link
+                                            href='/#contact'
+                                            to='Contact'
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-150}
+                                            ignoreCancelEvents={true}
+                                            duration={1200}>
                                             <span>05.</span>Contact
-                                        </li>
-                                    </Link>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </Fade>
                         </nav>

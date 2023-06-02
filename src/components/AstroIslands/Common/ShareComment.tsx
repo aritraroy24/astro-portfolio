@@ -3,7 +3,7 @@ import { GrFacebookOption } from 'react-icons/gr';
 import { HiRss } from 'react-icons/hi';
 import { IoLogoTumblr } from 'react-icons/io';
 import { AiOutlineTwitter, AiOutlineWhatsApp, AiOutlineReddit } from 'react-icons/ai';
-import { FaLinkedinIn, FaPinterestP, FaTumblr } from 'react-icons/fa'
+import { FaLinkedinIn, FaPinterestP } from 'react-icons/fa'
 import Giscus from '@giscus/react';
 import "./styles/ShareComment.scss";
 

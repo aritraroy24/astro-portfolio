@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 import mdx from '@astrojs/mdx';
-
+import compress from "astro-compression"
 export default defineConfig({
-  integrations: [react(), mdx()],
+  integrations: [react(), mdx(), compress()],
   experimental: {
     assets: true
   },
@@ -14,5 +14,6 @@ export default defineConfig({
       wrap: true,
     },
   },
-  site: 'https://aritraroy.live/'
+  site: 'https://aritraroy.live/',
+  compressHTML: true
 });

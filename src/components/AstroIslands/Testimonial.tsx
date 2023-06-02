@@ -3,6 +3,7 @@ import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { FaQuoteRight } from 'react-icons/fa';
 import testimonals from '../../assets/js/data/testimonials';
 import './styles/Testimonial.scss'
+import Image from '@astrojs/image';
 
 function Testimonial() {
     const [people] = useState(testimonals);
@@ -28,7 +29,7 @@ function Testimonial() {
     return (
         <section className='Testimonial'>
             <div className='section-center'>
-                {people.map((person, personIndex) => {
+                {people.map((person: any, personIndex: any) => {
                     const { id, image, name, title, quote } = person;
                     let position = 'nextSlide';
                     if (personIndex === index) {
