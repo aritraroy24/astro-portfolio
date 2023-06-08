@@ -4,6 +4,8 @@ import Layout from "@layouts/Layout.astro";
 
 // component import
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Footer from "@components/AstroComponents/Footer.astro";
+import Socials from "@components/AstroComponents/Socials.astro";
 
 // style import
 import "@assets/styles/posts.scss";
@@ -35,7 +37,8 @@ const imgData = [
 
 <Layout title={pageTitle} description={pageDescription}>
     <OtherHeader client:only="react" />
-    <div class="postsNavigationDiv" id="tutorialDiv">
+    <Socials />
+    <div class="postsNavigationDiv">
         <!-- publications  heading section -->
         <h1 style="margin-bottom: 0;">All Tutorials</h1>
         <!-- all publications -->
@@ -43,11 +46,12 @@ const imgData = [
             {
                 imgData.map((img: any) => (
                     <a class="projectSectionLinks" href={img.url}>
-                        <img src={img.src.src} alt={img.alt} height={300} />
+                        <img src={img.src.src} alt={img.alt} width={300} />
                         <h3 style="margin-top: 10px;">{img.text}</h3>
                     </a>
                 ))
             }
         </div>
     </div>
+    <Footer />
 </Layout>

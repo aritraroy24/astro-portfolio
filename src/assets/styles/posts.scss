@@ -1,9 +1,7 @@
 .headroom-wrapper {
   position: fixed !important;
 }
-#tutorialDiv {
-  margin-top: -80vh;
-}
+
 .postsNavigationDiv {
   padding: 0 220px;
   display: flex;
@@ -37,11 +35,7 @@
     }
   }
 }
-@media only screen and (max-width: 1539px) {
-  #tutorialDiv {
-    margin-top: 100px;
-  }
-}
+
 @media only screen and (max-width: 1250px) {
   .postsNavigationDiv {
     padding: 0 120px;

@@ -15,6 +15,5 @@ dockerUrl:
 newsUrl: 
 galleryImages: 
 ---
-# This is a test file
-abstract: 
-authors: 
+# Ongoing Project
+This is an ongoing project. Please come back later for the project details.

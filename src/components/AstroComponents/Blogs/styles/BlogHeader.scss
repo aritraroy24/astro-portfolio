@@ -35,9 +35,19 @@
     margin-bottom: 30px;
   }
 }
+@media only screen and (max-width: 1500px) {
+  .blogHeaderContainer {
+    .blogCoverImg {
+      width: 65vw;
+    }
+  }
+}
 @media only screen and (max-width: 1050px) {
   .blogHeaderContainer {
     padding: 0 80px;
+    .blogCoverImg {
+      width: 70vw;
+    }
   }
 }
 @media only screen and (max-width: 730px) {

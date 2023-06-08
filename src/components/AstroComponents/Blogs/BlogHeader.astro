@@ -1,7 +1,7 @@
 ---
 // component import
 import { Image } from "astro:assets";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-iconify";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
 import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 
@@ -51,7 +51,7 @@ const { tags, title, subtitle, duration, pubDate, cover } = Astro.props;
       </p>
     </div>
     <Image
-      src={cover.src}
+      src={cover}
       alt={title}
       width={1200}
       height={400}

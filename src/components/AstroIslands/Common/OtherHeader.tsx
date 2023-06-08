@@ -49,8 +49,8 @@ const OtherHeder = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="/tutorials">
-                                            <span>04.</span>Tutorials
+                                        <a href="/tutorial">
+                                            <span>04.</span>Tutorial
                                         </a>
                                     </li>
                                     <li>

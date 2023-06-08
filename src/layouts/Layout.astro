@@ -37,7 +37,6 @@ const {
 
     <!-- favicon, font and other stylesheets import -->
     <link rel="icon" href="/favicon.png" />
-    <link rel="stylesheet" href="src/assets/styles/academicons.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="apple-touch-icon" href="logo192.png" />
@@ -52,5 +51,19 @@ const {
     <div id="root">
       <slot />
     </div>
+    <script>
+      function loadCSS(url: string) {
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = url;
+        document.head.appendChild(link);
+      }
+
+      window.addEventListener("load", function () {
+        loadCSS(
+          "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+        );
+      });
+    </script>
   </body>
 </html>

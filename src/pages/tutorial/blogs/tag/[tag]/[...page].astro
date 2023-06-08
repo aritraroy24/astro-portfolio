@@ -7,6 +7,8 @@ import PostCard from "@components/AstroComponents/Common/PostCard.astro";
 import Pagination from "@components/AstroComponents/Common/Pagination.astro";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
 import BackButton from "@components/AstroComponents/Common/BackButton.astro";
+import Socials from "@components/AstroComponents/Socials.astro";
+import Footer from "@components/AstroComponents/Footer.astro";
 
 // style import
 import "@styles/posts.scss";
@@ -49,6 +51,7 @@ const pageDescription = `Discover the essence of ${tag} through captivating arti
 
 <Layout title={pageTitle} description={pageDescription}>
   <OtherHeader client:only="react" />
+  <Socials />
   <div class="postsNavigationDiv">
     <!-- blogs with specific tag heading section -->
     <h1>
@@ -105,4 +108,5 @@ const pageDescription = `Discover the essence of ${tag} through captivating arti
       />
     )}
   </div>
+  <Footer />
 </Layout>

@@ -3,7 +3,6 @@ import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { FaQuoteRight } from 'react-icons/fa';
 import testimonals from '../../assets/js/data/testimonials';
 import './styles/Testimonial.scss'
-import Image from '@astrojs/image';
 
 function Testimonial() {
     const [people] = useState(testimonals);

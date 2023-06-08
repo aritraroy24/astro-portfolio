@@ -1,6 +1,6 @@
 ---
 // component import
-import { Icon } from "astro-icon";
+import { Icon } from "astro-iconify";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
 import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 
@@ -55,7 +55,7 @@ const currentDate = new Date();
             ) : (<></>)
           }
       </p>
-      <p><strong>Status:</strong> {capitalizeWords(status)}</p>
+      <p><strong>Status: </strong> {capitalizeWords(status)}</p>
       {journalName!== null ? (isOpenAccess === true ? 
           (
             <div class="journalDetailsDiv">

@@ -7,6 +7,8 @@ import ChemProjectHeader from "@components/AstroComponents/ChemistryProjects/Che
 import RelatedPosts from "@components/AstroComponents/Common/RelatedPosts.astro";
 import ShareComment from "@components/AstroIslands/Common/ShareComment";
 import SwiperGallery from "@components/AstroIslands/ChemistryProjects/SwiperGallery";
+import Socials from "@components/AstroComponents/Socials.astro";
+import Footer from "@components/AstroComponents/Footer.astro";
 
 // function import
 import { formatPosts } from "@js/utils";
@@ -62,6 +64,7 @@ const relatedChemProjects = tagsFilteredChemProjects
 ---
 
 <Layout {title} {description}>
+  <Socials />
   <!-- blog heading section -->
   <ChemProjectHeader
     {title}
@@ -82,8 +85,8 @@ const relatedChemProjects = tagsFilteredChemProjects
     <div class="content">
       <slot />
     </div>
+    <SwiperGallery client:only="react" galleryImages={galleryImages} />
   </div>
-  <SwiperGallery client:only="react" galleryImages={galleryImages} />
   <!-- comment using giscus -->
   <ShareComment
     client:only="react"
@@ -96,4 +99,5 @@ const relatedChemProjects = tagsFilteredChemProjects
     text="Chemistry Projects"
     urlPrefix="/projects/chemistry/"
   />
+  <Footer />
 </Layout>

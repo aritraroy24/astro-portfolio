@@ -1,6 +1,6 @@
 ---
 // library imports
-import { Icon } from "astro-icon";
+import { Icon } from "astro-iconify";
 
 // style import
 import "./styles/Button.scss";
@@ -17,10 +17,11 @@ interface Props {
     side: "left" | "right";
   };
   backBtn?: boolean;
+  download?: string;
 }
 
 // destructuring astro properties
-const { text, href, target, rel, customStyle, icon, ...rest } =
+const { text, href, target, rel, customStyle, icon, download, ...rest } =
   Astro.props as Props;
 ---
 
@@ -30,6 +31,7 @@ const { text, href, target, rel, customStyle, icon, ...rest } =
   rel={rel}
   class="button-link"
   style={customStyle}
+  download={download}
   {...rest}
 >
   <!-- icon for left side -->

@@ -1,0 +1,67 @@
+---
+title: "Best Simplistic Way To Automate Gaussian Jobs Easily In 2023"
+videoId: "slq-6vFjTgg"
+description: "This tutorial describes how to implement automation of Gaussian 16 jobs in Linux systems."
+duration: "8 Min View"
+cover: "./best-simplistic-way-to-automate-gaussian-jobs-easily-in-2023.webp"
+tags: ["tutorial", "automation", "linux", "script", "bash", "gaussian"]
+pubDate: 2023-01-16
+---
+import Button from "@components/AstroComponents/Common/Button.astro"
+
+## Content of the video
+It is an educational tutorial video for computational chemistry students. This tutorial describes how to implement automation of Gaussian 16 jobs in Linux systems. 
+
+### What will you gain?
+You can definitely queue Gaussian jobs in the server pretty easily as the authorities implement that feature. But if you don’t have access to any such specific cluster or you also want to do some small calculations in your local system, you can use this automation bash script to submit all the jobs at once. It will also mention the starting time of one job and print the finishing time. After the termination of the job, it will move the job output folder to either the success or error folder, depending on the job termination status. Furthermore, after each calculation, the system will wait for 10 seconds to give some time to the CPU for cooling. Here, the input and output file types are .gjf and .log, respectively. If you want to use or get other types of input or output files respectively, you can change the code accordingly. You can use this script to automate any other computational calculations or other types of repetitive jobs based on a Linux environment. You can get the used codes in this post.
+
+### What is Gaussian
+Initially known as Gaussian 70, John Pople and his research team at Carnegie Mellon University created the general-purpose computational chemistry software programme. Since then, it has been updated often. The term comes from Pople's decision to employ Gaussian orbitals rather than Slater-type orbitals to accelerate computations of molecule electronic structure in order to maximise performance on the constrained computational resources of then-current computer technology for Hartree-Fock calculations. Gaussian 16.+ is the program's most recent iteration. It was first made accessible through the Quantum Chemistry Program Exchange, after which it was licenced by Carnegie Mellon University. Since 1987, Gaussian, Inc. has been responsible for its development and licencing.
+
+### Disclaimer
+This tutorial is for educational purposes only. Any commercial or publishing journal paper (or carrying out research work) using unlicensed Gaussian or other software is completely illegal, and CompChem Studio is not at all responsible for such activities. All the details about the gaussian software are taken from Wikipedia.
+
+## Used Bash Code
+```bash
+# Defining Variables For Different Text Colours
+RESTORE=$(echo '\033[0m')  # for WHITE coloured text
+RED=$(echo '\033[00;31m')  # for RED coloured text
+GREEN=$(echo '\033[00;32m')  # for GREEN coloured text
+YELLOW=$(echo '\033[00;33m')  # for YELLOW coloured text
+CYAN=$(echo '\033[00;36m')  # for CYAN coloured text
+MAGENTA=$(echo '\033[00;35m')  # for MAGENTA coloured text
+
+# Main Loop To Run The Automation
+for f in $(find . -name "*.gjf"); do  # Starting of the 'for loop' to find the input files in the same folder
+  filename="$(basename -s .gjf $f)"  # Storing the filename in a variable
+  echo "${YELLOW}$filename${RESTORE} job started at $(date +%H:%M:%S)"  # Prints the job starting status
+  g16 <$(basename -s .gjf $f).gjf> $(basename -s .gjf $f).log  # Code to run Gaussian jobs. You can modify the command accordingly for other computational calculations or other type of repetitive jobs
+  formchk $(basename -s .gjf $f).chk $(basename -s .gjf $f).fchk  # Command to create the formatted checkpoint file. You can delete this line if not needed.
+  if grep -q Normal "$filename.log"; then  # To check if the job has a normal termination
+    mkdir ~aritra/gaussian/output/success/$(basename -s .gjf $f)  # Creating a folder inside success folder with corresponding filename
+    echo "${MAGENTA}=>${RESTORE} Ongoing job${GREEN} FINISHED SUCCESSFULLY${RESTORE} at $(date +%H:%M:%S)"  # Prints the job normal termination status
+    mv $(basename -s .log $f).log ~aritra/gaussian/output/success/$(basename -s .gjf $f)  # Move the .log file into specific output folder
+    mv $(basename -s .chk $f).log ~aritra/gaussian/output/success/$(basename -s .gjf $f)  # Move the .chk file into specific output folder
+    mv $(basename -s .gjf $f).log ~aritra/gaussian/output/success/$(basename -s .gjf $f)  # Move the .gjf file into specific output folder
+    mv $(basename -s .fchk $f).log ~aritra/gaussian/output/success/$(basename -s .gjf $f)  # Move the .fchk file into specific output folder. Delete this line if you have removed the code to generate formatted checkpoint file.
+    echo "\n${YELLOW}$filename.gjf${RESTORE}, ${YELLOW}$filename.log${RESTORE}, ${YELLOW}$filename.chk${RESTORE} & ${YELLOW}$filename.fchk${RESTORE} files have been moved into the ${CYAN}output/success/$filename${RESTORE} folder\n-----------------\n"  # Prints the status of the moved files
+  else  # If the job doesn't have a normal termination...
+    mkdir ~aritra/gaussian/output/error/$(basename -s .gjf $f)  # Creating a folder inside error folder with corresponding filename
+    echo "${MAGENTA}=>${RESTORE} Ongoing job ${RED}TERMINATED${RESTORE} at $(date +%H:%M:%S)"  # Prints the job error termination status
+    mv $(basename -s .log $f).log ~aritra/gaussian/output/error/$(basename -s .gjf $f)  # Move the .log file into specific output folder
+    mv $(basename -s .chk $f).log ~aritra/gaussian/output/error/$(basename -s .gjf $f)  # Move the .chk file into specific output folder
+    mv $(basename -s .gjf $f).log ~aritra/gaussian/output/error/$(basename -s .gjf $f)  # Move the .gjf file into specific output folder
+    mv $(basename -s .fchk $f).log ~aritra/gaussian/output/error/$(basename -s .gjf $f)  # Move the .fchk file into specific output folder. Delete this line if you have removed the code to generate formatted checkpoint file.
+    echo "\n${YELLOW}$filename.gjf${RESTORE}, ${YELLOW}$filename.log${RESTORE}, ${YELLOW}$filename.chk${RESTORE} & ${YELLOW}$filename.fchk${RESTORE} files have been moved into the ${CYAN}output/error/$filename${RESTORE} folder\n-----------------\n"  # Prints the status of the moved files
+    fi  # Ending of the 'conditional code block (if-else)'
+  sleep 10  # System will start the next job after 10 seconds
+done  # Ending of the 'for loop'
+
+```
+
+<Button
+    text="Download Automation Script"
+    href="../../../../assets/files/videos/gaussian/best-simplistic-way-to-automate-gaussian-jobs-easily-in-2023/automation.sh"
+    download="automation.sh"
+    customStyle="margin-bottom: 25px; text-decoration: none;"
+/>

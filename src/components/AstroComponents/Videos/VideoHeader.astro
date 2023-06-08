@@ -1,5 +1,6 @@
 ---
 // component import
+import { Icon } from "astro-iconify";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
 import Button from "@components/AstroComponents/Common/Button.astro";
 import VideoPlayer from "@components/AstroIslands/Videos/VideoPlayer";
@@ -29,7 +30,18 @@ const { tags, title, videoId, duration, pubDate } = Astro.props;
     <div class="videoHeaderElements">
       <h1 class="title">{title}</h1>
       <p class="tagsContainer">
-        ⏱ {duration} • {formatDate(pubDate)}
+        <Icon
+          name="octicon:stopwatch-16"
+          class="customIcon"
+          height="24"
+          width="24"
+        />
+        {duration} • <Icon
+          name="mdi:calendar"
+          class="customIcon"
+          height="24"
+          width="24"
+        />{formatDate(pubDate)}
       </p>
       <p class="tagsContainer">
         {

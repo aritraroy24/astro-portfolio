@@ -6,6 +6,8 @@ import Layout from "@layouts/Layout.astro";
 import BlogHeader from "@components/AstroComponents/Blogs/BlogHeader.astro";
 import RelatedPosts from "@components/AstroComponents/Common/RelatedPosts.astro";
 import ShareComment from "@components/AstroIslands/Common/ShareComment";
+import Socials from "@components/AstroComponents/Socials.astro";
+import Footer from "@components/AstroComponents/Footer.astro";
 
 // function import
 import { formatPosts } from "@js/utils";
@@ -46,6 +48,7 @@ const relatedBlogs = tagsFilteredBlogs
 ---
 
 <Layout {title} {description}>
+  <Socials />
   <!-- blog heading section -->
   <BlogHeader
     {title}
@@ -75,4 +78,5 @@ const relatedBlogs = tagsFilteredBlogs
     text="Blogs"
     urlPrefix="/tutorial/blogs/"
   />
+  <Footer />
 </Layout>

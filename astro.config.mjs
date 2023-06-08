@@ -1,7 +1,9 @@
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 import mdx from '@astrojs/mdx';
-import compress from "astro-compress"
+import compress from "astro-compress";
+
+// https://astro.build/config
 export default defineConfig({
   integrations: [react(), mdx(), compress()],
   experimental: {
@@ -11,8 +13,8 @@ export default defineConfig({
     shikiConfig: {
       theme: 'min-dark',
       langs: [],
-      wrap: true,
-    },
+      wrap: true
+    }
   },
   site: 'https://aritraroy.live/',
   compressHTML: true

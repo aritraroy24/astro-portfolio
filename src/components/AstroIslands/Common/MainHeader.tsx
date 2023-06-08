@@ -77,14 +77,14 @@ const MainHeader = () => {
                                     </li>
                                     <li onClick={() => handleIsActive(false)} className='projects-menu' >
                                         <Link
-                                            href="/#tutorials"
+                                            href="/#tutorial"
                                             to='Tutorials'
                                             spy={true}
                                             smooth={true}
                                             offset={-150}
                                             ignoreCancelEvents={true}
                                             duration={1200}>
-                                            <span>04.</span>Tutorials
+                                            <span>04.</span>Tutorial
                                         </Link>
                                     </li>
                                     <li onClick={() => handleIsActive(false)}>

@@ -1,6 +1,6 @@
 .post-content {
-  padding: 0 220px;
-  text-align: justify;
+  padding: 0 30vw;
+  text-align: left;
   margin-bottom: 50px;
   .biggerParagraph {
     text-align: center;
@@ -84,7 +84,8 @@
     text-decoration: underline;
   }
   img {
-    width: 40vw;
+    width: 100%;
+    max-width: 40vw;
     height: auto;
   }
   div div div {
@@ -93,13 +94,18 @@
     flex-direction: column;
     div {
       margin-bottom: 30px;
-      width: 50vw;
+      width: 40vw;
       text-align: center;
       p {
         margin: 0 !important;
       }
       sup {
         font-size: 12px;
+        max-width: 40vw;
+      }
+      iframe {
+        width: 40vw;
+        height: 22.5vw;
       }
     }
   }
@@ -119,14 +125,43 @@
     border: 0.25px solid var(--slate);
   }
 }
+@media only screen and (max-width: 1500px) {
+  .post-content {
+    padding: 0 25vw;
+    div div div {
+      div {
+        width: 50vw;
+        iframe {
+          width: 50vw;
+          height: 28vw;
+        }
+      }
+    }
+    img {
+      max-width: 50vw;
+    }
+  }
+}
 @media only screen and (max-width: 1050px) {
   .post-content {
-    padding: 0 80px;
+    padding: 0 20vw;
     .refLeft {
       flex: 100%;
     }
     .refRight {
       display: none !important;
+    }
+    div div div {
+      div {
+        width: 60vw;
+        iframe {
+          width: 60vw;
+          height: 34vw;
+        }
+      }
+    }
+    img {
+      max-width: 60vw;
     }
   }
   .refLink {
@@ -136,6 +171,14 @@
     h6 {
       padding-top: 15px;
       font-size: 0.7rem !important;
+    }
+  }
+}
+@media only screen and (max-width: 850px) {
+  .post-content div div div div {
+    iframe {
+      width: 80vw;
+      height: 45vw;
     }
   }
 }
