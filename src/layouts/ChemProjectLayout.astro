@@ -18,7 +18,7 @@ import { getCollection } from "astro:content";
 import "@styles/single-post.scss";
 
 // destructuring astro properties
-const { frontmatter } = Astro.props;
+const { frontmatter, robots } = Astro.props;
 const {
   title,
   status,
@@ -34,6 +34,7 @@ const {
   newsUrl,
   description,
   galleryImages,
+  cover,
 } = frontmatter;
 
 // getting related blog posts related to first tag of the current blog
@@ -63,7 +64,7 @@ const relatedChemProjects = tagsFilteredChemProjects
   .slice(0, 3);
 ---
 
-<Layout {title} {description}>
+<Layout {title} {description} {frontmatter} {robots} {cover}>
   <Socials />
   <!-- blog heading section -->
   <ChemProjectHeader

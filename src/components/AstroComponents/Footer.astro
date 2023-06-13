@@ -1,6 +1,12 @@
 ---
-import "./styles/Footer.scss";
+// library import
 import { Icon } from "astro-iconify";
+
+// component import
+import Newsletter from "./Common/Newsletter.astro";
+
+// style import
+import "./styles/Footer.scss";
 ---
 
 <footer class="Footer" id="footer">
@@ -58,7 +64,7 @@ import { Icon } from "astro-iconify";
             <Icon name="el:twitter" title="Twitter" />
         </a>
         <a
-            href="https://www.youtube.com/channel/UCB_M2miS-dKtQlx3Ad-DNjw"
+            href="https://www.youtube.com/@CompChemStudio"
             target="_blank"
             rel="noopener noreferrer"
             title="YouTube"
@@ -83,16 +89,17 @@ import { Icon } from "astro-iconify";
     </div>
     <div class="visitsDiv" title="Visitor">
         <div>
-            <Icon name="ph:eye-bold" />
+            <Icon name="pajamas:eye" />
             <img
                 width="60"
                 height="15"
                 class="filtered"
-                src="https://www.free-website-hit-counter.com/c.php?d=4&id=150439&s=36"
-                alt="Free Website Hit Counter"
+                src="https://www.free-website-hit-counter.com/c.php?d=4&id=151751&s=36"
+                alt="Visitors"
             />
         </div>
     </div>
+    <Newsletter />
     <div class="copyrightDiv">
         <p>
             &copy; 2023 <a href="/"><span>aritraroy.live</span></a>

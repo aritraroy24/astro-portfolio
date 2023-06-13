@@ -1,3 +1,4 @@
+// library import
 import React from 'react';
 import { GrFacebookOption } from 'react-icons/gr';
 import { HiRss } from 'react-icons/hi';
@@ -5,8 +6,11 @@ import { IoLogoTumblr } from 'react-icons/io';
 import { AiOutlineTwitter, AiOutlineWhatsApp, AiOutlineReddit } from 'react-icons/ai';
 import { FaLinkedinIn, FaPinterestP } from 'react-icons/fa'
 import Giscus from '@giscus/react';
+
+// style import
 import "./styles/ShareComment.scss";
 
+// type declaration
 interface ShareCommentProps {
   postType: string;
   rssUrl: string;

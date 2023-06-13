@@ -2,6 +2,9 @@
 // layout import
 import Layout from "@layouts/Layout.astro";
 
+// library import
+import { getCollection } from "astro:content";
+
 // component import
 import ChemProjectCard from "@components/AstroComponents/ChemistryProjects/ChemProjectCard.astro";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
@@ -10,7 +13,6 @@ import Socials from "@components/AstroComponents/Socials.astro";
 import Footer from "@components/AstroComponents/Footer.astro";
 
 // function import
-import { getCollection } from "astro:content";
 import { formatPosts } from "@js/utils";
 
 // type import
@@ -38,7 +40,7 @@ export const getStaticPaths = (async ({ paginate }) => {
     pageSize: 6,
   });
 }) satisfies GetStaticPaths;
-const { page } = Astro.props;
+const { page, frontmatter, cover, robots } = Astro.props;
 
 // defining page title and description for completed publications page
 const pageTitle = "Aritra Roy | Completed Research Projects";
@@ -46,7 +48,7 @@ const pageDescription =
   "Explore my completed computational chemistry projects, where cutting-edge algorithms and simulations unravel the mysteries of molecules, reactions and the world.";
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>
   <OtherHeader client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">

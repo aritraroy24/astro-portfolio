@@ -1,7 +1,12 @@
+// library import
 import React, { useState, useEffect } from 'react';
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { FaQuoteRight } from 'react-icons/fa';
+
+// data import 
 import testimonals from '../../assets/js/data/testimonials';
+
+// style import
 import './styles/Testimonial.scss'
 
 function Testimonial() {

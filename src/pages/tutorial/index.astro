@@ -15,9 +15,13 @@ import blogImage from "@images/content/tutorial/blogs.svg";
 import videoImage from "@images/content/tutorial/videos.svg";
 
 // defining page title and description for all publications page
-const pageTitle = "Aritra Roy | All Tutorials";
-const pageDescription =
-    "Discover a vast array of computational chemistry tutorials, including engaging YouTube videos and informative articles, in my extensive collection.";
+const {
+    pageTitle = "Aritra Roy | All Tutorials",
+    pageDescription = "Discover a vast array of computational chemistry tutorials, including engaging YouTube videos and informative articles, in my extensive collection.",
+    frontmatter,
+    cover,
+    robots,
+} = Astro.props;
 
 const imgData = [
     {
@@ -35,7 +39,13 @@ const imgData = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout
+    title={pageTitle}
+    description={pageDescription}
+    {frontmatter}
+    {robots}
+    {cover}
+>
     <OtherHeader client:only="react" />
     <Socials />
     <div class="postsNavigationDiv">

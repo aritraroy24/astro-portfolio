@@ -19,13 +19,13 @@
 @media only screen and (max-width: 730px) {
   .PageNotFound {
     padding: 0 40px;
+    #PageNotFoundImage {
+      width: 80vw;
+      height: unset;
+    }
   }
 }
 @media only screen and (max-width: 550px) {
-  #PageNotFoundImage {
-    width: 80vw;
-    height: unset;
-  }
   #backToHome {
     font-size: 11px;
     padding: 15px 18px;

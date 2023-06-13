@@ -3,9 +3,12 @@ import react from "@astrojs/react";
 import mdx from '@astrojs/mdx';
 import compress from "astro-compress";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), mdx(), compress()],
+  site: 'https://aritraroy.live',
+  integrations: [react(), mdx(), compress(), sitemap()],
   experimental: {
     assets: true
   },
@@ -16,6 +19,5 @@ export default defineConfig({
       wrap: true
     }
   },
-  site: 'https://aritraroy.live/',
   compressHTML: true
 });

@@ -84,6 +84,7 @@ galleryImages: [
     imgDetails: "Figure 14: 5 membered edge-shared structure after following negative phonon: (a) two- dimensional nanosheet (b) unit cell with central B-B BL of 1.996 Å (c) band Structure with no band gap (d) DOS and (e) PDOS"
     }
 ]
+type: ChemistryProject
 ---
 
 ## Authors

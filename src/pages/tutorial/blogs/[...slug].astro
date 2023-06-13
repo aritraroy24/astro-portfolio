@@ -2,13 +2,13 @@
 // blogpost layout import
 import BlogPostLayout from "@layouts/BlogPostLayout.astro";
 
-// function import
+// library import
 import { getCollection } from "astro:content";
 
 // getting all blogs
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blogs");
-  return blogEntries.map((entry) => ({
+  return blogEntries.map((entry: any) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));

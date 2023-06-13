@@ -6,6 +6,7 @@ duration: "9 Min View"
 cover: "./unlock-the-power-of-md-simulation-and-its-world.png"
 tags: ["introduction", "beginner", "animated", "molecular dynamics", "simulation"]
 pubDate: 2023-05-05
+type: VideoPost
 ---
 ## Content of the video
 In this animated video, we explore the fascinating field of computational chemistry and its applications in solving chemical problems through molecular dynamics simulations. Join us as we discuss the different types of calculations, software, theories, and methods used in computational chemistry's one of the most popular and trending areas - MD Simulations, including force fields, time-stamp, stability, drawbacks, softwares like GROMACS, AMBER, CHARMM, LAMMPS, NAMD etc. and also Monte Carlo simulations.

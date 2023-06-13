@@ -6,6 +6,7 @@ duration: "15 Min View"
 cover: "./best-materials-studio-tutorial-how-to-build-any-structure-from-scratch.jpg"
 tags: ["introduction", "beginner", "materials studio", "build", "draw", "scratch"]
 pubDate: 2022-09-05
+type: VideoPost
 ---
 ## Content of the video
 Materials Studio is a software where you can model any material (or molecule) you like. No .cif file or no atom coordinates is required to model a new material. Think of it, you want to work on new material, to check whether it can be synthesized or not - no one has done this before. So, there is no question of finding the .cif file or lattice parameters. Then how will you build the material?

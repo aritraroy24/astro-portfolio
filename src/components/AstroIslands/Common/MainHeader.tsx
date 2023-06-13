@@ -1,8 +1,13 @@
+// library import
 import React, { useState } from 'react';
-import './styles/MainHeader.scss';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import Headroom from 'react-headroom';
+
+// style import
+import './styles/MainHeader.scss';
+
+// asset import
 import NavLogo from '@images/NavLogo.webp'
 
 const MainHeader = () => {

@@ -14,6 +14,7 @@ const blogCollection = defineCollection({
       cover: image(),
       tags: z.array(z.string()),
       pubDate: z.date(),
+      type: z.string()
     }),
 });
 const videoCollection = defineCollection({
@@ -26,6 +27,7 @@ const videoCollection = defineCollection({
       cover: image(),
       tags: z.array(z.string()),
       pubDate: z.date(),
+      type: z.string()
     }),
 });
 const chemProjectCollection = defineCollection({
@@ -49,7 +51,8 @@ const chemProjectCollection = defineCollection({
         imgSrc: image(),
         imgAlt: z.string(),
         imgDetails: z.string()
-      })).nullable()
+      })).nullable(),
+      type: z.string()
     }),
 })
 // 3. Export a single `collections` object to register your collection(s)

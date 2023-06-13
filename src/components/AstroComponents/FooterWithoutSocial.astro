@@ -1,21 +1,23 @@
 ---
-import "./styles/Footer.scss";
+import Newsletter from "./Common/Newsletter.astro";
+import "./styles/FooterWithoutSocial.scss";
 import { Icon } from "astro-iconify";
 ---
 
 <footer class="Footer" id="footer" style="height: unset;">
     <div class="visitsDiv" title="Visitor">
         <div>
-            <Icon name="ph:eye-bold" />
+            <Icon name="pajamas:eye" />
             <img
-                class="filtered"
                 width="60"
                 height="15"
-                src="https://www.free-website-hit-counter.com/c.php?d=4&id=150439&s=36"
-                alt="Free Website Hit Counter"
+                class="filtered"
+                src="https://www.free-website-hit-counter.com/c.php?d=4&id=151751&s=36"
+                alt="Visitors"
             />
         </div>
     </div>
+    <Newsletter />
     <div class="copyrightDiv">
         <p>
             &copy; 2023 <a href="/"><span>aritraroy.live</span></a>

@@ -1,7 +1,7 @@
 ---
-// metadata import
+// component import
 import GoogleAnalytics from "@components/Meta/GoogleAnalytics.astro";
-import LinkedDataJson from "@components/Meta/LinkedDataJson.astro";
+import Seo from "@components/Meta/Seo.astro";
 
 // style import
 import "@assets/styles/global.scss";
@@ -10,12 +10,18 @@ import "@assets/styles/global.scss";
 export interface LayoutProps {
   title?: string;
   description?: string;
+  cover?: string;
+  frontmatter?: any;
+  robots?: boolean;
 }
 
 // default values of title and description of the page
 const {
   title = "Aritra Roy | Computational Chemist",
   description = "I'm a Theoretical Computational Chemist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill.",
+  cover,
+  frontmatter,
+  robots,
 } = Astro.props as LayoutProps;
 ---
 
@@ -25,21 +31,19 @@ const {
     <!-- Google tag (gtag.js) -->
     <GoogleAnalytics />
 
-    <!-- Linked Data Json -->
-    <LinkedDataJson />
-
     <!-- metadata section -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content={description} />
+    <Seo {title} {description} url={Astro.url} {cover} {frontmatter} {robots} />
 
     <!-- favicon, font and other stylesheets import -->
     <link rel="icon" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="apple-touch-icon" href="/logo180.png" />
     <link rel="manifest" href="/manifest.json" />
     <title>{title}</title>
   </head>

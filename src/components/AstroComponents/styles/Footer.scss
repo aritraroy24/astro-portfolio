@@ -3,7 +3,7 @@
     position: relative;
     left: 0;
     width: 100%;
-    // bottom: 0vh;
+    min-height: 250px;
     height: 120px;
     display: flex;
     flex-direction: column;
@@ -62,25 +62,14 @@
     }
 }
 
-@media only screen and (max-width: 1050px) {
-    .Footer {
-        height: 90px;
-    }
-}
-
-@media only screen and (max-width: 850px) {
-    .Footer {
-        height: 130px;
-    }
-}
 @media only screen and (max-width: 730px) {
     .Footer {
-        height: 200px;
+        min-height: 400px;
         margin: unset;
         .footerSocials {
             display: flex;
             flex-wrap: wrap;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             align-items: center;
             justify-content: center;
             padding: 0 50px;
@@ -108,7 +97,7 @@
 
 @media only screen and (max-width: 350px) {
     .Footer {
-        height: 350px;
+        min-height: 450px;
         .footerSocials {
             a {
                 .ai {
@@ -133,18 +122,6 @@
 
 @media only screen and (max-width: 303px) {
     .Footer {
-        height: 380px;
-        .visitsDiv {
-            margin-bottom: 10px;
-        }
-    }
-}
-
-@media only screen and (max-width: 290px) {
-    .Footer {
-        height: 380px;
-        .visitsDiv {
-            margin-bottom: 10px;
-        }
+        min-height: 500px;
     }
 }

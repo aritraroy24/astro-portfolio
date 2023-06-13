@@ -14,6 +14,7 @@ runUrl:
 dockerUrl: 
 newsUrl: 
 galleryImages: 
+type: ChemistryProject
 ---
 # Ongoing Project
 This is an ongoing project. Please come back later for the project details.

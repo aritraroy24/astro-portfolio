@@ -2,6 +2,9 @@
 // layout import
 import Layout from "@layouts/Layout.astro";
 
+// library import
+import { getCollection } from "astro:content";
+
 // component import
 import PostCard from "@components/AstroComponents/Common/PostCard.astro";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
@@ -10,7 +13,6 @@ import Footer from "@components/AstroComponents/Footer.astro";
 import Socials from "@components/AstroComponents/Socials.astro";
 
 // function import
-import { getCollection } from "astro:content";
 import { formatPosts } from "@js/utils";
 
 // type import
@@ -33,12 +35,17 @@ export const getStaticPaths = (async ({ paginate }) => {
 const { page } = Astro.props;
 
 // defining page title and description for all blogs page
-const pageTitle = "Aritra Roy | All Blog Posts";
-const pageDescription =
-  "Discover insightful blogs on computational chemistry, programming, and more. Explore my extensive collection for the latest insights and discoveries.";
+const {
+  pageTitle = "Aritra Roy | All Blog Posts", 
+  pageDescription =
+  "Discover insightful blogs on computational chemistry, programming, and more. Explore my extensive collection for the latest insights and discoveries.",
+  frontmatter, 
+  cover,
+  robots
+  } = Astro.props;
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>
   <OtherHeader client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">

@@ -17,10 +17,19 @@ import Footer from "@components/AstroComponents/Footer.astro";
 const {
   pageTitle = "Aritra Roy | Computational Chemist",
   pageDescription = "I'm a Theoretical Computational Chemist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill.",
+  frontmatter,
+  robots,
+  cover,
 } = Astro.props;
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  {frontmatter}
+  {robots}
+  {cover}
+>
   <MainHeader client:only="react" />
   <Socials />
   <Hero />

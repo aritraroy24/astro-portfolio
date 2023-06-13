@@ -1,4 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+// library import
+import React, { useState, useEffect } from 'react';
+
+// style import 
 import './styles/ContactForm.scss';
 
 const ContactForm = props => {

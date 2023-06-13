@@ -2,7 +2,7 @@
 // component import
 import { Icon } from "astro-iconify";
 import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
-import Button from "@components/AstroComponents/Common/Button.astro";
+import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 import VideoPlayer from "@components/AstroIslands/Videos/VideoPlayer";
 
 // function import
@@ -18,9 +18,8 @@ const { tags, title, videoId, duration, pubDate } = Astro.props;
 <>
   <OtherHeader client:only="react" />
   <header class="videoHeaderContainer">
-    <Button
+    <BackButton
       text="Back"
-      href="/tutorial/videos"
       customStyle="margin-bottom:30px; padding: 15px 22px;"
       icon={{
         name: "tabler:arrow-big-left-line",

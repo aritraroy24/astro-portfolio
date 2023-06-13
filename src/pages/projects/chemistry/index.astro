@@ -17,9 +17,13 @@ import submittedProjects from "@images/content/chemistry/submitted-projects.svg"
 import allProjects from "@images/content/chemistry/all-projects.svg";
 
 // defining page title and description for all publications page
-const pageTitle = "Aritra Roy | All Publications";
-const pageDescription =
-    "Delve into my extensive collection of computational chemistry journal papers, showcasing groundbreaking research and the latest advancements in the field.";
+const {
+    pageTitle = "Aritra Roy | All Publications",
+    pageDescription = "Delve into my extensive collection of computational chemistry journal papers, showcasing groundbreaking research and the latest advancements in the field.",
+    frontmatter,
+    robots,
+    cover,
+} = Astro.props;
 
 const imgData = [
     {
@@ -49,7 +53,13 @@ const imgData = [
 ];
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout
+    title={pageTitle}
+    description={pageDescription}
+    {frontmatter}
+    {robots}
+    {cover}
+>
     <OtherHeader client:only="react" />
     <Socials />
     <div class="postsNavigationDiv">

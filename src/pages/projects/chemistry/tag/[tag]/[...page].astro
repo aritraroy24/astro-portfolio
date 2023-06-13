@@ -2,6 +2,9 @@
 // layout import
 import Layout from "@layouts/Layout.astro";
 
+// library import
+import { getCollection } from "astro:content";
+
 // component import
 import PostCard from "@components/AstroComponents/Common/PostCard.astro";
 import Pagination from "@components/AstroComponents/Common/Pagination.astro";
@@ -17,7 +20,6 @@ import "@styles/posts.scss";
 import NoData from "@images/No data.svg"
 
 // function import
-import { getCollection } from "astro:content";
 import { slugify, deslugify, formatPosts } from "@js/utils";
 
 // type import
@@ -44,14 +46,14 @@ export const getStaticPaths = (async ({ paginate }) => {
   });
 }) satisfies GetStaticPaths;
 const params = Astro.params;
-const { page } = Astro.props;
+const { page, frontmatter, cover, robots } = Astro.props;
 
 const tag = params.tag ? deslugify(params.tag).toUpperCase() : "";
 const pageTitle = `All Chemistry Projects | Tag: ${tag}`;
 const pageDescription = `Discover the essence of ${tag} through captivating chemistry project details, insights, and expertise. Explore a curated collection of ${tag} content, tailored specifically for the advancement of sustainability research.`;
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>
   <OtherHeader client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">

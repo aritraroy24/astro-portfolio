@@ -1,7 +1,12 @@
+// library import
 import React, { useState } from 'react';
-import './styles/OtherHeder.scss';
 import Fade from 'react-reveal/Fade';
 import Headroom from 'react-headroom';
+
+// style import
+import './styles/OtherHeder.scss';
+
+// asset import
 import NavLogo from '@images/NavLogo.webp'
 
 const OtherHeder = () => {
