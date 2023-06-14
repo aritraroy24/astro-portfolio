@@ -54,10 +54,10 @@ function Testimonial() {
                     )
                 })}
                 <button title="Previous Testimonial" className='prev' onClick={() => setIndex(index - 1)}>
-                    <FiChevronLeft />
+                    <FiChevronLeft className='navigationSign' />
                 </button>
                 <button title="Next Testimonial" className='next' onClick={() => setIndex(index + 1)}>
-                    <FiChevronRight />
+                    <FiChevronRight className='navigationSign' />
                 </button>
             </div>
         </section>

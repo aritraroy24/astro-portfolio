@@ -5,11 +5,11 @@ import "./styles/Newsletter.scss";
 
 <form
     class="newsletterForm"
-    action="https://tinyletter.com/Aritra"
+    action="http://eepurl.com/iteWVs"
     method="post"
     target="popupwindow"
     onsubmit="
-    window.open('https://tinyletter.com/Aritra', 'popupwindow', 'scrollbars=yes,width=800,height=600'); return true
+    window.open('http://eepurl.com/iteWVs', 'popupwindow', 'scrollbars=yes,width=800,height=800'); return true
     "
 >
     <p class="newsletterHeading">
@@ -19,17 +19,9 @@ import "./styles/Newsletter.scss";
         Get notifications for my latest blogs, videos or research projects right
         into your mailbox 💌.
     </p>
-    <div>
-        <input
-            class="newsletterTextbox"
-            type="text"
-            name="email"
-            id="tlemail"
-        />
-        <input type="hidden" value="1" name="embed" /><input
-            class="newsletterSubmit"
-            type="submit"
-            value="Subscribe"
-        />
-    </div>
+    <input type="hidden" value="1" name="embed" /><input
+        class="newsletterSubmit"
+        type="submit"
+        value="Subscribe"
+    />
 </form>

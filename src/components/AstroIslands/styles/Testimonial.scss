@@ -33,6 +33,12 @@
         color: white;
     }
 }
+.navigationSign {
+    color: black;
+}
+.navigationSign:hover {
+    color: black;
+}
 @media screen and (min-width: 800px) {
     h1 {
         font-size: 4rem;

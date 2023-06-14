@@ -1,5 +1,5 @@
 .newsletterForm {
-    margin: 20px 40px;
+    margin: 20px 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,28 +30,21 @@
         border-radius: 2px;
         margin-right: 10px;
     }
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .newsletterSubmit {
-            font-family: "Overpass", Verdana, Geneva, Tahoma, sans-serif;
-            place-items: center;
-            text-decoration: none;
-            width: -moz-fit-content;
-            width: fit-content;
-            padding: 8.5px 20px;
-            border: 1px solid #64ffda;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 200ms ease-out;
-            background: transparent;
-            color: white;
-            background: #64ffdb25;
-        }
-        .newsletterSubmit:hover {
-            background: #64ffdb52;
-        }
+
+    .newsletterSubmit {
+        font-family: "Overpass", Verdana, Geneva, Tahoma, sans-serif;
+        place-items: center;
+        text-decoration: none;
+        width: -moz-fit-content;
+        width: fit-content;
+        padding: 8.5px 20px;
+        border: 1px solid #64ffda;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 200ms ease-out;
+        background: transparent;
+        color: white;
+        background: #64ffdb25;
     }
 }
 @media only screen and (max-width: 350px) {
@@ -62,13 +55,6 @@
         }
         .newsletterDescription {
             font-size: 12px;
-        }
-        div {
-            flex-direction: column;
-            .newsletterTextbox {
-                width: 175px;
-                margin-bottom: 10px;
-            }
         }
     }
 }
