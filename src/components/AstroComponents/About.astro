@@ -3,6 +3,10 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-iconify";
 
+// data import
+import chemistryTools from "@assets/js/data/chemistryTools";
+import programmingTools from "@assets/js/data/programmingTools";
+
 // asset import
 import headshot from "@images/about/headshot.jpg";
 
@@ -111,330 +115,264 @@ import "./styles/About.scss";
           Multiwfn
         </a> etc.
       </p>
-      <p>Here are a few computational tools I've been working with recently:</p>
+      <p>Here are a few tools I've been working with recently:</p>
       <section class="skills">
         <ul>
-          <li>
-            <span>▹</span> Gaussian <span class="es6">16</span>
-          </li>
-          <li>
-            <span>▹</span> GaussView <span class="es6">6.0</span>
-          </li>
-          <li>
-            <span>▹</span> Materials Studio <span class="es6">2017</span>
-          </li>
-          <li>
-            <span>▹</span> ChemDraw Pro <span class="es6">19</span>
-          </li>
-          <li>
-            <span>▹</span> Origin Pro <span class="es6">2018</span>
-          </li>
-          <li>
-            <span>▹</span> Math Editor
-          </li>
+          {
+            chemistryTools.map((tool: any) => {
+              if (tool.id % 2 != 0) {
+                return (
+                  <li>
+                    <span>▹ </span>
+                    {tool.toolName}
+                    {"\u00A0"}
+                    <span class="es6">{tool.version}</span>
+                  </li>
+                );
+              }
+            })
+          }
         </ul>
         <ul>
-          <li>
-            <span>▹</span> ORCA <span class="es6">5.0</span>
-          </li>
-          <li>
-            <span>▹</span> Spartan <span class="es6">'14</span>
-          </li>
-          <li>
-            <span>▹</span> Avogadro
-          </li>
-          <li>
-            <span>▹</span> WinCACAO
-          </li>
-          <li>
-            <span>▹</span> EndNote <span class="es6">X9</span>
-          </li>
-          <li>
-            <span>▹</span> Multiwfn
-          </li>
+          {
+            chemistryTools.map((tool: any) => {
+              if (tool.id % 2 == 0) {
+                return (
+                  <li>
+                    <span>▹ </span>
+                    {tool.toolName}
+                    {"\u00A0"}
+                    <span class="es6">{tool.version}</span>
+                  </li>
+                );
+              }
+            })
+          }
         </ul>
       </section>
       <div class="iconsContainerMobile">
-        <div class="langIcons">
-          <p>Language:</p>
-          <div>
-            <a href="https://en.wikipedia.org/wiki/C_(programming_language)"
-              ><Icon name="teenyicons:c-solid" title="C Programming" /></a
-            >
-            <a href="https://www.python.org/"
-              ><Icon name="simple-icons:python" title="Python" /></a
-            >
-            <a href="https://en.wikipedia.org/wiki/HTML"
-              ><Icon name="ri:html5-fill" title="HTML5" /></a
-            >
-            <a href="https://en.wikipedia.org/wiki/CSS">
-              <Icon name="cib:css3-shiled" title="CSS3" /></a
-            >
-            <a href="https://en.wikipedia.org/wiki/JavaScript"
-              ><Icon name="fluent:javascript-24-filled" title="JavaScript" /></a
-            >
-            <a href="https://www.typescriptlang.org/"
-              ><Icon name="mdi:language-typescript" title="Typescript" /></a
-            >
-            <a href="https://sass-lang.com/"
-              ><Icon name="simple-icons:sass" title="Sass" /></a
-            >
-            <a href="https://daringfireball.net/projects/markdown/"
-              ><Icon name="ri:markdown-fill" title="Markdown" /></a
-            >
-            <a href="https://en.wikipedia.org/wiki/LaTeX"
-              ><Icon name="cib:latex" title="LaTeX" /></a
-            >
-            <a href="https://www.php.net/"
-              ><Icon name="akar-icons:php-fill" title="PHP" /></a
-            >
-            <a href="https://www.java.com/en/"
-              ><Icon name="fa-brands:java" title="Java" /></a
-            >
-          </div>
-          <p>Library/Framework:</p>
-          <div>
-            <a href="https://numpy.org/"
-              ><Icon name="simple-icons:numpy" title="NumPy" /></a
-            >
-            <a href="https://scipy.org/"
-              ><Icon name="simple-icons:scipy" title="SciPy" /></a
-            >
-            <a href="https://tailwindcss.com/"
-              ><Icon name="teenyicons:tailwind-solid" title="Tailwind CSS" /></a
-            >
-            <a href="https://react.dev/"
-              ><Icon name="mdi:react" title="React" /></a
-            >
-            <a href="https://astro.build/"
-              ><Icon name="simple-icons:astro" title="Astro" /></a
-            >
-            <a href="https://nodejs.org/"
-              ><Icon
-                name="teenyicons:nodejs-solid"
-                title="Node.js Runtime Environment"
-              /></a
-            >
-            <a href="https://laravel.com/"
-              ><Icon name="ion:logo-laravel" title="Laravel" /></a
-            >
-            <a href="https://nextjs.org/"
-              ><Icon name="file-icons:nextjs" title="Next.js" /></a
-            >
-          </div>
-          <p>Backend:</p>
-          <div>
-            <a href="https://www.postman.com/"
-              ><Icon name="simple-icons:postman" title="Postman" /></a
-            >
-            <a href="https://www.mongodb.com/"
-              ><Icon name="simple-icons:mongodb" title="MongoDB" /></a
-            >
-            <a href="https://www.prisma.io/"
-              ><Icon name="file-icons:prisma" title="Prisma ORM" /></a
-            >
-          </div>
-          <p>Tools:</p>
-          <div>
-            <a href="https://code.visualstudio.com/"
-              ><Icon name="file-icons:vscode" title="Visual Studio Code" /></a
-            >
-            <a href="https://git-scm.com/"
-              ><Icon name="simple-icons:git" title="Git" /></a
-            >
-            <a href="https://github.com/"
-              ><Icon name="bi:github" title="GitHub" /></a
-            >
-            <a href="https://www.apachefriends.org/download.html"
-              ><Icon name="simple-icons:xampp" title="XAMPP" /></a
-            >
-            <a href="https://www.gnu.org/software/bash/"
-              ><Icon name="simple-icons:gnubash" title="Bash" /></a
-            >
-            <a href="https://learn.microsoft.com/en-us/windows/terminal/install"
-              ><Icon name="ic:round-terminal" title="Windows Terminal" /></a
-            >
-            <a href="https://www.netlify.com/"
-              ><Icon name="cib:netlify" title="Netlify Deploy" /></a
-            >
-          </div>
-          <p>Operating System:</p>
-          <div>
-            <a href="https://www.microsoft.com/en-us/windows"
-              ><Icon name="uil:windows" title="Windows" /></a
-            >
-            <a href="https://ubuntu.com/"
-              ><Icon name="mdi:ubuntu" title="Linux" /></a
-            >
-          </div>
-          <p>UI/UX:</p>
-          <div>
-            <a href="https://www.adobe.com/products/photoshop.html"
-              ><Icon
-                name="simple-icons:adobephotoshop"
-                title="Adobe Photoshop"
-              /></a
-            >
-            <a href="https://www.canva.com/"
-              ><Icon name="cib:canva" title="Canva" /></a
-            >
-            <a href="https://www.figma.com/"
-              ><Icon name="gg:figma" title="Figma" /></a
-            >
-          </div>
-          <p>Blog Writing:</p>
-          <div>
-            <a href="https://medium.com/"
-              ><Icon name="iconoir:www" title="Meidum" /></a
-            >
-            <a href="https://aritraroy.live/"
-              ><Icon name="ri:medium-fill" title="Personal Website" /></a
-            >
-          </div>
-        </div>
+        {
+          programmingTools.map((item: any) => {
+            if (item.language) {
+              return (
+                <div class="langIcons">
+                  <p>Language:</p>
+                  <div>
+                    {item.language.map((languageItem: any) => (
+                      <a href={languageItem.url}>
+                        <Icon
+                          name={languageItem.iconName}
+                          title={languageItem.title}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else if (item.library) {
+              return (
+                <div class="langIcons">
+                  <p>Library/Framework:</p>
+                  <div>
+                    {item.library.map((libraryItem: any) => (
+                      <a href={libraryItem.url}>
+                        <Icon
+                          name={libraryItem.iconName}
+                          title={libraryItem.title}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else if (item.backend) {
+              return (
+                <div class="langIcons">
+                  <p>Backend:</p>
+                  <div>
+                    {item.backend.map((backendItem: any) => (
+                      <a href={backendItem.url}>
+                        <Icon
+                          name={backendItem.iconName}
+                          title={backendItem.title}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else if (item.tools) {
+              return (
+                <div class="langIcons">
+                  <p>Tools:</p>
+                  <div>
+                    {item.tools.map((toolsItem: any) => (
+                      <a href={toolsItem.url}>
+                        <Icon
+                          name={toolsItem.iconName}
+                          title={toolsItem.title}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else if (item.os) {
+              return (
+                <div class="langIcons">
+                  <p>Operating System:</p>
+                  <div>
+                    {item.os.map((osItem: any) => (
+                      <a href={osItem.url}>
+                        <Icon name={osItem.iconName} title={osItem.title} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else if (item.ui) {
+              return (
+                <div class="langIcons">
+                  <p>UI/UX:</p>
+                  <div>
+                    {item.ui.map((uiItem: any) => (
+                      <a href={uiItem.url}>
+                        <Icon name={uiItem.iconName} title={uiItem.title} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else {
+              return (
+                <div class="langIcons">
+                  <p>Blog Writing:</p>
+                  <div>
+                    {item.blog.map((blogItem: any) => (
+                      <a href={blogItem.url}>
+                        <Icon name={blogItem.iconName} title={blogItem.title} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+          })
+        }
       </div>
     </section>
     <!-- about image - right section -->
     <section class="img-container">
       <Image src={headshot} alt="Aritra Face" width={300} height={300} />
       <div class="iconsContainer">
-        <div class="langIcons">
-          <p>Language:</p>
-          <div>
-            <a href="https://en.wikipedia.org/wiki/C_(programming_language)"
-              ><Icon name="teenyicons:c-solid" title="C Programming" /></a
-            >
-            <a href="https://www.python.org/"
-              ><Icon name="simple-icons:python" title="Python" /></a
-            >
-            <a href="https://en.wikipedia.org/wiki/HTML"
-              ><Icon name="ri:html5-fill" title="HTML5" /></a
-            >
-            <a href="https://en.wikipedia.org/wiki/CSS">
-              <Icon name="cib:css3-shiled" title="CSS3" /></a
-            >
-            <a href="https://en.wikipedia.org/wiki/JavaScript"
-              ><Icon name="fluent:javascript-24-filled" title="JavaScript" /></a
-            >
-            <a href="https://www.typescriptlang.org/"
-              ><Icon name="mdi:language-typescript" title="Typescript" /></a
-            >
-            <a href="https://sass-lang.com/"
-              ><Icon name="simple-icons:sass" title="Sass" /></a
-            >
-            <a href="https://daringfireball.net/projects/markdown/"
-              ><Icon name="ri:markdown-fill" title="Markdown" /></a
-            >
-            <a href="https://en.wikipedia.org/wiki/LaTeX"
-              ><Icon name="cib:latex" title="LaTeX" /></a
-            >
-            <a href="https://www.php.net/"
-              ><Icon name="akar-icons:php-fill" title="PHP" /></a
-            >
-            <a href="https://www.java.com/en/"
-              ><Icon name="fa-brands:java" title="Java" /></a
-            >
-          </div>
-          <p>Library/Framework:</p>
-          <div>
-            <a href="https://numpy.org/"
-              ><Icon name="simple-icons:numpy" title="NumPy" /></a
-            >
-            <a href="https://scipy.org/"
-              ><Icon name="simple-icons:scipy" title="SciPy" /></a
-            >
-            <a href="https://tailwindcss.com/"
-              ><Icon name="teenyicons:tailwind-solid" title="Tailwind CSS" /></a
-            >
-            <a href="https://react.dev/"
-              ><Icon name="mdi:react" title="React" /></a
-            >
-            <a href="https://astro.build/"
-              ><Icon name="simple-icons:astro" title="Astro" /></a
-            >
-            <a href="https://nodejs.org/"
-              ><Icon
-                name="teenyicons:nodejs-solid"
-                title="Node.js Runtime Environment"
-              /></a
-            >
-            <a href="https://laravel.com/"
-              ><Icon name="ion:logo-laravel" title="Laravel" /></a
-            >
-            <a href="https://nextjs.org/"
-              ><Icon name="file-icons:nextjs" title="Next.js" /></a
-            >
-          </div>
-          <p>Backend:</p>
-          <div>
-            <a href="https://www.postman.com/"
-              ><Icon name="simple-icons:postman" title="Postman" /></a
-            >
-            <a href="https://www.mongodb.com/"
-              ><Icon name="simple-icons:mongodb" title="MongoDB" /></a
-            >
-            <a href="https://www.prisma.io/"
-              ><Icon name="file-icons:prisma" title="Prisma ORM" /></a
-            >
-          </div>
-          <p>Tools:</p>
-          <div>
-            <a href="https://code.visualstudio.com/"
-              ><Icon name="file-icons:vscode" title="Visual Studio Code" /></a
-            >
-            <a href="https://git-scm.com/"
-              ><Icon name="simple-icons:git" title="Git" /></a
-            >
-            <a href="https://github.com/"
-              ><Icon name="bi:github" title="GitHub" /></a
-            >
-            <a href="https://www.apachefriends.org/download.html"
-              ><Icon name="simple-icons:xampp" title="XAMPP" /></a
-            >
-            <a href="https://www.gnu.org/software/bash/"
-              ><Icon name="simple-icons:gnubash" title="Bash" /></a
-            >
-            <a href="https://learn.microsoft.com/en-us/windows/terminal/install"
-              ><Icon name="ic:round-terminal" title="Windows Terminal" /></a
-            >
-            <a href="https://www.netlify.com/"
-              ><Icon name="cib:netlify" title="Netlify Deploy" /></a
-            >
-          </div>
-          <p>Operating System:</p>
-          <div>
-            <a href="https://www.microsoft.com/en-us/windows"
-              ><Icon name="uil:windows" title="Windows" /></a
-            >
-            <a href="https://ubuntu.com/"
-              ><Icon name="mdi:ubuntu" title="Linux" /></a
-            >
-          </div>
-          <p>UI/UX:</p>
-          <div>
-            <a href="https://www.adobe.com/products/photoshop.html"
-              ><Icon
-                name="simple-icons:adobephotoshop"
-                title="Adobe Photoshop"
-              /></a
-            >
-            <a href="https://www.canva.com/"
-              ><Icon name="cib:canva" title="Canva" /></a
-            >
-            <a href="https://www.figma.com/"
-              ><Icon name="gg:figma" title="Figma" /></a
-            >
-          </div>
-          <p>Blog Writing:</p>
-          <div>
-            <a href="https://medium.com/"
-              ><Icon name="iconoir:www" title="Meidum" /></a
-            >
-            <a href="https://aritraroy.live/"
-              ><Icon name="ri:medium-fill" title="Personal Website" /></a
-            >
-          </div>
-        </div>
+        {
+          programmingTools.map((item: any) => {
+            if (item.language) {
+              return (
+                <div class="langIcons">
+                  <p>Language:</p>
+                  <div>
+                    {item.language.map((languageItem: any) => (
+                      <a href={languageItem.url}>
+                        <Icon
+                          name={languageItem.iconName}
+                          title={languageItem.title}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else if (item.library) {
+              return (
+                <div class="langIcons">
+                  <p>Library/Framework:</p>
+                  <div>
+                    {item.library.map((libraryItem: any) => (
+                      <a href={libraryItem.url}>
+                        <Icon
+                          name={libraryItem.iconName}
+                          title={libraryItem.title}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else if (item.backend) {
+              return (
+                <div class="langIcons">
+                  <p>Backend:</p>
+                  <div>
+                    {item.backend.map((backendItem: any) => (
+                      <a href={backendItem.url}>
+                        <Icon
+                          name={backendItem.iconName}
+                          title={backendItem.title}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else if (item.tools) {
+              return (
+                <div class="langIcons">
+                  <p>Tools:</p>
+                  <div>
+                    {item.tools.map((toolsItem: any) => (
+                      <a href={toolsItem.url}>
+                        <Icon
+                          name={toolsItem.iconName}
+                          title={toolsItem.title}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else if (item.os) {
+              return (
+                <div class="langIcons">
+                  <p>Operating System:</p>
+                  <div>
+                    {item.os.map((osItem: any) => (
+                      <a href={osItem.url}>
+                        <Icon name={osItem.iconName} title={osItem.title} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else if (item.ui) {
+              return (
+                <div class="langIcons">
+                  <p>UI/UX:</p>
+                  <div>
+                    {item.ui.map((uiItem: any) => (
+                      <a href={uiItem.url}>
+                        <Icon name={uiItem.iconName} title={uiItem.title} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else {
+              return (
+                <div class="langIcons">
+                  <p>Blog Writing:</p>
+                  <div>
+                    {item.blog.map((blogItem: any) => (
+                      <a href={blogItem.url}>
+                        <Icon name={blogItem.iconName} title={blogItem.title} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+          })
+        }
       </div>
     </section>
   </section>

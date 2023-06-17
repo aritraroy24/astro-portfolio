@@ -1,8 +1,10 @@
+// config import
 import { defineConfig } from 'astro/config';
+
+// integrations import
 import react from "@astrojs/react";
 import mdx from '@astrojs/mdx';
 import compress from "astro-compress";
-
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
