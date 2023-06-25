@@ -230,7 +230,12 @@ article.lastSlide {
 article.nextSlide {
     transform: translateX(100%);
 }
-
+@media screen and (max-width: 950px) {
+    .prev,
+    .next {
+        margin-top: -100px;
+    }
+}
 @media screen and (max-width: 799px) {
     .prev,
     .next {
@@ -277,10 +282,6 @@ article.nextSlide {
             color: white;
         }
     }
-    .prev,
-    .next {
-        margin-top: -100px;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -309,10 +310,6 @@ article.nextSlide {
         h4 {
             font-size: 0.85rem;
         }
-    }
-    .prev,
-    .next {
-        margin-top: -100px;
     }
 }
 

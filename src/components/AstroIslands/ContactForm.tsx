@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 // style import 
 import './styles/ContactForm.scss';
 
-const ContactForm = props => {
+const ContactForm = () => {
     const [status, updateStatus] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -23,7 +23,7 @@ const ContactForm = props => {
         }
     }, [name, email, message, isSubmitting, isSubmitted]);
 
-    const submitForm = async (event) => {
+    const submitForm = async (event: any) => {
         event.preventDefault();
         const form = event.target;
         setIsSubmitting(true);

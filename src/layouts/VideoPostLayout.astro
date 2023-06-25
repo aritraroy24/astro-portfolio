@@ -18,7 +18,8 @@ import "@styles/single-post.scss";
 
 // destructuring astro properties
 const { frontmatter } = Astro.props;
-const { title, description, pubDate, tags, duration, videoId } = frontmatter;
+const { title, description, pubDate, tags, duration, videoId, cover } =
+  frontmatter;
 
 // getting related video posts related to first tag of the current video
 const allVideos = await getCollection("videos");
@@ -46,7 +47,7 @@ const relatedVideos = tagsFilteredVideos
   .slice(0, 3);
 ---
 
-<Layout {title} {description}>
+<Layout {title} {description} {frontmatter} {cover}>
   <Socials />
   <!-- video heading section -->
   <VideoHeader {title} {description} {pubDate} {tags} {videoId} {duration} />
