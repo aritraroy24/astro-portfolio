@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
-Sitemap: http://www.aritraroy.live/sitemap-index.xml
+Sitemap: https://aritraroy.live/sitemap-index.xml
