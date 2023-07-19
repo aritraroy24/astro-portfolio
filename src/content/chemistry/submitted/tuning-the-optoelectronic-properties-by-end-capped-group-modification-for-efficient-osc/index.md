@@ -1,8 +1,8 @@
 ---
 title: Tuning the optoelectronic properties by end-capped group modification for efficient OSCs
-status: ongoing
+status: submitted
 duration: Sep, 2022 - Present
-tags: ["OSC", "optoelectronic", "solar", "dft study", "theoretical", "ongoing"]
+tags: ["OSC", "optoelectronic", "solar", "dft study", "theoretical", "submitted"]
 pubDate: 2024-05-24
 cover: ./tuning-the-optoelectronic-properties-by-end-capped-group-modification-for-efficient-osc.png
 description: "DFT studies to enhance the efficiency of A-D-A type organic solar cells by end-capped group modification"
