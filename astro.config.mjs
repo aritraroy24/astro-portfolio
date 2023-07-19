@@ -10,7 +10,16 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://aritraroy.live',
-  integrations: [react(), mdx(), compress(), sitemap()],
+  integrations: [
+    react(),
+    mdx(),
+    compress({
+      png: false,
+      jpg: false,
+      jpeg: false,
+      webp: false
+    }),
+    sitemap()],
   experimental: {
     assets: true
   },
