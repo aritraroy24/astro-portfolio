@@ -14,10 +14,7 @@ export default defineConfig({
     react(),
     mdx(),
     compress({
-      png: false,
-      jpg: false,
-      jpeg: false,
-      webp: false
+      img: false,
     }),
     sitemap()],
   experimental: {
