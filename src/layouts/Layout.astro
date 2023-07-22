@@ -69,6 +69,52 @@ const {
           "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
         );
       });
+      (function (window) {
+        var unknown = "-";
+        var os = unknown;
+        var osVersion = unknown;
+        var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(
+          navigator.userAgent
+        );
+        var screenSize = "";
+
+        if (mobile) {
+          var nVer = navigator.appVersion;
+          var nAgt = navigator.userAgent;
+          var browser = navigator.appName;
+          var version = "" + parseFloat(nVer);
+          var nameOffset, verOffset, ix;
+
+          var clientStrings = [{ s: "iOS", r: /(iPhone|iPad|iPod)/ }];
+
+          for (var id in clientStrings) {
+            var cs = clientStrings[id];
+            if (cs.r.test(nAgt)) {
+              os = cs.s;
+              if (os === "iOS") {
+                osVersion = /OS (\d+)_(\d+)_?(\d+)?/.exec(nVer);
+                osVersion =
+                  osVersion[1] + "." + osVersion[2] + "." + (osVersion[3] | 0);
+                break;
+              }
+            }
+          }
+
+          if (screen.width) {
+            var width = screen.width;
+            var height = screen.height;
+            screenSize = width + " x " + height;
+          }
+
+          if (os === "iOS" && screen.width < 730) {
+            const footerSocials = document.getElementById("footerSocials");
+            const footer = document.getElementById("footer");
+            footerSocials.style.display = "none";
+            footer.style.minHeight = "200px";
+          }
+        }
+      })(this);
+
       setInterval(function () {
         console.clear();
         console.log(`
