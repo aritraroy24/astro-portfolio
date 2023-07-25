@@ -35,17 +35,30 @@ for (let i = 1; i <= totalPage; i++) {
   }
   <!-- buttons with all the page numbers in pagination section -->
   {
-    pages.map((item) => (
-      <Button
-        href={item.page}
-        text={item.id}
-        customStyle={
-          item.id === currentPage
-            ? "padding: 5px 8px;margin: 0 3px;"
-            : "border:none;padding: 5px 8px;margin: 0 3px;"
-        }
-      />
-    ))
+    pages.map((item, index) => {
+      if (
+        index === 0 ||
+        index === pages.length - 1 ||
+        index + 1 === parseInt(currentPage) ||
+        index === parseInt(currentPage) ||
+        index === parseInt(currentPage) - 2
+      ) {
+        return (
+          <Button
+            href={item.page}
+            text={item.id}
+            customStyle={
+              item.id === currentPage
+                ? "padding: 5px 8px;margin: 0 3px;"
+                : "border:none;padding: 5px 8px;margin: 0 3px;"
+            }
+          />
+        );
+      }
+      if (index < 2 || index > pages.length - 3) {
+        return <div style="padding:5px">...</div>;
+      }
+    })
   }
   <!-- button to next page in pagination section -->
   {
