@@ -127,6 +127,28 @@ html {
   --transition-squish-slow: var(--_tspeed_slow) var(--_ttiming_squish);
   --transition-squish-fast: var(--_tspeed_fast) var(--_ttiming_squish);
 
+  /*** Changing Default Selecting Style ***/
+  ::selection {
+    background-color: rgba(100, 255, 218, 0.3);
+    color: white;
+  }
+  ::-moz-selection {
+    background-color: rgba(100, 255, 218, 0.3);
+    color: white;
+  }
+  ::-o-selection {
+    background-color: rgba(100, 255, 218, 0.3);
+    color: white;
+  }
+  ::-ms-selection {
+    background-color: rgba(100, 255, 218, 0.3);
+    color: white;
+  }
+  ::-webkit-selection {
+    background-color: rgba(100, 255, 218, 0.3);
+    color: white;
+  }
+
   // markdown related customization
   .astro-code {
     padding: 20px 30px 20px 30px;

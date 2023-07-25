@@ -3,7 +3,7 @@ title: "Best Materials Studio Tutorial: How to Build Any Structure from Scratch?
 videoId: "Xibd7IvL0Zo"
 description: "Materials Studio is a software where you can model any material (or molecule) you like. No .cif file or no atom coordinates is required to model a new material."
 duration: "15 Min View"
-cover: "./best-materials-studio-tutorial-how-to-build-any-structure-from-scratch.jpg"
+cover: "./materials-studio-tutorial-how-to-build-any-structure.jpg"
 tags: ["introduction", "beginner", "materials studio", "build", "draw", "scratch"]
 pubDate: 2022-09-05
 type: VideoPost
