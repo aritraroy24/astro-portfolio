@@ -1,6 +1,6 @@
 ---
 title: Finding a More Stable Semiconductor Borophene Using the Theoretical Approach
-status: M.Sc. Thesis
+status: M.Sc. Thesis (OpenSource)
 duration: Dec, 2020 - Jul, 2021
 tags: ["Borophene", "Semiconductor", "M.Sc. Project", "materials studio", "dft studies", "theoretical", "Completed"]
 pubDate: 2021-08-05

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import Headroom from 'react-headroom';
+import { FaSearch } from 'react-icons/fa'
 
 // style import
 import './styles/MainHeader.scss';
@@ -103,6 +104,11 @@ const MainHeader = () => {
                                             duration={1200}>
                                             <span>05.</span>Contact
                                         </Link>
+                                    </li>
+                                    <li>
+                                        <a href='/search' title='Search Posts'>
+                                            <FaSearch id='searchIcon' />
+                                        </a>
                                     </li>
                                 </ul>
                             </Fade>

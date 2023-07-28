@@ -1,5 +1,4 @@
 // 1. Import utilities from `astro:content`
-import { string } from "astro/zod";
 import { z, defineCollection } from "astro:content";
 
 // 2. Define your collection(s)
@@ -18,7 +17,7 @@ const blogCollection = defineCollection({
     }),
 });
 const videoCollection = defineCollection({
-  schema:({ image }) =>
+  schema: ({ image }) =>
     z.object({
       title: z.string(),
       videoId: z.string(),
@@ -31,7 +30,7 @@ const videoCollection = defineCollection({
     }),
 });
 const chemProjectCollection = defineCollection({
-  schema: ({ image }) => 
+  schema: ({ image }) =>
     z.object({
       title: z.string(),
       status: z.string(),

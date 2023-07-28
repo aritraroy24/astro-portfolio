@@ -13,7 +13,7 @@
       "@content/*": ["src/content/*"],
       "@pages/*": ["src/pages/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@js/*": ["src/assets/js/utils.js"]
+      "@js/*": ["src/assets/js/*"]
     }
   }
 }

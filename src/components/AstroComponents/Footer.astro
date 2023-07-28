@@ -7,85 +7,27 @@ import Newsletter from "./Common/Newsletter.astro";
 
 // style import
 import "./styles/Footer.scss";
+
+// import data
+import socials from "@js/data/socials";
 ---
 
 <footer class="Footer" id="footer">
   <div class="footerSocials" id="footerSocials">
-    <a
-      href="https://scholar.google.com/citations?hl=en&user=er7v8VoAAAAJ"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="Google Scholar"
-    >
-      <i class="ai ai-google-scholar"></i>
-    </a>
-    <a
-      href="https://orcid.org/0000-0003-0243-9124"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="ORCID"
-    >
-      <i class="ai ai-orcid"></i>
-    </a>
-    <a
-      href="https://www.researchgate.net/profile/Aritra-Roy-5"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="ResearchGate"
-    >
-      <i class="ai ai-researchgate"></i>
-    </a>
-    <a
-      href="https://www.linkedin.com/in/aritraroy24/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="ri:linkedin-fill" title="LinkedIn" />
-    </a>
-    <a
-      href="https://github.com/aritraroy24"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="bi:github" title="GitHub" />
-    </a>
-    <a
-      href="https://medium.com/@aritraroy24"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="grommet-icons:medium" title="Medium" />
-    </a>
-    <a
-      href="https://twitter.com/aritraroy24"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="el:twitter" title="Twitter" />
-    </a>
-    <a
-      href="https://www.youtube.com/@CompChemStudio"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="YouTube"
-    >
-      <Icon name="entypo-social:youtube" title="YouTube" />
-    </a>
-    <a
-      href="https://www.facebook.com/aritraroy24"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="Facebook"
-    >
-      <Icon name="bi:facebook" title="Facebook" />
-    </a>
-    <a
-      href="https://www.instagram.com/royaritra24/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Icon name="simple-icons:instagram" title="Instagram" />
-    </a>
+    {
+      socials.map((social: any) => {
+        return (
+          <a
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={social.title}
+          >
+            <Icon name={social.name} />
+          </a>
+        );
+      })
+    }
   </div>
   <!-- <div class="visitsDiv" title="Visitor">
         <div>

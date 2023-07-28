@@ -1,6 +1,6 @@
 ---
 title: DFT study for H₂ adsorption in a cage like metal oxide cluster
-status: ongoing
+status: Ongoing
 duration: Aug, 2022 - Present
 tags: ["Adsorption", "H₂ storage", "metal oxide", "dft study", "theoretical", "ongoing"]
 pubDate: 2024-05-24

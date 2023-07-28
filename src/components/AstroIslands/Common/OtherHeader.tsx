@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Headroom from 'react-headroom';
+import { FaSearch } from 'react-icons/fa'
 
 // style import
 import './styles/OtherHeder.scss';
@@ -61,6 +62,11 @@ const OtherHeder = () => {
                                     <li>
                                         <a href="/#contact">
                                             <span>05.</span>Contact
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href='/search' title='Search Posts'>
+                                            <FaSearch id='searchIcon' />
                                         </a>
                                     </li>
                                 </ul>

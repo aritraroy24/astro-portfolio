@@ -1,6 +1,6 @@
 ---
 title: Tuning the optoelectronic properties by end-capped group modification for efficient OSCs
-status: submitted
+status: Submitted
 duration: Sep, 2022 - Present
 tags: ["OSC", "optoelectronic", "solar", "dft study", "theoretical", "submitted"]
 pubDate: 2024-05-24

@@ -1,6 +1,6 @@
 ---
 title: DFT study for selective amino acid (L-Cysteine) sensing by a Cu(II)
-status: submitted
+status: Submitted
 duration: Nov, 2022 - Present
 tags: ["Cysteine", "Binding Modes", "amino acid", "dft studies", "theoretical", "experimental", "submitted"]
 pubDate: 2024-05-24
