@@ -1,9 +1,9 @@
 // library import
 import { useState } from 'react';
 import Fuse from 'fuse.js';
-import { FaSearch } from 'react-icons/fa'
-import { GoStopwatch } from 'react-icons/go'
-import { IoMdCalendar } from 'react-icons/io'
+import { FaSearch } from 'react-icons/fa/index.js'
+import { GoStopwatch } from 'react-icons/go/index.js'
+import { IoMdCalendar } from 'react-icons/io/index.js'
 
 // function import
 import { formatDate } from "@js/utils";

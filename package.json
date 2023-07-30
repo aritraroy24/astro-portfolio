@@ -7,8 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "postbuild": "pagefind --source dist --bundle-dir pagefind"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.1",
@@ -22,7 +21,9 @@
     "@types/styled-components": "^5.1.26",
     "astro": "^2.5.7",
     "astro-iconify": "^1.2.0",
+    "fast-glob": "^3.3.1",
     "fuse.js": "^6.6.2",
+    "image-size": "^1.0.2",
     "marked": "^5.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

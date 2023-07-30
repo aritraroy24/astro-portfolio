@@ -1,0 +1,75 @@
+---
+import collaborators from "@js/data/collaborators";
+import { Image } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import OtherHeder from "@components/AstroIslands/Common/OtherHeader";
+import Footer from "@components/AstroComponents/Footer.astro";
+import Socials from "@components/AstroComponents/Socials.astro";
+import "@styles/collaborators.scss";
+import Icon from "astro-iconify";
+const {
+  pageTitle = "Aritra Roy | Collaborators",
+  pageDescription = "Connect with all of my collaborators from all around the world from various countries including India, UK, Iran and Pakistan",
+} = Astro.props;
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <OtherHeder />
+  <div class="listContainer">
+    {
+      collaborators.map((collaborator: any) => {
+        return (
+          <>
+            <div class="listItem">
+              <Image
+                src={collaborator.avatar}
+                alt={collaborator.name}
+                width={200}
+                height={200}
+              />
+              <div>
+                <h4>{collaborator.name}</h4>
+                <p>
+                  {collaborator.position}, {collaborator.institute}
+                </p>
+                <p>
+                  <b>Topic: </b>
+                  {collaborator.project}
+                </p>
+                <div>
+                  <a
+                    href={collaborator.email}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name="mdi:email" />
+                  </a>
+                  {collaborator.googleScholar && (
+                    <a
+                      href={collaborator.googleScholar}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon name="academicons:google-scholar" />
+                    </a>
+                  )}
+                  {collaborator.website && (
+                    <a
+                      href={collaborator.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon name="ion:globe" />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          </>
+        );
+      })
+    }
+  </div>
+  <Socials />
+  <Footer />
+</Layout>
