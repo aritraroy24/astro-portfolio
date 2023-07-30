@@ -16,7 +16,8 @@ export default defineConfig({
     compress({
       img: false,
     }),
-    sitemap()],
+    sitemap()
+  ],
   experimental: {
     assets: true
   },
@@ -26,6 +27,11 @@ export default defineConfig({
       langs: [],
       wrap: true
     }
+  },
+  vite: {
+    ssr: {
+      noExternal: ["react-icons"],
+    },
   },
   compressHTML: true
 });

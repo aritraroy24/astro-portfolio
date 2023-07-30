@@ -14,7 +14,7 @@ const {
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-  <OtherHeder />
+  <OtherHeder client:only="react" />
   <div class="listContainer">
     {
       collaborators.map((collaborator: any) => {
