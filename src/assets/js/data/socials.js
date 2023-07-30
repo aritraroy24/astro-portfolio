@@ -51,18 +51,24 @@ const socials = [
     },
     {
         id: 9,
+        title: 'Discord',
+        url: 'https://discordapp.com/users/756481409836646461',
+        name: 'ic:baseline-discord'
+    },
+    {
+        id: 10,
         title: 'YouTube',
         url: 'https://www.youtube.com/@CompChemStudio',
         name: 'entypo-social:youtube'
     },
     {
-        id: 10,
+        id: 11,
         title: 'Facebook',
         url: 'https://www.facebook.com/aritraroy24',
         name: 'bi:facebook'
     },
     {
-        id: 11,
+        id: 12,
         title: 'Instagram',
         url: 'https://www.instagram.com/royaritra24/',
         name: 'simple-icons:instagram'
