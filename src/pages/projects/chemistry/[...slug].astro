@@ -22,19 +22,16 @@ const allFigureData = await Astro.glob(
 const figureData = allFigureData.filter((figData: any) => {
   return entry.slug.includes(figData.default[0].project);
 });
-var altImgArr: any = [];
 const allImages = await Astro.glob(
   "/src/content/chemistry/completed/*/*/*/*.png"
 );
+// const projectImages = allImages;
 const projectImages = allImages.filter((imageData: any) => {
-  altImgArr.push(imageData.default.src.split("figures/")[1].split(".")[1]);
   return imageData.default.src.includes(`/${entry.slug}/`);
 });
 ---
 
-<ChemProjectLayout
-  frontmatter={{ ...entry.data, altImgArr, projectImages, figureData }}
->
+<ChemProjectLayout frontmatter={{ ...entry.data, projectImages, figureData }}>
   <Content />
 </ChemProjectLayout>
 <script>
