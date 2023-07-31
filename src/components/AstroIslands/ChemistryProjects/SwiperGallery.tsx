@@ -13,11 +13,29 @@ import "./styles/SwiperGallery.scss";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 
+interface ImageObject {
+    default: {
+        src: string;
+        width: number;
+        height: number;
+        format: string;
+    };
+    [Symbol.toStringTag]: 'Module';
+}
+interface DefaultObject {
+    project: string;
+    title: string[]
+}
+interface FigureDataObject {
+    default: Array<DefaultObject>
+}
 interface GalleryProps {
-    galleryImages: string[];
+    altImgArr: string[];
+    projectImages: Array<ImageObject>;
+    figureData: Array<FigureDataObject>
 }
 
-const Gallery: React.FC<GalleryProps> = ({ galleryImages }) => {
+const Gallery: React.FC<GalleryProps> = ({ projectImages, altImgArr, figureData }) => {
     return (
         <>
             <h2 className="imgHeading">All Figures</h2>
@@ -40,10 +58,10 @@ const Gallery: React.FC<GalleryProps> = ({ galleryImages }) => {
                 className="mySwiper"
             >
                 {
-                    galleryImages.map((item: any) => (
-                        <SwiperSlide>
-                            <img src={item.imgSrc.src} alt={item.imgAlt} />
-                            <sub>{item.imgDetails}</sub>
+                    projectImages.map((item: any, index: number) => (
+                        <SwiperSlide key={index}>
+                            <img src={item.default.src} alt={altImgArr[index]} width={250} height={250} />
+                            <sub>{figureData[0].default[0].title[index]}</sub>
                         </SwiperSlide>
                     ))
                 }

@@ -15,9 +15,26 @@ export async function getStaticPaths() {
 }
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const allFigureData = await Astro.glob(
+  "/src/content/chemistry/completed/*/*/*.js"
+);
+const figureData = allFigureData.filter((figData: any) => {
+  return entry.slug.includes(figData.default[0].project);
+});
+var altImgArr: any = [];
+const allImages = await Astro.glob(
+  "/src/content/chemistry/completed/*/*/*/*.png"
+);
+const projectImages = allImages.filter((imageData: any) => {
+  altImgArr.push(imageData.default.src.split("figures/")[1].split(".")[1]);
+  return imageData.default.src.includes(`/${entry.slug}/`);
+});
 ---
 
-<ChemProjectLayout frontmatter={entry.data}>
+<ChemProjectLayout
+  frontmatter={{ ...entry.data, altImgArr, projectImages, figureData }}
+>
   <Content />
 </ChemProjectLayout>
 <script>
