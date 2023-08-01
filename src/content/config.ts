@@ -46,6 +46,11 @@ const chemProjectCollection = defineCollection({
       runUrl: z.string().nullable(),
       dockerUrl: z.string().nullable(),
       newsUrl: z.string().nullable(),
+      galleryImages: z.array(z.object({
+        imgSrc: image(),
+        imgAlt: z.string(),
+        imgDetails: z.string()
+      })).nullable(),
       type: z.string()
     }),
 })

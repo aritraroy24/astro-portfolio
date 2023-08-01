@@ -33,10 +33,10 @@ const {
   dockerUrl,
   newsUrl,
   description,
+  galleryImages,
   cover,
-  projectImages,
-  figureData,
 } = frontmatter;
+
 // getting related blog posts related to first tag of the current blog
 const allChemProjects = await getCollection("chemistry");
 const formattedChemProjects = formatPosts(allChemProjects, {
@@ -86,11 +86,7 @@ const relatedChemProjects = tagsFilteredChemProjects
     <div class="content">
       <slot />
     </div>
-    <SwiperGallery
-      client:only="react"
-      projectImages={projectImages}
-      figureData={figureData}
-    />
+    <SwiperGallery client:only="react" galleryImages={galleryImages} />
   </div>
   <!-- comment using giscus -->
   <ShareComment
