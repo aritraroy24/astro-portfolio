@@ -1,12 +1,20 @@
 ---
-import collaborators from "@js/data/collaborators";
-import { Image } from "astro:assets";
+// Component import
 import Layout from "@layouts/Layout.astro";
 import OtherHeder from "@components/AstroIslands/Common/OtherHeader";
 import Footer from "@components/AstroComponents/Footer.astro";
 import Socials from "@components/AstroComponents/Socials.astro";
-import "@styles/collaborators.scss";
+
+// Library import
 import Icon from "astro-iconify";
+import { Image } from "astro:assets";
+
+// Data import
+import collaborators from "@js/data/collaborators";
+
+// style import
+import "@styles/collaborators.scss";
+
 const {
   pageTitle = "Aritra Roy | Collaborators",
   pageDescription = "Connect with all of my collaborators from all around the world from various countries including India, UK, Iran and Pakistan",

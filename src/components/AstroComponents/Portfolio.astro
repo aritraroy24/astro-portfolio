@@ -5,7 +5,7 @@ import Tab from "@components/AstroComponents/Common/Tab.astro";
 // data import
 import education from "@assets/js/data/education";
 import research from "@assets/js/data/research";
-import Testimonial from "@components/AstroIslands/Testimonial";
+import Testimonial from "./Testimonial.astro";
 
 // style import
 import "./styles/Portfolio.scss";
@@ -27,6 +27,6 @@ import "./styles/Portfolio.scss";
     <div class="section-heading">
       <h4>Testimonials</h4>
     </div>
-    <Testimonial client:only="react" />
+    <Testimonial />
   </section>
 </main>

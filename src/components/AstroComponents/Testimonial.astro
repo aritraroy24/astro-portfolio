@@ -1,0 +1,101 @@
+---
+// Library import
+import { Image } from "astro:assets";
+import Icon from "astro-iconify";
+
+// data import
+import testimonials from "@js/data/testimonials";
+
+// style import
+import "./styles/Testimonial.scss";
+---
+
+<section class="Testimonial">
+  <div class="section-center">
+    <button
+      title="Previous Testimonial"
+      class="prev"
+      onclick="
+      plusSlides(-1)
+      "
+    >
+      <Icon
+        class="navigationSign"
+        name="material-symbols:keyboard-arrow-left"
+      />
+    </button>
+    {
+      testimonials.map((person: any, index) => {
+        const { image, name, title, quote } = person;
+        const isFirst = index === 0;
+        return (
+          <div class={isFirst ? "slide active" : "slide"}>
+            <Image
+              src={image}
+              height={250}
+              width={250}
+              alt={name}
+              class="person-img"
+            />
+            <h4>{name}</h4>
+            <p class="title">{title}</p>
+            <p class="text">{quote}</p>
+          </div>
+        );
+      })
+    }
+    <button title="Next Testimonial" class="next" onclick="plusSlides(1)">
+      <Icon
+        class="navigationSign"
+        name="material-symbols:keyboard-arrow-right"
+      />
+    </button>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll<HTMLDivElement>(".slide");
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  let slideInterval: NodeJS.Timeout;
+  let slideIndex = 0;
+  function plusSlides(n: number) {
+    showSlides((slideIndex += n));
+  }
+  function showSlides(n: any) {
+    if (n >= slides.length) {
+      slideIndex = 0;
+    }
+    if (n < 0) {
+      slideIndex = slides.length - 1;
+    }
+    slides.forEach((slide: any, index: number) => {
+      if (index === slideIndex) {
+        slide.style.display = "block";
+      } else {
+        slide.style.display = "none";
+      }
+    });
+    resetTimer();
+  }
+  function startSlideshow() {
+    slideInterval = setInterval(function () {
+      plusSlides(1);
+    }, 5000);
+  }
+  function resetTimer() {
+    clearInterval(slideInterval);
+    startSlideshow();
+  }
+  startSlideshow();
+  if (prevButton !== null) {
+    prevButton.addEventListener("click", () => {
+      plusSlides(-1);
+    });
+  }
+  if (nextButton !== null) {
+    nextButton.addEventListener("click", () => {
+      plusSlides(1);
+    });
+  }
+</script>

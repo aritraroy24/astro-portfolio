@@ -1,3 +1,4 @@
+import { felipe, biswanath, motahareh, saeedeh, faheem } from "@js/data/exportedImages";
 const collaborators = [
     {
         id: 1,
@@ -7,7 +8,7 @@ const collaborators = [
         email: 'https://mailhide.io/e/csxB46sW',
         website: 'https://www.felipefantuzzi.org/',
         googleScholar: 'https://scholar.google.com/citations?hl=en&user=se9pb9sAAAAJ',
-        avatar: '/images/collaborators/felipe.webp',
+        avatar: felipe,
         project: 'Electronic structure and reactivity of an allyl-like trialuminium compound'
     },
     {
@@ -18,7 +19,7 @@ const collaborators = [
         email: 'https://mailhide.io/e/inLj9mI4',
         website: null,
         googleScholar: 'https://scholar.google.com/citations?user=sjtnGdAAAAAJ',
-        avatar: '/images/collaborators/biswanath.jpg',
+        avatar: biswanath,
         project: 'DFT Study For Selective Amino Acid (L-Cysteine) Sensing By A Cu(II)'
     },
     {
@@ -29,7 +30,7 @@ const collaborators = [
         email: 'https://mailhide.io/e/O0sPDQEB',
         website: null,
         googleScholar: null,
-        avatar: '/images/collaborators/motahareh.jpg',
+        avatar: motahareh,
         project: 'Be₂C Monolayer For Sensing Of COVID-19 Biomarkers And Drug Delivery: A DFT Study'
     },
     {
@@ -40,7 +41,7 @@ const collaborators = [
         email: 'https://mailhide.io/e/T9kXf5N4',
         website: null,
         googleScholar: 'https://scholar.google.com/citations?user=JXzm13sAAAAJ',
-        avatar: '/images/collaborators/saeedeh.jpg',
+        avatar: saeedeh,
         project: 'DFT Study For H₂ Adsorption In A Cage Like Metal Oxide Cluster'
     },
     {
@@ -51,7 +52,7 @@ const collaborators = [
         email: 'https://mailhide.io/e/6VPRd573',
         website: null,
         googleScholar: 'https://scholar.google.com/citations?user=0bftz28AAAAJ',
-        avatar: '/images/collaborators/faheem.jpg',
+        avatar: faheem,
         project: 'Tuning The Optoelectronic Properties By End-capped Group Modification For Efficient OSCs'
     }
 ]

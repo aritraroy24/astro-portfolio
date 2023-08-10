@@ -1,8 +1,4 @@
-import mmbk from '../../images/testimonials/mmbk.webp'
-import gaurav from '../../images/testimonials/gaurav.webp'
-import tarak from '../../images/testimonials/tarak.webp'
-import felipe from '../../images/testimonials/felipe.webp'
-import ssr from '../../images/testimonials/ssr.webp'
+import { felipe, mmbk, ssr, gaurav, tarak } from "@js/data/exportedImages";
 
 const people = [
     {
