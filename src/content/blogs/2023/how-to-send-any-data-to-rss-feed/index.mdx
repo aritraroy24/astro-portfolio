@@ -57,7 +57,8 @@ I assume that you have a basic knowledge of [Astro](https://astro.build/), one o
 ### Deep Diving into the code
 #### Frontmatter Structure & Goal
 I have several data associated with each of my blog post. The following is my frontmatter of this article --
-```javascript
+```javascript 
+// index.mdx
 ---
 isDraft: false
 title: "How to Send Any Data to Your RSS Feed? A Guide with Astro + RSS"
@@ -75,7 +76,8 @@ Out of all the items in the frontmatter, only title, description, cover image (e
 #### JavaScript Code to Send Data in RSS Feed
 I have used [ES6 template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) to merge all the custom data which should be shipped in the feed. However, before sending the data all of them should be converted to proper HTML syntax using marked and sanitize-html NPM packages. I have also attached a prefix to each of them ('Subtitle: ' and 'Duration: ') The complete javascript code is given below, and you can see, for each item, custom data like subtitle and duration are being passed through **content**--
 
-```javascript
+```javascript 
+// rss.xml.js
 // package import
 import rss from '@astrojs/rss';
 import sanitizeHtml from 'sanitize-html';
@@ -130,7 +132,7 @@ Now, we can see our each of the custom data is inside the **\<content:encoded>\<
 • Getting the required value using the 𝘀𝘂𝗯𝘀𝘁𝗿𝗶𝗻𝗴-𝗯𝗲𝗳𝗼𝗿𝗲 and 𝘀𝘂𝗯𝘀𝘁𝗿𝗶𝗻𝗴-𝗮𝗳𝘁𝗲𝗿 functions
 
 **'\<p>Subtitle: '** and **'\<p>Duration: '** are used to get the string after this parameters till a closing **\</p>** tag. Following is the code for all items --
-```xml
+```xml title="styles.xsl"
 <xsl:for-each select="/rss/channel/item">
 <xsl:variable name="allContent" select="*[name()='content:encoded']" />
 <div class="py-5">

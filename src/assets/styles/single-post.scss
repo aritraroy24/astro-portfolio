@@ -125,6 +125,25 @@
     border: 0.25px solid var(--slate);
   }
 }
+// Customizing code blocks
+pre {
+  padding: 0 1.35rem !important;
+}
+code {
+  overflow-x: scroll !important;
+  width: calc(40vw - 1.35rem) !important;
+}
+.ec-line {
+  padding-inline: 0 !important;
+}
+.ec-oxbgc {
+  margin-bottom: 20px !important;
+}
+.ec.ec-oxbgc .frame.has-title:not(.is-terminal) .title {
+  width: 100% !important;
+  background: rgb(80, 80, 80) !important;
+}
+
 @media only screen and (max-width: 1500px) {
   .post-content {
     padding: 0 25vw;
@@ -140,6 +159,10 @@
     img {
       max-width: 50vw;
     }
+  }
+  code {
+    overflow-x: scroll !important;
+    width: calc(50vw - 1.35rem) !important;
   }
 }
 @media only screen and (max-width: 1050px) {
@@ -173,6 +196,10 @@
       font-size: 0.7rem !important;
     }
   }
+  code {
+    overflow-x: scroll !important;
+    width: calc(60vw - 1.35rem) !important;
+  }
 }
 @media only screen and (max-width: 850px) {
   .post-content div div div div {
@@ -202,6 +229,13 @@
       font-size: 0.7rem !important;
     }
   }
+  pre {
+    padding: 0 0.75rem !important;
+  }
+  code {
+    overflow-x: scroll !important;
+    width: calc(100vw - 0.75rem - 80px) !important;
+  }
 }
 @media only screen and (max-width: 480px) {
   .post-content {
@@ -222,5 +256,9 @@
 @media only screen and (max-width: 420px) {
   .post-content {
     padding: 0 22px;
+  }
+  .ec.ec-oxbgc {
+    display: flex;
+    align-items: normal;
   }
 }

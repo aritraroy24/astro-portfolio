@@ -80,7 +80,7 @@ const {
             if (cs.r.test(nAgt)) {
               os = cs.s;
               if (os === "iOS") {
-                osVersion = /OS (\d+)_(\d+)_?(\d+)?/.exec(nVer);
+                osVersion = /OS (\d+)_(\d+)_?(\d+)?/.exec(nVer)!![1];
                 osVersion =
                   osVersion[1] + "." + osVersion[2] + "." + (osVersion[3] | 0);
                 break;
@@ -97,8 +97,12 @@ const {
           if (os === "iOS" && screen.width < 730) {
             const footerSocials = document.getElementById("footerSocials");
             const footer = document.getElementById("footer");
-            footerSocials.style.display = "none";
-            footer.style.minHeight = "200px";
+            if (footerSocials !== null) {
+              footerSocials.style.display = "none";
+            }
+            if (footer !== null) {
+              footer.style.minHeight = "200px";
+            }
           }
         }
       })(this);
