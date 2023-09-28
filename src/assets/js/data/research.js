@@ -1,12 +1,25 @@
 const research = [
     {
+        id: 4,
+        title: 'Research Assistant / PhD Student',
+        institution: 'London South Bank University',
+        duration: 'Sep, 2023 - Present',
+        url: 'https://www.lsbu.ac.uk/',
+        description: [
+            'Domain wall manipulation',
+            'Machine learning',
+            'Ferroelectronic materials',
+            'Under Dr. John Buckeridge'
+        ]
+    },
+    {
         id: 3,
         title: 'Research Collaborator',
         institution: 'National Institute of Technology Silchar',
         duration: 'Nov, 2022 - Present',
         url: 'http://www.nits.ac.in/',
         description: [
-            'Metal Sensing using amino acids',
+            'Metal sensing using amino acids',
             'L-Cysteine and Histidine',
             'With Dr B. Ghosh & Dr F. Fantuzzi'
         ]
