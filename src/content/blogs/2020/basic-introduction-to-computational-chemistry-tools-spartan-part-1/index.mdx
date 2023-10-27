@@ -1,0 +1,155 @@
+---
+isDraft: false
+title: "Basic Introduction to Computational Chemistry Tools: Spartan (Part-1)"
+subtitle: Build any 3D molecule from scratch 🎉🎉🎉
+description: Spartan is a molecular modelling and computational chemistry application from Wavefunction. The initial release was in 1991 and it is available for Windows, MacOS X and Linux.
+duration: 6 Min Read
+cover: ./spartan-part-1.png
+tags: [chemistry, quantum, tools, computational, basics, tutorial]
+pubDate: 2020-10-08
+type: BlogPost
+---
+import ThreeDDrawingModes from "./figures/3d-drawing-methods-of-spartan.gif";
+import TwoDDrawingModes from "./figures/2d-drawing-methods-of-spartan.gif";
+import BondMakingBreaking from "./figures/bond-making-and-breaking-procedure.gif"
+import RemoveElement from "./figures/removing-an-element-or-bond.gif"
+import EnergyMinimization from "./figures/energy-minimization-procedure.gif"
+import ModelTypes from "./figures/types-of-models.webp"
+
+<div>
+
+_<span style="font-size:30px;">A</span>lthough much of its discovery process is descriptive and qualitative, chemistry is fundamentally a quantitative science. It serves a wide range of human needs, activities, and concerns. Chemistry attained a quantitative science status through the development of one major discipline in science, namely, quantum mechanics and molecular mechanics. Molecular mechanics, quantum mechanics, and quantum chemical calculations provide structures, relative stabilities, properties, and spectra of isolated molecules._
+
+Though there is a difference between quantum mechanics and molecular mechanics — <br></br><a href="https://www.researchgate.net/post/Quantum_Mechanics_vs_Molecular_Mechanics_in_molecular_docking_how_to_choose#:~:text=Quantum%20mechanical%20calculations%20describe%20the,expensive%20from%20a%20computational%20perspective." target="_blank">Quantum mechanical calculations describe the electronic behaviour of atoms and molecules, and this is what makes it suitable for the site of failure of Molecular Mechanical calculations, which is the calculation of bond formation and dissociation energies, but QM methods are expensive from a computational perspective.</a> Whatever in both cases, we use some tools for our quantum chemical calculations. One of the hugely used software is Spartan.
+
+## Version and Supported Systems:
+- • It was first released in the year 1991 as Spartan version 1 for Unix OS. But as of now, the latest available stable version is <a href="https://www.wavefun.com/" target="_blank">Spartan’18</a>.
+- • It’s available for Windows, Linux, and Macintosh.
+
+## Basic Features and Usage:
+Now, let’s have a look at the basic features and usage that Spartan provides us —
+<div style="text-align:left;">
+- • _**Databases:**_ Spartan provides us with four different databases like <a href="http://ww2.wavefun.com/products/databases/sspd/sspd_main.html" target="_blank">Spartan Spectra and Properties Database (SSPD)</a>, <a href="http://ww2.wavefun.com/products/databases/smd/wf_smd.html" target="_blank">Spartan Molecular Database (SMD)</a>, <a href="https://www.rcsb.org/" target="_blank">Protein Data Bank (PDB)</a>, and <a href="http://ww2.wavefun.com/products/databases/csd/ccdc_csd.html" target="_blank">Cambridge Structural Database System (CSD)</a>.<br></br><br></br>
+- • _**Computational Ability:**_ <a href="https://en.wikipedia.org/wiki/Hartree%E2%80%93Fock_method" target="_blank">Hartree–Fock (HF) methods</a>, <a href="https://en.wikipedia.org/wiki/Self-consistent_field" target="_blank">self-consistent field (SCF) methods</a>, <a href="https://en.wikipedia.org/wiki/Density_functional_theory" target="_blank">Density functional theory (DFT) methods</a>, <a href="https://en.wikipedia.org/wiki/Coupled_cluster" target="_blank">Coupled cluster (CC) methods</a>, <a href="https://en.wikipedia.org/wiki/M%C3%B8ller%E2%80%93Plesset_perturbation_theory" target="_blank">Møller–Plesset (MP) methods</a>, <a href="https://en.wikipedia.org/wiki/Excited_state" target="_blank">Excited-state methods</a>, and <a href="https://en.wikipedia.org/wiki/Quantum_chemistry_composite_methods" target="_blank">Quantum chemistry composite methods</a>.<br></br><br></br>
+- • _**Tasks Performed:**_ Energy calculation, Equilibrium molecular geometry, Transition state geometry, Equilibrium conformer, Conformer distribution, Energy profile, Similarity analysis, etc.<br></br><br></br>
+- • _**Graphical Models:**_ Molecular orbitals, Electron density, Spin density, Van der Waals radius, Solvent accessible surface area, Electrostatic potential, Electrostatic potential map, Local ionisation potential map, LUMO map<br></br><br></br>
+- • _**Spectral Calculations:**_ Fourier-transform spectroscopy (FT-IR), Raman Spectroscopy (IR), 1H chemical shift and coupling constants, 13C chemical shift, 13C-DEPT spectra, COSY spectra, HSQC spectra, UV/Vis spectra, etc.
+</div>
+
+<p class="sectionDivider">⁕ ⁕ ⁕</p>
+
+## Basic Tutorial:
+#### Drawing a molecule: 
+One can use two possible methods for drawing a molecule, 3D drawing or 2D drawing —
+`In the 3D drawing method, one can go to the New Build option from the File option or simply by using the shortcut Ctrl+N and then selecting the elements from the right-side panel of the screen. One can use any Organic molecule(C based structure) or Inorganic molecule (Any element from the Periodic Table). One can rotate the molecule for different angle views. Also one can use different bond types from the right panel (like conjugation or double bond etc.). Furthermore, one can set the coordination number of the element from the inorganic section of the panel (fig.-1.1).`
+
+<div><div>
+
+<img src={ThreeDDrawingModes.src} alt="3D Drawing methods of Spartan" /><br></br>
+
+<sup>**Figure 1.1:** 3D Drawing methods of Spartan</sup>
+
+</div></div>
+
+`On the other hand, in the 2D drawing method, one can go to the New Sketch option from the File option or simply by using the shortcut Ctrl+K and then one can select residue and make bonds for forming the molecule. Technically, it doesn’t contain all the Periodic Group elements, but for larger molecules (like Fullerene C60) drawing it acts as a simpler tool. After drawing in 2D, one can see its 3D view just by clicking the spectacle symbol (fig.-1.2).`
+
+<div><div>
+
+<img src={TwoDDrawingModes.src} alt="2D Drawing methods of Spartan" /><br></br>
+
+<sup>**Figure 1.2:** 2D Drawing methods of Spartan</sup>
+
+</div></div>
+
+#### Making or Breaking a bond:
+One can make bonds by selecting the ends of the two coordinating bond-end using the _dumbbell like option_ at the bottom-right corner of the page (fig.-3), and also any bond can be broken by clicking the _dumbbell-like+rubber symbolled option_ at the bottom-right part of the page (fig.-1.3).
+
+<div><div>
+
+<img src={BondMakingBreaking.src} alt="Bond Making & Breaking Procedure" /><br></br>
+
+<sup>**Figure 1.3:** Bond Making & Breaking Procedure</sup>
+
+</div></div>
+
+#### Removing an Element or Bond: 
+Removing an element or bond is very easy in Spartan. One can select the _rubber symbolled option_ at the bottom-right part of the page and click on the bond or element which should be removed (fig.-1.4).
+
+<div><div>
+
+<img src={RemoveElement.src} alt="Removing an element or bond" /><br></br>
+
+<sup>**Figure 1.4:** Removing an element or bond</sup>
+
+</div></div>
+
+#### Energy Minimization: 
+The energy minimisation or optimisation process is the best thing at the beginning level for getting a good energy result and stable conformational structure. It allows one to draw a structure by making bonds (joining bonds to form the desired molecule). This option will optimise the molecule in its stable conformational structure and stable conformer’s point group (can be seen at the bottom-right corner of the page). Furthermore, the advanced level calculations are also done by taking the structure's coordinate values after energy minimisation. One can do energy minimisation by clicking the _green downside arrow symbolled option_ at the page's bottom-right part (fig.-1.5).
+
+<div><div>
+
+<img src={EnergyMinimization.src} alt="Energy minimisation procedure" /><br></br>
+
+<sup>**Figure 1.5:** Energy minimisation procedure</sup>
+
+</div></div>
+
+#### Different Types of Model: 
+Though after opening, drawing a molecule in Spartan will be in _Ball and Spoke Model_, Spartan supports various types of model viewing for a molecule under the _Model_ option.
+```
+(1)Wire Model
+(2)Ball and Wire Model
+(3)Tube Model
+(4)Ball and Spoke Model
+(5)Space-filling Model
+(6)Line Model.
+```
+I’m giving all types of examples (for CH3 — NH2 molecule) in the following picture (fig.-1.6) —
+
+<div><div>
+
+<img src={ModelTypes.src} alt="Different types of models supported by Spartan" /><br></br>
+
+<sup>**Figure 1.6:** Different types of models supported by Spartan</sup>
+
+</div></div>
+
+## Output and Saving:
+We can save the Spartan file in many formats like —
+```
+1) Spartan Doc's(*.spartan)
+2) Spartan Input(*.spinput)
+3) Spartan Output(*.txt)
+4) Spartan Archive(*.sparchive)
+5) Spartan Collection(*.col)
+6) Spartan Eschange(*.sxf)
+7) Spartan Database(*.spentry)
+8) Sybyl Mol(*.mol)
+9) Protein Data Bank(*.pdb)
+10)XYZ(*.xyz)
+11)JPEG file(*.jpg)
+12)PNG file(*.png) etc.
+```
+As a matter of fact, the Spartan Input value can be used in furthermore calculation to get AOs from CACAO software(will be discussed later).
+
+## Note:
+- • The first point that will come to one’s mind while going to download it is that _Spartan is a paid educational software_. Now, let me tell you one thing if you have a keen desire for this computational chemistry calculation, I’m pretty much sure you have a chemistry background. Then surely you’ll get help from your institutional department in this case. But, unfortunately, if you’re not from a chemistry background and desire to learn about the computational calculations approach, then there is an alternative to this software, _<a href="https://avogadro.en.softonic.com/" target="_blank">Avogadro</a>_. Don’t worry, I’ll write about Avogadro also.
+- • So far, what we’ve seen it’s not _all_. Spartan provides us with many more features and methods for helping out in visualising molecules and computational calculations. The following article of this series will be on different types of geometry constraints and many more. Stay updated.
+
+## References:
+- • [Wikipedia](https://en.wikipedia.org/wiki/Spartan_(chemistry_software))
+- • [Spartan documentation](https://www.wavefun.com/spartan-documentation)
+- • [Spartan manual](https://dasher.wustl.edu/chem478/software/spartan-manual.pdf)
+
+<p class="sectionDivider">⁕ ⁕ ⁕</p>
+
+<div class="citationBlockquote">
+Thank you for reading.
+
+I hope you found this **_“Basic Introduction to Computational Chemistry Tools: Spartan (Part-1)”_** article helpful. Please share if you like and leave any comment to let me know your thoughts.
+
+You can connect with me on <i><b><a href="https://www.linkedin.com/in/aritraroy24/" target="_blank">LinkedIn</a></b></i>, <i><b><a href="https://twitter.com/royaritra24" target="_blank">Instagram</a></b></i>, <i><b><a href="https://twitter.com/aritraroy24" target="_blank">Twitter</a></b></i> or <i><b><a href="https://github.com/aritraroy24" target="_blank">GitHub</a></b></i>.
+
+</div>
+
+</div>

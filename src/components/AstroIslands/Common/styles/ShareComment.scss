@@ -1,0 +1,53 @@
+.shareCommentContainer {
+  padding: 0 220px;
+  margin-bottom: 10px;
+}
+.shareText {
+  text-align: center;
+}
+.shareBtnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  a {
+    margin: 10px;
+    width: 50px;
+    .shareIcon {
+      width: 2rem;
+      height: auto;
+    }
+  }
+}
+#comments {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 1050px) {
+  .shareCommentContainer {
+    padding: 0 80px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .shareCommentContainer {
+    padding: 0 40px;
+  }
+  .shareBtnContainer a {
+    width: 30px;
+    .shareIcon {
+      width: 1.25rem;
+    }
+  }
+}
+@media only screen and (max-width: 420px) {
+  .shareCommentContainer {
+    padding: 0 22px;
+  }
+  .shareBtnContainer a {
+    margin: 5px;
+    width: 18px;
+    .shareIcon {
+      width: 1rem;
+    }
+  }
+}

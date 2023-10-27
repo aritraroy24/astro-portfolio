@@ -1,0 +1,127 @@
+.Footer {
+    background: rgb(6, 14, 31);
+    position: relative;
+    left: 0;
+    width: 100%;
+    min-height: 250px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    margin-top: 50px;
+    .footerSocials {
+        display: none;
+    }
+    .visitsDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+            width: 20px;
+            fill: none;
+            margin: 5px;
+            color: #64ffda;
+        }
+        div {
+            margin-top: 7px;
+            display: flex;
+            align-items: center;
+            .filtered {
+                filter: hue-rotate(70deg);
+            }
+        }
+    }
+    .copyrightDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            font-family: "Overpass Mono", Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            color: rgb(149, 171, 204);
+            // margin-top: 20px;
+            opacity: 1;
+            padding: 8px 5px;
+            border-radius: 1px;
+            a {
+                color: #64ffda;
+                text-decoration: none;
+                transition: all 200ms ease-out;
+
+                &:hover {
+                    color: rgba(255, 47, 82, 0.685);
+                }
+            }
+
+            span {
+                color: #64ffda;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .Footer {
+        min-height: 400px;
+        margin: unset;
+        .footerSocials {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            align-items: center;
+            justify-content: center;
+            padding: 0 50px;
+            a {
+                margin: 10px;
+                .ai {
+                    font-size: 22px;
+                    margin-top: 5px;
+                }
+            }
+        }
+        .visitsDiv {
+            svg {
+                width: 17px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Footer {
+        height: 260px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .Footer {
+        min-height: 450px;
+        .footerSocials {
+            a {
+                .ai {
+                    font-size: 18px;
+                }
+                svg {
+                    height: 18px;
+                }
+            }
+        }
+        .visitsDiv {
+            margin-bottom: 10px;
+        }
+        .copyrightDiv {
+            flex-direction: column;
+            p {
+                padding: unset;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 303px) {
+    .Footer {
+        min-height: 500px;
+    }
+}

@@ -1,0 +1,299 @@
+.Home {
+  width: 100%;
+  min-height: 750px;
+  padding: 0 220px;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 64px !important;
+  line-height: 1;
+  font-family: "Overpass", Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 5px;
+  color: rgb(227, 237, 255);
+}
+h2 {
+  margin: 0;
+}
+
+.AllButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#BuyMeIceCream {
+  width: 300px;
+  height: auto;
+}
+.ContactButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+  .button-link {
+    text-decoration: none;
+  }
+}
+
+.home-title-section {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: 2s ease-out 0s 1 slideInFromBottom;
+}
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(3%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.introduction {
+  font-size: 18px;
+  color: #fe3e55;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  font-family: "Overpass Mono", Verdana, Geneva, Tahoma, sans-serif;
+  transition: all 200ms ease-out;
+}
+
+a:focus {
+  outline: none;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  transition: all 200ms ease-out;
+}
+
+.description-title {
+  margin-top: 35px;
+  font-size: 16.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: "Overpass", Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 540px;
+  transition: all 200ms ease-out;
+}
+
+.sub-header-title {
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 200ms ease-out;
+  font-size: 55px;
+}
+
+.orb {
+  height: 800px;
+  width: 800px;
+  background: url("../../../assets/images/fullerene.webp");
+  z-index: -1;
+  position: fixed;
+  bottom: -320px;
+  right: -150px;
+  animation: orbfloat 12s infinite ease-in-out;
+}
+
+@keyframes orbfloat {
+  from {
+    transform: translate(40px, 0px);
+  }
+  50% {
+    transform: translate(0px, -40px);
+  }
+  to {
+    transform: translate(40px, 0px);
+  }
+}
+
+@media only screen and (max-width: 1145px) {
+  .customButton {
+    font-size: 12.5px;
+  }
+  #BuyMeIceCream {
+    width: 240px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .Home {
+    padding: 0 80px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  .sub-header-title {
+    font-size: 48px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .description-title {
+    margin-top: 35px;
+    font-weight: 300;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .Home {
+    min-height: 850px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .Home {
+    min-height: 650px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .Home {
+    padding: 0 40px;
+    margin-bottom: 200px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .sub-header-title {
+    font-size: 42px;
+  }
+  p {
+    font-size: 16px;
+  }
+
+  .description-title {
+    margin-top: 35px;
+    font-weight: 300;
+    width: 90%;
+  }
+
+  .introduction {
+    font-size: 14px;
+  }
+
+  .AllButtons {
+    display: flex;
+    flex-direction: column;
+  }
+  #BuyMeIceCream {
+    width: 210px;
+  }
+  .home-title-section {
+    padding: 50px 0 50px 0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .Home {
+    min-height: 700px;
+  }
+  h1 {
+    font-size: 47px;
+  }
+  .sub-header-title {
+    font-size: 38px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .description-title {
+    font-weight: 300;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Home {
+    min-height: 850px;
+  }
+  h1 {
+    font-size: 39px;
+  }
+
+  #BuyMeIceCream {
+    width: 180px;
+  }
+
+  .introduction {
+    font-size: 16px;
+  }
+
+  .sub-header-title {
+    font-size: 31px;
+  }
+
+  .orb {
+    bottom: -600px;
+    right: -275px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  h1 {
+    font-size: 32px;
+  }
+  #BuyMeIceCream {
+    width: 150px;
+  }
+  .sub-header-title {
+    font-size: 26px;
+  }
+  p {
+    font-size: 14px;
+  }
+
+  .description-title {
+    margin-top: 35px;
+    font-weight: 300;
+    font-size: 15px;
+    width: 98%;
+  }
+
+  .introduction {
+    font-size: 12px;
+  }
+
+  .ContactButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .home-title-section {
+    padding: 100px 0 50px 0;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .Home {
+    padding: 0 22px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    overflow-x: hidden;
+  }
+}

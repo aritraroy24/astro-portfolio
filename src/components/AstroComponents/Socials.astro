@@ -1,0 +1,28 @@
+---
+// library import
+import { Icon } from "astro-iconify";
+
+// style import
+import "./styles/Socials.scss";
+
+// import data
+import socials from "@js/data/socials";
+---
+
+<div class="Socials">
+  {
+    socials.map((social: any) => {
+      return (
+        <a
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={social.title}
+        >
+          <Icon name={social.name} />
+        </a>
+      );
+    })
+  }
+  <div class="stripe"></div>
+</div>

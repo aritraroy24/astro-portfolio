@@ -1,0 +1,76 @@
+.videoHeaderContainer {
+  padding: 0 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  .videoHeaderElements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .subtitle {
+      color: var(--slate);
+    }
+    .tagsContainer {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 1.1rem;
+      .customIcon {
+        height: 18px;
+        padding: 1px;
+        margin: 0 2px;
+        width: unset;
+      }
+      .tagBadge {
+        padding: 4px;
+      }
+    }
+  }
+
+  .videoCoverImg {
+    width: 70%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .videoHeaderContainer {
+    padding: 0 80px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .videoHeaderContainer {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .videoHeaderContainer {
+    margin-top: 130px;
+    .title {
+      font-size: 1.8rem;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+    }
+    .videoCoverImg {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 440px) {
+  .videoHeaderContainer {
+    .title {
+      font-size: 1.5rem;
+    }
+    .subtitle {
+      font-size: 1rem;
+    }
+  }
+}
+@media only screen and (max-width: 420px) {
+  .videoHeaderContainer {
+    padding: 0 22px;
+  }
+}

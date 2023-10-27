@@ -1,0 +1,57 @@
+---
+// component import
+import { Icon } from "astro-iconify";
+import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import BackButton from "@components/AstroComponents/Common/BackButton.astro";
+import VideoPlayer from "@components/AstroIslands/Videos/VideoPlayer";
+
+// function import
+import { slugify, formatDate } from "@js/utils";
+
+// style import
+import "./styles/VideoHeader.scss";
+
+// // destructuring astro properties
+const { tags, title, videoId, duration, pubDate } = Astro.props;
+---
+
+<>
+  <OtherHeader client:only="react" />
+  <header class="videoHeaderContainer">
+    <BackButton
+      text="Back"
+      customStyle="margin-bottom:30px; padding: 15px 22px;"
+      icon={{
+        name: "tabler:arrow-big-left-line",
+        side: "left",
+      }}
+    />
+    <div class="videoHeaderElements">
+      <h1 class="title">{title}</h1>
+      <p class="tagsContainer">
+        <Icon
+          name="octicon:stopwatch-16"
+          class="customIcon"
+          height="24"
+          width="24"
+        />
+        {duration} • <Icon
+          name="mdi:calendar"
+          class="customIcon"
+          height="24"
+          width="24"
+        />{formatDate(pubDate)}
+      </p>
+      <p class="tagsContainer">
+        {
+          tags.map((tag: string) => (
+            <a href={`/tutorial/videos/tag/${slugify(tag)}`}>
+              <span class="tagBadge">#{slugify(tag)}</span>
+            </a>
+          ))
+        }
+      </p>
+    </div>
+    <VideoPlayer client:only="react" videoId={videoId} />
+  </header>
+</>

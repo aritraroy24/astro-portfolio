@@ -1,0 +1,39 @@
+{
+  import.meta.env.DEV && (
+    <script
+      type="text/javascript"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=NOT-PASSED"
+    />
+    <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "NOT-PASSED");
+    </script>
+  )
+}
+{
+  import.meta.env.PROD && (
+    <script
+      type="text/javascript"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZX7CR53T89"
+    />
+    <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-ZX7CR53T89");
+    </script>
+  )
+}
+
+
+

@@ -1,0 +1,52 @@
+---
+// library import
+import { Icon } from "astro-iconify";
+
+// component import
+import Newsletter from "./Common/Newsletter.astro";
+
+// style import
+import "./styles/Footer.scss";
+
+// import data
+import socials from "@js/data/socials";
+---
+
+<footer class="Footer" id="footer">
+  <div class="footerSocials" id="footerSocials">
+    {
+      socials.map((social: any) => {
+        return (
+          <a
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={social.title}
+          >
+            <Icon name={social.name} />
+          </a>
+        );
+      })
+    }
+  </div>
+  <!-- <div class="visitsDiv" title="Visitor">
+        <div>
+            <Icon name="pajamas:eye" />
+            <img
+                width="60"
+                height="15"
+                class="filtered"
+                src="https://www.free-website-hit-counter.com/c.php?d=4&id=151751&s=36"
+                alt="Visitors"
+            />
+        </div>
+    </div> -->
+  <Newsletter />
+  <div class="copyrightDiv">
+    <p>
+      &copy; 2023 <a href="/"><span>aritraroy.live</span></a>
+    </p>
+    <p>❤️</p>
+    <p>All rights reserved.</p>
+  </div>
+</footer>

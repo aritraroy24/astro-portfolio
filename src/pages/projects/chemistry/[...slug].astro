@@ -1,0 +1,29 @@
+---
+// chemistry project post layout import
+import ChemProjectLayout from "@layouts/ChemProjectLayout.astro";
+
+// library import
+import { getCollection } from "astro:content";
+
+// getting all chemistry projects
+export async function getStaticPaths() {
+  const chemistryProjectEntries = await getCollection("chemistry");
+  return chemistryProjectEntries.map((entry: any) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<ChemProjectLayout frontmatter={entry.data}>
+  <Content />
+</ChemProjectLayout>
+<script>
+  // Get all the anchor elements in the markdown file and add target="_blank" attribute
+  var links = document.getElementsByTagName("a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].setAttribute("target", "_blank");
+  }
+</script>

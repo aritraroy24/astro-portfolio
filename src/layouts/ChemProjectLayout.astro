@@ -1,0 +1,104 @@
+---
+// layout import
+import Layout from "@layouts/Layout.astro";
+
+// component import
+import ChemProjectHeader from "@components/AstroComponents/ChemistryProjects/ChemProjectHeader.astro";
+import RelatedPosts from "@components/AstroComponents/Common/RelatedPosts.astro";
+import ShareComment from "@components/AstroIslands/Common/ShareComment";
+import SwiperGallery from "@components/AstroIslands/ChemistryProjects/SwiperGallery";
+import Socials from "@components/AstroComponents/Socials.astro";
+import Footer from "@components/AstroComponents/Footer.astro";
+
+// function import
+import { formatPosts } from "@js/utils";
+import { getCollection } from "astro:content";
+
+// style import
+import "@styles/single-post.scss";
+
+// destructuring astro properties
+const { frontmatter, robots } = Astro.props;
+const {
+  title,
+  status,
+  duration,
+  tags,
+  pubDate,
+  journalName,
+  isOpenAccess,
+  journalUrl,
+  codeUrl,
+  runUrl,
+  dockerUrl,
+  newsUrl,
+  description,
+  galleryImages,
+  cover,
+} = frontmatter;
+
+// getting related blog posts related to first tag of the current blog
+const allChemProjects = await getCollection("chemistry");
+const formattedChemProjects = formatPosts(allChemProjects, {
+  sortByDate: false,
+  filterOutFuturePosts: false,
+});
+// filtering based on common tags
+const tagsFilteredChemProjects: any[] = [];
+var flag = 0;
+formattedChemProjects.forEach((item: any) => {
+  var tempTags = item.data.tags;
+  tempTags.forEach((tag: string) => {
+    if (tags.includes(tag)) {
+      flag = 1;
+    }
+  });
+  if (flag === 1) {
+    tagsFilteredChemProjects.push(item);
+  }
+  flag = 0;
+});
+// removing the same post itself (we don't want to show the same post as similar post suggestion)
+const relatedChemProjects = tagsFilteredChemProjects
+  .filter((blog: any) => blog.data.title !== title)
+  .slice(0, 3);
+---
+
+<Layout {title} {description} {frontmatter} {robots} {cover}>
+  <Socials />
+  <!-- blog heading section -->
+  <ChemProjectHeader
+    {title}
+    {status}
+    {duration}
+    {tags}
+    {pubDate}
+    {journalName}
+    {isOpenAccess}
+    {journalUrl}
+    {codeUrl}
+    {runUrl}
+    {dockerUrl}
+    {newsUrl}
+  />
+  <!-- blog post content section -->
+  <div class="post-content">
+    <div class="content">
+      <slot />
+    </div>
+    <SwiperGallery client:only="react" galleryImages={galleryImages} />
+  </div>
+  <!-- comment using giscus -->
+  <ShareComment
+    client:only="react"
+    postType="Publication"
+    rssUrl="/projects/chemistry/rss.xml"
+  />
+  <!-- related blog posts section -->
+  <RelatedPosts
+    relatedPosts={relatedChemProjects}
+    text="Chemistry Projects"
+    urlPrefix="/projects/chemistry/"
+  />
+  <Footer />
+</Layout>

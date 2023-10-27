@@ -1,0 +1,27 @@
+---
+// style import
+import "./styles/Newsletter.scss";
+---
+
+<form
+    class="newsletterForm"
+    action="https://eepurl.com/iteWVs"
+    method="post"
+    target="popupwindow"
+    onsubmit="
+    window.open('https://eepurl.com/iteWVs', 'popupwindow', 'scrollbars=yes,width=800,height=800'); return true
+    "
+>
+    <p class="newsletterHeading">
+        <label for="tlemail">Subscribe My Newsletter</label>
+    </p>
+    <p class="newsletterDescription">
+        Get notifications for my latest blogs, videos or research projects right
+        into your mailbox 💌.
+    </p>
+    <input type="hidden" value="1" name="embed" /><input
+        class="newsletterSubmit"
+        type="submit"
+        value="Subscribe"
+    />
+</form>

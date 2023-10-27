@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  src: url("/src/assets/fonts/Overpass-Regular.ttf");
+  font-family: "Overpass";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("/src/assets/fonts/OverpassMono-Regular.ttf");
+  font-family: "Overpass Mono";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  --navy: #011b43;
+  --blue: #71afff;
+  --green: #64ffda;
+  --red: #fe3e55;
+  --slate: #8892b0;
+  --white: #e6f1ff;
+  --highlight: rgba(41, 61, 90, 0.99);
+  --font-size-xs: 13px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 22px;
+  --font-size-h3: 32px;
+}
+:root {
+  /* colors */
+  --_hue: 235;
+
+  /* Light Mode */
+  --bkg--light: var(--_hue) 25% 97%;
+  --txt--light: var(--_hue) 40% 5%;
+  --accent--light: var(--_hue) 55% 50%;
+  --muted--light: var(--_hue) 30% 99%;
+  /* Dark Mode */
+  --bkg--dark: var(--_hue) 15% 10%;
+  --txt--dark: var(--_hue) 20% 85%;
+  --accent--dark: var(--_hue) 50% 50%;
+  --muted--dark: var(--_hue) 20% 2%;
+
+  --bkg: var(--bkg--light);
+  --txt: var(--txt--light);
+  --accent: var(--accent--light);
+  --muted: var(--muted--light);
+  color-scheme: light;
+
+  /* dynamic spacing adapted from utopia.fyi */
+  --space-2xs: clamp(0.31rem, calc(0.18rem + 0.65vw), 0.69rem);
+  --space-xs: clamp(0.56rem, calc(0.39rem + 0.87vw), 1.06rem);
+  --space-sm: clamp(0.88rem, calc(0.7rem + 0.87vw), 1.38rem);
+  --space-md: clamp(1.13rem, calc(0.8rem + 1.63vw), 2.06rem);
+  --space-lg: clamp(1.69rem, calc(1.32rem + 1.85vw), 2.75rem);
+  --space-xl: clamp(2.25rem, calc(1.6rem + 3.26vw), 4.13rem);
+  --space-2xl: clamp(3.38rem, calc(2.64rem + 3.7vw), 5.5rem);
+  --space-3xl: clamp(4.5rem, calc(3.2rem + 6.52vw), 8.25rem);
+
+  /* content sizes */
+  --content-xs: 20ch;
+  --content-sm: 30ch;
+  --content-md: 45ch;
+  --content-lg: 65ch;
+
+  /* dynamic font sizes adapted from utopia.fyi */
+  --fs-sm: clamp(0.78rem, calc(0.75rem + 0.17vw), 0.88rem);
+  --fs-md: clamp(1.13rem, calc(1.04rem + 0.43vw), 1.38rem);
+  --fs-lg: clamp(1.35rem, calc(1.22rem + 0.64vw), 1.72rem);
+  --fs-xl: clamp(1.94rem, calc(1.69rem + 1.29vw), 2.69rem);
+  --fs-2xl: clamp(2.8rem, calc(2.31rem + 2.43vw), 4.2rem);
+
+  /* line heights */
+  --lh-1: 1;
+  --lh-1-1: 1.1;
+  --lh-1-4: 1.4;
+
+  /* shadows adapted from https: //www.joshwcomeau.com/shadow-palette/ */
+  --_shadow-strength: 0.25;
+  --_shadow-saturation: 30%;
+  --_shadow-lightness: 62%;
+  --_shadow: var(--_hue) var(--_shadow-saturation) var(--_shadow-lightness);
+  --shadow-sm: 0.2px 0.5px 0.6px hsl(var(--_shadow) / var(--_shadow-strength)),
+    0.3px 0.8px 1px -1.2px hsl(var(--_shadow) / var(--_shadow-strength)),
+    0.8px 1.9px 2.3px -2.5px hsl(var(--_shadow) / var(--_shadow-strength));
+  --shadow-md: 0.2px 0.5px 0.6px hsl(var(--_shadow) / calc(var(--_shadow-strength) + 0.04)),
+    0.6px 1.5px 1.8px -0.8px hsl(var(--_shadow) / calc(var(--_shadow-strength) + 0.04)),
+    1.6px 3.8px 4.6px -1.7px hsl(var(--_shadow) / calc(var(--_shadow-strength) + 0.04)),
+    3.9px 9.3px 11.3px -2.5px hsl(var(--_shadow) / calc(var(--_shadow-strength) + 0.04));
+  --shadow-lg: 0.2px 0.5px 0.6px hsl(var(--_shadow) / var(--_shadow-strength)),
+    1.1px 2.7px 3.3px -0.4px hsl(var(--_shadow) / var(--_shadow-strength)),
+    2.1px 5px 6.1px -0.7px hsl(var(--_shadow) / var(--_shadow-strength)),
+    3.5px 8.3px 10.1px -1.1px hsl(var(--_shadow) / var(--_shadow-strength)),
+    5.6px 13.2px 16.1px -1.4px hsl(var(--_shadow) / var(--_shadow-strength)),
+    8.7px 20.7px 25.3px -1.8px hsl(var(--_shadow) / var(--_shadow-strength)),
+    13.3px 31.4px 38.4px -2.1px hsl(var(--_shadow) / var(--_shadow-strength)),
+    19.6px 46.3px 56.6px -2.5px hsl(var(--_shadow) / var(--_shadow-strength));
+
+  /* border */
+  --border-sm: 1px;
+  --border-md: 3px;
+  --border-lg: 5px;
+
+  /* radius */
+  --radius-sm: 0.2em;
+  --radius-md: 0.4em;
+  --radius-lg: 0.8em;
+  --radius-full: 100vmax;
+
+  /* transitions */
+  --_tspeed_fast: 150ms;
+  --_tspeed_slow: 400ms;
+  --_ttiming_ease: cubic-bezier(0.3, 0, 0.7, 1);
+  --_ttiming_squish: cubic-bezier(0.5, -0.3, 0.1, 1.5);
+  --transition-ease-slow: var(--_tspeed_slow) var(--_ttiming_ease);
+  --transition-ease-fast: var(--_tspeed_fast) var(--_ttiming_ease);
+  --transition-squish-slow: var(--_tspeed_slow) var(--_ttiming_squish);
+  --transition-squish-fast: var(--_tspeed_fast) var(--_ttiming_squish);
+
+  /*** Changing Default Selecting Style ***/
+  ::selection {
+    background-color: rgba(100, 255, 218, 0.3);
+    color: white;
+  }
+  ::-moz-selection {
+    background-color: rgba(100, 255, 218, 0.3);
+    color: white;
+  }
+  ::-o-selection {
+    background-color: rgba(100, 255, 218, 0.3);
+    color: white;
+  }
+  ::-ms-selection {
+    background-color: rgba(100, 255, 218, 0.3);
+    color: white;
+  }
+  ::-webkit-selection {
+    background-color: rgba(100, 255, 218, 0.3);
+    color: white;
+  }
+
+  // markdown related customization
+  .astro-code {
+    padding: 20px 30px 20px 30px;
+    margin-bottom: 25px;
+    font-size: smaller;
+    line-height: 1.6;
+    border: 0.25px solid var(--slate);
+  }
+
+  // post (any) related global styling
+  .tagBadge {
+    color: var(--green);
+    opacity: 0.5;
+    transition: all 200ms ease-out;
+    font-family: "Overpass Mono", Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .tagBadge:hover {
+    opacity: 1;
+  }
+  .coloredHeading {
+    color: rgba(100, 255, 218, 0.5);
+  }
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--navy);
+  color: var(--slate);
+  // line-height: 1.3;
+  font-size: var(--font-size-xl);
+  background-attachment: fixed;
+  font-family: "Overpass", Verdana, Geneva, Tahoma, sans-serif;
+  &.hidden {
+    overflow: hidden;
+  }
+  &.blur {
+    overflow: hidden;
+    #root > #content > * {
+      filter: blur(5px) brightness(0.7);
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      pointer-events: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+  }
+}
+
+::selection {
+  background-color: var(--highlight);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  color: var(--white);
+  margin: 0 0 10px 0;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
+}
+svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-text-decoration-skip-ink: auto;
+  -moz-text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--green);
+    outline: 0;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
+
+  &:focus,
+  &:active {
+    outline-color: var(--blue);
+  }
+}
+
+input,
+textarea {
+  border-radius: 0;
+  outline: 0;
+
+  &:focus {
+    outline: 0;
+  }
+  &:focus,
+  &:active {
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+}
+
+p,
+ul {
+  margin: 0 0 15px 0 !important;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.gatsby-image-outer-wrapper {
+  height: 100%;
+}
+
+.fadeup-enter {
+  opacity: 0.01;
+  transform: translateY(20px);
+  transition:
+    opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+    transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.fadeup-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition:
+    opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+    transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.fadedown-enter {
+  opacity: 0.01;
+  transform: translateY(-20px);
+  transition:
+    opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+    transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.fadedown-enter-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition:
+    opacity 300ms cubic-bezier(0.645, 0.045, 0.355, 1),
+    transform 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.fade-enter {
+  opacity: 0.01;
+  transition: opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.overline {
+  color: var(--green);
+  font-size: var(--font-size-md);
+  font-weight: normal;
+}
+
+// customizing the scrollbar
+::-webkit-scrollbar {
+  width: 0.35rem;
+  height: 0.2rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 100vw;
+  margin-block: 0.25rem;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 255, 218, 0.65);
+  border-radius: 100vw;
+  transition: opacity 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green);
+}
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: rgba(100, 255, 218, 0.65) transparent;
+    scrollbar-width: thin;
+  }
+}
+
+// media queries
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: var(--font-size-lg);
+  }
+}
