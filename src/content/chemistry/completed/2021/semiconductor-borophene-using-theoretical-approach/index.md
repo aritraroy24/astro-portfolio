@@ -4,7 +4,7 @@ status: M.Sc. Thesis (OpenSource)
 duration: Dec, 2020 - Jul, 2021
 tags: ["Borophene", "Semiconductor", "M.Sc. Project", "materials studio", "dft studies", "theoretical", "Completed"]
 pubDate: 2021-08-05
-cover: ./semiconductor-borophene-using-theoretical-approach.jpg
+cover: ./semiconductor-borophene-cover.jpg
 description: Borophenes, 2D boron sheets, hold promise for various applications. Despite lacking a semiconductor form, our study discovered a stable new structure.
 journalName: ResearchGate Opensource
 isOpenAccess : true

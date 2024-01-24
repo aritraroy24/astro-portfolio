@@ -4,7 +4,7 @@ status: Published
 duration: Nov, 2022 - Oct, 2023
 tags: ["Cysteine", "Binding Modes", "amino acid", "theoretical", "experimental", "completed", "published"]
 pubDate: 2023-10-21
-cover: ./cysteine-sensing-by-cu.jpg
+cover: ./cysteine-sensing-cover.jpg
 description: "Synthesis and characterization of a simple copper complex using L-Cysteine to use as a vital antioxidant to protect cells and tissues from oxidation."
 journalName: RSC Sensors & Diagnostics
 isOpenAccess: true
