@@ -13,7 +13,6 @@ codeUrl:
 runUrl: 
 dockerUrl: 
 newsUrl: 
-galleryImages: 
 type: ChemistryProject
 ---
 # Ongoing Project

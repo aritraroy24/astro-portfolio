@@ -13,38 +13,6 @@ codeUrl:
 runUrl: 
 dockerUrl: 
 newsUrl: 
-galleryImages: [
-    {
-    imgSrc: "./figures/fig1-synthesis-route.jpg", 
-    imgAlt: "𝗦𝗰𝗵𝗲𝗺𝗲 𝟭 Synthesis of 𝗖𝘂𝗖𝗹₂𝗟.", 
-    imgDetails: "𝗦𝗰𝗵𝗲𝗺𝗲 𝟭 Synthesis of 𝗖𝘂𝗖𝗹₂𝗟."
-    },
-    {
-    imgSrc: "./figures/fig2-absorption-spectra-of-L.jpg", 
-    imgAlt: "Absorption spectra of L and CuCl2L in aq. acetonitrile", 
-    imgDetails: "𝗙𝗶𝗴𝘂𝗿𝗲 𝟭 Absorption spectra of 𝗟 (red curve; 200 µM, 300 µL) and the in-situ prepared 𝗖𝘂𝗖𝗹₂𝗟 (green curve; 200 µM, 300 µL) in aqueous acetonitrile (2 mL, 4:1 v/v, 10 mM HEPES buffer, pH 7.4). Inset: Charge density difference (CDD) plot of the LMCT transition of 𝗖𝘂𝗖𝗹₂𝗟 at the SMD/ωB97X-D/bs2 level of theory. Charge flows from red to blue. "
-    },
-    {
-    imgSrc: "./figures/fig3-absorption-spectra-of-CuCl2L.jpg", 
-    imgAlt: "Absorption spectra of L and CuCl2L upon addition of diff AA", 
-    imgDetails: "𝗙𝗶𝗴𝘂𝗿𝗲 𝟮 Absorption spectra of the in-situ prepared 𝗖𝘂𝗖𝗹₂𝗟 (30 µM, 2 mL) upon addition of different amino acids (1 mM, 60 µL) in aqueous acetonitrile (4:1 v/v, 10 mM HEPES, pH 7.4). AA stands for amino acid."
-    },
-    {
-    imgSrc: "./figures/fig4-absorption-spectra-of-CuCl2L-gradual-cys-his.jpg", 
-    imgAlt: "Absorption spectra of L and CuCl2L upon gradual addition of Cys & His", 
-    imgDetails: "𝗙𝗶𝗴𝘂𝗿𝗲 𝟯 Absorption spectra of the in-situ prepared 𝗖𝘂𝗖𝗹₂𝗟 (30 µM, 2 mL) upon gradual additions of (top left) Cys (0.2 mM, 6 µL) and (top right) His acids (0.5 mM, 5 µL) in aqueous acetonitrile (4:1 v/v, 10 mM HEPES, pH 7.4). Bottom: 350 nm absorption band intensity variation upon gradual addition of Cys (left) and His (right)."
-    },
-    {
-    imgSrc: "./figures/fig5-absorption-spectra-of-CuCl2L-other-aa.jpg", 
-    imgAlt: "Absorption spectra of L and CuCl2L upon addition of diff AA followed by 1 eqv. Cys", 
-    imgDetails: "𝗙𝗶𝗴𝘂𝗿𝗲 𝟰 Absorption spectra of in-situ prepared 𝗖𝘂𝗖𝗹₂𝗟 (30 µM, 2 mL) upon addition of different amino acids (1 mM, 60 µL) followed by the addition of one equiv. of Cys (1 mM, 60 µL) in aqueous acetonitrile (4:1 v/v, 10 mM HEPES, pH 7.4). AA stands for amino acid. In the single AA entries, only one amino acid different than Cys was added to the solution."
-    },
-    {
-    imgSrc: "./figures/fig6-stable-structures.jpg", 
-    imgAlt: "B₇H₅-as-primary-building-unit", 
-    imgDetails: "𝗙𝗶𝗴𝘂𝗿𝗲 𝟱 Most stable structures of (A) [CuCysCl₂]²⁻ and (B) [Cu(His)₂] at the SMD/PBE0-D3(BJ)/bs2 level of theory. Geometries were optimised at the PBE0-D3(BJ)/bs1 level. For low-lying isomers, see Figures S14 and S18 in the ESI. Gray: carbon; white: hydrogen; red: oxygen; blue: nitrogen; green: chlorine; orange: copper."
-    }
-]
 type: ChemistryProject
 ---
 ## Authors

@@ -3,7 +3,7 @@ title: "How to Build High-Quality MEP Surface Using Multiwfn & VMD from Gaussian
 videoId: "YYUteT0s3M0"
 description: "One can get a beautiful and customized ESP surface using Multiwfn and VMD. Both are freely available and lightweight software."
 duration: "12 Min View"
-cover: "./how-to-build-high-quality-mep-surface-using-multiwfn-and-vmd.png"
+cover: "./mep-using-multiwfn-and-vmd.png"
 tags: ["tutorial", "multiwfn", "quantum", "VMD", "surface", "free"]
 pubDate: 2022-09-29
 type: VideoPost
