@@ -3,7 +3,7 @@
 import Layout from "@layouts/Layout.astro";
 
 // component import
-import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Header from "@components/AstroIslands/Common/Header";
 import Footer from "@components/AstroComponents/Footer.astro";
 import Socials from "@components/AstroComponents/Socials.astro";
 
@@ -46,7 +46,7 @@ const imgData = [
   {robots}
   {cover}
 >
-  <OtherHeader client:only="react" />
+  <Header isHomePage={false} client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">
     <!-- publications  heading section -->

@@ -3,7 +3,7 @@
 import Layout from "@layouts/Layout.astro";
 
 // component import
-import MainHeader from "@components/AstroIslands/Common/MainHeader";
+import Header from "@components/AstroIslands/Common/Header";
 import Hero from "@components/AstroComponents/Hero.astro";
 import About from "@components/AstroComponents/About.astro";
 import Projects from "@components/AstroComponents/Projects.astro";
@@ -30,7 +30,7 @@ const {
   {robots}
   {cover}
 >
-  <MainHeader client:only="react" />
+  <Header isHomePage={true} client:only="react" />
   <Socials />
   <Hero />
   <About />

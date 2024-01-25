@@ -3,7 +3,7 @@
 import { Icon } from "astro-iconify";
 
 // component import
-import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Header from "@components/AstroIslands/Common/Header";
 import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 
 // function import
@@ -19,7 +19,7 @@ const currentDate = new Date();
 ---
 
 <>
-  <OtherHeader client:only="react" />
+  <Header isHomePage={false} client:only="react" />
   <header class="chemProjectHeaderContainer">
     <BackButton
       text="Back"

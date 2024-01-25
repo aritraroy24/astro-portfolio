@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-iconify";
 
 // component import
-import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Header from "@components/AstroIslands/Common/Header";
 import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 
 // function import
@@ -18,7 +18,7 @@ const { tags, title, subtitle, duration, pubDate, cover } = Astro.props;
 ---
 
 <>
-  <OtherHeader client:only="react" />
+  <Header isHomePage={false} client:only="react" />
   <header class="blogHeaderContainer">
     <BackButton
       text="Back"

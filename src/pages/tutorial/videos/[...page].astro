@@ -7,7 +7,7 @@ import { getCollection } from "astro:content";
 
 // component import
 import PostCard from "@components/AstroComponents/Common/PostCard.astro";
-import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Header from "@components/AstroIslands/Common/Header";
 import Pagination from "@components/AstroComponents/Common/Pagination.astro";
 import Socials from "@components/AstroComponents/Socials.astro";
 import Footer from "@components/AstroComponents/Footer.astro";
@@ -45,7 +45,7 @@ const {
 ---
 
 <Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>
-  <OtherHeader client:only="react" />
+  <Header isHomePage={false} client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">
     <!-- videos  heading section -->

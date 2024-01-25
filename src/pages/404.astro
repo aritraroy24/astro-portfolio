@@ -3,7 +3,7 @@
 import Layout from "@layouts/Layout.astro";
 
 // component import
-import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Header from "@components/AstroIslands/Common/Header";
 import Button from "@components/AstroComponents/Common/Button.astro";
 import FooterWithoutSocial from "@components/AstroComponents/FooterWithoutSocial.astro";
 
@@ -21,7 +21,7 @@ const {
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-  <OtherHeader client:only="react" />
+  <Header isHomePage={false} client:only="react" />
   <div class="PageNotFound">
     <img
       id="PageNotFoundImage"

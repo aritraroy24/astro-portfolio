@@ -8,7 +8,7 @@ import { getCollection } from "astro:content";
 // component import
 import PostCard from "@components/AstroComponents/Common/PostCard.astro";
 import Pagination from "@components/AstroComponents/Common/Pagination.astro";
-import OtherHeader from "@components/AstroIslands/Common/OtherHeader";
+import Header from "@components/AstroIslands/Common/Header";
 import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 import Socials from "@components/AstroComponents/Socials.astro";
 import Footer from "@components/AstroComponents/Footer.astro";
@@ -54,7 +54,7 @@ const pageDescription = `Discover the essence of ${tag} through captivating chem
 ---
 
 <Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>
-  <OtherHeader client:only="react" />
+  <Header isHomePage={false} client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">
     <!-- chemistry projects with specific tag heading section -->

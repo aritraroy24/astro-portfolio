@@ -22,8 +22,11 @@ import socials from "@js/data/socials";
             target="_blank"
             rel="noopener noreferrer"
             title={social.title}
+            aria-label={social.title}
           >
-            <Icon name={social.name} />
+            <span role="img" aria-label={social.title}>
+              <Icon name={social.name} title="ello" />
+            </span>
           </a>
         );
       })

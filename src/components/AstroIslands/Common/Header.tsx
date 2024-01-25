@@ -1,17 +1,21 @@
 // library import
 import React, { useState } from 'react';
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 import { Link } from 'react-scroll';
 import Headroom from 'react-headroom';
 import { FaSearch } from 'react-icons/fa'
 
 // style import
-import './styles/MainHeader.scss';
+import './styles/Header.scss';
 
 // asset import
 import NavLogo from '@images/NavLogo.webp'
 
-const MainHeader = () => {
+interface NavbarProps {
+    isHomePage?: boolean;
+}
+
+const Header: React.FC<NavbarProps> = ({ isHomePage }) => {
     const [isActive, handleIsActive] = useState(false);
 
     return (
@@ -22,8 +26,8 @@ const MainHeader = () => {
             <div className={`nav-wrapper-mobile`}></div>
             <div className='nav-wrapper'>
                 <Headroom disableInlineStyles>
-                    <Fade>
-                        <nav className='NavContainer'>
+                    <Fade triggerOnce>
+                        <nav className={isHomePage ? 'homeNavContainer' : 'otherNavContainer'}>
                             <div
                                 className={`hamburger-menu ${isActive &&
                                     'hamburger-menu-active'}`}
@@ -32,15 +36,25 @@ const MainHeader = () => {
                                 <div className='bar-2'></div>
                                 <div className='bar-3'></div>
                             </div>
-                            <div className='logo'
-                                onClick={() =>
-                                    window.scrollTo({
-                                        top: 0,
-                                        behavior: 'smooth'
-                                    })}>
-                                <img src={NavLogo.src} alt="NavLogo" className='NavLogo' />
+                            <div className='logo'>
+                                {isHomePage ? (
+                                    <div
+                                        onClick={() =>
+                                            window.scrollTo({
+                                                top: 0,
+                                                behavior: 'smooth'
+                                            })
+                                        }
+                                    >
+                                        <img src={NavLogo.src} alt="NavLogo" className='homeNavLogo' />
+                                    </div>
+                                ) : (
+                                    <a href="/">
+                                        <img src={NavLogo.src} alt="NavLogo" className='otherNavLogo' />
+                                    </a>
+                                )}
                             </div>
-                            <Fade top cascade delay={300}>
+                            <Fade direction='down' cascade delay={300} triggerOnce>
                                 <ul
                                     className={`navigation-ul ${isActive &&
                                         'navigation-ul-active'}`}>
@@ -59,7 +73,7 @@ const MainHeader = () => {
                                     </li>
                                     <li onClick={() => handleIsActive(false)} className='projects-menu' >
                                         <Link
-                                            href='/#project'
+                                            href={isHomePage ? "/#project" : "/projects"}
                                             to='Projects'
                                             spy={true}
                                             smooth={true}
@@ -83,7 +97,7 @@ const MainHeader = () => {
                                     </li>
                                     <li onClick={() => handleIsActive(false)} className='projects-menu' >
                                         <Link
-                                            href="/#tutorial"
+                                            href={isHomePage ? "/#tutorial" : "/tutorial"}
                                             to='Tutorials'
                                             spy={true}
                                             smooth={true}
@@ -120,4 +134,4 @@ const MainHeader = () => {
     );
 };
 
-export default MainHeader;
+export default Header;

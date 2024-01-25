@@ -49,9 +49,12 @@
   transition: all 200ms ease-out;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.199);
 }
-// .NavContainer {
-//   display: flex;
-// }
+.homeNavContainer {
+  display: block;
+}
+.otherNavContainer {
+  display: flex;
+}
 
 .blur-hide {
   width: 105vw;
@@ -141,11 +144,17 @@
   :hover {
     cursor: pointer;
   }
-  .NavLogo {
-    height: 45px;
-    position: absolute;
-    margin: 10px 0px 10px 55px;
-  }
+}
+.homeNavLogo {
+  height: 45px;
+  position: absolute;
+  margin: 10px 0px 10px 55px;
+}
+.otherNavLogo {
+  height: 45px;
+  width: auto;
+  position: absolute;
+  margin: -8px 0px 10px 55px;
 }
 
 #searchIcon {
@@ -161,21 +170,15 @@
     margin-right: 10px;
     padding-right: 30px;
   }
-
-  .logo p {
-    color: rgb(204, 211, 224);
-    position: absolute;
-    top: 8px;
-    font-size: 10px;
-    left: 82px;
-    width: 80px;
-    letter-spacing: 7px;
-    line-height: 18px;
-    position: fixed;
-  }
 }
 
 @media only screen and (max-width: 1130px) {
+  .otherNavContainer {
+    position: fixed;
+    .hamburger-menu {
+      position: fixed;
+    }
+  }
   .navigation-ul {
     margin-right: 0px;
     box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.199);
@@ -267,25 +270,14 @@
       margin: 3.5px;
     }
   }
-
-  .logo p {
-    position: absolute;
-    color: white;
-    position: absolute;
-    top: 13px;
-    left: 40px;
-    font-size: 8px;
-    width: 80px;
-    letter-spacing: 6px;
-    line-height: 15px;
-  }
 }
 
 @media only screen and (max-width: 730px) {
-  .logo {
-    .NavLogo {
-      margin: 10px 0px 10px 35px;
-    }
+  .homeNavLogo {
+    margin: 10px 0px 10px 35px;
+  }
+  .otherNavLogo {
+    margin: -8px 0px 10px 35px;
   }
 }
 
