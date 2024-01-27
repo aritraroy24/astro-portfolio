@@ -1,6 +1,6 @@
 ---
 // library import
-import { Icon } from "astro-iconify";
+import { Icon } from "astro-icon/components";
 
 // style import
 import "./styles/Socials.scss";
@@ -19,7 +19,7 @@ import socials from "@js/data/socials";
           rel="noopener noreferrer"
           title={social.title}
         >
-          <Icon name={social.name} />
+          <Icon name={social.name} title={social.title} />
         </a>
       );
     })

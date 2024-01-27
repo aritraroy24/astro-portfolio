@@ -1,7 +1,7 @@
 ---
 // library import
 import { Image } from "astro:assets";
-import { Icon } from "astro-iconify";
+import { Icon } from "astro-icon/components";
 
 // component import
 import Header from "@components/AstroIslands/Common/Header";
@@ -24,7 +24,7 @@ const { tags, title, subtitle, duration, pubDate, cover } = Astro.props;
       text="Back"
       customStyle="margin-bottom:30px; padding: 15px 22px;"
       icon={{
-        name: "tabler:arrow-big-left-line",
+        name: "others/arrow-big-left-line",
         side: "left",
       }}
     />
@@ -33,13 +33,20 @@ const { tags, title, subtitle, duration, pubDate, cover } = Astro.props;
       <h3 class="subtitle">{subtitle}</h3>
       <p class="tagsContainer">
         <Icon
-          name="octicon:stopwatch-16"
+          name="others/stopwatch"
           class="customIcon"
           height="24"
           width="24"
+          title="Duration"
         />
         {duration} •
-        <Icon name="mdi:calendar" class="customIcon" height="24" width="24" />
+        <Icon
+          name="others/calendar"
+          class="customIcon"
+          height="24"
+          width="24"
+          title="Publication Date"
+        />
         {formatDate(pubDate)}
       </p>
       <p class="tagsContainer">

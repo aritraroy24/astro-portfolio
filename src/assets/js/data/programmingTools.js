@@ -4,68 +4,62 @@ const programmingTools = [
             {
                 id: 1,
                 url: 'https://en.wikipedia.org/wiki/C_(programming_language)',
-                iconName: 'teenyicons:c-solid',
+                iconName: 'programmingTools/language/c-solid',
                 title: 'C Programming'
             },
             {
                 id: 2,
                 url: 'https://www.python.org/',
-                iconName: 'simple-icons:python',
+                iconName: 'programmingTools/language/python',
                 title: 'Python'
             },
             {
                 id: 3,
                 url: 'https://en.wikipedia.org/wiki/HTML',
-                iconName: 'ri:html5-fill',
+                iconName: 'programmingTools/language/html5-fill',
                 title: 'HTML5'
             },
             {
                 id: 4,
                 url: 'https://en.wikipedia.org/wiki/CSS',
-                iconName: 'cib:css3-shiled',
+                iconName: 'programmingTools/language/css3-shiled',
                 title: 'CSS3'
             },
             {
                 id: 5,
                 url: 'https://en.wikipedia.org/wiki/JavaScript',
-                iconName: 'fluent:javascript-24-filled',
+                iconName: 'programmingTools/language/javascript-24-filled',
                 title: 'JavaScript'
             },
             {
                 id: 6,
                 url: 'https://www.typescriptlang.org/',
-                iconName: 'mdi:language-typescript',
+                iconName: 'programmingTools/language/language-typescript',
                 title: 'TypeScript'
             },
             {
                 id: 7,
                 url: 'https://sass-lang.com/',
-                iconName: 'simple-icons:sass',
+                iconName: 'programmingTools/language/sass',
                 title: 'Sass'
             },
             {
                 id: 8,
                 url: 'https://daringfireball.net/projects/markdown/',
-                iconName: 'ri:markdown-fill',
+                iconName: 'programmingTools/language/markdown-fill',
                 title: 'Markdown'
             },
             {
                 id: 9,
                 url: 'https://en.wikipedia.org/wiki/LaTeX',
-                iconName: 'cib:latex',
+                iconName: 'programmingTools/language/latex',
                 title: 'LaTeX'
             },
             {
                 id: 10,
                 url: 'https://www.php.net/',
-                iconName: 'akar-icons:php-fill',
+                iconName: 'programmingTools/language/php-fill',
                 title: 'PHP'
-            },
-            {
-                id: 11,
-                url: 'https://www.java.com/en/',
-                iconName: 'fa-brands:java',
-                title: 'Java'
             }
         ]
     },
@@ -74,49 +68,67 @@ const programmingTools = [
             {
                 id: 1,
                 url: 'https://numpy.org/',
-                iconName: 'simple-icons:numpy',
+                iconName: 'programmingTools/library/numpy',
                 title: 'NumPy',
             },
             {
                 id: 2,
-                url: 'https://scipy.org/',
-                iconName: 'simple-icons:scipy',
-                title: 'SciPy',
+                url: 'https://pandas.pydata.org/',
+                iconName: 'programmingTools/library/pandas',
+                title: 'pandas',
             },
             {
                 id: 3,
-                url: 'https://tailwindcss.com/',
-                iconName: 'teenyicons:tailwind-solid',
-                title: 'Tailwind CSS',
+                url: 'https://scikit-learn.org/stable/',
+                iconName: 'programmingTools/library/scikitlearn',
+                title: 'scikit-learn',
             },
             {
                 id: 4,
-                url: 'https://react.dev/',
-                iconName: 'mdi:react',
-                title: 'React',
+                url: 'https://www.tensorflow.org/',
+                iconName: 'programmingTools/library/tensorflow',
+                title: 'TensorFlow',
             },
             {
                 id: 5,
-                url: 'https://astro.build/',
-                iconName: 'simple-icons:astro',
-                title: 'Astro',
+                url: 'https://getbootstrap.com/',
+                iconName: 'programmingTools/library/bootstrap-fill',
+                title: 'Bootstrap',
             },
             {
                 id: 6,
-                url: 'https://nodejs.org/',
-                iconName: 'teenyicons:nodejs-solid',
-                title: 'Node.js Runtime Environment',
+                url: 'https://tailwindcss.com/',
+                iconName: 'programmingTools/library/tailwind-solid',
+                title: 'Tailwind CSS',
             },
             {
                 id: 7,
-                url: 'https://laravel.com/',
-                iconName: 'ion:logo-laravel',
-                title: 'Laravel',
+                url: 'https://jquery.com/',
+                iconName: 'programmingTools/library/jquery-wordmark',
+                title: 'jQuery',
             },
             {
                 id: 8,
+                url: 'https://react.dev/',
+                iconName: 'programmingTools/library/react',
+                title: 'React',
+            },
+            {
+                id: 9,
+                url: 'https://astro.build/',
+                iconName: 'programmingTools/library/astro',
+                title: 'Astro',
+            },
+            {
+                id: 10,
+                url: 'https://laravel.com/',
+                iconName: 'programmingTools/library/logo-laravel',
+                title: 'Laravel',
+            },
+            {
+                id: 11,
                 url: 'https://nextjs.org/',
-                iconName: 'file-icons:nextjs',
+                iconName: 'programmingTools/library/nextjs',
                 title: 'Next.js',
             },
         ]
@@ -126,20 +138,20 @@ const programmingTools = [
             {
                 id: 1,
                 url: 'https://www.postman.com/',
-                iconName: 'simple-icons:postman',
+                iconName: 'programmingTools/backend/postman',
                 title: 'Postman'
             },
             {
                 id: 2,
                 url: 'https://www.mongodb.com/',
-                iconName: 'simple-icons:mongodb',
+                iconName: 'programmingTools/backend/mongodb',
                 title: 'MongoDB'
             },
             {
                 id: 3,
-                url: 'https://www.prisma.io/',
-                iconName: 'file-icons:prisma',
-                title: 'Prisma ORM'
+                url: 'https://nodejs.org/',
+                iconName: 'programmingTools/backend/nodejs-solid',
+                title: 'Node.js Runtime Environment',
             },
         ]
     },
@@ -148,44 +160,62 @@ const programmingTools = [
             {
                 id: 1,
                 url: 'https://code.visualstudio.com/',
-                iconName: 'file-icons:vscode',
+                iconName: 'programmingTools/tools/vscode',
                 title: 'Visual Studio Code'
             },
             {
                 id: 2,
-                url: 'https://git-scm.com/',
-                iconName: 'simple-icons:git',
-                title: 'Git'
+                url: 'https://colab.google/',
+                iconName: 'programmingTools/tools/googlecolab',
+                title: 'Google Colab'
             },
             {
                 id: 3,
-                url: 'https://github.com/',
-                iconName: 'bi:github',
-                title: 'GitHub'
+                url: 'https://docs.conda.io/en/latest/',
+                iconName: 'programmingTools/tools/conda',
+                title: 'Conda'
             },
             {
                 id: 4,
-                url: 'https://www.apachefriends.org/download.html',
-                iconName: 'simple-icons:xampp',
-                title: 'XAMPP'
+                url: 'https://git-scm.com/',
+                iconName: 'programmingTools/tools/git',
+                title: 'Git'
             },
             {
                 id: 5,
-                url: 'https://www.gnu.org/software/bash/',
-                iconName: 'simple-icons:gnubash',
-                title: 'Bash'
+                url: 'https://github.com/',
+                iconName: 'programmingTools/tools/github',
+                title: 'GitHub'
             },
             {
                 id: 6,
-                url: 'https://learn.microsoft.com/en-us/windows/terminal/install',
-                iconName: 'ic:round-terminal',
-                title: 'Windows Terminal'
+                url: 'https://www.apachefriends.org/download.html',
+                iconName: 'programmingTools/tools/xampp',
+                title: 'XAMPP'
             },
             {
                 id: 7,
+                url: 'https://www.gnu.org/software/bash/',
+                iconName: 'programmingTools/tools/gnubash',
+                title: 'Bash'
+            },
+            {
+                id: 8,
+                url: 'https://learn.microsoft.com/en-us/windows/terminal/install',
+                iconName: 'programmingTools/tools/terminal',
+                title: 'Windows Terminal'
+            },
+            {
+                id: 9,
                 url: 'https://www.netlify.com/',
-                iconName: 'cib:netlify',
-                title: 'Netlify Deploy'
+                iconName: 'programmingTools/tools/netlify',
+                title: 'Netlify'
+            },
+            {
+                id: 10,
+                url: 'https://www.hostinger.com/',
+                iconName: 'programmingTools/tools/hostinger',
+                title: 'Hostinger'
             }
         ]
     },
@@ -194,14 +224,14 @@ const programmingTools = [
             {
                 id: 1,
                 url: 'https://www.microsoft.com/en-us/windows',
-                iconName: 'uil:windows',
+                iconName: 'programmingTools/os/windows',
                 title: 'Windows'
             },
             {
                 id: 2,
                 url: 'https://ubuntu.com/',
-                iconName: 'mdi:ubuntu',
-                title: 'Linux'
+                iconName: 'programmingTools/os/ubuntu',
+                title: 'Linux (Ubuntu)'
             },
         ]
     },
@@ -210,21 +240,15 @@ const programmingTools = [
             {
                 id: 1,
                 url: 'https://www.adobe.com/products/photoshop.html',
-                iconName: 'simple-icons:adobephotoshop',
+                iconName: 'programmingTools/ui/adobephotoshop',
                 title: 'Adobe Photoshop'
             },
             {
                 id: 2,
                 url: 'https://www.canva.com/',
-                iconName: 'cib:canva',
+                iconName: 'programmingTools/ui/canva',
                 title: 'Canva'
-            },
-            {
-                id: 3,
-                url: 'https://www.figma.com/',
-                iconName: 'gg:figma',
-                title: 'Figma'
-            },
+            }
         ]
     },
     {
@@ -232,14 +256,42 @@ const programmingTools = [
             {
                 id: 1,
                 url: 'https://medium.com/',
-                iconName: 'ri:medium-fill',
+                iconName: 'programmingTools/blog/medium-fill',
                 title: 'Medium'
             },
             {
                 id: 2,
                 url: 'https://aritraroy.live/',
-                iconName: 'iconoir:www',
+                iconName: 'programmingTools/blog/www',
                 title: 'Personal Website'
+            }
+        ]
+    },
+    {
+        assistant: [
+            {
+                id: 1,
+                url: 'https://chat.openai.com/',
+                iconName: 'programmingTools/assistant/openai-chatgpt',
+                title: 'ChatGPT'
+            },
+            {
+                id: 2,
+                url: 'https://claude.ai/',
+                iconName: 'programmingTools/assistant/anthropic-icon',
+                title: 'Claude'
+            },
+            {
+                id: 3,
+                url: 'https://bard.google.com/',
+                iconName: 'programmingTools/assistant/bard-fill',
+                title: 'Bard'
+            },
+            {
+                id: 4,
+                url: 'https://github.com/features/copilot',
+                iconName: 'programmingTools/assistant/copilot-fill',
+                title: 'GitHub Copilot'
             }
         ]
     }

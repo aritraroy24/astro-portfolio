@@ -7,6 +7,7 @@ import mdx from '@astrojs/mdx';
 import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
 import astroExpressiveCode from 'astro-expressive-code';
+import icon from 'astro-icon'
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
 const astroExpressiveCodeOptions = {
@@ -20,7 +21,7 @@ export default defineConfig({
   site: 'https://aritraroy.live',
   integrations: [react(), astroExpressiveCode(astroExpressiveCodeOptions), mdx(), compress({
     img: false
-  }), sitemap()],
+  }), sitemap(), icon()],
   markdown: {
     shikiConfig: {
       theme: 'min-dark',

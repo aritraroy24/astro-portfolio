@@ -1,12 +1,12 @@
 ---
 // Component import
 import Layout from "@layouts/Layout.astro";
-import OtherHeder from "@components/AstroIslands/Common/OtherHeader";
+import Header from "@components/AstroIslands/Common/Header";
 import Footer from "@components/AstroComponents/Footer.astro";
 import Socials from "@components/AstroComponents/Socials.astro";
 
 // Library import
-import Icon from "astro-iconify";
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
 // Data import
@@ -22,7 +22,7 @@ const {
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-  <OtherHeder client:only="react" />
+  <Header client:only="react" />
   <div class="listContainer">
     {
       collaborators.map((collaborator: any) => {
@@ -50,7 +50,7 @@ const {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icon name="mdi:email" />
+                    <Icon name="others/email" />
                   </a>
                   {collaborator.googleScholar && (
                     <a
@@ -58,7 +58,7 @@ const {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Icon name="academicons:google-scholar" />
+                      <Icon name="others/google-scholar" />
                     </a>
                   )}
                   {collaborator.website && (
@@ -67,7 +67,7 @@ const {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Icon name="ion:globe" />
+                      <Icon name="others/globe" />
                     </a>
                   )}
                 </div>

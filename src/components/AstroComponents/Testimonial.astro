@@ -1,7 +1,7 @@
 ---
 // Library import
 import { Image } from "astro:assets";
-import Icon from "astro-iconify";
+import { Icon } from "astro-icon/components";
 
 // data import
 import testimonials from "@js/data/testimonials";
@@ -19,10 +19,7 @@ import "./styles/Testimonial.scss";
       plusSlides(-1)
       "
     >
-      <Icon
-        class="navigationSign"
-        name="material-symbols:keyboard-arrow-left"
-      />
+      <Icon class="navigationSign" name="others/keyboard-arrow-left" />
     </button>
     {
       testimonials.map((person: any, index) => {
@@ -45,10 +42,7 @@ import "./styles/Testimonial.scss";
       })
     }
     <button title="Next Testimonial" class="next" onclick="plusSlides(1)">
-      <Icon
-        class="navigationSign"
-        name="material-symbols:keyboard-arrow-right"
-      />
+      <Icon class="navigationSign" name="others/keyboard-arrow-right" />
     </button>
   </div>
 </section>

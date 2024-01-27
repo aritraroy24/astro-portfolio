@@ -1,7 +1,7 @@
 ---
 // library import
 import { Image } from "astro:assets";
-import { Icon } from "astro-iconify";
+import { Icon } from "astro-icon/components";
 
 // data import
 import chemistryTools from "@assets/js/data/chemistryTools";
@@ -237,7 +237,7 @@ import "./styles/About.scss";
                   </div>
                 </div>
               );
-            } else {
+            } else if (item.blog) {
               return (
                 <div class="langIcons">
                   <p>Blog Writing:</p>
@@ -245,6 +245,22 @@ import "./styles/About.scss";
                     {item.blog.map((blogItem: any) => (
                       <a href={blogItem.url}>
                         <Icon name={blogItem.iconName} title={blogItem.title} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else {
+              return (
+                <div class="langIcons">
+                  <p>AI Assistants:</p>
+                  <div>
+                    {item.assistant.map((assistantItem: any) => (
+                      <a href={assistantItem.url}>
+                        <Icon
+                          name={assistantItem.iconName}
+                          title={assistantItem.title}
+                        />
                       </a>
                     ))}
                   </div>
@@ -351,7 +367,7 @@ import "./styles/About.scss";
                   </div>
                 </div>
               );
-            } else {
+            } else if (item.blog) {
               return (
                 <div class="langIcons">
                   <p>Blog Writing:</p>
@@ -359,6 +375,22 @@ import "./styles/About.scss";
                     {item.blog.map((blogItem: any) => (
                       <a href={blogItem.url}>
                         <Icon name={blogItem.iconName} title={blogItem.title} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            } else {
+              return (
+                <div class="langIcons">
+                  <p>AI Assitants:</p>
+                  <div>
+                    {item.assistant.map((assistantItem: any) => (
+                      <a href={assistantItem.url}>
+                        <Icon
+                          name={assistantItem.iconName}
+                          title={assistantItem.title}
+                        />
                       </a>
                     ))}
                   </div>

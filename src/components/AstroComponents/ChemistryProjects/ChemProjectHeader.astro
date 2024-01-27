@@ -1,6 +1,6 @@
 ---
 // library import
-import { Icon } from "astro-iconify";
+import { Icon } from "astro-icon/components";
 
 // component import
 import Header from "@components/AstroIslands/Common/Header";
@@ -25,7 +25,7 @@ const currentDate = new Date();
       text="Back"
       customStyle="margin-bottom:30px; padding: 15px 22px;"
       icon={{
-        name: "tabler:arrow-big-left-line",
+        name: "others/arrow-big-left-line",
         side: "left",
       }}
     />
@@ -42,7 +42,7 @@ const currentDate = new Date();
       </p>
       <p class="tagsContainer">
         <Icon
-          name="ion:hourglass-outline"
+          name="others/hourglass-outline"
           class="customIcon"
           height="24"
           width="24"
@@ -50,7 +50,7 @@ const currentDate = new Date();
         {duration} {
           currentDate > pubDate ? (
             <> •
-              <Icon name="mdi:calendar" class="customIcon" height="24" width="24" />
+              <Icon name="others/calendar" class="customIcon" height="24" width="24" />
               {formatDate(pubDate)}
             </>
             ) : (<></>)
@@ -61,40 +61,40 @@ const currentDate = new Date();
           (
             <div class="journalDetailsDiv">
               <h4>{journalName}</h4> 
-              <Icon class="isOpenAccessIcon" name="mdi:lock-open-variant" />
+              <Icon class="isOpenAccessIcon" name="others/lock-open-variant" />
             </div>
           ) : 
           (
             <div class="journalDetailsDiv">
               <h4>{journalName}</h4> 
-              <Icon class="isOpenAccessIcon" name="mdi:lock" />
+              <Icon class="isOpenAccessIcon" name="others/lock" />
             </div>
           ) 
         ):(<></>) }
       <div>
         {journalUrl && (
           <a href={journalUrl} class="pubRelatedLinks" target="_blank" title="Journal Link" >
-            <Icon name="tabler:external-link" height="30" width="30" />
+            <Icon name="others/external-link" height="30" width="30" />
           </a>
         )}
         {codeUrl && (
           <a href={codeUrl} class="pubRelatedLinks" target="_blank" title="GitHub Repo" >
-            <Icon name="mdi:github" height="30" width="30" />
+            <Icon name="others/github" height="30" width="30" />
           </a>
         )}
         {runUrl && (
           <a href={runUrl} class="pubRelatedLinks" target="_blank" title="Run Online" >
-            <Icon name="codicon:run-all" height="30" width="30" />
+            <Icon name="others/run-all" height="30" width="30" />
           </a>
         )}
         {dockerUrl && (
           <a href={dockerUrl} class="pubRelatedLinks" target="_blank" title="Build Docker Image" >
-            <Icon name="mdi:docker" height="30" width="30" />
+            <Icon name="others/docker" height="30" width="30" />
           </a>
         )}
         {newsUrl && (
           <a href={newsUrl} class="pubRelatedLinks" target="_blank" title="Newspaper Review" >
-            <Icon name="emojione-monotone:newspaper" height="30" width="30" />
+            <Icon name="others/newspaper" height="30" width="30" />
           </a>
         )}
       </div>

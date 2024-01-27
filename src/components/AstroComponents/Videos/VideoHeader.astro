@@ -1,6 +1,6 @@
 ---
 // component import
-import { Icon } from "astro-iconify";
+import { Icon } from "astro-icon/components";
 import Header from "@components/AstroIslands/Common/Header";
 import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 import VideoPlayer from "@components/AstroIslands/Videos/VideoPlayer";
@@ -22,7 +22,7 @@ const { tags, title, videoId, duration, pubDate } = Astro.props;
       text="Back"
       customStyle="margin-bottom:30px; padding: 15px 22px;"
       icon={{
-        name: "tabler:arrow-big-left-line",
+        name: "others/arrow-big-left-line",
         side: "left",
       }}
     />
@@ -36,7 +36,7 @@ const { tags, title, videoId, duration, pubDate } = Astro.props;
           width="24"
         />
         {duration} • <Icon
-          name="mdi:calendar"
+          name="others/calendar"
           class="customIcon"
           height="24"
           width="24"

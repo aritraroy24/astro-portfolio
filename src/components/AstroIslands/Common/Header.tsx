@@ -121,7 +121,7 @@ const Header: React.FC<NavbarProps> = ({ isHomePage }) => {
                                     </li>
                                     <li>
                                         <a href='/search' title='Search Posts'>
-                                            <FaSearch id='searchIcon' />
+                                            <FaSearch id='searchIcon' title="Search Posts" />
                                         </a>
                                     </li>
                                 </ul>

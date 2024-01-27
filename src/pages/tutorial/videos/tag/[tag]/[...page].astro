@@ -33,7 +33,7 @@ export const getStaticPaths = (async ({ paginate }) => {
     ...new Set(formattedVideos.map((video: any) => video.data.tags).flat()),
   ];
 
-  return uniqueTags.map((tag: any) => {
+  return uniqueTags.flatMap((tag: any) => {
     const filteredPosts = formattedVideos.filter((video: any) =>
       video.data.tags.includes(tag)
     );
@@ -68,7 +68,7 @@ const {
       text="Back"
       customStyle="padding: 10px 18px;"
       icon={{
-        name: "tabler:arrow-big-left-line",
+        name: "others/arrow-big-left-line",
         side: "left",
       }}
     />

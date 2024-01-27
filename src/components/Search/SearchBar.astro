@@ -4,7 +4,7 @@ import Layout from "@layouts/Layout.astro";
 
 // component import
 import Search from "./Search";
-import OtherHeder from "@components/AstroIslands/Common/OtherHeader";
+import Header from "@components/AstroIslands/Common/Header";
 
 // function import
 import { formatPosts } from "@js/utils";
@@ -34,7 +34,7 @@ const {
 ---
 
 <Layout>
-  <OtherHeder client:only="react" />
+  <Header client:only="react" />
   <div class="searchContainer">
     <h1>Search Posts</h1>
     <Search client:load searchList={allPost} />
