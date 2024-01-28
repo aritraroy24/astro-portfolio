@@ -25,7 +25,7 @@ const {
 } = Astro.props as LayoutProps;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -62,7 +62,7 @@ const {
         var os = unknown;
         var osVersion = unknown;
         var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(
-          navigator.userAgent
+          navigator.userAgent,
         );
         var screenSize = "";
 
@@ -82,7 +82,11 @@ const {
               if (os === "iOS") {
                 osVersion = /OS (\d+)_(\d+)_?(\d+)?/.exec(nVer)!![1];
                 osVersion =
-                  osVersion[1] + "." + osVersion[2] + "." + (osVersion[3] | 0);
+                  osVersion[1] +
+                  "." +
+                  osVersion[2] +
+                  "." +
+                  (osVersion[3] || "0");
                 break;
               }
             }

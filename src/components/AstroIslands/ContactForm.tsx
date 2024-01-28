@@ -52,7 +52,7 @@ const ContactForm = () => {
             className='ContactForm'
             onSubmit={submitForm}
             method={'POST'}>
-            <label>Name:</label>
+            <label htmlFor="contactName">Name:</label>
             <input
                 title='Name'
                 type='text'
@@ -60,14 +60,18 @@ const ContactForm = () => {
                 value={name}
                 required
                 onChange={(event) => setName(event.target.value)}
+                autocomplete="on"
+                id="contactName"
             />
-            <label>Phone No:</label>
+            <label htmlFor="contactNumber">Phone No:</label>
             <input
                 title='Phone'
                 type='number'
                 name='Phone'
+                autocomplete="on"
+                id="contactNumber"
             />
-            <label>Email:</label>
+            <label htmlFor="contactEmail">Email:</label>
             <input
                 title='Email'
                 type='email'
@@ -75,8 +79,10 @@ const ContactForm = () => {
                 value={email}
                 required
                 onChange={(event) => setEmail(event.target.value)}
+                autocomplete="on"
+                id="contactEmail"
             />
-            <label className='message'>Message:</label>
+            <label className='message' htmlFor="contactMessage">Message:</label>
             <h4>Hello Aritra,</h4>
             <textarea
                 title='Message'
@@ -84,6 +90,7 @@ const ContactForm = () => {
                 value={message}
                 required
                 onChange={(event) => setMessage(event.target.value)}
+                id="contactMessage"
             >
             </textarea>
             {status === 'SUCCESS' ? (

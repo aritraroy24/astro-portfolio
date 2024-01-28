@@ -51,7 +51,7 @@ import "./styles/Testimonial.scss";
   const slides = document.querySelectorAll<HTMLDivElement>(".slide");
   const prevButton = document.querySelector(".prev");
   const nextButton = document.querySelector(".next");
-  let slideInterval: NodeJS.Timeout;
+  let slideInterval: number;
   let slideIndex = 0;
   function plusSlides(n: number) {
     showSlides((slideIndex += n));
