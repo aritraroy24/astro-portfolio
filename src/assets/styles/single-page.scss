@@ -1,0 +1,32 @@
+.SinglePage {
+  padding: 0 220px;
+  font-family: "Overpass";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  text-align: center;
+  h1 {
+    color: var(--red);
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .SinglePage {
+    padding: 0 80px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .SinglePage {
+    padding: 0 40px;
+    .SinglePageImage {
+      width: 80vw;
+      height: unset;
+    }
+  }
+}
+@media only screen and (max-width: 420px) {
+  .SinglePage {
+    padding: 0 22px;
+  }
+}

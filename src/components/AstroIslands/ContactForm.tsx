@@ -30,7 +30,7 @@ const ContactForm = () => {
         setIsSubmitted(true);
         const data = new FormData(form);
         try {
-            const res = await fetch('https://script.google.com/macros/s/AKfycbxxfEbxIZl07xXhcXTrNJQgXewIyWvYFNFld8rHsNy0cYhqt6GJQ8SFicgiKWKkgG7b/exec', {
+            const res = await fetch('https://script.google.com/macros/s/AKfycbw_x6fj3JycsE4kxa6uDtq76HMsfCSRLrXtFp2-n-EqHE-fTlPrp2bpBoBdTrMWbkNn/exec', {
                 method: 'POST',
                 body: data,
             })
@@ -60,7 +60,7 @@ const ContactForm = () => {
                 value={name}
                 required
                 onChange={(event) => setName(event.target.value)}
-                autocomplete="on"
+                autoComplete="on"
                 id="contactName"
             />
             <label htmlFor="contactNumber">Phone No:</label>
@@ -68,7 +68,7 @@ const ContactForm = () => {
                 title='Phone'
                 type='number'
                 name='Phone'
-                autocomplete="on"
+                autoComplete="on"
                 id="contactNumber"
             />
             <label htmlFor="contactEmail">Email:</label>
@@ -79,7 +79,7 @@ const ContactForm = () => {
                 value={email}
                 required
                 onChange={(event) => setEmail(event.target.value)}
-                autocomplete="on"
+                autoComplete="on"
                 id="contactEmail"
             />
             <label className='message' htmlFor="contactMessage">Message:</label>

@@ -1,0 +1,54 @@
+---
+// layout import
+import Layout from "@layouts/Layout.astro";
+
+// component import
+import ShareComment from "@components/AstroIslands/Common/ShareComment";
+import Socials from "@components/AstroComponents/Socials.astro";
+import Footer from "@components/AstroComponents/Footer.astro";
+
+// style import
+import "@styles/single-post.scss";
+import ProgrammingProjectHeader from "@components/AstroComponents/ProgrammingProjects/ProgrammingProjectHeader.astro";
+
+// destructuring astro properties
+const { frontmatter, robots } = Astro.props;
+const {
+  title,
+  status,
+  duration,
+  tags,
+  githubUrl,
+  hostedUrl,
+  dockerUrl,
+  description,
+  cover,
+} = frontmatter;
+---
+
+<Layout {title} {description} {frontmatter} {robots} {cover}>
+  <Socials />
+  <!-- blog heading section -->
+  <ProgrammingProjectHeader
+    {title}
+    {status}
+    {duration}
+    {tags}
+    {githubUrl}
+    {hostedUrl}
+    {dockerUrl}
+  />
+  <!-- blog post content section -->
+  <div class="post-content">
+    <div class="content">
+      <slot />
+    </div>
+  </div>
+  <!-- comment using giscus -->
+  <ShareComment
+    client:only="react"
+    postType="Publication"
+    rssUrl="/projects/research/rss.xml"
+  />
+  <Footer />
+</Layout>

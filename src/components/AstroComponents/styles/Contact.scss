@@ -5,7 +5,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 0 220px;
+    padding: 150px 220px 0 220px;
+    margin-top: -150px;
+    margin-bottom: 50px;
     .number-heading {
         font-family: "Overpass Mono", Verdana, Geneva, Tahoma, sans-serif;
         font-size: 22px;
@@ -82,21 +84,18 @@
 @media only screen and (max-width: 1100px) {
     .Contact {
         min-height: 520px;
-        margin-top: 120px;
     }
 }
 @media only screen and (max-width: 1050px) {
     .Contact {
-        padding: 0 80px;
+        padding: 150px 80px 0 80px;
     }
 }
 
 @media only screen and (max-width: 730px) {
     .Contact {
         min-height: 520px;
-        margin-top: 140px;
-        margin-bottom: 50px;
-        padding: 0 40px;
+        padding: 150px 40px 0 40px;
         p {
             font-size: 18px;
             width: 400px;
@@ -136,7 +135,6 @@
 
 @media only screen and (max-width: 550px) {
     .Contact {
-        margin-top: 50px;
         p {
             font-size: 18px;
             width: 400px;
@@ -150,6 +148,7 @@
 
 @media only screen and (max-width: 450px) {
     .Contact {
+        padding: 150px 22px 0 22px;
         .number-heading {
             font-size: 22px;
         }
@@ -174,7 +173,10 @@
 }
 @media only screen and (max-width: 420px) {
     .Contact {
-        padding: 0 22px;
+        h2 {
+            font-size: 25px;
+            top: 20px;
+        }
     }
 }
 @media only screen and (max-width: 330px) {

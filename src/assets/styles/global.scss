@@ -361,6 +361,13 @@ ol {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--green);
 }
+#preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
 @supports (scrollbar-color: red blue) {
   * {
     scrollbar-color: rgba(100, 255, 218, 0.65) transparent;

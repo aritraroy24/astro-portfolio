@@ -1,5 +1,5 @@
 // library import
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Fade } from "react-awesome-reveal";
 import { Link } from 'react-scroll';
 import Headroom from 'react-headroom';
@@ -17,6 +17,16 @@ interface NavbarProps {
 
 const Header: React.FC<NavbarProps> = ({ isHomePage }) => {
     const [isActive, handleIsActive] = useState(false);
+    useEffect(() => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.remove();
+        }
+        const delayedContent = document.getElementById('root');
+        if (delayedContent) {
+            delayedContent.style.display = 'block';
+        }
+    }, []);
 
     return (
         <>
@@ -59,65 +69,90 @@ const Header: React.FC<NavbarProps> = ({ isHomePage }) => {
                                     className={`navigation-ul ${isActive &&
                                         'navigation-ul-active'}`}>
                                     <li onClick={() => handleIsActive(false)}>
-                                        <Link
-                                            href='/#about'
-                                            activeClass='active-scroll'
-                                            to='AboutMe'
-                                            spy={true}
-                                            smooth={true}
-                                            offset={-220}
-                                            ignoreCancelEvents={true}
-                                            duration={1200}>
-                                            <span>01.</span>About
-                                        </Link>
+                                        {isHomePage ? (
+                                            <Link
+                                                href='/#about'
+                                                activeClass='active-scroll'
+                                                to='AboutMe'
+                                                spy={true}
+                                                smooth={true}
+                                                ignoreCancelEvents={true}
+                                                duration={1200}>
+                                                <span>01.</span>About
+                                            </Link>
+                                        ) : (
+                                            <a href="/#about">
+                                                <span>01.</span>About
+                                            </a>
+                                        )}
                                     </li>
                                     <li onClick={() => handleIsActive(false)} className='projects-menu' >
-                                        <Link
-                                            href={isHomePage ? "/#project" : "/projects"}
-                                            to='Projects'
-                                            spy={true}
-                                            smooth={true}
-                                            offset={-150}
-                                            ignoreCancelEvents={true}
-                                            duration={1200}>
-                                            <span>02.</span>Projects
-                                        </Link>
+                                        {isHomePage ? (
+                                            <Link
+                                                href='/#project'
+                                                to='Projects'
+                                                spy={true}
+                                                smooth={true}
+                                                ignoreCancelEvents={true}
+                                                duration={1200}>
+                                                <span>02.</span>Projects
+                                            </Link>
+                                        ) : (
+                                            <a href="/projects">
+                                                <span>02.</span>Projects
+                                            </a>
+                                        )}
                                     </li>
                                     <li onClick={() => handleIsActive(false)}>
-                                        <Link
-                                            href='/#portfolio'
-                                            to='Portfolio'
-                                            spy={true}
-                                            smooth={true}
-                                            offset={-150}
-                                            ignoreCancelEvents={true}
-                                            duration={1200}>
-                                            <span>03.</span>Portfolio
-                                        </Link>
+                                        {isHomePage ? (
+                                            <Link
+                                                href='/#portfolio'
+                                                to='Portfolio'
+                                                spy={true}
+                                                smooth={true}
+                                                ignoreCancelEvents={true}
+                                                duration={1200}>
+                                                <span>03.</span>Portfolio
+                                            </Link>
+                                        ) : (
+                                            <a href="/#portfolio">
+                                                <span>03.</span>Portfolio
+                                            </a>
+                                        )}
                                     </li>
-                                    <li onClick={() => handleIsActive(false)} className='projects-menu' >
-                                        <Link
-                                            href={isHomePage ? "/#tutorial" : "/tutorial"}
-                                            to='Tutorials'
-                                            spy={true}
-                                            smooth={true}
-                                            offset={-150}
-                                            ignoreCancelEvents={true}
-                                            duration={1200}>
-                                            <span>04.</span>Tutorial
-                                        </Link>
+                                    <li onClick={() => handleIsActive(false)} className='projects-menu'>
+                                        {isHomePage ? (
+                                            <Link
+                                                href='/#tutorial'
+                                                to='Tutorials'
+                                                spy={true}
+                                                smooth={true}
+                                                ignoreCancelEvents={true}
+                                                duration={1200}>
+                                                <span>04.</span>Tutorial
+                                            </Link>
+                                        ) : (
+                                            <a href="/tutorial">
+                                                <span>04.</span>Tutorial
+                                            </a>
+                                        )}
                                     </li>
                                     <li onClick={() => handleIsActive(false)}>
-                                        <Link
-                                            href='/#contact'
-                                            to='Contact'
-                                            spy={true}
-                                            smooth={true}
-                                            offset={-150}
-                                            ignoreCancelEvents={true}
-                                            duration={1200}>
-                                            <span>05.</span>Contact
-                                        </Link>
+                                        {isHomePage ? (
+                                            <Link
+                                                href='/#contact'
+                                                to='Contact'
+                                                spy={true}
+                                                smooth={true}
+                                                ignoreCancelEvents={true}
+                                                duration={1200}>
+                                                <span>05.</span>Contact
+                                            </Link>
+                                        ) : (
+                                            <a href="/#contact">
+                                                <span>05.</span>Contact
+                                            </a>
+                                        )}
                                     </li>
                                     <li>
                                         <a href='/search' title='Search Posts'>

@@ -1,5 +1,5 @@
 // library import
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Fuse from 'fuse.js';
 import { FaSearch } from 'react-icons/fa'
 import { GoStopwatch } from 'react-icons/go'
@@ -28,10 +28,19 @@ type Props = {
 function Search({ searchList }: Props) {
     const [query, setQuery] = useState('');
     const fuse = new Fuse(searchList, options);
+    const searchContainerRef = useRef<HTMLDivElement>(null);
 
     const posts = fuse
         .search(query)
         .map((result) => result.item)
+
+    useEffect(() => {
+        if (searchContainerRef.current) {
+            const height = searchContainerRef.current.scrollHeight;
+            const rootHeight = height + 300;
+            document.documentElement.style.height = `${rootHeight}px`;
+        }
+    }, [posts]);
 
     function handleOnSearch({ target }: { target: HTMLInputElement }) {
         const { value } = target;
@@ -77,7 +86,7 @@ function Search({ searchList }: Props) {
     }
 
     return (
-        < div className='searchBarContainer' >
+        < div className='searchBarContainer' ref={searchContainerRef} >
             <label htmlFor="search" className="custom-field"></label>
             <div className='inputContainer'>
                 <div id='searchIcon'>
@@ -91,7 +100,7 @@ function Search({ searchList }: Props) {
                         <p className="resultSummary">
                             Found {posts.length} {posts.length === 1 ? 'result' : 'results'} for '{query}'
                         </p>
-                        <Section posts={posts} slugKey="projects/chemistry" heading="Chemistry Project" />
+                        <Section posts={posts} slugKey="projects/research" heading="Research Project" />
                         <Section posts={posts} slugKey="videos" heading="Video" />
                         <Section posts={posts} slugKey="blogs" heading="Blog" /></>
                 ) : (<p className="resultSummary">

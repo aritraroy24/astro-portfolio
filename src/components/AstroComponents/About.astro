@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 
 // data import
-import chemistryTools from "@assets/js/data/chemistryTools";
+import researchTools from "@assets/js/data/researchTools";
 import programmingTools from "@assets/js/data/programmingTools";
 
 // asset import
@@ -113,7 +113,7 @@ import "./styles/About.scss";
       <section class="skills">
         <ul>
           {
-            chemistryTools.map((tool: any) => {
+            researchTools.map((tool: any) => {
               if (tool.id % 2 != 0) {
                 return (
                   <li>
@@ -128,7 +128,7 @@ import "./styles/About.scss";
         </ul>
         <ul>
           {
-            chemistryTools.map((tool: any) => {
+            researchTools.map((tool: any) => {
               if (tool.id % 2 == 0) {
                 return (
                   <li>

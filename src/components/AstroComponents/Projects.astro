@@ -3,8 +3,9 @@
 import { getCollection } from "astro:content";
 
 // component import
+import { Image } from "astro:assets";
 import Button from "@components/AstroComponents/Common/Button.astro";
-import ChemProjectCard from "@components/AstroComponents/ChemistryProjects/ChemProjectCard.astro";
+import ResearchProjectCard from "@components/AstroComponents/ResearchProjects/ResearchProjectCard.astro";
 
 // function import
 import { formatPosts } from "@js/utils";
@@ -14,9 +15,15 @@ import "./styles/Projects.scss";
 
 // asset import
 import NoData from "@images/No data.svg";
+import ProgrammingProjectCard from "./ProgrammingProjects/ProgrammingProjectCard.astro";
 
-const allPublications = await getCollection("chemistry");
-const formattedPublications = formatPosts(allPublications, {
+const allResearchProjects = await getCollection("research");
+const formattedResearchProjects = formatPosts(allResearchProjects, {
+  filterOutFuturePosts: false,
+}).slice(0, 2);
+
+const allProgrammingProjects = await getCollection("programming");
+const formattedProgrammingProjects = formatPosts(allProgrammingProjects, {
   filterOutFuturePosts: false,
 }).slice(0, 2);
 ---
@@ -26,27 +33,30 @@ const formattedPublications = formatPosts(allPublications, {
     <span class="number-heading">02.</span>Projects
   </h2>
   <section class="chemprojects-container">
+    <div class="section-heading">
+      <h4>Research Projects</h4>
+    </div>
     <div class="allPostsContainer">
       {
-        formattedPublications.length > 0 ? (
-          formattedPublications.map((publication: any) => (
-            <ChemProjectCard
-              url={publication.slug}
-              title={publication.data.title}
-              journalName={publication.data.journalName}
-              image={publication.data.cover}
-              duration={publication.data.duration}
-              status={publication.data.status}
-              tags={publication.data.tags}
-              urlPrefix="/projects/chemistry/"
+        formattedResearchProjects.length > 0 ? (
+          formattedResearchProjects.map((researchProject: any) => (
+            <ResearchProjectCard
+              url={researchProject.slug}
+              title={researchProject.data.title}
+              journalName={researchProject.data.journalName}
+              image={researchProject.data.cover}
+              duration={researchProject.data.duration}
+              status={researchProject.data.status}
+              tags={researchProject.data.tags}
+              urlPrefix="/projects/research/"
               buttonText="View Paper"
             />
           ))
         ) : (
           <div class="noDataFoundContainer">
-            <img
+            <Image
               id="noDataFound"
-              src={NoData.src}
+              src={NoData}
               alt="No Data Found"
               width={500}
             />
@@ -61,8 +71,46 @@ const formattedPublications = formatPosts(allPublications, {
     </div>
     <Button
       text="Explore More..."
-      href="/projects/chemistry"
-      customStyle="margin-top:-60px;"
+      href="/projects/research"
+      customStyle="margin-bottom:75px;"
     />
+    <div class="section-heading">
+      <h4>Programming Projects</h4>
+    </div>
+    <div class="allPostsContainer">
+      {
+        formattedProgrammingProjects.length > 0 ? (
+          formattedProgrammingProjects.map((programmingProject: any) => (
+            <ProgrammingProjectCard
+              url={programmingProject.slug}
+              title={programmingProject.data.title}
+              cover={programmingProject.data.cover}
+              duration={programmingProject.data.duration}
+              status={programmingProject.data.status}
+              tags={programmingProject.data.tags}
+              githubUrl={programmingProject.data.githubUrl}
+              hostedUrl={programmingProject.data.hostedUrl}
+              urlPrefix="/projects/programming/"
+              buttonText="View Project"
+            />
+          ))
+        ) : (
+          <div class="noDataFoundContainer">
+            <Image
+              id="noDataFound"
+              src={NoData}
+              alt="No Data Found"
+              width={500}
+            />
+            <h2>No Records Found</h2>
+            <p>
+              There is no project in this section at this moment.. Maybe explore
+              other projects?
+            </p>
+          </div>
+        )
+      }
+    </div>
+    <Button text="Explore More..." href="/projects/programming" />
   </section>
 </main>

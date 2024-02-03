@@ -13,7 +13,7 @@ import { getCollection } from "astro:content";
 // style import
 import "./styles/Search.scss";
 
-// getting & formatting all posts (blogs, videos and chemistry projects)
+// getting & formatting all posts (blogs, videos and research projects)
 const allBlogs = await getCollection("blogs");
 const formattedBlogs = formatPosts(allBlogs);
 formattedBlogs.forEach((blog: any) => {
@@ -24,12 +24,12 @@ const formattedVideos = formatPosts(allVideos);
 formattedVideos.forEach((video: any) => {
   video.slug = "tutorial/videos/" + video.slug;
 });
-const allChemistryProjects = await getCollection("chemistry");
-allChemistryProjects.forEach((chemProject: any) => {
-  chemProject.slug = "projects/chemistry/" + chemProject.slug;
+const allResearchProjects = await getCollection("research");
+allResearchProjects.forEach((chemProject: any) => {
+  chemProject.slug = "projects/research/" + chemProject.slug;
 });
 const {
-  allPost = formattedBlogs.concat(formattedVideos, allChemistryProjects),
+  allPost = formattedBlogs.concat(formattedVideos, allResearchProjects),
 } = Astro.props;
 ---
 
@@ -40,3 +40,19 @@ const {
     <Search client:load searchList={allPost} />
   </div>
 </Layout>
+<!-- <script>
+  window.addEventListener("load", () => {
+    const searchContainer = document.getElementsByClassName(
+      "searchContainer",
+    )[0] as HTMLElement;
+
+    // Create a new MutationObserver instance
+    const observer = new MutationObserver(() => {
+      const height = searchContainer.scrollHeight;
+      searchContainer.style.height = `${height}px`;
+    });
+
+    // Start observing the searchContainer for child list changes
+    observer.observe(searchContainer, { childList: true });
+  });
+</script> -->

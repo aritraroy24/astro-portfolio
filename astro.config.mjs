@@ -15,13 +15,12 @@ const astroExpressiveCodeOptions = {
   theme: 'min-dark'
 };
 
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://aritraroy.live',
-  integrations: [react(), astroExpressiveCode(astroExpressiveCodeOptions), mdx(), compress({
+  integrations: [react(), astroExpressiveCode(astroExpressiveCodeOptions), mdx(), sitemap(), icon(), compress({
     img: false
-  }), sitemap(), icon()],
+  })],
   markdown: {
     shikiConfig: {
       theme: 'min-dark',

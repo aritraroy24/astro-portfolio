@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 // layout import
 import Layout from "@layouts/Layout.astro";
 
@@ -11,7 +12,7 @@ import FooterWithoutSocial from "@components/AstroComponents/FooterWithoutSocial
 import PageNotFoundImage from "@assets/images/404.svg";
 
 // style import
-import "@styles/404.scss";
+import "@styles/single-page.scss";
 
 // title & description value to pass to the layout
 const {
@@ -22,10 +23,10 @@ const {
 
 <Layout title={pageTitle} description={pageDescription}>
   <Header isHomePage={false} client:only="react" />
-  <div class="PageNotFound">
-    <img
-      id="PageNotFoundImage"
-      src={PageNotFoundImage.src}
+  <div class="SinglePage">
+    <Image
+      class="SinglePageImage"
+      src={PageNotFoundImage}
       alt="Page Not Found"
       width={600}
     />

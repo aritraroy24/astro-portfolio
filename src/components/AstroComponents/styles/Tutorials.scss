@@ -1,11 +1,12 @@
 .Tutorials {
     width: 100%;
-    padding: 0 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 200px;
+    padding: 150px 220px 0 220px;
+    margin-top: -150px;
+    margin-bottom: 150px;
     .number-heading {
         font-family: "Overpass Mono", Verdana, Geneva, Tahoma, sans-serif;
         font-size: 22px;
@@ -68,17 +69,28 @@
 }
 @media only screen and (max-width: 1050px) {
     .Tutorials {
-        padding: 0 80px;
+        padding: 150px 80px 0 80px;
     }
 }
 @media only screen and (max-width: 730px) {
     .Tutorials {
-        padding: 0 40px;
+        padding: 150px 40px 0 40px;
     }
 }
 @media only screen and (max-width: 450px) {
-    .Tutorials h2 {
-        font-size: 25px;
+    .Tutorials {
+        padding: 150px 22px 0 22px;
+        h2 {
+            font-size: 25px;
+        }
+    }
+}
+@media only screen and (max-width: 420px) {
+    .Tutorials {
+        h2 {
+            font-size: 25px;
+            top: 20px;
+        }
     }
 }
 @media only screen and (max-width: 330px) {

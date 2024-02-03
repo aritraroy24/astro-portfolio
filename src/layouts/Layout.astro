@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 // component import
 import GoogleAnalytics from "@components/Meta/GoogleAnalytics.astro";
 import Seo from "@components/Meta/Seo.astro";
@@ -53,7 +54,15 @@ const {
       >You need to enable JavaScript to run all the functionality of this
       website.</noscript
     >
-    <div id="root">
+    <div id="preloader">
+      <Image
+        src="/src/assets/images/preloader.svg"
+        alt="Loading..."
+        width={150}
+        height={150}
+      />
+    </div>
+    <div id="root" style="display: none;">
       <slot />
     </div>
     <script>
@@ -62,16 +71,13 @@ const {
         var os = unknown;
         var osVersion = unknown;
         var mobile = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(
-          navigator.userAgent,
+          navigator.userAgent
         );
         var screenSize = "";
 
         if (mobile) {
           var nVer = navigator.appVersion;
           var nAgt = navigator.userAgent;
-          var browser = navigator.appName;
-          var version = "" + parseFloat(nVer);
-          var nameOffset, verOffset, ix;
 
           var clientStrings = [{ s: "iOS", r: /(iPhone|iPad|iPod)/ }];
 
@@ -121,9 +127,9 @@ const {
       ██║  ██║██║  ██║██║   ██║   ██║  ██║██║  ██║    ██║  ██║╚██████╔╝   ██║
       ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝    ╚═╝
 
-      Research Assistant / PhD Student,
+      Research Assistant / Doctoral Researcher,
       Chemical Process and Energy Engineering,
-      London South Bank University, UK           
+      London South Bank University, UK
       `);
       }, 5000);
     </script>

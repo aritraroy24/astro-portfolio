@@ -6,6 +6,7 @@ import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 // component import
+import { Image } from "astro:assets";
 import PostCard from "@components/AstroComponents/Common/PostCard.astro";
 import Pagination from "@components/AstroComponents/Common/Pagination.astro";
 import Header from "@components/AstroIslands/Common/Header";
@@ -90,9 +91,9 @@ const {
           ))
         ):(
           <div class="noDataFoundContainer">
-            <img
+            <Image
               id="noDataFound"
-              src={NoData.src}
+              src={NoData}
               alt="No Data Found"
               width={500}
             />

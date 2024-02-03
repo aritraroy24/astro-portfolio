@@ -3,6 +3,7 @@
 import { getCollection } from "astro:content";
 
 // component import
+import { Image } from "astro:assets";
 import Button from "@components/AstroComponents/Common/Button.astro";
 import PostCard from "@components/AstroComponents/Common/PostCard.astro";
 
@@ -49,9 +50,9 @@ const formattedVideos = formatPosts(allVideos).slice(0, 2);
           ))
         ) : (
           <div class="noDataFoundContainer">
-            <img
+            <Image
               id="noDataFound"
-              src={NoData.src}
+              src={NoData}
               alt="No Data Found"
               width={500}
             />
@@ -91,9 +92,9 @@ const formattedVideos = formatPosts(allVideos).slice(0, 2);
           ))
         ) : (
           <div class="noDataFoundContainer">
-            <img
+            <Image
               id="noDataFound"
-              src={NoData.src}
+              src={NoData}
               alt="No Data Found"
               width={500}
             />

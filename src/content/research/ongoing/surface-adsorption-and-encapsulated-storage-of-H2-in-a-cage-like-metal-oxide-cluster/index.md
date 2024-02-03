@@ -1,0 +1,29 @@
+---
+title: DFT study for H₂ adsorption in a cage like metal oxide cluster
+status: Ongoing
+duration: Aug, 2022 - Present
+tags:
+  [
+    "Adsorption",
+    "H₂ storage",
+    "metal oxide",
+    "dft study",
+    "theoretical",
+    "ongoing",
+  ]
+pubDate: 2024-05-24
+cover: ./Ca12O12-cage-H2-storage.jpg
+description: "DFT studies on surface adsorption and encapsulated hydrogen storage in a cage like metal oxide cluster."
+journalName:
+isOpenAccess:
+journalUrl:
+codeUrl:
+runUrl:
+dockerUrl:
+newsUrl:
+type: ResearchProject
+---
+
+# Ongoing Project
+
+This is an ongoing project. Please come back later for the project details.

@@ -124,6 +124,26 @@
     padding: 2px;
     border: 0.25px solid var(--slate);
   }
+
+  .content p img {
+    width: auto;
+  }
+  .copy {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    .show,
+    .feedback {
+      position: absolute;
+      z-index: 10;
+      width: 70px;
+      right: -60px;
+      margin-top: -40px;
+    }
+  }
+}
+.expressive-code .copy button div {
+  display: none;
 }
 // Customizing code blocks
 pre {
@@ -142,6 +162,15 @@ code {
 .ec.ec-oxbgc .frame.has-title:not(.is-terminal) .title {
   width: 100% !important;
   background: rgb(80, 80, 80) !important;
+}
+
+.expressive-code {
+  margin-bottom: 15px;
+  .ec-line {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+  }
 }
 
 @media only screen and (max-width: 1500px) {

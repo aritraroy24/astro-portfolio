@@ -13,7 +13,7 @@ export async function get(context) {
     return rss({
         xmlns: { atom: "http://www.w3.org/2005/Atom" },
         title: 'Aritra Roy | YouTube Videos',
-        description: 'I\'m a Theoretical Computational Chemist & Algorithm Enthusiast from India. If you subscribe to this RSS feed you will receive updates and summaries of my new youtube videos about computational chemistry, programming and stuff.',
+        description: 'I\'m a Theoretical Computational Chemist & Algorithm Enthusiast from India. If you subscribe to this RSS feed you will receive updates and summaries of my new youtube videos about computational chemistry, materials science, programming and stuff.',
         site: context.site,
         author: "Aritra Roy",
         commentsUrl: "https://github.com/aritraroy24/astro-portfolio-comments/discussions",

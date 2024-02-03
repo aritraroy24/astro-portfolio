@@ -3,6 +3,7 @@
 import Layout from "@layouts/Layout.astro";
 
 // component import
+import { Image } from "astro:assets";
 import Header from "@components/AstroIslands/Common/Header";
 import Footer from "@components/AstroComponents/Footer.astro";
 import Socials from "@components/AstroComponents/Socials.astro";
@@ -17,7 +18,7 @@ import videoImage from "@images/content/tutorial/videos.svg";
 // defining page title and description for all publications page
 const {
   pageTitle = "Aritra Roy | All Tutorials",
-  pageDescription = "Discover a vast array of computational chemistry tutorials, including engaging YouTube videos and informative articles, in my extensive collection.",
+  pageDescription = "Discover a vast array of computational chemistry and materials science tutorials, including engaging YouTube videos and informative articles, in my extensive collection.",
   frontmatter,
   cover,
   robots,
@@ -56,7 +57,7 @@ const imgData = [
       {
         imgData.map((img: any) => (
           <a class="projectSectionLinks" href={`/tutorial/${img.url}`}>
-            <img src={img.src.src} alt={img.alt} width={400} />
+            <Image src={img.src} alt={img.alt} width={300} />
             <h3 style="margin-top: 10px;">{img.text}</h3>
           </a>
         ))

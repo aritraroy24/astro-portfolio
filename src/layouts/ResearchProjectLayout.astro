@@ -1,0 +1,101 @@
+---
+// layout import
+import Layout from "@layouts/Layout.astro";
+
+// component import
+import ResearchProjectHeader from "@components/AstroComponents/ResearchProjects/ResearchProjectHeader.astro";
+import RelatedPosts from "@components/AstroComponents/Common/RelatedPosts.astro";
+import ShareComment from "@components/AstroIslands/Common/ShareComment";
+import Socials from "@components/AstroComponents/Socials.astro";
+import Footer from "@components/AstroComponents/Footer.astro";
+
+// function import
+import { formatPosts } from "@js/utils";
+import { getCollection } from "astro:content";
+
+// style import
+import "@styles/single-post.scss";
+
+// destructuring astro properties
+const { frontmatter, robots } = Astro.props;
+const {
+  title,
+  status,
+  duration,
+  tags,
+  pubDate,
+  journalName,
+  isOpenAccess,
+  journalUrl,
+  codeUrl,
+  runUrl,
+  dockerUrl,
+  newsUrl,
+  description,
+  cover,
+} = frontmatter;
+
+// getting related blog posts related to first tag of the current blog
+const allResearchProjects = await getCollection("research");
+const formattedResearchProjects = formatPosts(allResearchProjects, {
+  sortByDate: false,
+  filterOutFuturePosts: false,
+});
+// filtering based on common tags
+const tagsFilteredResearchProjects: any[] = [];
+var flag = 0;
+formattedResearchProjects.forEach((item: any) => {
+  var tempTags = item.data.tags;
+  tempTags.forEach((tag: string) => {
+    if (tags.includes(tag)) {
+      flag = 1;
+    }
+  });
+  if (flag === 1) {
+    tagsFilteredResearchProjects.push(item);
+  }
+  flag = 0;
+});
+// removing the same post itself (we don't want to show the same post as similar post suggestion)
+const relatedResearchProjects = tagsFilteredResearchProjects
+  .filter((blog: any) => blog.data.title !== title)
+  .slice(0, 3);
+---
+
+<Layout {title} {description} {frontmatter} {robots} {cover}>
+  <Socials />
+  <!-- blog heading section -->
+  <ResearchProjectHeader
+    {title}
+    {status}
+    {duration}
+    {tags}
+    {pubDate}
+    {journalName}
+    {isOpenAccess}
+    {journalUrl}
+    {codeUrl}
+    {runUrl}
+    {dockerUrl}
+    {newsUrl}
+  />
+  <!-- blog post content section -->
+  <div class="post-content">
+    <div class="content">
+      <slot />
+    </div>
+  </div>
+  <!-- comment using giscus -->
+  <ShareComment
+    client:only="react"
+    postType="Publication"
+    rssUrl="/projects/research/rss.xml"
+  />
+  <!-- related blog posts section -->
+  <RelatedPosts
+    relatedPosts={relatedResearchProjects}
+    text="Research Projects"
+    urlPrefix="/projects/research/"
+  />
+  <Footer />
+</Layout>

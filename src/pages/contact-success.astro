@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 // layout import
 import Layout from "@layouts/Layout.astro";
 
@@ -8,33 +9,33 @@ import Button from "@components/AstroComponents/Common/Button.astro";
 import FooterWithoutSocial from "@components/AstroComponents/FooterWithoutSocial.astro";
 
 // asset import
-import ContactRedirectImage from "@assets/images/contactSuccess.svg";
+import ContactSuccessImage from "@assets/images/contactSuccess.svg";
 
 // style import
-import "@styles/contact-redirect.scss";
+import "@styles/single-page.scss";
 
 // title & description value to pass to the layout
 const {
-    pageTitle = "Aritra Roy | Successful Form Submission",
-    pageDescription = "Yaay, you submitted my contact form successfully. I'll reach you out as soon as possible. It'll not be too long, I promise. Till then you can learn more about me.",
+  pageTitle = "Aritra Roy | Successful Form Submission",
+  pageDescription = "Yaay, you submitted my contact form successfully. I'll reach you out as soon as possible. It'll not be too long, I promise. Till then you can learn more about me.",
 } = Astro.props;
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-    <Header isHomePage={false} client:only="react" />
-    <div class="ContactRedirect">
-        <img
-            id="ContactRedirectImage"
-            src={ContactRedirectImage.src}
-            alt="Page Not Found"
-            height={500}
-        />
-        <h1>Yaay, You Made It</h1>
-        <p>
-            Thanks for contacting. I'll reach you out as soon as possible. Till
-            then you can learn more about me.
-        </p>
-        <Button href="/" text="Go to Home" rel="noopener noreferrer" />
-    </div>
-    <FooterWithoutSocial />
+  <Header isHomePage={false} client:only="react" />
+  <div class="SinglePage">
+    <Image
+      class="SinglePageImage"
+      src={ContactSuccessImage}
+      alt="Contact Success Image"
+      height={500}
+    />
+    <h1>Yaay, You Made It</h1>
+    <p>
+      Thanks for contacting. I'll reach you out as soon as possible. Till then
+      you can learn more about me.
+    </p>
+    <Button href="/" text="Go to Home" rel="noopener noreferrer" />
+  </div>
+  <FooterWithoutSocial />
 </Layout>
