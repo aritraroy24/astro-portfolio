@@ -11,9 +11,7 @@ Changed
 Fixed
 ```
 ## [v1.0.0] - 04-02-2024
-  
-Here we would have the update steps for 1.2.4 for people to follow.
- 
+   
 ### Added
  - [CHANGELOG.md](https://github.com/aritraroy24/astro-portfolio/blob/main/CHANGELOG.md) file added to keep track of the versions.
  - `Programming Projects` added as content. [Zotero Email Notification](https://github.com/aritraroy24/astro-portfolio/tree/main/src/content/programming/completed/zotero-email-notification) added as a completed programming project.
