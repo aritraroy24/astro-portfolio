@@ -24,7 +24,7 @@ const Header: React.FC<NavbarProps> = ({ isHomePage }) => {
         }
         const delayedContent = document.getElementById('root');
         if (delayedContent) {
-            delayedContent.style.display = 'block';
+            delayedContent.style.display = 'grid';
         }
     }, []);
 

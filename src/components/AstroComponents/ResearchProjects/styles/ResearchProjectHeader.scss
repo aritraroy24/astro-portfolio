@@ -45,6 +45,10 @@
       margin: 5px;
       border-radius: 8px;
     }
+    .coverImage {
+      height: 400px;
+      width: auto;
+    }
   }
 
   .researchProjectCoverImg {
@@ -80,6 +84,12 @@
     .researchProjectCoverImg {
       width: 100%;
     }
+    .researchProjectHeaderElements {
+      .coverImage {
+        width: 60vw;
+        height: auto;
+      }
+    }
   }
 }
 @media only screen and (max-width: 440px) {
@@ -93,6 +103,10 @@
     .researchProjectHeaderElements {
       .tagsContainer {
         font-size: 14px;
+      }
+      .coverImage {
+        width: 80vw;
+        height: auto;
       }
     }
   }

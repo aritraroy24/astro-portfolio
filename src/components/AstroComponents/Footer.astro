@@ -10,6 +10,8 @@ import "./styles/Footer.scss";
 
 // import data
 import socials from "@js/data/socials";
+
+const year = new Date().getFullYear();
 ---
 
 <footer class="Footer" id="footer">
@@ -35,7 +37,8 @@ import socials from "@js/data/socials";
   <Newsletter />
   <div class="copyrightDiv">
     <p>
-      &copy; 2023 <a href="/"><span>aritraroy.live</span></a>
+      &copy; {year}
+      <a href="/"><span>aritraroy.live</span></a>
     </p>
     <p>❤️</p>
     <p>All rights reserved.</p>

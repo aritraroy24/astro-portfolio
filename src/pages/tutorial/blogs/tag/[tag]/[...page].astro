@@ -44,17 +44,28 @@ export const getStaticPaths = (async ({ paginate }) => {
     });
   });
 }) satisfies GetStaticPaths;
+interface Props {
+  pageTitle?: string;
+  pageDescription?: string;
+  frontmatter?: any; 
+  cover?: string;
+  robots?: string;
+  page: any;
+}
+
 const params = Astro.params;
-const { page } = Astro.props;
+const { page }:Props = Astro.props;
 
 const tag = params.tag ? deslugify(params.tag).toUpperCase() : "";
+
+
 const {
   pageTitle = `All Blogs | Tag: ${tag}`, 
   pageDescription = `Discover the essence of ${tag} through captivating articles, insights, and expertise. Explore a curated collection of ${tag} content, tailored just for you.`, 
   frontmatter, 
   cover, 
   robots
-} = Astro.props;
+}:Props = Astro.props;
 ---
 
 <Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>

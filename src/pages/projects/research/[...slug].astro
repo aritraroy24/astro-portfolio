@@ -13,7 +13,11 @@ export async function getStaticPaths() {
     props: { entry },
   }));
 }
-const { entry } = Astro.props;
+interface Entry {
+  render: () => Promise<{ Content: any }>;
+  data: any;
+}
+const { entry }: { entry: Entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 

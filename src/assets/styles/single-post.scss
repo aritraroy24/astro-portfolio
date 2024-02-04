@@ -124,7 +124,9 @@
     padding: 2px;
     border: 0.25px solid var(--slate);
   }
-
+  .break-word {
+    word-break: break-word;
+  }
   .content p img {
     width: auto;
   }

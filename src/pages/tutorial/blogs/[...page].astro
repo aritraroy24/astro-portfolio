@@ -33,7 +33,15 @@ export const getStaticPaths = (async ({ paginate }) => {
     pageSize: 6,
   });
 }) satisfies GetStaticPaths;
-const { page } = Astro.props;
+interface Props {
+  pageTitle?: string;
+  pageDescription?: string;
+  frontmatter?: any; 
+  cover?: string;
+  robots?: string;
+  page: any;
+}
+const { page }: Props = Astro.props;
 
 // defining page title and description for all blogs page
 const {
@@ -43,7 +51,7 @@ const {
   frontmatter, 
   cover,
   robots
-  } = Astro.props;
+  }: Props = Astro.props;
 ---
 
 <Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>

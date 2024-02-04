@@ -3,6 +3,7 @@
 import { Icon } from "astro-icon/components";
 
 // component import
+import { Image } from "astro:assets";
 import Header from "@components/AstroIslands/Common/Header";
 import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 
@@ -13,8 +14,16 @@ import { slugify, capitalizeWords } from "@js/utils";
 import "./styles/ProgrammingProjectHeader.scss";
 
 // // destructuring astro properties
-const { title, status, duration, tags, githubUrl, hostedUrl, dockerUrl } =
-  Astro.props;
+const {
+  title,
+  status,
+  duration,
+  tags,
+  githubUrl,
+  hostedUrl,
+  dockerUrl,
+  cover,
+} = Astro.props;
 ---
 
 <>
@@ -102,6 +111,7 @@ const { title, status, duration, tags, githubUrl, hostedUrl, dockerUrl } =
           )
         }
       </div>
+      <Image src={cover} alt={title} class="coverImage" />
     </div>
   </header>
 </>

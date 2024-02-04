@@ -45,6 +45,11 @@
       margin: 5px;
       border-radius: 8px;
     }
+    .coverImage {
+      margin-top: 15px;
+      height: 400px;
+      width: auto;
+    }
   }
 
   .programmingProjectCoverImg {
@@ -80,6 +85,12 @@
     .programmingProjectCoverImg {
       width: 100%;
     }
+    .programmingProjectHeaderElements {
+      .coverImage {
+        width: 60vw;
+        height: auto;
+      }
+    }
   }
 }
 @media only screen and (max-width: 440px) {
@@ -93,6 +104,10 @@
     .programmingProjectHeaderElements {
       .tagsContainer {
         font-size: 14px;
+      }
+      .coverImage {
+        width: 80vw;
+        height: auto;
       }
     }
   }

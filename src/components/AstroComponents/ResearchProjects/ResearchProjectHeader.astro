@@ -3,6 +3,7 @@
 import { Icon } from "astro-icon/components";
 
 // component import
+import { Image } from "astro:assets";
 import Header from "@components/AstroIslands/Common/Header";
 import BackButton from "@components/AstroComponents/Common/BackButton.astro";
 
@@ -13,7 +14,7 @@ import { slugify, formatDate, capitalizeWords } from "@js/utils";
 import "./styles/ResearchProjectHeader.scss";
 
 // // destructuring astro properties
-const {   title, status, duration, tags, pubDate, journalName, isOpenAccess, journalUrl, codeUrl, runUrl, dockerUrl, newsUrl } = Astro.props;
+const {   title, status, duration, tags, pubDate, journalName, isOpenAccess, journalUrl, codeUrl, runUrl, dockerUrl, newsUrl, cover } = Astro.props;
 
 const currentDate = new Date();
 ---
@@ -98,6 +99,7 @@ const currentDate = new Date();
           </a>
         )}
       </div>
+      <Image src={cover} alt={title} class="coverImage" />
     </div>
   </header>
 </>

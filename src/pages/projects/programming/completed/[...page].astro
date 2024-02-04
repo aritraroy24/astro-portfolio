@@ -41,7 +41,13 @@ export const getStaticPaths = (async ({ paginate }) => {
     pageSize: 6,
   });
 }) satisfies GetStaticPaths;
-const { page, frontmatter, cover, robots } = Astro.props;
+interface Props {
+  frontmatter?: any; 
+  cover?: string;
+  robots?: string;
+  page: any;
+}
+const { page, frontmatter, cover, robots }: Props = Astro.props;
 
 // defining page title and description for completed publications page
 const pageTitle = "Aritra Roy | Completed Programming Projects";

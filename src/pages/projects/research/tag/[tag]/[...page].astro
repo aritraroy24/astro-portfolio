@@ -47,7 +47,15 @@ export const getStaticPaths = (async ({ paginate }) => {
   });
 }) satisfies GetStaticPaths;
 const params = Astro.params;
-const { page, frontmatter, cover, robots } = Astro.props;
+
+interface Props {
+  frontmatter?: any; 
+  cover?: string;
+  robots?: string;
+  page: any;
+}
+
+const { page, frontmatter, cover, robots }: Props = Astro.props;
 
 const tag = params.tag ? deslugify(params.tag).toUpperCase() : "";
 const pageTitle = `All Research Projects | Tag: ${tag}`;
