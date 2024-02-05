@@ -7,6 +7,9 @@ import Seo from "@components/Meta/Seo.astro";
 // style import
 import "@assets/styles/global.scss";
 
+// asset import
+import preloader from "@assets/images/preloader.svg";
+
 // defining type of title and description of the page
 export interface LayoutProps {
   title?: string;
@@ -55,12 +58,7 @@ const {
       website.</noscript
     >
     <div id="preloader">
-      <Image
-        src="/src/assets/images/preloader.svg"
-        alt="Loading..."
-        width={150}
-        height={150}
-      />
+      <Image src={preloader} alt="Loading..." width={150} height={150} />
     </div>
     <div id="root" style="display: none;">
       <slot />

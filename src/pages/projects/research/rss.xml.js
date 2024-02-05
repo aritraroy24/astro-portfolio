@@ -7,7 +7,7 @@ import { marked } from 'marked';
 import { getCollection } from 'astro:content';
 import { formatPosts } from '@js/utils'
 
-export async function get(context) {
+export async function GET(context) {
     const allResearchProjects = await getCollection("research");
     const formattedResearchProjects = formatPosts(allResearchProjects, {
         filterOutFuturePosts: false,

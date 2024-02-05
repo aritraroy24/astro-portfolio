@@ -7,7 +7,7 @@ import { marked } from 'marked';
 import { getCollection } from 'astro:content';
 import { formatPosts } from '@js/utils'
 
-export async function get(context) {
+export async function GET(context) {
     const allVideos = await getCollection("videos");
     const formattedVideos = formatPosts(allVideos);
     return rss({

@@ -7,7 +7,7 @@ import { marked } from 'marked';
 import { getCollection } from 'astro:content';
 import { formatPosts } from '@js/utils'
 
-export async function get(context) {
+export async function GET(context) {
     const allProgrammingProjects = await getCollection("programming");
     const formattedProgrammingProjects = formatPosts(allProgrammingProjects, {
         filterOutFuturePosts: false,
@@ -16,7 +16,7 @@ export async function get(context) {
     return rss({
         xmlns: { atom: "http://www.w3.org/2005/Atom" },
         title: 'Aritra Roy | Programming Projects',
-        description: 'I\'m a Theoretical Computational Chemist & Algorithm Enthusiast from India. If you subscribe to this RSS feed you will receive updates and summaries of my new projects on programming related to research.',
+        description: 'I\'m a Theoretical Computational Chemist & Algorithm Enthusiast from India. If you subscribe to this RSS feed you will receive updates and summaries of my new projects on programming.',
         site: context.site,
         author: "Aritra Roy",
         commentsUrl: "https://github.com/aritraroy24/astro-portfolio-comments/discussions",
@@ -38,6 +38,6 @@ export async function get(context) {
             ]}`,
         })),
         customData: `<atom:link href="https://aritraroy.live/projects/programming/rss.xml" rel="self" type="application/rss+xml" />`,
-        stylesheet: '/rss/programming-project-rss-styles.xsl',
+        stylesheet: '/rss/coding-project-rss-styles.xsl',
     });
 }
