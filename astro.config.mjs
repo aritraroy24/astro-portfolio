@@ -7,7 +7,8 @@ import mdx from '@astrojs/mdx';
 import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
 import astroExpressiveCode from 'astro-expressive-code';
-import icon from 'astro-icon'
+import icon from 'astro-icon';
+import partytown from "@astrojs/partytown";
 
 /** @type {import('astro-expressive-code').AstroExpressiveCodeOptions} */
 const astroExpressiveCodeOptions = {
@@ -15,10 +16,11 @@ const astroExpressiveCodeOptions = {
   theme: 'min-dark'
 };
 
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://aritraroy.live',
-  integrations: [react(), astroExpressiveCode(astroExpressiveCodeOptions), mdx(), sitemap(), icon(), compress()],
+  integrations: [react(), astroExpressiveCode(astroExpressiveCodeOptions), mdx(), sitemap(), icon(), partytown(), compress()],
   markdown: {
     shikiConfig: {
       theme: 'min-dark',
