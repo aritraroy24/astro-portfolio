@@ -20,7 +20,11 @@ const astroExpressiveCodeOptions = {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://aritraroy.live',
-  integrations: [react(), astroExpressiveCode(astroExpressiveCodeOptions), mdx(), sitemap(), icon(), partytown(), compress()],
+  integrations: [react(), astroExpressiveCode(astroExpressiveCodeOptions), mdx(), sitemap(), icon(), partytown({
+    config: {
+      forward: ['dataLayer.push'],
+    },
+  }), compress()],
   markdown: {
     shikiConfig: {
       theme: 'min-dark',
