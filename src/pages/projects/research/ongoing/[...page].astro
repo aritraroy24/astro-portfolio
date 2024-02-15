@@ -12,6 +12,7 @@ import Header from "@components/AstroIslands/Common/Header";
 import Pagination from "@components/AstroComponents/Common/Pagination.astro";
 import Socials from "@components/AstroComponents/Socials.astro";
 import Footer from "@components/AstroComponents/Footer.astro";
+import Button from "@components/AstroComponents/Common/Button.astro";
 
 // function import
 import { formatPosts } from "@js/utils";
@@ -59,6 +60,7 @@ const pageDescription =
   <Header isHomePage={false} client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">
+    <Button text="Projects Homepage" href="/projects/research" customStyle="margin-bottom:20px;" />
     <!-- publications  heading section -->
     <h1 style="margin-bottom: 0;">Ongoing Research Projects</h1>
     <!-- ongoing publications -->

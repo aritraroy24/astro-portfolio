@@ -28,7 +28,7 @@ const education = [
         title: 'Higher Secondary Examination',
         institution: 'Nabadwip Bakultala High School',
         duration: 'June 2014 - April 2016',
-        url: 'http://nbvpcs.org.in/',
+        url: 'https://www.nabadwipbakultalahighschool.org/',
         description: [
             '89.20%',
             'Completed in 2016',
@@ -40,7 +40,7 @@ const education = [
         title: 'Secondary Examination',
         institution: 'Nabadwip Bakultala High School',
         duration: 'April 2009 - May 2014',
-        url: 'http://nbvpcs.org.in/',
+        url: 'https://www.nabadwipbakultalahighschool.org/',
         description: [
             '90.00%',
             'Completed in 2014',

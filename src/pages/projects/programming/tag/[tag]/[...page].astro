@@ -7,7 +7,7 @@ import { getCollection } from "astro:content";
 
 // component import
 import { Image } from "astro:assets";
-import ResearchProjectCard from "@components/AstroComponents/ResearchProjects/ResearchProjectCard.astro";
+import ProgrammingProjectCard from "@components/AstroComponents/ProgrammingProjects/ProgrammingProjectCard.astro";
 import Pagination from "@components/AstroComponents/Common/Pagination.astro";
 import Header from "@components/AstroIslands/Common/Header";
 import BackButton from "@components/AstroComponents/Common/BackButton.astro";
@@ -26,19 +26,19 @@ import { slugify, deslugify, formatPosts } from "@js/utils";
 // type import
 import type { GetStaticPaths } from "astro";
 
-// getting all blog posts with a specified tag (6 posts per page)
+// getting all project posts with a specified tag (6 posts per page)
 export const getStaticPaths = (async ({ paginate }) => {
-  const allPublications = await getCollection("research");
-  const formattedPublications = formatPosts(allPublications, {
+  const allProgrammingProjects = await getCollection("programming");
+  const formattedProgrammingProjects = formatPosts(allProgrammingProjects, {
     filterOutFuturePosts: false,
   });
   const uniqueTags = [
-    ...new Set(formattedPublications.map((blog: any) => blog.data.tags).flat()),
+    ...new Set(formattedProgrammingProjects.map((project: any) => project.data.tags).flat()),
   ];
 
   return uniqueTags.flatMap((tag: any) => {
-    const filteredPosts = formattedPublications.filter((blog: any) =>
-      blog.data.tags.includes(tag)
+    const filteredPosts = formattedProgrammingProjects.filter((project: any) =>
+      project.data.tags.includes(tag)
     );
     return paginate(filteredPosts, {
       params: { tag: slugify(tag) },
@@ -58,17 +58,17 @@ interface Props {
 const { page, frontmatter, cover, robots }: Props = Astro.props;
 
 const tag = params.tag ? deslugify(params.tag).toUpperCase() : "";
-const pageTitle = `All Research Projects | Tag: ${tag}`;
-const pageDescription = `Discover the essence of ${tag} through captivating research project details, insights, and expertise. Explore a curated collection of ${tag} content, tailored specifically for the advancement of sustainability research.`;
+const pageTitle = `All Programming Projects | Tag: ${tag}`;
+const pageDescription = `Discover the essence of ${tag} through captivating programming project details, insights, and expertise. Explore a curated collection of ${tag} content, tailored specifically for the advancement of reseach.`;
 ---
 
 <Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>
   <Header isHomePage={false} client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">
-    <!-- research projects with specific tag heading section -->
+    <!-- programming projects with specific tag heading section -->
     <h1>
-      Research Projects about <span class="highlightedText">{tag}</span>
+      Programming Projects about <span class="highlightedText">{tag}</span>
     </h1>
     <BackButton
       text="Back"
@@ -78,20 +78,21 @@ const pageDescription = `Discover the essence of ${tag} through captivating rese
         side: "left",
       }}
     />
-    <!-- all research projects with one specific tag -->
+    <!-- all programming projects with one specific tag -->
     <div class="allPostsContainer">
       {
         page.data.length > 0 ? (
-          page.data.map((blog: any) => (
-            <ResearchProjectCard
-              url={blog.slug}
-              title={blog.data.title}
-              journalName={blog.data.journalName}
-              image={blog.data.cover}
-              status={blog.data.status}
-              duration={blog.data.duration}
-              tags={blog.data.tags}
-              urlPrefix="/projects/research/"
+          page.data.map((project: any) => (
+            <ProgrammingProjectCard
+              url={project.slug}
+              title={project.data.title}
+              cover={project.data.cover}
+              duration={project.data.duration}
+              status={project.data.status}
+              tags={project.data.tags}
+              githubUrl={project.data.githubUrl}
+              hostedUrl={project.data.hostedUrl}
+              urlPrefix="/projects/programming/"
               buttonText="View Post"
             />
           ))
@@ -118,7 +119,7 @@ const pageDescription = `Discover the essence of ${tag} through captivating rese
           nextUrl={page.url.next}
           totalPage={page.lastPage}
           currentPage={page.currentPage}
-          urlPrefix={`/projects/research/tag/${params.tag}/`}
+          urlPrefix={`/projects/programming/tag/${params.tag}/`}
         />
       )
     }

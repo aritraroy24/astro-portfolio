@@ -146,7 +146,7 @@ export default function jsonLDGenerator({ type, post, url }) {
                 "@type": "CreativeWork",
                 "description": "Higher Secondary",
                 "name": "Nabadwip Bakultala High School (H.S.) for Boys",
-                "url": "http://nbvpcs.org.in/",
+                "url": "https://www.nabadwipbakultalahighschool.org/",
                 "locationCreated":
                   "Badur Tala Lane, Nabadwip, 741302, West Bengal, India"
               },
@@ -170,7 +170,7 @@ export default function jsonLDGenerator({ type, post, url }) {
                 "@type": "CreativeWork",
                 "description": "Secondary",
                 "name": "Nabadwip Bakultala High School (H.S.) for Boys",
-                "url": "http://nbvpcs.org.in/",
+                "url": "https://www.nabadwipbakultalahighschool.org/",
                 "locationCreated":
                   "Badur Tala Lane, Nabadwip, 741302, West Bengal, India"
               },

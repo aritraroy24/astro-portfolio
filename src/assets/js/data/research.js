@@ -1,14 +1,14 @@
 const research = [
     {
         id: 4,
-        title: 'Research Assistant / PhD Student',
+        title: 'Doctoral Researcher',
         institution: 'London South Bank University',
         duration: 'Sep, 2023 - Present',
         url: 'https://www.lsbu.ac.uk/',
         description: [
-            'Domain wall manipulation',
             'Machine learning',
-            'Ferroelectronic materials',
+            'Solid State Physics',
+            'Materials Modelling',
             'Under Dr. John Buckeridge'
         ]
     },

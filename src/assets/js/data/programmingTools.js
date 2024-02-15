@@ -283,9 +283,9 @@ const programmingTools = [
             },
             {
                 id: 3,
-                url: 'https://bard.google.com/',
+                url: 'https://gemini.google.com/app',
                 iconName: 'programmingTools/assistant/bard-fill',
-                title: 'Bard'
+                title: 'Gemini'
             },
             {
                 id: 4,
