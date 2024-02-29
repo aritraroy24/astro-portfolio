@@ -18,11 +18,11 @@ import "./styles/PostCard.scss";
 
 <>
   <div class="postCard">
-    <a href={`${urlPrefix}${url}`}>
+    <a href={`/${url}`}>
       <Image alt={title} src={image} width={300} height={150} />
     </a>
     <div>
-      <a href={`${urlPrefix}${url}`}>
+      <a href={`/${url}`}>
         <h4>{title}</h4>
       </a>
       <div>
@@ -41,7 +41,7 @@ import "./styles/PostCard.scss";
         }
       </p>
       <Button
-        href={`${urlPrefix}${url}`}
+        href={`/${url}`}
         text={buttonText}
         customStyle="padding: 12px 18px;"
       />

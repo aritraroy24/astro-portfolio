@@ -1,29 +1,31 @@
 ---
-// videopost layout import
-import VideoPostLayout from "@layouts/VideoPostLayout.astro";
+// blogpost layout import
+import BlogPostLayout from "@layouts/BlogPostLayout.astro";
 
 // library import
 import { getCollection } from "astro:content";
 
-// getting all videos
+// getting all blogs
 export async function getStaticPaths() {
-  const videoEntries = await getCollection("videos");
-  return videoEntries.map((entry: any) => ({
-    params: { slug: entry.slug },
+  const blogEntries = await getCollection("blogs");
+  return blogEntries.map((entry: any) => ({
+    params: { blog: entry.slug },
     props: { entry },
   }));
 }
+
 interface Entry {
   render: () => Promise<{ Content: any }>;
   data: any;
 }
+
 const { entry }: { entry: Entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<VideoPostLayout frontmatter={entry.data}>
+<BlogPostLayout frontmatter={entry.data}>
   <Content />
-</VideoPostLayout>
+</BlogPostLayout>
 <script>
   // Get all the anchor elements in the markdown file and add target="_blank" attribute
   var links = document.getElementsByTagName("a");
