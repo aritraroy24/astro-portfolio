@@ -14,7 +14,7 @@ tags:
     "ongoing",
   ]
 pubDate: 2024-05-10
-cover: ./trialuminium-compound.png
+cover: ./confidential.png
 description: "Investigating the electronic structure and reactivity of an allyl-like trialuminium compound, an intriguing study in organometallic chemistry."
 journalName:
 isOpenAccess:

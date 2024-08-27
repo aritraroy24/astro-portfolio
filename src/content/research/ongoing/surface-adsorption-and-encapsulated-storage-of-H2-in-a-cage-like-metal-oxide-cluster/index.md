@@ -12,7 +12,7 @@ tags:
     "ongoing",
   ]
 pubDate: 2024-05-24
-cover: ./Ca12O12-cage-H2-storage.jpg
+cover: ./confidential.png
 description: "DFT studies on surface adsorption and encapsulated hydrogen storage in a cage like metal oxide cluster."
 journalName:
 isOpenAccess:

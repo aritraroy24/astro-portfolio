@@ -66,7 +66,8 @@ export default function jsonLDGenerator({ type, post, url }) {
                 "Origin Pro 2018",
                 "EndNote X9",
                 "Math Editor",
-                "Multiwfn"
+                "Multiwfn",
+                "VASP"
               ]
             },
             "address": {

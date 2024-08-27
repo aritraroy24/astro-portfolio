@@ -14,7 +14,7 @@ tags:
     ongoing,
   ]
 pubDate: 2025-05-10
-cover: ./doped-graphene.png
+cover: ./confidential.png
 description: An experimental and theoretical study of the induced effect on charge transfter after doping of H, F, O and PhSO₃H on graphene monolayer.
 journalName:
 isOpenAccess:

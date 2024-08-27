@@ -85,9 +85,9 @@ const programmingTools = [
             },
             {
                 id: 4,
-                url: 'https://www.tensorflow.org/',
-                iconName: 'programmingTools/library/tensorflow',
-                title: 'TensorFlow',
+                url: 'https://pytorch.org/',
+                iconName: 'programmingTools/library/pytorch',
+                title: 'PyTorch',
             },
             {
                 id: 5,
@@ -124,12 +124,6 @@ const programmingTools = [
                 url: 'https://laravel.com/',
                 iconName: 'programmingTools/library/logo-laravel',
                 title: 'Laravel',
-            },
-            {
-                id: 11,
-                url: 'https://nextjs.org/',
-                iconName: 'programmingTools/library/nextjs',
-                title: 'Next.js',
             },
         ]
     },

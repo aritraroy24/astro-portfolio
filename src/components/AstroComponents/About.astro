@@ -22,14 +22,14 @@ import "./styles/About.scss";
     <!-- about description - left section -->
     <section class="about-description">
       <p>
-        Currently, I'm doing my PhD at <a
+        Currently, I'm a doctoral researcher at <a
           href="https://www.lsbu.ac.uk/"
           target="_blank"
           rel="noopener noreferrer"
           class="hyperlink"
         >
           LSBU, UK
-        </a> on <b>Chemical Process and Energy Engineering</b> under {" "}
+        </a> under {" "}
         <a
           href="https://scholar.google.com.sg/citations?user=hfyoL4AAAAAJ&hl=en"
           target="_blank"
@@ -63,19 +63,19 @@ import "./styles/About.scss";
         </a> [Experimental Part].
       </p>
       <p>
-        My project is based on <b
-          >machine learning approaches for domain wall manipulation of
-          ferroelectronic materials</b
-        >. Currently I'm learning <a
+        My PhD project is based on <b
+          >deep learning approaches to predict novel piezoelectric materials
+          using text-mined data</b
+        >. Moreover, I work in different computational aspects with different
+        softwares in computational physics and chemistry field, such as, {" "}
+        <a
           href="https://www.vasp.at/"
           target="_blank"
           rel="noopener noreferrer"
           class="hyperlink"
         >
           VASP
-        </a>. While working with my M.Sc. project, I learned to work in
-        different computational aspects with different softwares in quantum
-        chemistry field, such as, {" "}
+        </a>, {" "}
         <a
           href="https://gaussian.com/"
           target="_blank"
@@ -145,7 +145,7 @@ import "./styles/About.scss";
       <div class="iconsContainerMobile">
         {
           programmingTools.map((item: any) => {
-            const typeMapping = {
+            const typeMapping: { [key: string]: string } = {
               language: "Language",
               library: "Library/Framework",
               backend: "Backend",
@@ -184,7 +184,7 @@ import "./styles/About.scss";
       <div class="iconsContainer">
         {
           programmingTools.map((item: any) => {
-            const typeMapping = {
+            const typeMapping: { [key: string]: string } = {
               language: "Language",
               library: "Library/Framework",
               backend: "Backend",
