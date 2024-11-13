@@ -21,8 +21,8 @@ const researchTools = [
     },
     {
         id: 5,
-        toolName: 'Materials Studio',
-        version: '2017'
+        toolName: 'VASP',
+        version: '6.4.3'
     },
     {
         id: 6,
@@ -56,6 +56,11 @@ const researchTools = [
     },
     {
         id: 12,
+        toolName: 'Materials Studio',
+        version: '2017'
+    },
+    {
+        id: 13,
         toolName: 'Multiwfn',
         version: ''
     },

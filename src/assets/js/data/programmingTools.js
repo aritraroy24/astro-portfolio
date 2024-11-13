@@ -85,6 +85,15 @@ const programmingTools = [
             },
             {
                 id: 4,
+<<<<<<< HEAD
+=======
+                url: 'https://pytorch.org/',
+                iconName: 'programmingTools/library/pytorch',
+                title: 'PyTorch',
+            },
+            {
+                id: 5,
+>>>>>>> 5df2d1acc4293f52db89bc92a177ba0f94da32e0
                 url: 'https://getbootstrap.com/',
                 iconName: 'programmingTools/library/bootstrap-fill',
                 title: 'Bootstrap',
@@ -119,12 +128,15 @@ const programmingTools = [
                 iconName: 'programmingTools/library/logo-laravel',
                 title: 'Laravel',
             },
+<<<<<<< HEAD
             {
                 id: 10,
                 url: 'https://nextjs.org/',
                 iconName: 'programmingTools/library/nextjs',
                 title: 'Next.js',
             },
+=======
+>>>>>>> 5df2d1acc4293f52db89bc92a177ba0f94da32e0
         ]
     },
     {

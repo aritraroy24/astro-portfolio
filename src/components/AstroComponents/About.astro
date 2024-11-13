@@ -22,7 +22,7 @@ import "./styles/About.scss";
     <!-- about description - left section -->
     <section class="about-description">
       <p>
-        Currently, I'm doing my PhD at <a
+        Currently, I'm a doctoral researcher at <a
           href="https://www.lsbu.ac.uk/"
           target="_blank"
           rel="noopener noreferrer"
@@ -80,9 +80,7 @@ import "./styles/About.scss";
           class="hyperlink"
         >
           VASP
-        </a>. While working with my M.Sc. project, I learned to work in
-        different computational aspects with different softwares in quantum
-        chemistry field, such as, {" "}
+        </a>, {" "}
         <a
           href="https://gaussian.com/"
           target="_blank"
@@ -152,7 +150,7 @@ import "./styles/About.scss";
       <div class="iconsContainerMobile">
         {
           programmingTools.map((item: any) => {
-            const typeMapping = {
+            const typeMapping: { [key: string]: string } = {
               language: "Language",
               library: "Library/Framework",
               backend: "Backend",
@@ -192,7 +190,7 @@ import "./styles/About.scss";
       <div class="iconsContainer">
         {
           programmingTools.map((item: any) => {
-            const typeMapping = {
+            const typeMapping: { [key: string]: string } = {
               language: "Language",
               library: "Library/Framework",
               backend: "Backend",
