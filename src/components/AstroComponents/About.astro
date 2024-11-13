@@ -29,7 +29,7 @@ import "./styles/About.scss";
           class="hyperlink"
         >
           LSBU, UK
-        </a> on <b>Chemical Process and Energy Engineering</b> under {" "}
+        </a> in <b>Chemical Process and Energy Engineering Dept.</b> under {" "}
         <a
           href="https://scholar.google.com.sg/citations?user=hfyoL4AAAAAJ&hl=en"
           target="_blank"
@@ -37,12 +37,19 @@ import "./styles/About.scss";
           class="hyperlink"
         >
           Dr. John Buckeridge
+        </a> and
+        <a
+          href="https://scholar.google.co.uk/citations?user=cwB7NzAAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hyperlink"
+        >
+          Dr. Chiara Gattinoni
         </a>.
       </p>
       <p>
-        Along with that, I'm working with {" "}
-        <span><b>four</b></span> collaborative projects. In one of them I'm working
-        with {" "}
+        Along with that, I'm working on multiple collaborative projects. In one
+        of them I'm working with {" "}
         <a
           href="https://www.felipefantuzzi.org/"
           target="_blank"
@@ -63,9 +70,9 @@ import "./styles/About.scss";
         </a> [Experimental Part].
       </p>
       <p>
-        My project is based on <b
-          >machine learning approaches for domain wall manipulation of
-          ferroelectronic materials</b
+        My PhD project is based on <b
+          >using text-mined scientific data for designing piezoelectric
+          materials</b
         >. Currently I'm learning <a
           href="https://www.vasp.at/"
           target="_blank"
@@ -157,7 +164,8 @@ import "./styles/About.scss";
             };
 
             const itemType = Object.keys(item)[0];
-            const displayName = typeMapping[itemType];
+            const displayName =
+              typeMapping[itemType as keyof typeof typeMapping];
 
             return (
               <div class="langIcons">
@@ -196,7 +204,8 @@ import "./styles/About.scss";
             };
 
             const itemType = Object.keys(item)[0];
-            const displayName = typeMapping[itemType];
+            const displayName =
+              typeMapping[itemType as keyof typeof typeMapping];
 
             return (
               <div class="langIcons">

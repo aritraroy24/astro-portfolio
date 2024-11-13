@@ -3,26 +3,32 @@ title: "Best Simplistic Way To Automate Gaussian Jobs Easily In 2023"
 videoId: "slq-6vFjTgg"
 description: "This tutorial describes how to implement automation of Gaussian 16 jobs in Linux systems."
 duration: "8 Min View"
-cover: "./best-simplistic-way-to-automate-gaussian-jobs-easily-in-2023.png"
+cover: "./automate-gaussian-jobs.png"
 tags: ["tutorial", "automation", "linux", "script", "bash", "gaussian"]
 pubDate: 2023-01-16
 type: VideoPost
 ---
-import Button from "@components/AstroComponents/Common/Button.astro"
+
+import Button from "@components/AstroComponents/Common/Button.astro";
 
 ## Content of the video
-It is an educational tutorial video for computational chemistry students. This tutorial describes how to implement automation of Gaussian 16 jobs in Linux systems. 
+
+It is an educational tutorial video for computational chemistry students. This tutorial describes how to implement automation of Gaussian 16 jobs in Linux systems.
 
 ### What will you gain?
+
 You can definitely queue Gaussian jobs in the server pretty easily as the authorities implement that feature. But if you don’t have access to any such specific cluster or you also want to do some small calculations in your local system, you can use this automation bash script to submit all the jobs at once. It will also mention the starting time of one job and print the finishing time. After the termination of the job, it will move the job output folder to either the success or error folder, depending on the job termination status. Furthermore, after each calculation, the system will wait for 10 seconds to give some time to the CPU for cooling. Here, the input and output file types are .gjf and .log, respectively. If you want to use or get other types of input or output files respectively, you can change the code accordingly. You can use this script to automate any other computational calculations or other types of repetitive jobs based on a Linux environment. You can get the used codes in this post.
 
 ### What is Gaussian
+
 Initially known as Gaussian 70, John Pople and his research team at Carnegie Mellon University created the general-purpose computational chemistry software programme. Since then, it has been updated often. The term comes from Pople's decision to employ Gaussian orbitals rather than Slater-type orbitals to accelerate computations of molecule electronic structure in order to maximise performance on the constrained computational resources of then-current computer technology for Hartree-Fock calculations. Gaussian 16.+ is the program's most recent iteration. It was first made accessible through the Quantum Chemistry Program Exchange, after which it was licenced by Carnegie Mellon University. Since 1987, Gaussian, Inc. has been responsible for its development and licencing.
 
 ### Disclaimer
+
 This tutorial is for educational purposes only. Any commercial or publishing journal paper (or carrying out research work) using unlicensed Gaussian or other software is completely illegal, and CompChem Studio is not at all responsible for such activities. All the details about the gaussian software are taken from Wikipedia.
 
 ## Used Bash Code
+
 ```bash title="automation.sh"
 # Defining Variables For Different Text Colours
 RESTORE=$(echo '\033[0m')  # for WHITE coloured text
@@ -61,8 +67,8 @@ done  # Ending of the 'for loop'
 ```
 
 <Button
-    text="Download Automation Script"
-    href="/download/videos/gaussian/best-simplistic-way-to-automate-gaussian-jobs-easily-in-2023/automation.sh"
-    download="automation.sh"
-    customStyle="margin-bottom: 25px; text-decoration: none;"
+  text="Download Automation Script"
+  href="/download/videos/gaussian/best-simplistic-way-to-automate-gaussian-jobs-easily-in-2023/automation.sh"
+  download="automation.sh"
+  customStyle="margin-bottom: 25px; text-decoration: none;"
 />

@@ -1,7 +1,7 @@
 ---
 title: Electronic structure and Reactivity of an Allyl-Like Trialuminium Compound
-status: Ongoing
-duration: Jun, 2022 - Present
+status: Accepted
+duration: Jun, 2022 - Sep, 2024
 tags:
   [
     "trialuminium",
@@ -11,10 +11,11 @@ tags:
     "dft studies",
     "theoretical",
     "experimental",
-    "ongoing",
+    "submitted",
+    "accepted",
   ]
 pubDate: 2024-05-10
-cover: ./trialuminium-compound.png
+cover: ../../confidential-base.jpg
 description: "Investigating the electronic structure and reactivity of an allyl-like trialuminium compound, an intriguing study in organometallic chemistry."
 journalName:
 isOpenAccess:
@@ -26,6 +27,6 @@ newsUrl:
 type: ResearchProject
 ---
 
-# Ongoing Project
+# Accepted Project
 
-This is an ongoing project. Please come back later for the project details.
+The journal article has been just accepted for publication. The details will be updated as soon as the article is published online.

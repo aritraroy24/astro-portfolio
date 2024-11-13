@@ -9,27 +9,30 @@ tags: [chemistry, quantum, energy, computational, basics, diagrams]
 pubDate: 2020-10-12
 type: BlogPost
 ---
+
 import OneDPESDiagram from "./figures/1d-pes-diagram.webp";
-import SlicePESDiagram from "./figures/slice-of-pes-diagram.webp"
-import StationaryPoints from "./figures/stationary-points-in-pes.webp"
-import SaddlePointTS from "./figures/saddle-point-and-transition-state.jpg"
-import WaterPES from "./figures/water-pes.webp"
-import PerpendicularAxes from "./figures/4-mutually-perpendicular-axes.webp"
-import CrossSection from "./figures/pes-cross-sectional-diagram.webp"
-import EyrinTSTheory from "./figures/eyring-transition-state-thory.webp"
+import SlicePESDiagram from "./figures/slice-of-pes-diagram.webp";
+import StationaryPoints from "./figures/stationary-points-in-pes.webp";
+import SaddlePointTS from "./figures/saddle-point-and-transition-state.jpg";
+import WaterPES from "./figures/water-pes.webp";
+import PerpendicularAxes from "./figures/4-mutually-perpendicular-axes.webp";
+import CrossSection from "./figures/pes-cross-sectional-diagram.webp";
+import EyrinTSTheory from "./figures/eyring-transition-state-thory.webp";
 
 <div>
 
 _<span style="font-size:30px;">T</span>he term theoretical chemistry or computational chemistry may be defined as the mathematical description of chemistry. The term computational chemistry is generally used when a mathematical method is sufficiently well-developed to be automated for implementation on a computer. Very few chemistry aspects can be computed exactly, but almost every aspect of chemistry has been described in a qualitative or approximately quantitative computational scheme. However valuable this aspect is, we often use constructs that do not fit in the scientific method scheme as it is typically described. One of the most commonly used constructs is a model. A model is a simple way of describing and predicting scientific results, which is an incorrect or incomplete description. But before going deep into different models, we will see some terms and definitions associated with these computational calculations. **Potential Energy Surface** and **Saddle Point**, these two terms will come to one's mind first, as soon as one enters these computational chemistry calculations. However, one can say these two terms are the two sides of a coin. PES and Saddle Point both are very much crucial in understanding the reaction transition states and reaction pathways._
 
 ## Potential Energy Surface (PES):
+
 The potential energy surface (PES) is a central concept in computational chemistry. A Potential Energy Surface (PES) describes the potential energy of a system, especially a collection of atoms, in terms of specific parameters, usually the atoms' positions. The surface might define the energy as a function of one or more coordinates; if there is only one coordinate, the surface is called a potential energy curve or energy profile. The Born–Oppenheimer approximation says that the nuclei are essentially stationary in a molecule compared to the electrons. This is one of the cornerstones of computational chemistry because it makes the concept of molecular shape (geometry) meaningful, makes possible the concept of PES, and simplifies the application of the Schrödinger equation to molecules by allowing us to focus on the electronic energy and add in the nuclear repulsion energy. PES helps us to explain Geometry optimisation and Transition State optimisation. Now, some details about PES are described below —
 
 #### The dimension of PES:
 
 <div><div>
 
-<img src={OneDPESDiagram.src} alt="1D PES Diagram for Diatomic Molecule" /><br></br>
+<img src={OneDPESDiagram.src} alt="1D PES Diagram for Diatomic Molecule" />
+<br></br>
 
 <sup>**Figure 1:** 1D PES Diagram for Diatomic Molecule</sup>
 
@@ -45,7 +48,8 @@ So, we should have drawn a 4D PES diagram to plot a molecule and its energy acco
 
 <div><div>
 
-<img src={SlicePESDiagram.src} alt="Slice of a PES diagram" /><br></br>
+<img src={SlicePESDiagram.src} alt="Slice of a PES diagram" />
+<br></br>
 
 <sup>**Figure 2:** Slice of a PES diagram</sup>
 
@@ -54,41 +58,56 @@ So, we should have drawn a 4D PES diagram to plot a molecule and its energy acco
 In the above diagram, one can change another one to get the specific energy on that particular position in fixing one bond length.
 
 ## Mathematical Definition:
+
 A set of atoms' geometry can be described by a vector, _**r**_, whose elements represent the atom positions. The vector r could be the set of the atoms' Cartesian coordinates or could also be a set of inter-atomic distances and angles. Given r, the energy as a function of the positions, _**V(r)**_, is the value of _**V(r)**_ for all values of r of interest. Using the landscape analogy from the introduction, _**V(r)**_ gives the height on the “_**energy landscape**_” so that the concept of a potential energy surface arises.
 
 ## Stationary Points and Saddle Point:
+
 Saddle point and stationary points all lie on the slice of PES. But these terms are not equivalent. Mostly, in our computational calculations, we give more preferences to the saddle point than stationary points. Let’s have a look at what these are —
 
 #### Stationary Points:
+
 In mathematics, particularly in calculus, a **stationary point** of a differentiable function of one variable is a point on the graph of the function where the function’s derivative is zero; for the PES diagram, stationary points are the same in meaning. **Stationary points in the PES diagram indicate that the energies are minimum corresponding to physically stable chemical species.** For example, the **4 SP points** in Figure 3 are four stationary points in that PES diagram.
 
 <div><div>
 
-<img src={StationaryPoints.src} alt="Stationary Points in PES" /><br></br>
+<img src={StationaryPoints.src} alt="Stationary Points in PES" />
+<br></br>
 
 <sup>**Figure 3:** Stationary Points in PES</sup>
 
 </div></div>
 
 #### Saddle Point
+
 The reaction path is defined as the pathway between the two minima. **The reactant passes through a maximum in energy along the reaction pathway, connecting the two minima. That maxima is called a saddle point.** While this point is a maximum along the minimum energy path in the two valleys, this is a minimum point if we traverse a path in a plane perpendicular to the minimum energy path at the saddle point. The Transition State is the most cultured area for a chemical reaction. **A transition state is a first-order saddle point on a potential energy surface (PES).** Transition-state energies can be close to excited states. This often implies that the usual MO-based computational methods may not be as accurate for transition states as for minima on a PES. A better image for saddle point and transition state is shown in Figure 4.
 
 <div><div>
 
-<img src={SaddlePointTS.src} alt="Saddle Point and Transition State" /><br></br>
+<img src={SaddlePointTS.src} alt="Saddle Point and Transition State" />
+<br></br>
 
 <sup>**Figure 4:** Saddle Point and Transition State</sup>
 
 </div></div>
 
 #### Example:
+
 - • Suppose we have a molecule with more than one geometric parameter, for example, **water**: the geometry is defined by two bond lengths and a bond angle. If we reasonably content ourselves with allowing the two bond lengths to be the same, i.e. if we limit ourselves to _C₂ᵥ symmetry_ (two planes of symmetry and a two-fold symmetry axis), then the PES for this triatomic molecule is a graph of E versus two geometric parameters, q1 = the O–H bond length, and q2 = the H–O–H bond angle (fig.-1.5). Figure 1.5 represents a two dimensional PES (a regular surface is a 2-D object) in the three-dimensional graph; we could make an actual 3-D model of this drawing of a 3-D diagram of E versus q1 and q2.
 
 <div><div>
 
-<img src={WaterPES.src} alt="The H₂O potential energy surface. The point Pₘᵢₙ corresponds to the minimum-energy geometry for the three atoms, i.e. to the water molecule's equilibrium geometry." /><br></br>
+<img
+  src={WaterPES.src}
+  alt="The H₂O potential energy surface. The point Pₘᵢₙ corresponds to the minimum-energy geometry for the three atoms, i.e. to the water molecule's equilibrium geometry."
+/>
+<br></br>
 
-<sup>**Figure 5:** The H₂O potential energy surface. The point Pₘᵢₙ corresponds to the minimum-energy geometry for the three atoms, i.e. to the water molecule's equilibrium geometry.</sup>
+<sup>
+  **Figure 5:** The H₂O potential energy surface. The point Pₘᵢₙ corresponds to
+  the minimum-energy geometry for the three atoms, i.e. to the water molecule's
+  equilibrium geometry.
+</sup>
 
 </div></div>
 
@@ -96,20 +115,38 @@ The reaction path is defined as the pathway between the two minima. **The reacta
 
 <div><div>
 
-<img src={PerpendicularAxes.src} alt="We would need four mutually perpendicular axes to plot energy against three geometric parameters in a Cartesian coordinate system. Such a coordinate system cannot be constructed in our three-dimensional space. However, we can work with such coordinate systems and the potential energy surfaces in them mathematically. " /><br></br>
+<img
+  src={PerpendicularAxes.src}
+  alt="We would need four mutually perpendicular axes to plot energy against three geometric parameters in a Cartesian coordinate system. Such a coordinate system cannot be constructed in our three-dimensional space. However, we can work with such coordinate systems and the potential energy surfaces in them mathematically. "
+/>
+<br></br>
 
-<sup>**Figure 6:** We would need four mutually perpendicular axes to plot energy against three geometric parameters in a Cartesian coordinate system. Such a coordinate system cannot be constructed in our three-dimensional space. However, we can work with such coordinate systems and the potential energy surfaces in them mathematically. </sup>
+<sup>
+  **Figure 6:** We would need four mutually perpendicular axes to plot energy
+  against three geometric parameters in a Cartesian coordinate system. Such a
+  coordinate system cannot be constructed in our three-dimensional space.
+  However, we can work with such coordinate systems and the potential energy
+  surfaces in them mathematically.{" "}
+</sup>
 
 </div></div>
 
 ## Equilibrium Constant and Rate Constant Calculation:
+
 Now, PES does not show kinetic energy! So, everyone’s favourite picture of a dynamic molecule being a ball rolling on the surface is misleading if you think of the energy decreasing as you go downhill. It doesn’t make any sense to roll over a ball as many times the number of molecules and to see which one is crossing the TS energy and which is not. So, we change our aspect of viewing somewhat to calculate our Equilibrium Constant and Rate Constant. **We switch our coordinate of _Energy_ to _Free Energy_, i.e. G**(marked in Figure 7(2) using red colour). If we cut the PES perpendicularly of the screen and along the dotted direction line of the diagram of Figure 7(1), folded out to make it flat and see the cross-sectional diagram, we’ll get a diagram like Figure 7(2).
 
 <div><div>
 
-<img src={CrossSection.src} alt="PES cross-sectional diagram without cutting (fig. — 1.7(1)) and after cutting. (fig. — 1.7(2))" /><br></br>
+<img
+  src={CrossSection.src}
+  alt="PES cross-sectional diagram without cutting (fig. — 1.7(1)) and after cutting. (fig. — 1.7(2))"
+/>
+<br></br>
 
-<sup>**Figure 7:** PES cross-sectional diagram without cutting (1) and after cutting (2).</sup>
+<sup>
+  **Figure 7:** PES cross-sectional diagram without cutting (1) and after
+  cutting (2).
+</sup>
 
 </div></div>
 
@@ -117,17 +154,26 @@ Now, we can easily get **ΔG** for individual two species (out of reactant, Tran
 
 <div><div>
 
-<img src={EyrinTSTheory.src} alt="Equations for calculating Equilibrium Constant and Rate Constant from Eyring’s Transition State Theory [Where K is the Equilibrium Constant, and k is the Rate Constant(per second)." /><br></br>
+<img
+  src={EyrinTSTheory.src}
+  alt="Equations for calculating Equilibrium Constant and Rate Constant from Eyring’s Transition State Theory [Where K is the Equilibrium Constant, and k is the Rate Constant(per second)."
+/>
+<br></br>
 
-<sup>**Figure 8:** Equations for calculating Equilibrium Constant and Rate Constant from Eyring’s Transition State Theory [Where **K** is the Equilibrium Constant, and **k** is the Rate Constant(per second).</sup>
+<sup>
+  **Figure 8:** Equations for calculating Equilibrium Constant and Rate Constant
+  from Eyring’s Transition State Theory [Where **K** is the Equilibrium
+  Constant, and **k** is the Rate Constant(per second).
+</sup>
 
 </div></div>
 
 ## References:
-• [Computational Chemistry by Errol G. Lewars (2nd Edition)](http://www.qfa.uam.es/qcomp/libros/l2.pdf)<br></br>
+
+• [Computational Chemistry by Errol G. Lewars (2nd Edition)](https://link.springer.com/book/10.1007/978-3-319-30916-3)<br></br>
 • [Chemical Kinetics Chapter of UCD Chem 107B: Physical Chemistry for Life Scientists](https://chem.libretexts.org/Courses/University_of_California_Davis/UCD_Chem_107B%3A_Physical_Chemistry_for_Life_Scientists/Chapters/2%3A_Chemical_Kinetics/2.06%3A_Potential_Energy_Surfaces)<br></br>
 • [Computational Chemistry by Chris Cramer](https://www.youtube.com/playlist?list=PLkNVwyLvX_TFBLHCvApmvafqqQUHb6JwF)<br></br>
-• [Wikipedia](https://en.wikipedia.org/wiki/Potential_energy_surface#:~:text=Stationary%20points%20\(or%20points%20with,chemical%20reactant%20to%20a%20chemical)<br></br>
+• [Wikipedia](https://en.wikipedia.org/wiki/Potential_energy_surface#:~:text=Stationary%20points%20(or%20points%20with,chemical%20reactant%20to%20a%20chemical)<br></br>
 • [Professor McBride’s web resources for CHEM 125 (Lecture 37)](https://oyc.yale.edu/chemistry/chem-125a/lecture-37)<br></br>
 
 <p class="sectionDivider">⁕ ⁕ ⁕</p>

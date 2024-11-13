@@ -1,20 +1,9 @@
 ---
-title: "Doping Induced Charge Transfer in Functional Graphene"
-status: Writing
-duration: Jul, 2023 - Present
-tags:
-  [
-    doping,
-    2d,
-    charge transfer,
-    graphene,
-    dft studies,
-    theoretical,
-    experimental,
-    ongoing,
-    writing,
-  ]
-pubDate: 2025-05-10
+title: "Using Text-mined Scientific Data and AI for Materials Design"
+status: Ongoing PhD Project
+duration: Oct, 2023 - Present
+tags: [text mining, scientific data, ai, materials design, theoretical, ongoing]
+pubDate: 2027-05-10
 cover: ../../confidential-base.jpg
 description: An experimental and theoretical study of the induced effect on charge transfter after doping of H, F, O and PhSO₃H on graphene monolayer.
 journalName:

@@ -112,9 +112,10 @@
         background: none;
         border-radius: 0;
         border-bottom: 1px solid #64ffdbcc;
-        padding-left: 0;
+        padding-left: 4px;
         transition: 0.2s;
         border-radius: 2px 2px 0 0;
+        background-color: #2c6bb393;
 
         &:focus {
             outline: none;

@@ -34,9 +34,9 @@ export const getStaticPaths = (async ({ paginate }) => {
   });
   const ongoingPublications = formattedPublications.filter(
     (publication: any) =>
-      publication.data.status === "Ongoing" ||
-      publication.data.status === "ongoing" ||
-      publication.data.status === "ONGOING"
+      publication.data.tags.includes("Ongoing") ||
+      publication.data.tags.includes("ongoing") ||
+      publication.data.tags.includes("ONGOING")
   );
   return paginate(ongoingPublications, {
     pageSize: 6,
