@@ -15,7 +15,7 @@ export async function GET(context) {
     return rss({
         xmlns: { atom: "http://www.w3.org/2005/Atom" },
         title: 'Aritra Roy | Research Projects',
-        description: 'I\'m a Theoretical Computational Chemist & Algorithm Enthusiast from India. If you subscribe to this RSS feed you will receive updates and summaries of my new projects and publications on computational research.',
+        description: 'I\'m a Theoretical Computational Materials Scientist & Algorithm Enthusiast from India. If you subscribe to this RSS feed you will receive updates and summaries of my new projects and publications on computational research.',
         site: context.site,
         author: "Aritra Roy",
         commentsUrl: "https://github.com/aritraroy24/astro-portfolio-comments/discussions",

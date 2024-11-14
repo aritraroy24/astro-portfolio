@@ -42,7 +42,7 @@ export default function jsonLDGenerator({ type, post, url }) {
             "image":
               "${siteData.cover.src}",
             "url": "https://aritraroy.live/",
-            "jobTitle": "Computational Chemist",
+            "jobTitle": "Computational Materials Scientist",
             "worksFor": {
               "@type": "Organization",
               "name": "London South Bank University",

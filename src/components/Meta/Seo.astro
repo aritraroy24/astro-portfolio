@@ -3,18 +3,18 @@ import siteData from "@assets/js/data/siteData";
 import jsonLDGenerator from "@assets/js/jsonLD";
 
 const {
-    title,
-    description,
-    url = Astro.url,
-    cover,
-    frontmatter,
-    robots,
+  title,
+  description,
+  url = Astro.url,
+  cover,
+  frontmatter,
+  robots,
 } = Astro.props;
 
 const jsonLD = jsonLDGenerator({
-    type: frontmatter ? "post" : "website",
-    post: frontmatter,
-    url,
+  type: frontmatter ? "post" : "website",
+  post: frontmatter,
+  url,
 });
 ---
 
@@ -22,18 +22,21 @@ const jsonLD = jsonLDGenerator({
 <link rel="canonical" href={url} />
 
 <!-- Open Graph -->
-<meta property="og:site_name" content="Aritra Roy | Computational Chemist" />
+<meta
+  property="og:site_name"
+  content="Aritra Roy | Computational Materials Scientist"
+/>
 <meta property="og:url" content={url} />
 <meta property="og:type" content="website" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta
-    property="og:image"
-    content={cover ? import.meta.env.SITE + cover.src : siteData.cover.src}
+  property="og:image"
+  content={cover ? import.meta.env.SITE + cover.src : siteData.cover.src}
 />
 <meta
-    property="og:image:alt"
-    content={cover ? frontmatter.title : siteData.cover.alt}
+  property="og:image:alt"
+  content={cover ? frontmatter.title : siteData.cover.alt}
 />
 
 <!-- Twitter -->
@@ -43,8 +46,8 @@ const jsonLD = jsonLDGenerator({
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta
-    name="twitter:image"
-    content={cover ? import.meta.env.SITE + cover.src : siteData.cover.src}
+  name="twitter:image"
+  content={cover ? import.meta.env.SITE + cover.src : siteData.cover.src}
 />
 
 {robots && <meta name="robots" content="noindex, nofollow" />}
