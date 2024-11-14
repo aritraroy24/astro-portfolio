@@ -1,0 +1,88 @@
+---
+isDraft: false
+title: "Reclaiming Disk Space from WSL2: A Personal Experience"
+subtitle: ""
+description: This article will discuss how to reclaim disk space from WSL2 by compacting the VHDX file, freeing up valuable disk space on your host machine.
+duration: 3 Min Read
+cover: ./reclaim-disk-space.jpg
+tags: [terminal, wsl, wsl2, disk-space, storage, ubuntu]
+pubDate: 2024-07-09
+type: BlogPost
+---
+
+<div>
+
+_<span style="font-size:30px;">A</span>s an avid user of the Windows Subsystem for Linux (WSL2), I often find myself working with large files and datasets within my Ubuntu environment. However, after deleting some of these files, I noticed that the disk space wasn’t being released, which was frustrating. Fortunately, I discovered a solution to reclaim the disk space from my WSL2 virtual disk, and I’m excited to share my experience with you._
+
+<p class="sectionDivider">⁕ ⁕ ⁕</p>
+
+## The Problem
+
+After working on a project that involved processing and analyzing large datasets, I ended up with several gigabytes of files stored within my WSL2 instance. Once the project was completed, I deleted these files to free up space. However, to my surprise, the disk space wasn’t being released, even after restarting WSL2.
+
+This issue can occur because WSL2 uses a virtual hard disk (VHDX) file to store its file system. When you delete files within WSL2, the space is marked as available within the file system, but the VHDX file itself doesn’t shrink automatically. This means that the disk space isn’t actually reclaimed on your host machine.
+
+## The Solution: Compacting the VHDX File
+
+After some research, I stumbled upon a solution that involved using the “diskpart” tool to compact the VHDX file. This process allows you to shrink the WSL2 virtual disk file, effectively reclaiming the disk space on your host machine.
+
+Here are the steps I followed:
+
+#### 1. Shut Down WSL2
+
+I opened a PowerShell window and ran the following command to shut down all running WSL2 instances:
+
+```bash
+wsl --shutdown
+```
+
+#### 2. Open Diskpart
+
+In the same PowerShell window, I started the Diskpart tool by typing:
+
+```bash
+diskpart
+```
+
+#### 3. Select the VHDX file
+
+I used the following commands to select and attach the VHDX file, replacing the path with the actual path to my VHDX file:
+
+```bash
+select vdisk file="C:\Users\YOURNAME\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc\LocalState\ext4.vhdx"
+attach vdisk readonly
+```
+
+#### 4. Compact the VHDX file
+
+I ran the following command to compact the VHDX file:
+
+```bash
+compact vdisk
+```
+
+#### 5. Detach the VHDX file:
+
+Finally, I detached the VHDX file with:
+
+```bash
+detach vdisk
+exit
+```
+
+## The Result
+
+After following these steps, I was amazed to see that the disk space had been reclaimed on my host machine! The process was straightforward and didn’t take much time, but it made a significant difference in freeing up valuable disk space. Earlier I used to reset and reinstlall the Linux distro, I know it was insane — but all the solutions I tried, failed. But with this process I reduced the disk space from 160 GB to 48 GB by relaiming the space.
+
+<p class="sectionDivider">⁕ ⁕ ⁕</p>
+
+<div class="citationBlockquote">
+Thank you for reading.
+
+I hope you found this **_“Reclaiming Disk Space from WSL2: A Personal Experience”_** article helpful. Please share if you like and leave any comment to let me know your thoughts. Also, subscribe to my **Newsletter** to get notification of my latest posts.
+
+You can connect with me on <i><b><a href="https://www.linkedin.com/in/aritraroy24/" target="_blank">LinkedIn</a></b></i>, <i><b><a href="https://twitter.com/royaritra24" target="_blank">Instagram</a></b></i>, <i><b><a href="https://twitter.com/aritraroy24" target="_blank">Twitter</a></b></i> or <i><b><a href="https://github.com/aritraroy24" target="_blank">GitHub</a></b></i>.
+
+</div>
+
+</div>
