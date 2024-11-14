@@ -10,8 +10,9 @@ tags:
     "amino acid",
     "theoretical",
     "experimental",
-    "completed",
+    "Completed",
     "published",
+    "2023",
   ]
 pubDate: 2023-10-21
 cover: ./cysteine-sensing-cover.jpg

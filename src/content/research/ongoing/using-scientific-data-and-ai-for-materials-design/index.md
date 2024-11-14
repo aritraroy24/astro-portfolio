@@ -5,7 +5,7 @@ duration: Oct, 2023 - Present
 tags: [text mining, scientific data, ai, materials design, theoretical, ongoing]
 pubDate: 2027-05-10
 cover: ../../confidential-base.jpg
-description: An experimental and theoretical study of the induced effect on charge transfter after doping of H, F, O and PhSO₃H on graphene monolayer.
+description: "This project focuses on leveraging text-mined scientific data and AI to design piezoelectric materials."
 journalName:
 isOpenAccess:
 journalUrl:

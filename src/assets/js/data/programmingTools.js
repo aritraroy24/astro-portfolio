@@ -118,13 +118,7 @@ const programmingTools = [
                 url: 'https://laravel.com/',
                 iconName: 'programmingTools/library/logo-laravel',
                 title: 'Laravel',
-            },
-            {
-                id: 10,
-                url: 'https://nextjs.org/',
-                iconName: 'programmingTools/library/nextjs',
-                title: 'Next.js',
-            },
+            }
         ]
     },
     {

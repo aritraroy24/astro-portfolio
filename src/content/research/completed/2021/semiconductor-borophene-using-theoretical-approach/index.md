@@ -11,6 +11,7 @@ tags:
     "dft studies",
     "theoretical",
     "Completed",
+    "2021",
   ]
 pubDate: 2021-08-05
 cover: ./semiconductor-borophene-cover.jpg
