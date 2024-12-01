@@ -51,16 +51,11 @@ const researchTools = [
     },
     {
         id: 11,
-        toolName: 'Math Editor',
-        version: ''
-    },
-    {
-        id: 12,
         toolName: 'Materials Studio',
         version: '2017'
     },
     {
-        id: 13,
+        id: 12,
         toolName: 'Multiwfn',
         version: ''
     },

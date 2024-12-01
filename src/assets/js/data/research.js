@@ -9,7 +9,7 @@ const research = [
             'Machine learning',
             'Solid State Physics',
             'Materials Modelling',
-            'Under Dr. John Buckeridge'
+            'Under Dr John Buckeridge'
         ]
     },
     {

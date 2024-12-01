@@ -12,7 +12,8 @@ import { formatDate } from "@js/utils";
 import "./styles/Search.scss"
 
 // type import
-import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+type CollectionEntry = Awaited<ReturnType<typeof getCollection>>[number];
 
 const options = {
     keys: ['post.title', 'post.description', 'slug'],
@@ -23,7 +24,7 @@ const options = {
     shouldSort: true
 };
 type Props = {
-    searchList: CollectionEntry<"blogs">[];
+    searchList: CollectionEntry[];
 };
 function Search({ searchList }: Props) {
     const [query, setQuery] = useState('');

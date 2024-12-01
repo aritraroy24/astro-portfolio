@@ -59,7 +59,6 @@ export default function jsonLDGenerator({ type, post, url }) {
                 "ORCA 5.0",
                 "GaussView 6.0",
                 "Spartan '14",
-                "Materials Studio 2017",
                 "Avogadro",
                 "ChemDraw Pro 19",
                 "WinCACAO",
@@ -79,13 +78,16 @@ export default function jsonLDGenerator({ type, post, url }) {
               "addressCountry": "India"
             },
             "sameAs": [
-              "https://beacons.ai/aritraroy24",
+              "https://scholar.google.com/citations?hl=en&user=er7v8VoAAAAJ",
               "https://orcid.org/0000-0003-0243-9124",
               "https://www.researchgate.net/profile/Aritra-Roy-5/",
               "https://www.linkedin.com/in/aritraroy24/",
               "https://github.com/aritraroy24",
               "https://aritraroy24.medium.com/",
-              "https://twitter.com/aritraroy24",
+              "https://x.com/aritraroy24",
+              "https://mastodon.social/@aritraroy24",
+              "https://discordapp.com/users/756481409836646461",
+              "https://www.youtube.com/@CompChemStudio",
               "https://www.facebook.com/aritraroy24/",
               "https://www.instagram.com/royaritra24/"
             ]

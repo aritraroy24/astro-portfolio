@@ -42,20 +42,20 @@ const currentDate = new Date();
         }
       </p>
       <p class="tagsContainer">
-        <Icon
+        {tags.some((tag: string) => ['published', 'completed', 'submitted'].includes(tag.toLowerCase())) ? (
+          <>
+            <Icon name="others/calendar" class="customIcon" height={24} width={24} />
+            {formatDate(pubDate)}
+          </>
+        ) : (
+          <Icon
           name="others/hourglass-outline"
           class="customIcon"
           height={24}
           width={24}
         />
-        {duration} {
-          currentDate > pubDate ? (
-            <> •
-              <Icon name="others/calendar" class="customIcon" height={24} width={24} />
-              {formatDate(pubDate)}
-            </>
-            ) : (<></>)
-          }
+          <>{duration}</>
+        )}
       </p>
       <p><strong>Status: </strong> {capitalizeWords(status)}</p>
       {journalName!== null ? (isOpenAccess === true ? 

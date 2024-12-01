@@ -8,7 +8,7 @@ tags:
     "sensing",
     "Binding Modes",
     "amino acid",
-    "theoretical",
+    "computational",
     "experimental",
     "Completed",
     "published",
@@ -19,6 +19,7 @@ cover: ./cysteine-sensing-cover.jpg
 description: "Synthesis and characterization of a simple copper complex using L-Cysteine to use as a vital antioxidant to protect cells and tissues from oxidation."
 journalName: RSC Sensors & Diagnostics
 isOpenAccess: true
+isPinned: true
 journalUrl: https://pubs.rsc.org/en/content/articlelanding/2023/sd/d3sd00183k
 codeUrl:
 runUrl:

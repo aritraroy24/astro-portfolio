@@ -3,12 +3,22 @@ title: Tuning the optoelectronic properties by end-capped group modification for
 status: Preprint
 duration: Sep, 2022 - Present
 tags:
-  ["OSC", "optoelectronic", "solar", "dft study", "theoretical", "submitted"]
-pubDate: 2024-05-24
+  [
+    "OSC",
+    "optoelectronic",
+    "solar",
+    "dft",
+    "computational",
+    "completed",
+    "preprint",
+    "2023",
+  ]
+pubDate: 2023-10-30
 cover: ./osc.jpg
 description: "DFT studies to enhance the efficiency of A-D-A type organic solar cells by end-capped group modification"
 journalName: Research Square for Preprint
-isOpenAccess:
+isOpenAccess: true
+isPinned:
 journalUrl: https://doi.org/10.21203/rs.3.rs-3488487/v1
 codeUrl:
 runUrl:

@@ -1,22 +1,24 @@
 ---
 title: A copper complex receptor for nanomolar sulfide sensing and applications in DNA/BSA binding
-status: Accepted
+status: Published Journal Article
 duration: Nov, 2023 - Oct, 2024
 tags:
   [
     "sulfide",
     "sensing",
     "Binding Modes",
-    "theoretical",
+    "computational",
     "experimental",
     "Completed",
+    "published",
     "2024",
   ]
-pubDate: 2024-11-13
-cover: ./sulfide-sensing-preproof.jpg
+pubDate: 2025-04-01
+cover: ./sulfide-sensing-with-dna-bsa-binding.jpg
 description: "Investigating the sensing of sulfide using a copper complex and its applications in DNA/BSA binding."
 journalName: "Journal of Photochemistry and Photobiology A: Chemistry"
 isOpenAccess: true
+isPinned:
 journalUrl: https://www.sciencedirect.com/science/article/pii/S1010603024006981
 codeUrl:
 runUrl:

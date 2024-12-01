@@ -1,6 +1,7 @@
 ---
 import siteData from "@assets/js/data/siteData";
 import jsonLDGenerator from "@assets/js/jsonLD";
+import fullerene from "@assets/images/fullerene.webp";
 
 const {
   title,
@@ -32,12 +33,9 @@ const jsonLD = jsonLDGenerator({
 <meta property="og:description" content={description} />
 <meta
   property="og:image"
-  content={cover ? import.meta.env.SITE + cover.src : siteData.cover.src}
+  content={cover ? import.meta.env.SITE + cover.src : "https://ibb.co/5136hJ0"}
 />
-<meta
-  property="og:image:alt"
-  content={cover ? frontmatter.title : siteData.cover.alt}
-/>
+<meta property="og:image:alt" content={cover ? frontmatter.title : ""} />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />

@@ -71,3 +71,8 @@ export function formatPosts(posts, {
     return filteredPosts;
 
 }
+
+// sort collaborators according to the number of papers
+export function sortCollaborators(collaborators) {
+    return collaborators.sort((a, b) => b.paperNo - a.paperNo)
+}

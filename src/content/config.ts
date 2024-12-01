@@ -41,6 +41,7 @@ const researchProjectCollection = defineCollection({
       description: z.string(),
       journalName: z.string().nullable(),
       isOpenAccess: z.boolean().nullable(),
+      isPinned: z.boolean().nullable(),
       journalUrl: z.string().nullable(),
       codeUrl: z.string().nullable(),
       runUrl: z.string().nullable(),

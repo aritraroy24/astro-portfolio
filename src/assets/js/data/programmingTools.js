@@ -3,15 +3,15 @@ const programmingTools = [
         language: [
             {
                 id: 1,
-                url: 'https://en.wikipedia.org/wiki/C_(programming_language)',
-                iconName: 'programmingTools/language/c-solid',
-                title: 'C Programming'
-            },
-            {
-                id: 2,
                 url: 'https://www.python.org/',
                 iconName: 'programmingTools/language/python',
                 title: 'Python'
+            },
+            {
+                id: 2,
+                url: 'https://en.wikipedia.org/wiki/C_(programming_language)',
+                iconName: 'programmingTools/language/c-solid',
+                title: 'C Programming'
             },
             {
                 id: 3,
@@ -277,6 +277,12 @@ const programmingTools = [
             },
             {
                 id: 4,
+                url: 'https://www.perplexity.ai/',
+                iconName: 'programmingTools/assistant/perplexity-ai',
+                title: 'Perplexity AI'
+            },
+            {
+                id: 5,
                 url: 'https://github.com/features/copilot',
                 iconName: 'programmingTools/assistant/copilot-fill',
                 title: 'GitHub Copilot'

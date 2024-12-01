@@ -1,14 +1,14 @@
 ---
 title: DFT study for H₂ adsorption in a cage like metal oxide cluster
-status: Writing
+status: Writing Draft
 duration: Aug, 2022 - Present
 tags:
   [
     "Adsorption",
-    "H₂ storage",
+    "H2 storage",
     "metal oxide",
-    "dft study",
-    "theoretical",
+    "dft",
+    "computational",
     "ongoing",
     "writing",
   ]
@@ -17,6 +17,7 @@ cover: ../../confidential-base.jpg
 description: "DFT studies on surface adsorption and encapsulated hydrogen storage in a cage like metal oxide cluster."
 journalName:
 isOpenAccess:
+isPinned:
 journalUrl:
 codeUrl:
 runUrl:

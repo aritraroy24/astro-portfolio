@@ -8,8 +8,8 @@ tags:
     "Semiconductor",
     "M.Sc. Project",
     "materials studio",
-    "dft studies",
-    "theoretical",
+    "dft",
+    "computational",
     "Completed",
     "2021",
   ]
@@ -18,6 +18,7 @@ cover: ./semiconductor-borophene-cover.jpg
 description: Borophenes, 2D boron sheets, hold promise for various applications. Despite lacking a semiconductor form, our study discovered a stable new structure.
 journalName: ResearchGate Opensource
 isOpenAccess: true
+isPinned:
 journalUrl: https://dx.doi.org/10.13140/RG.2.2.18066.32965
 codeUrl:
 runUrl:

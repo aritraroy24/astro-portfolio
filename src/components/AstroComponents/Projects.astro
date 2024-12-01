@@ -18,9 +18,11 @@ import NoData from "@images/No data.svg";
 import ProgrammingProjectCard from "./ProgrammingProjects/ProgrammingProjectCard.astro";
 
 const allResearchProjects = await getCollection("research");
-const formattedResearchProjects = formatPosts(allResearchProjects, {
-  filterOutFuturePosts: false,
-}).slice(0, 2);
+const pinnedResearchProjects = formatPosts(
+  allResearchProjects.filter(
+    (researchProject: any) => researchProject.data.isPinned
+  )
+).slice(0, 2);
 
 const allProgrammingProjects = await getCollection("programming");
 const formattedProgrammingProjects = formatPosts(allProgrammingProjects, {
@@ -38,14 +40,15 @@ const formattedProgrammingProjects = formatPosts(allProgrammingProjects, {
     </div>
     <div class="allPostsContainer">
       {
-        formattedResearchProjects.length > 0 ? (
-          formattedResearchProjects.map((researchProject: any) => (
+        pinnedResearchProjects.length > 0 ? (
+          pinnedResearchProjects.map((researchProject: any) => (
             <ResearchProjectCard
               url={researchProject.slug}
               title={researchProject.data.title}
               journalName={researchProject.data.journalName}
               image={researchProject.data.cover}
               duration={researchProject.data.duration}
+              pubDate={researchProject.data.pubDate}
               status={researchProject.data.status}
               tags={researchProject.data.tags}
               urlPrefix="/projects/research/"

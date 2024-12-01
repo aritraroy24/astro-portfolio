@@ -32,11 +32,12 @@ export const getStaticPaths = (async ({ paginate }) => {
   const formattedPublications = formatPosts(allPublications, {
     filterOutFuturePosts: false,
   });
+  const keywords = ["completed", "published"];
   const completedPublications = formattedPublications.filter(
     (publication: any) =>
-      publication.data.tags.includes("completed") ||
-      publication.data.tags.includes("Completed") ||
-      publication.data.tags.includes("COMPLETED")
+      publication.data.tags.some((tag: string) =>
+        keywords.includes(tag.toLowerCase())
+      )
   );
   return paginate(completedPublications, {
     pageSize: 6,
@@ -74,6 +75,7 @@ const pageDescription =
               journalName={publication.data.journalName}
               image={publication.data.cover}
               duration={publication.data.duration}
+              pubDate={publication.data.pubDate}
               status={publication.data.status}
               tags={publication.data.tags}
               urlPrefix="/projects/research/"

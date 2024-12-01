@@ -4,7 +4,7 @@ const people = [
     {
         id: 5,
         image: felipe,
-        name: 'Dr. felipe fantuzzi',
+        name: 'Dr felipe fantuzzi',
         title: 'Assist. Professor, University of Kent, UK (Research Collaborator)',
         quote:
             'Aritra\'s dedication, expertise, and collaborative spirit make him an invaluable asset to any research team.',
@@ -12,7 +12,7 @@ const people = [
     {
         id: 4,
         image: mmbk,
-        name: 'Dr. m. m. balakrishnarajan',
+        name: 'Dr m. m. balakrishnarajan',
         title: 'Professor, Pondicherry University, India (Project Guide)',
         quote:
             'He is definitely capable of doing independent research but also a good team player.',
@@ -20,7 +20,7 @@ const people = [
     {
         id: 3,
         image: ssr,
-        name: 'Dr. sougata sarkar',
+        name: 'Dr sougata sarkar',
         title: 'Assist. Professor, RKMVC College, India (Course Teacher)',
         quote:
             'He has a sincere interest in figuring out how to overcome difficulties and is genuinely inspired to do research.',

@@ -1,25 +1,26 @@
 ---
-// Component import
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/AstroIslands/Common/Header";
 import Footer from "@components/AstroComponents/Footer.astro";
 import Socials from "@components/AstroComponents/Socials.astro";
 import Button from "@components/AstroComponents/Common/Button.astro";
 
-// Library import
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-// Data import
 import collaborators from "@js/data/collaborators";
 
-// style import
 import "@styles/collaborators.scss";
+
+import { sortCollaborators } from "@js/utils";
 
 const {
   pageTitle = "Aritra Roy | Collaborators",
   pageDescription = "Connect with all of my collaborators from all around the world from various countries including India, UK, Iran and Pakistan",
 } = Astro.props;
+
+// Sort collaborators
+const sortedCollaborators = sortCollaborators(collaborators);
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -31,55 +32,53 @@ const {
       customStyle="margin-bottom:20px;"
     />
     {
-      collaborators.map((collaborator: any) => {
+      sortedCollaborators.map((collaborator: any) => {
         return (
-          <>
-            <div class="listItem">
-              <Image
-                src={collaborator.avatar}
-                alt={collaborator.name}
-                width={200}
-                height={200}
-              />
+          <div class="listItem">
+            <Image
+              src={collaborator.avatar}
+              alt={collaborator.name}
+              width={200}
+              height={200}
+            />
+            <div>
+              <h4>{collaborator.name}</h4>
+              <p>
+                {collaborator.position}, {collaborator.institute}
+              </p>
+              <p>
+                <b>Paper: </b>
+                {collaborator.paperNo}
+              </p>
               <div>
-                <h4>{collaborator.name}</h4>
-                <p>
-                  {collaborator.position}, {collaborator.institute}
-                </p>
-                <p>
-                  <b>Topic: </b>
-                  {collaborator.project}
-                </p>
-                <div>
+                <a
+                  href={collaborator.email}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon name="others/email" />
+                </a>
+                {collaborator.googleScholar && (
                   <a
-                    href={collaborator.email}
+                    href={collaborator.googleScholar}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Icon name="others/email" />
+                    <Icon name="others/google-scholar" />
                   </a>
-                  {collaborator.googleScholar && (
-                    <a
-                      href={collaborator.googleScholar}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon name="others/google-scholar" />
-                    </a>
-                  )}
-                  {collaborator.website && (
-                    <a
-                      href={collaborator.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon name="others/globe" />
-                    </a>
-                  )}
-                </div>
+                )}
+                {collaborator.website && (
+                  <a
+                    href={collaborator.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name="others/globe" />
+                  </a>
+                )}
               </div>
             </div>
-          </>
+          </div>
         );
       })
     }

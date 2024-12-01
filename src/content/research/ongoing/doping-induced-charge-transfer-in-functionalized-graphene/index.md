@@ -1,6 +1,6 @@
 ---
 title: "Doping Induced Charge Transfer in Functional Graphene"
-status: Writing
+status: Writing Draft
 duration: Jul, 2023 - Present
 tags:
   [
@@ -8,8 +8,8 @@ tags:
     2d,
     charge transfer,
     graphene,
-    dft studies,
-    theoretical,
+    dft,
+    computational,
     experimental,
     ongoing,
     writing,
@@ -19,6 +19,7 @@ cover: ../../confidential-base.jpg
 description: An experimental and theoretical study of the induced effect on charge transfter after doping of H, F, O and PhSO₃H on graphene monolayer.
 journalName:
 isOpenAccess:
+isPinned:
 journalUrl:
 codeUrl:
 runUrl:

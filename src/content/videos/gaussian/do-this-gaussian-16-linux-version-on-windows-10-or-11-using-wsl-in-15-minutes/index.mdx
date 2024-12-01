@@ -8,36 +8,45 @@ tags: ["tutorial", "WSL", "linux", "script", "bash", "gaussian", "g16"]
 pubDate: 2022-10-23
 type: VideoPost
 ---
-import Button from "@components/AstroComponents/Common/Button.astro"
+
+import Button from "@components/AstroComponents/Common/Button.astro";
 
 ## Content of the video
-In this tutorial, I'll teach you how to install the Gaussian 16 software Linux version on Windows 10 and 11 (Here, I've used Windows 10, but the procedure will be the same). Gaussian 16 is a powerful software package which is used widely by computational chemists all over the world. 
+
+In this tutorial, I'll teach you how to install the Gaussian 16 software Linux version on Windows 10 and 11 (Here, I've used Windows 10, but the procedure will be the same). Gaussian 16 is a powerful software package which is used widely by computational chemists all over the world.
 
 ### What will you gain?
+
 If you want to run gaussian in a linux environment without dual-boot this tutorial will help you
 
 ### What is Gaussian
+
 Initially known as Gaussian 70, John Pople and his research team at Carnegie Mellon University created the general-purpose computational chemistry software programme. Since then, it has been updated often. The term comes from Pople's decision to employ Gaussian orbitals rather than Slater-type orbitals to accelerate computations of molecule electronic structure in order to maximise performance on the constrained computational resources of then-current computer technology for Hartree-Fock calculations. Gaussian 16.+ is the program's most recent iteration. It was first made accessible through the Quantum Chemistry Program Exchange, after which it was licenced by Carnegie Mellon University. Since 1987, Gaussian, Inc. has been responsible for its development and licencing.
 
 ### Disclaimer
+
 This tutorial is for educational purposes only. Any commercial or publishing journal paper (or carrying out research work) using unlicensed Gaussian or other software is completely illegal, and CompChem Studio is not at all responsible for such activities. All the details about the gaussian software are taken from Wikipedia.
 
 ### Possible difficulty / error
-●   If you are using an AMD processor, you have to write another line (after three lines in the .bashrc file). The line is as follows-
-𝚎𝚡𝚙𝚘𝚛𝚝 𝙿𝙶𝙸_𝙵𝙰𝚂𝚃𝙼𝙰𝚃𝙷_𝙲𝙿𝚄=𝚑𝚊𝚜𝚠𝚎𝚕𝚕
 
-🙌 This extra procedure(line) for AMD is reported by [Dr. Boobalan Maria Susai](https://scholar.google.co.in/citations?user=IXgeyE0AAAAJ&hl=en)
+● If you are using an AMD processor, you have to write another line (after three lines in the .bashrc file). The line is as follows-
+𝚎𝚡𝚙𝚘𝚛𝚝 𝙿𝙶𝙸*𝙵𝙰𝚂𝚃𝙼𝙰𝚃𝙷*𝙲𝙿𝚄=𝚑𝚊𝚜𝚠𝚎𝚕𝚕
 
-●   Keep an eye on the CPU usage using the Taskbar. If you see 100% usage all the time (if u use all the available cores or simultaneously run other software), kill the job (or the other running software) and KEEP THE CPU USAGE UNDER 85%. If you continuously use 100% usage of CPU and the overclocking of your system is not ideally optimized, the system can crash and see a blue screen with the line "Your PC ran into a problem". Don't worry; just restart your computer (you may have to power off the CPU by holding the power button), and your system will be fine again. This happens as your CPU is running at 100% usage, but usage by Gaussian may vary depending on the calculation, and if it tries to push more than 100%, the system crashes.
+🙌 This extra procedure(line) for AMD is reported by [Dr Boobalan Maria Susai](https://scholar.google.co.in/citations?user=IXgeyE0AAAAJ&hl=en)
+
+● Keep an eye on the CPU usage using the Taskbar. If you see 100% usage all the time (if u use all the available cores or simultaneously run other software), kill the job (or the other running software) and KEEP THE CPU USAGE UNDER 85%. If you continuously use 100% usage of CPU and the overclocking of your system is not ideally optimized, the system can crash and see a blue screen with the line "Your PC ran into a problem". Don't worry; just restart your computer (you may have to power off the CPU by holding the power button), and your system will be fine again. This happens as your CPU is running at 100% usage, but usage by Gaussian may vary depending on the calculation, and if it tries to push more than 100%, the system crashes.
 
 ## Used Bash Code
+
 #### WSL Installation in Windows 10 or Windows 11
+
 ```bash
 wsl --install  # If WSL is not installed at all in the system
 wsl --install -d < DistroName >  # If WSL is installed previously in the system (e.g.: wsl --install -d Ubuntu)
 ```
 
 #### Gaussian 16 Linux Installation
+
 ```bash
 su  # To check if the su & sudo passwords are same or not
 sudo passwd root  # Change the su password using this command if shows 'Authentication failure' error in the previous command
@@ -69,7 +78,9 @@ source .bashrc  # To run the edited .bashrc file
 
 cd $g16root  # Navigate to the gaussian root folder
 ```
+
 #### Gaussian Calculation Related
+
 ```bash
 g16  # To enter into gaussian instance
 g16 filename.log  # Run the gaussian calculation for filename.gjf and to print the results in filename.log file
@@ -79,14 +90,14 @@ mv filename.gjf filename.log filename.chk ../../../../../mnt/f  # To move the fi
 ```
 
 <Button
-    text="Download Code"
-    href="/download/videos/gaussian/do-this-gaussian-16-linux-version-on-windows-10-or-11-using-wsl-in-15-minutes/g16_wsl.txt"
-    customStyle="margin-bottom: 25px; text-decoration: none;"
-    download="g16_wsl.txt"
+  text="Download Code"
+  href="/download/videos/gaussian/do-this-gaussian-16-linux-version-on-windows-10-or-11-using-wsl-in-15-minutes/g16_wsl.txt"
+  customStyle="margin-bottom: 25px; text-decoration: none;"
+  download="g16_wsl.txt"
 />
 <Button
-    text="Download Input Sample"
-    href="/download/videos/gaussian/do-this-gaussian-16-linux-version-on-windows-10-or-11-using-wsl-in-15-minutes/input.gjf"
-    customStyle="margin-bottom: 25px; text-decoration: none;"
-    download="input.gjf"
+  text="Download Input Sample"
+  href="/download/videos/gaussian/do-this-gaussian-16-linux-version-on-windows-10-or-11-using-wsl-in-15-minutes/input.gjf"
+  customStyle="margin-bottom: 25px; text-decoration: none;"
+  download="input.gjf"
 />
