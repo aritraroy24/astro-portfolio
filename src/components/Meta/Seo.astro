@@ -33,9 +33,12 @@ const jsonLD = jsonLDGenerator({
 <meta property="og:description" content={description} />
 <meta
   property="og:image"
-  content={cover ? import.meta.env.SITE + cover.src : "https://ibb.co/5136hJ0"}
+  content={cover ? import.meta.env.SITE + cover.src : siteData.cover.src}
 />
-<meta property="og:image:alt" content={cover ? frontmatter.title : ""} />
+<meta
+  property="og:image:alt"
+  content={cover ? frontmatter.title : siteData.cover.alt}
+/>
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />

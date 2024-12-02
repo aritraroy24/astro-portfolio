@@ -1,9 +1,9 @@
 const siteData = {
   "title": "Aritra Roy | Computational Materials Scientist",
-  "description": "I'm a Theoretical Computational Materials Scientist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill.",
+  "description": "Doctoral student in Materials Science at LSBU, UK. Researching the computational design of materials for energy storage and conversion applications.",
   "cover": {
-    "src": "https://i.ibb.co/19grMz4/headshot.jpg",
-    "alt": "Aritra Roy Photo"
+    "src": "https://ibb.co/5136hJ0",
+    "alt": "OpenGraph Image for aritraroy.live"
   }
 }
 export default siteData
