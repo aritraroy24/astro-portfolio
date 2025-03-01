@@ -23,6 +23,12 @@ const ContactForm = () => {
         }
     }, [name, email, message, isSubmitting, isSubmitted]);
 
+    useEffect(() => {
+        if (status === 'SUCCESS') {
+            window.location.href = '/contact-success';
+        }
+    }, [status]);
+
     const submitForm = async (event: any) => {
         event.preventDefault();
         const form = event.target;
@@ -30,20 +36,21 @@ const ContactForm = () => {
         setIsSubmitted(true);
         const data = new FormData(form);
         try {
-            const res = await fetch('https://script.google.com/macros/s/AKfycbw_x6fj3JycsE4kxa6uDtq76HMsfCSRLrXtFp2-n-EqHE-fTlPrp2bpBoBdTrMWbkNn/exec', {
+            const res = await fetch('/contact.php', {
                 method: 'POST',
                 body: data,
-            })
+            });
             const result = await res.json();
             if (result.result === 'success') {
                 updateStatus('SUCCESS');
             }
             else {
-                window.location.href = "/contact-error"
+                window.location.href = "/contact-error";
             }
         }
-        catch {
-            window.location.href = "/contact-error"
+        catch (error) {
+            console.error('Form submission error:', error);
+            window.location.href = "/contact-error";
         }
     }
 
@@ -94,9 +101,11 @@ const ContactForm = () => {
             >
             </textarea>
             {status === 'SUCCESS' ? (
-                (window.location.href = '/contact-success')
+                <div className="success-message">Message sent successfully! Redirecting...</div>
             ) : (
-                <button id="subBtn" type='submit' disabled={isSubmitting || isSubmitted}>{isSubmitting ? 'Submitting...' : 'Send Message'}</button>
+                <button id="subBtn" type='submit' disabled={isSubmitting || isSubmitted}>
+                    {isSubmitting ? 'Submitting...' : 'Send Message'}
+                </button>
             )}
         </form>
     );

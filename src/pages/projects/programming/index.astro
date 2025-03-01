@@ -63,7 +63,7 @@ const imgData = [
     <div class="allPostsContainer">
       {
         imgData.map((img: any) => (
-          <a class="projectSectionLinks" href={`programming/${img.url}`}>
+          <a class="projectSectionLinks" href={img.url}>
             <Image src={img.src} alt={img.alt} width={300} />
             <h3>{img.text}</h3>
           </a>

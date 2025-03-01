@@ -26,19 +26,19 @@ import { slugify, deslugify, formatPosts } from "@js/utils";
 // type import
 import type { GetStaticPaths } from "astro";
 
-// getting all blog posts with a specified tag (6 posts per page)
+// getting all research_project posts with a specified tag (6 posts per page)
 export const getStaticPaths = (async ({ paginate }) => {
   const allPublications = await getCollection("research");
   const formattedPublications = formatPosts(allPublications, {
     filterOutFuturePosts: false,
   });
   const uniqueTags = [
-    ...new Set(formattedPublications.map((blog: any) => blog.data.tags).flat()),
+    ...new Set(formattedPublications.map((research_project: any) => research_project.data.tags).flat()),
   ];
 
   return uniqueTags.flatMap((tag: any) => {
-    const filteredPosts = formattedPublications.filter((blog: any) =>
-      blog.data.tags.includes(tag)
+    const filteredPosts = formattedPublications.filter((research_project: any) =>
+      research_project.data.tags.includes(tag)
     );
     return paginate(filteredPosts, {
       params: { tag: slugify(tag) },
@@ -82,15 +82,15 @@ const pageDescription = `Discover the essence of ${tag} through captivating rese
     <div class="allPostsContainer">
       {
         page.data.length > 0 ? (
-          page.data.map((blog: any) => (
+          page.data.map((research_project: any) => (
             <ResearchProjectCard
-              url={blog.slug}
-              title={blog.data.title}
-              journalName={blog.data.journalName}
-              image={blog.data.cover}
-              status={blog.data.status}
-              duration={blog.data.duration}
-              tags={blog.data.tags}
+              url={research_project.slug}
+              title={research_project.data.title}
+              journalName={research_project.data.journalName}
+              image={research_project.data.cover}
+              status={research_project.data.status}
+              duration={research_project.data.duration}
+              tags={research_project.data.tags}
               urlPrefix="/projects/research/"
               buttonText="View Post"
             />

@@ -29,7 +29,7 @@ import "./styles/ResearchProjectCard.scss";
 
 <>
   <div class="researchCard">
-    <a href={`${url}`}>
+    <a href={`${urlPrefix}${url}`}>
       <h4>{capitalizeWords(title)}</h4>
     </a>
     <div class="researchImgTextContainer">
@@ -48,7 +48,7 @@ import "./styles/ResearchProjectCard.scss";
         <p>
           {
             tags.map((tag: string) => (
-              <a href={`/projects/research/tag/${slugify(tag)}`}>
+              <a href={`${urlPrefix}tag/${slugify(tag)}`}>
                 <small class="tagBadge">#{slugify(tag)}</small>
               </a>
             ))
@@ -72,7 +72,7 @@ import "./styles/ResearchProjectCard.scss";
         </small>
         <div class="btnContainer">
           <Button
-            href={`${url}`}
+            href={`${urlPrefix}${url}`}
             text={buttonText}
             customStyle="padding: 12px 18px;"
           />
