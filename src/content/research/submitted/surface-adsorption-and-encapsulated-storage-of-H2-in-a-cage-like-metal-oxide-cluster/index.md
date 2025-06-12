@@ -1,6 +1,6 @@
 ---
 title: DFT study for H₂ adsorption in a cage like metal oxide cluster
-status: Writing Draft
+status: Submitted
 duration: Aug, 2022 - Present
 tags:
   [
@@ -9,8 +9,7 @@ tags:
     "metal oxide",
     "dft",
     "computational",
-    "ongoing",
-    "writing",
+    "submitted",
   ]
 pubDate: 2024-05-24
 cover: ../../confidential-base.jpg
@@ -26,6 +25,6 @@ newsUrl:
 type: ResearchProject
 ---
 
-# Ongoing Project
+# Submitted Project
 
-This is an ongoing project. Please come back later for the project details.
+The paper has been submitted for review. Please come back later when the paper is accepted for publication.

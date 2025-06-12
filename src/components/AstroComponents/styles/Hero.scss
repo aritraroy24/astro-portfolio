@@ -22,7 +22,7 @@ h2 {
 .AllButtons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 
@@ -37,9 +37,10 @@ h2 {
   align-items: center;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 20px;
+  padding: 20px 0;
   .button-link {
     text-decoration: none;
+    margin: 10px 20px 10px 0 !important;
   }
 }
 
@@ -191,10 +192,6 @@ p {
     font-size: 14px;
   }
 
-  .AllButtons {
-    display: flex;
-    flex-direction: column;
-  }
   #BuyMeIceCream {
     width: 210px;
   }
@@ -247,6 +244,16 @@ p {
   .orb {
     bottom: -600px;
     right: -275px;
+  }
+
+  .AllButtons {
+    display: flex;
+    flex-direction: column;
+  }
+  .ContactButton {
+    .button-link {
+      margin: 10px !important;
+    }
   }
 }
 

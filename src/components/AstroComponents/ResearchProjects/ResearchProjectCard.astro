@@ -55,7 +55,7 @@ import "./styles/ResearchProjectCard.scss";
           }
         </p>
         <small class="dateDuration">
-          {tags.some((tag: string) => ['published', 'completed', 'submitted'].includes(tag.toLowerCase())) ? (
+          {tags.some((tag: string) => ['published', 'completed'].includes(tag.toLowerCase())) ? (
             <>
             <Icon name="others/calendar" class="customIcon" height={24} width={24} />
             {formatDate(pubDate)}

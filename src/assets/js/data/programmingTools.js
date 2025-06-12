@@ -60,6 +60,12 @@ const programmingTools = [
                 url: 'https://www.php.net/',
                 iconName: 'programmingTools/language/php-fill',
                 title: 'PHP'
+            },
+            {
+                id: 11,
+                url: 'https://www.gnu.org/software/bash/',
+                iconName: 'programmingTools/language/gnubash',
+                title: 'Bash'
             }
         ]
     },
@@ -183,24 +189,18 @@ const programmingTools = [
             },
             {
                 id: 7,
-                url: 'https://www.gnu.org/software/bash/',
-                iconName: 'programmingTools/tools/gnubash',
-                title: 'Bash'
-            },
-            {
-                id: 8,
                 url: 'https://learn.microsoft.com/en-us/windows/terminal/install',
                 iconName: 'programmingTools/tools/terminal',
                 title: 'Windows Terminal'
             },
             {
-                id: 9,
+                id: 8,
                 url: 'https://www.netlify.com/',
                 iconName: 'programmingTools/tools/netlify',
                 title: 'Netlify'
             },
             {
-                id: 10,
+                id: 9,
                 url: 'https://www.hostinger.com/',
                 iconName: 'programmingTools/tools/hostinger',
                 title: 'Hostinger'
@@ -259,15 +259,15 @@ const programmingTools = [
         assistant: [
             {
                 id: 1,
-                url: 'https://chat.openai.com/',
-                iconName: 'programmingTools/assistant/openai-chatgpt',
-                title: 'ChatGPT'
-            },
-            {
-                id: 2,
                 url: 'https://claude.ai/',
                 iconName: 'programmingTools/assistant/anthropic-icon',
                 title: 'Claude'
+            },
+            {
+                id: 2,
+                url: 'https://chat.openai.com/',
+                iconName: 'programmingTools/assistant/openai-chatgpt',
+                title: 'ChatGPT'
             },
             {
                 id: 3,
