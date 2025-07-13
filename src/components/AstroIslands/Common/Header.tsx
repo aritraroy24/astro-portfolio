@@ -9,6 +9,7 @@ import { FaSearch } from 'react-icons/fa'
 import './styles/Header.scss';
 
 // asset import
+// import NavLogo from '@images/NavLogo.webp'
 import NavLogo from '@images/NavLogo.webp'
 
 interface NavbarProps {
