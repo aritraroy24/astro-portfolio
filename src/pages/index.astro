@@ -18,18 +18,11 @@ const {
   pageTitle = "Aritra Roy | Computational Materials Scientist",
   pageDescription = "I'm a Theoretical Computational Materials Scientist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill.",
   frontmatter,
-  robots,
   cover,
 } = Astro.props;
 ---
 
-<Layout
-  title={pageTitle}
-  description={pageDescription}
-  {frontmatter}
-  {robots}
-  {cover}
->
+<Layout title={pageTitle} description={pageDescription} {frontmatter} {cover}>
   <Header isHomePage={true} client:only="react" />
   <Socials />
   <Hero />

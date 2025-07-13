@@ -51,18 +51,17 @@ const params = Astro.params;
 interface Props {
   frontmatter?: any; 
   cover?: string;
-  robots?: string;
   page: any;
 }
 
-const { page, frontmatter, cover, robots }: Props = Astro.props;
+const { page, frontmatter, cover }: Props = Astro.props;
 
 const tag = params.tag ? deslugify(params.tag).toUpperCase() : "";
 const pageTitle = `All Research Projects | Tag: ${tag}`;
 const pageDescription = `Discover the essence of ${tag} through captivating research project details, insights, and expertise. Explore a curated collection of ${tag} content, tailored specifically for the advancement of sustainability research.`;
 ---
 
-<Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>
+<Layout title={pageTitle} description={pageDescription} {frontmatter} {cover}>
   <Header isHomePage={false} client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">

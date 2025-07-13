@@ -21,7 +21,6 @@ const {
   pageDescription = "Discover a vast array of research projects and coding projects. Explore the world of technology and research.",
   frontmatter,
   cover,
-  robots,
 } = Astro.props;
 
 const imgData = [
@@ -40,13 +39,7 @@ const imgData = [
 ];
 ---
 
-<Layout
-  title={pageTitle}
-  description={pageDescription}
-  {frontmatter}
-  {robots}
-  {cover}
->
+<Layout title={pageTitle} description={pageDescription} {frontmatter} {cover}>
   <Header isHomePage={false} client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">

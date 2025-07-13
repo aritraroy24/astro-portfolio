@@ -16,7 +16,6 @@ export interface LayoutProps {
   description?: string;
   cover?: string;
   frontmatter?: any;
-  robots?: boolean;
 }
 
 // default values of title and description of the page
@@ -25,7 +24,6 @@ const {
   description = "I'm a Theoretical Computational Materials Scientist & Algorithm Enthusiast from India. I have expertise in theory, software handling, & problem-solving skill.",
   cover,
   frontmatter,
-  robots,
 } = Astro.props as LayoutProps;
 ---
 
@@ -41,7 +39,7 @@ const {
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content={description} />
-    <Seo {title} {description} url={Astro.url} {cover} {frontmatter} {robots} />
+    <Seo {title} {description} url={Astro.url} {cover} {frontmatter} />
 
     <!-- favicon, font and other stylesheets import -->
     <link rel="icon" href="/favicon.png" />

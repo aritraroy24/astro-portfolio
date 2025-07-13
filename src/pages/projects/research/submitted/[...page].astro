@@ -45,10 +45,9 @@ export const getStaticPaths = (async ({ paginate }) => {
 interface Props {
   frontmatter?: any; 
   cover?: string;
-  robots?: string;
   page: any;
 }
-const { page, frontmatter, cover, robots }: Props = Astro.props;
+const { page, frontmatter, cover }: Props = Astro.props;
 
 // defining page title and description for submitted publications page
 const pageTitle = "Aritra Roy | Submitted Research Projects";
@@ -56,7 +55,7 @@ const pageDescription =
   "Explore my submitted computational research projects, where cutting-edge algorithms and simulations unravel the mysteries of molecules, reactions and the world.";
 ---
 
-<Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>
+<Layout title={pageTitle} description={pageDescription} {frontmatter} {cover}>
   <Header isHomePage={false} client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">

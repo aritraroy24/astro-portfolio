@@ -4,7 +4,7 @@ import { defineConfig } from 'astro/config';
 // integrations import
 import react from "@astrojs/react";
 import mdx from '@astrojs/mdx';
-import compress from "astro-compress";
+import compress from '@playform/compress';
 import sitemap from "@astrojs/sitemap";
 import astroExpressiveCode from 'astro-expressive-code';
 import icon from 'astro-icon';
@@ -33,8 +33,26 @@ export default defineConfig({
     }
   },
   vite: {
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    },
     ssr: {
       noExternal: ["react-icons"]
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler'
+        },
+        sass: {
+          api: 'modern-compiler'
+        }
+      }
+    },
+    build: {
+      rollupOptions: {
+        external: ['sharp', 'detect-libc']
+      }
     }
   },
   compressHTML: true

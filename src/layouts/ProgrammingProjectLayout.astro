@@ -12,7 +12,7 @@ import "@styles/single-post.scss";
 import ProgrammingProjectHeader from "@components/AstroComponents/ProgrammingProjects/ProgrammingProjectHeader.astro";
 
 // destructuring astro properties
-const { frontmatter, robots } = Astro.props;
+const { frontmatter } = Astro.props;
 const {
   title,
   status,
@@ -26,7 +26,7 @@ const {
 } = frontmatter;
 ---
 
-<Layout {title} {description} {frontmatter} {robots} {cover}>
+<Layout {title} {description} {frontmatter} {cover}>
   <Socials />
   <!-- blog heading section -->
   <ProgrammingProjectHeader

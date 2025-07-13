@@ -202,11 +202,11 @@ jobs:
 
 ## License
 
-This project is licensed under the GPL v3 License. See the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the GPL v3 License. See the [LICENSE](https://github.com/aritraroy24/zotero-notification/blob/main/LICENSE.md) file for details.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request. For more details about how to contribute, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+Contributions are welcome! Please feel free to submit a Pull Request. For more details about how to contribute, please refer to the [CONTRIBUTING.md](https://github.com/aritraroy24/zotero-notification/blob/main/CONTRIBUTING.md) file.
 
 #### Pull Request Process
 

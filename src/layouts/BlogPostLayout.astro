@@ -17,7 +17,7 @@ import { getCollection } from "astro:content";
 import "@styles/single-post.scss";
 
 // destructuring astro properties
-const { frontmatter, robots } = Astro.props;
+const { frontmatter } = Astro.props;
 const { title, subtitle, description, pubDate, tags, duration, cover } =
   frontmatter;
 
@@ -47,7 +47,7 @@ const relatedBlogs = tagsFilteredBlogs
   .slice(0, 3);
 ---
 
-<Layout {title} {description} {frontmatter} {robots} {cover}>
+<Layout {title} {description} {frontmatter} {cover}>
   <Socials />
   <!-- blog heading section -->
   <BlogHeader

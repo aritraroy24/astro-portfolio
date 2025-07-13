@@ -38,7 +38,6 @@ interface Props {
   pageDescription?: string;
   frontmatter?: any; 
   cover?: string;
-  robots?: string;
   page: any;
 }
 const { page }: Props = Astro.props;
@@ -50,11 +49,10 @@ const {
   "Discover insightful blogs on computational chemistry, materials science, programming, and more. Explore my extensive collection for the latest insights and discoveries.",
   frontmatter, 
   cover,
-  robots
   }: Props = Astro.props;
 ---
 
-<Layout title={pageTitle} description={pageDescription} {frontmatter} {robots} {cover}>
+<Layout title={pageTitle} description={pageDescription} {frontmatter} {cover}>
   <Header isHomePage={false} client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">

@@ -14,14 +14,20 @@ import ContactErrorImage from "@assets/images/contactError.svg";
 // style import
 import "@styles/single-page.scss";
 
+//  Setting up robots meta tag for SEO to prevent indexing
+interface Props {
+  robots?: string;
+}
+
+const { robots }: Props = Astro.props;
+
 // title & description value to pass to the layout
-const {
-  pageTitle = "Aritra Roy | Error Form Submission",
-  pageDescription = "Encountered an issue with your contact form submission? Apologies for the inconvenience! Please bear with me as I resolve the error promptly. Thank you for your understanding.",
-} = Astro.props;
+const pageTitle = "Aritra Roy | Error Form Submission";
+const pageDescription =
+  "Encountered an issue with your contact form submission? Apologies for the inconvenience! Please bear with me as I resolve the error promptly. Thank you for your understanding.";
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription} {robots}>
   <Header isHomePage={false} client:only="react" />
   <div class="SinglePage">
     <Image

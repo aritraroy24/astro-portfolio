@@ -23,7 +23,6 @@ const {
   pageTitle = "Aritra Roy | Research Projects",
   pageDescription = "Find anything related to my research projects, whether it is published, accepted or ongoing. Furthermore, meet with my collaborators all around the world.",
   frontmatter,
-  robots,
   cover,
 } = Astro.props;
 
@@ -61,13 +60,7 @@ const imgData = [
 ];
 ---
 
-<Layout
-  title={pageTitle}
-  description={pageDescription}
-  {frontmatter}
-  {robots}
-  {cover}
->
+<Layout title={pageTitle} description={pageDescription} {frontmatter} {cover}>
   <Header isHomePage={false} client:only="react" />
   <Socials />
   <div class="postsNavigationDiv">
