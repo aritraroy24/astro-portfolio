@@ -2,7 +2,7 @@ const education = [
     {
         id: 4,
         title: 'M.Sc. Chemistry',
-        institution: 'Pondicherry University',
+        institution: 'Pondicherry University, India',
         duration: 'July 2019 - August 2021',
         url: 'https://www.pondiuni.edu.in/',
         description: [
@@ -14,7 +14,7 @@ const education = [
     {
         id: 3,
         title: 'B.Sc. Chemistry',
-        institution: 'RKM Vivekananda Centenary College',
+        institution: 'RKM Vivekananda Centenary College, India',
         duration: 'July 2016 - May 2019',
         url: 'https://rkmvccrahara.org/',
         description: [
@@ -26,7 +26,7 @@ const education = [
     {
         id: 2,
         title: 'Higher Secondary Examination',
-        institution: 'Nabadwip Bakultala High School',
+        institution: 'Nabadwip Bakultala High School, India',
         duration: 'June 2014 - April 2016',
         url: 'https://www.nabadwipbakultalahighschool.org/',
         description: [
@@ -38,7 +38,7 @@ const education = [
     {
         id: 1,
         title: 'Secondary Examination',
-        institution: 'Nabadwip Bakultala High School',
+        institution: 'Nabadwip Bakultala High School, India',
         duration: 'April 2009 - May 2014',
         url: 'https://www.nabadwipbakultalahighschool.org/',
         description: [
