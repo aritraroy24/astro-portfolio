@@ -1,6 +1,6 @@
 ---
 // component import
-import Tab from "@components/AstroComponents/Common/Tab.astro";
+import Timeline from "@components/AstroComponents/Common/Timeline.astro";
 
 // data import
 import education from "@assets/js/data/education";
@@ -17,11 +17,11 @@ import "./styles/Portfolio.scss";
     <div class="section-heading">
       <h2>Research</h2>
     </div>
-    <Tab data={research} side="left" />
+    <Timeline data={research} label="Research positions" />
     <div class="section-heading">
       <h2>Education</h2>
     </div>
-    <Tab data={education} side="left2" />
+    <Timeline data={education} label="Education history" />
     <div class="section-heading">
       <h2>Testimonials</h2>
     </div>

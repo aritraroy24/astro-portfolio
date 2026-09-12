@@ -1,0 +1,161 @@
+// Vertical spine with everything visible at once. The right column carries the
+// span of each entry as plain type rather than a chart element.
+.timeline {
+    --when-w: 110px;
+    --when-gap: 28px;
+    --spine: rgb(51, 63, 88);
+
+    width: min(100%, 860px);
+    list-style: none;
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+.timeline__item {
+    display: grid;
+    grid-template-columns: 1fr var(--when-w);
+    gap: 0 var(--when-gap);
+    align-items: start;
+    position: relative;
+    padding: 0 0 26px 26px;
+
+    // The spine itself, drawn as a left border so it joins entry to entry.
+    border-left: 1px solid var(--spine);
+
+    &:last-child {
+        border-left-color: transparent;
+        padding-bottom: 0;
+    }
+
+    // Node on the spine.
+    &::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 6px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--navy);
+        border: 1px solid var(--green);
+    }
+
+    // Ongoing entries get a filled node so "current" reads without the label.
+    &.is-ongoing::before {
+        background: var(--green);
+        box-shadow: 0 0 0 4px rgba(100, 255, 218, 0.14);
+    }
+}
+
+.timeline__title {
+    color: rgb(204, 214, 246);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 10px;
+
+    .timeline__at {
+        color: var(--green);
+        opacity: 0.75;
+    }
+
+    a {
+        color: var(--green);
+        text-decoration: none;
+        transition: opacity 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &:hover,
+        &:focus-visible {
+            opacity: 0.75;
+            text-decoration: underline;
+        }
+    }
+}
+
+.timeline__points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 4px;
+        font-size: var(--font-size-md);
+        line-height: 1.5;
+        color: var(--slate);
+
+        &::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+        }
+    }
+}
+
+// Right column: when the entry ran, start over end.
+.timeline__when {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    margin: 0;
+    padding-top: 4px;
+    font-family: "SF Mono", "Fira Code", monospace;
+    font-size: var(--font-size-xs);
+    line-height: 1.4;
+    color: var(--slate);
+    text-align: right;
+    white-space: nowrap;
+}
+
+.timeline__from {
+    color: rgb(204, 214, 246);
+    opacity: 0.85;
+}
+
+// Leading en dash marks this as the closing end of the range.
+.timeline__to::before {
+    content: "– ";
+    opacity: 0.6;
+}
+
+.timeline__item.is-ongoing .timeline__to {
+    color: var(--green);
+    opacity: 0.9;
+}
+
+// Narrow: fold the right column up under the date line.
+@media only screen and (max-width: 700px) {
+    .timeline__item {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline__when {
+        order: -1;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: flex-start;
+        gap: 6px;
+        margin-bottom: 8px;
+        padding-top: 0;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .timeline__title {
+        font-size: 17.5px;
+    }
+
+    .timeline__points li {
+        font-size: var(--font-size-sm);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .timeline__title a {
+        transition: none;
+    }
+}

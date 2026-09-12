@@ -1,9 +1,11 @@
+// `start` / `end` are "YYYY-MM"; omit `end` (or set it to null) for an ongoing entry.
+// Display labels and timeline positions are derived in @js/utils/timeline.
 const education = [
     {
-        id: 4,
         title: 'M.Sc. Chemistry',
         institution: 'Pondicherry University, India',
-        duration: 'July 2019 - August 2021',
+        start: '2019-07',
+        end: '2021-08',
         url: 'https://www.pondiuni.edu.in/',
         description: [
             '8.88 CGPA',
@@ -12,10 +14,10 @@ const education = [
         ]
     },
     {
-        id: 3,
         title: 'B.Sc. Chemistry',
         institution: 'RKM Vivekananda Centenary College, India',
-        duration: 'July 2016 - May 2019',
+        start: '2016-07',
+        end: '2019-05',
         url: 'https://rkmvccrahara.org/',
         description: [
             '7.34 CGPA',
@@ -24,10 +26,10 @@ const education = [
         ]
     },
     {
-        id: 2,
         title: 'Higher Secondary Examination',
         institution: 'Nabadwip Bakultala High School, India',
-        duration: 'June 2014 - April 2016',
+        start: '2014-06',
+        end: '2016-04',
         url: 'https://www.nabadwipbakultalahighschool.org/',
         description: [
             '89.20%',
@@ -36,10 +38,10 @@ const education = [
         ]
     },
     {
-        id: 1,
         title: 'Secondary Examination',
         institution: 'Nabadwip Bakultala High School, India',
-        duration: 'April 2009 - May 2014',
+        start: '2009-04',
+        end: '2014-05',
         url: 'https://www.nabadwipbakultalahighschool.org/',
         description: [
             '90.00%',

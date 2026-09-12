@@ -1,0 +1,43 @@
+---
+// util import
+import { rangeParts, byRecency } from "@js/utils/timeline";
+
+// style import
+import "./styles/Timeline.scss";
+
+const { data, label } = Astro.props;
+
+const rows = [...data].sort(byRecency).map((entry: any) => ({
+  ...entry,
+  ...rangeParts(entry),
+  ongoing: !entry.end,
+}));
+---
+
+<ol class="timeline" aria-label={label}>
+  {
+    rows.map((row: any) => (
+      <li class:list={["timeline__item", { "is-ongoing": row.ongoing }]}>
+        <div class="timeline__body">
+          <h3 class="timeline__title">
+            <span>{row.title}</span>
+            <span class="timeline__at"> @ </span>
+            <a href={row.url} target="_blank" rel="noopener noreferrer">
+              {row.institution}
+            </a>
+          </h3>
+          <ul class="timeline__points">
+            {row.description.map((point: string) => (
+              <li>{point}</li>
+            ))}
+          </ul>
+        </div>
+
+        <p class="timeline__when">
+          <span class="timeline__from">{row.from}</span>
+          <span class="timeline__to">{row.to}</span>
+        </p>
+      </li>
+    ))
+  }
+</ol>

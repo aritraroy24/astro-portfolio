@@ -1,9 +1,11 @@
+// `start` / `end` are "YYYY-MM"; omit `end` (or set it to null) for an ongoing entry.
+// Display labels and timeline positions are derived in @js/utils/timeline.
 const research = [
     {
-        id: 4,
         title: 'Doctoral Researcher',
         institution: 'London South Bank University, United Kingdom',
-        duration: 'Sep, 2023 - Present',
+        start: '2023-09',
+        end: null,
         url: 'https://slimeslab.github.io/',
         description: [
             'AI for piezoelectric materials',
@@ -11,10 +13,10 @@ const research = [
         ]
     },
     {
-        id: 3,
         title: 'Visiting Researcher',
         institution: "École Polytechnique Fédérale de Lausanne, Switzerland",
-        duration: 'Aug, 2026 - Sep, 2026',
+        start: '2026-08',
+        end: '2026-09',
         url: 'https://www.epfl.ch/labs/lsmo/',
         description: [
             'Digitizing isotherm plots from literature',
@@ -22,10 +24,10 @@ const research = [
         ]
     },
     {
-        id: 2,
         title: 'Visiting Researcher',
         institution: 'University of Kent, United Kingdom',
-        duration: 'Jun, 2022 - Nov, 2025',
+        start: '2022-06',
+        end: '2025-11',
         url: 'https://www.felipefantuzzi.org/',
         description: [
             'Electronic structure calculations for organometallic systems',
@@ -33,10 +35,10 @@ const research = [
         ]
     },
     {
-        id: 1,
         title: 'M.Sc. Project',
         institution: 'Pondicherry University, India',
-        duration: 'Dec, 2020 - Jul, 2021',
+        start: '2020-12',
+        end: '2021-07',
         url: 'https://sites.google.com/view/cis-laboratory',
         description: [
             'Semiconductor borophene: A first-principles study',
