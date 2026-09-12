@@ -1,8 +1,3040 @@
 // Auto-generated publications data
-// Last updated: 2026-04-26T17:22:32.740Z
-const generationDate = '2026-04-26T17:22:32.740Z';
+// Last updated: 2026-09-12T08:38:50.731Z
+const generationDate = '2026-09-12T08:38:50.731Z';
 
 const publications = [
+  {
+    "put-code": 216264872,
+    "created-date": {
+      "value": 1780212357261
+    },
+    "last-modified-date": {
+      "value": 1780212357261
+    },
+    "source": {
+      "source-orcid": {
+        "uri": "https://orcid.org/0000-0003-0243-9124",
+        "path": "0000-0003-0243-9124",
+        "host": "orcid.org"
+      },
+      "source-client-id": null,
+      "source-name": {
+        "value": "Aritra Roy"
+      },
+      "assertion-origin-orcid": null,
+      "assertion-origin-client-id": null,
+      "assertion-origin-name": null
+    },
+    "title": {
+      "title": {
+        "value": "From Knowledge to Action: Outcomes of the 2025 Large Language Model (LLM) Hackathon for Applications in Materials Science and Chemistry"
+      },
+      "subtitle": null,
+      "translated-title": null
+    },
+    "external-ids": {
+      "external-id": [
+        {
+          "external-id-type": "doi",
+          "external-id-value": "10.48550/ARXIV.2605.03205",
+          "external-id-normalized": {
+            "value": "10.48550/arxiv.2605.03205",
+            "transient": true
+          },
+          "external-id-normalized-error": null,
+          "external-id-url": {
+            "value": "https://doi.org/10.48550/ARXIV.2605.03205"
+          },
+          "external-id-relationship": "self"
+        }
+      ]
+    },
+    "url": {
+      "value": "https://arxiv.org/abs/2605.03205"
+    },
+    "type": "preprint",
+    "publication-date": {
+      "year": {
+        "value": "2026"
+      },
+      "month": {
+        "value": "05"
+      },
+      "day": null
+    },
+    "journal-title": {
+      "value": "arXiv Preprint"
+    },
+    "visibility": "public",
+    "path": "/0000-0003-0243-9124/work/216264872",
+    "display-index": "0",
+    "metadata": {
+      "type": "arxiv",
+      "title": "From Knowledge to Action: Outcomes of the 2025 Large Language Model (LLM) Hackathon for Applications in Materials Science and Chemistry",
+      "author": [
+        {
+          "given": "Aritra",
+          "family": "Roy"
+        },
+        {
+          "given": "Kevin",
+          "family": "Shen"
+        },
+        {
+          "given": "Andrew",
+          "family": "MacBride"
+        },
+        {
+          "given": "Awwal",
+          "family": "Oladipupo"
+        },
+        {
+          "given": "Mudassra",
+          "family": "Taskeen"
+        },
+        {
+          "given": "Wojtek",
+          "family": "Treyde"
+        },
+        {
+          "given": "Ruaa A. E. A.",
+          "family": "Abakar"
+        },
+        {
+          "given": "Ahmad D.",
+          "family": "Abbas"
+        },
+        {
+          "given": "Elsayed",
+          "family": "Abdelfatah"
+        },
+        {
+          "given": "Abbas A.",
+          "family": "Abdullahi"
+        },
+        {
+          "given": "Seham S.",
+          "family": "Abyah"
+        },
+        {
+          "given": "Chahd Rahyl",
+          "family": "Adjmi"
+        },
+        {
+          "given": "Fariha",
+          "family": "Agbere"
+        },
+        {
+          "given": "Savyasanchi",
+          "family": "Aggarwal"
+        },
+        {
+          "given": "Muhammad",
+          "family": "Ahmed"
+        },
+        {
+          "given": "Tasnim",
+          "family": "Ahmed"
+        },
+        {
+          "given": "Motasem",
+          "family": "Ajlouni"
+        },
+        {
+          "given": "Mattias",
+          "family": "Akke"
+        },
+        {
+          "given": "Hussein",
+          "family": "AlAdwan"
+        },
+        {
+          "given": "Anwaar S.",
+          "family": "Alazani"
+        },
+        {
+          "given": "Zahra A.",
+          "family": "Alharbi"
+        },
+        {
+          "given": "Wajd A.",
+          "family": "Aljulyhi"
+        },
+        {
+          "given": "Mohammed A.",
+          "family": "AlKubaish"
+        },
+        {
+          "given": "Fatima A.",
+          "family": "Almahri"
+        },
+        {
+          "given": "Sayed A.",
+          "family": "Almohri"
+        },
+        {
+          "given": "David Obeh",
+          "family": "Alobo"
+        },
+        {
+          "given": "Mohammed",
+          "family": "Alouni"
+        },
+        {
+          "given": "Azizah S.",
+          "family": "Alqahtani"
+        },
+        {
+          "given": "Omar",
+          "family": "Alsaigh"
+        },
+        {
+          "given": "Husain",
+          "family": "Althagafi"
+        },
+        {
+          "given": "Md. Aqib",
+          "family": "Aman"
+        },
+        {
+          "given": "Lena",
+          "family": "Ara"
+        },
+        {
+          "given": "",
+          "family": "Arifin"
+        },
+        {
+          "given": "Ignacio",
+          "family": "Arretche"
+        },
+        {
+          "given": "Abdulaziz",
+          "family": "Ashy"
+        },
+        {
+          "given": "Syeda A.",
+          "family": "Asim"
+        },
+        {
+          "given": "Amro",
+          "family": "Aswad"
+        },
+        {
+          "given": "Adeel",
+          "family": "Atta"
+        },
+        {
+          "given": "Sören",
+          "family": "Auer"
+        },
+        {
+          "given": "Abdullah al",
+          "family": "Azmi"
+        },
+        {
+          "given": "Toheeb",
+          "family": "Balogun"
+        },
+        {
+          "given": "Suvo",
+          "family": "Banik"
+        },
+        {
+          "given": "Viktoriia",
+          "family": "Baibakova"
+        },
+        {
+          "given": "Shakira A.",
+          "family": "Baksh"
+        },
+        {
+          "given": "Neus G.",
+          "family": "Bastús"
+        },
+        {
+          "given": "Christina J.",
+          "family": "Bayard"
+        },
+        {
+          "given": "Adib",
+          "family": "Bazgir"
+        },
+        {
+          "given": "Louis",
+          "family": "Beal"
+        },
+        {
+          "given": "Lejla",
+          "family": "Biberić"
+        },
+        {
+          "given": "Wahid",
+          "family": "Billah"
+        },
+        {
+          "given": "Ankita",
+          "family": "Biswas"
+        },
+        {
+          "given": "Joshua",
+          "family": "Bocarsly"
+        },
+        {
+          "given": "Montassar T.",
+          "family": "Bouzidi"
+        },
+        {
+          "given": "Esma B.",
+          "family": "Boydas"
+        },
+        {
+          "given": "Youssef",
+          "family": "Briki"
+        },
+        {
+          "given": "Cailin",
+          "family": "Buchanan"
+        },
+        {
+          "given": "Mauricio",
+          "family": "Cafiero"
+        },
+        {
+          "given": "Damien",
+          "family": "Caliste"
+        },
+        {
+          "given": "Yi",
+          "family": "Cao"
+        },
+        {
+          "given": "Rafael E.",
+          "family": "Castañeda"
+        },
+        {
+          "given": "Sruthy K.",
+          "family": "Chandy"
+        },
+        {
+          "given": "Benjamin",
+          "family": "Charmes"
+        },
+        {
+          "given": "Shayantan",
+          "family": "Chaudhuri"
+        },
+        {
+          "given": "Yiming",
+          "family": "Chen"
+        },
+        {
+          "given": "Alexander",
+          "family": "Chen"
+        },
+        {
+          "given": "Jieneng",
+          "family": "Chen"
+        },
+        {
+          "given": "Min-Hsueh",
+          "family": "Chiu"
+        },
+        {
+          "given": "Defne",
+          "family": "Circi"
+        },
+        {
+          "given": "Cinthya H.",
+          "family": "Contreras"
+        },
+        {
+          "given": "Yoann",
+          "family": "Cure"
+        },
+        {
+          "given": "Nathan",
+          "family": "Daelman"
+        },
+        {
+          "given": "Roshini",
+          "family": "Dantuluri"
+        },
+        {
+          "given": "Thomas",
+          "family": "Davy"
+        },
+        {
+          "given": "William",
+          "family": "Dawson"
+        },
+        {
+          "given": "Leonid",
+          "family": "Didukh"
+        },
+        {
+          "given": "Rui",
+          "family": "Ding"
+        },
+        {
+          "given": "Aminu R.",
+          "family": "Doguwa"
+        },
+        {
+          "given": "Claudia",
+          "family": "Draxl"
+        },
+        {
+          "given": "Sathya",
+          "family": "Edamadaka"
+        },
+        {
+          "given": "Oulaya",
+          "family": "Elargab"
+        },
+        {
+          "given": "Christina",
+          "family": "Ertural"
+        },
+        {
+          "given": "Matthew L.",
+          "family": "Evans"
+        },
+        {
+          "given": "Edvin",
+          "family": "Fako"
+        },
+        {
+          "given": "Hossam",
+          "family": "Farag"
+        },
+        {
+          "given": "Nur A.",
+          "family": "Fathurrahman"
+        },
+        {
+          "given": "Merve",
+          "family": "Fedai"
+        },
+        {
+          "given": "Rodrigo P.",
+          "family": "Ferreira"
+        },
+        {
+          "given": "Giuseppe",
+          "family": "Fisicaro"
+        },
+        {
+          "given": "Thomas",
+          "family": "Frank"
+        },
+        {
+          "given": "Sasi K.",
+          "family": "Gaddipati"
+        },
+        {
+          "given": "Abhijeet",
+          "family": "Gangan"
+        },
+        {
+          "given": "Jennifer",
+          "family": "Garland"
+        },
+        {
+          "given": "James",
+          "family": "Garrick"
+        },
+        {
+          "given": "Luigi",
+          "family": "Genovese"
+        },
+        {
+          "given": "Maryam",
+          "family": "Ghadrdran"
+        },
+        {
+          "given": "Sandip",
+          "family": "Giri"
+        },
+        {
+          "given": "Maxime",
+          "family": "Goulet"
+        },
+        {
+          "given": "Jeremy",
+          "family": "Goumaz"
+        },
+        {
+          "given": "Sara U.",
+          "family": "Gracia"
+        },
+        {
+          "given": "Jacob",
+          "family": "Graham"
+        },
+        {
+          "given": "Gabriel",
+          "family": "Graves"
+        },
+        {
+          "given": "Kevin P.",
+          "family": "Greenman"
+        },
+        {
+          "given": "Tim",
+          "family": "Greitemeier"
+        },
+        {
+          "given": "Cameron",
+          "family": "Gruich"
+        },
+        {
+          "given": "Sophie",
+          "family": "Gu"
+        },
+        {
+          "given": "Salomé",
+          "family": "Guilbert"
+        },
+        {
+          "given": "Hans",
+          "family": "Gundlach"
+        },
+        {
+          "given": "Muriel F.",
+          "family": "Gusta"
+        },
+        {
+          "given": "Mourad El",
+          "family": "Haddaoui"
+        },
+        {
+          "given": "Alexander J.",
+          "family": "Haibel"
+        },
+        {
+          "given": "Anubhab",
+          "family": "Haldar"
+        },
+        {
+          "given": "Vehaan",
+          "family": "Handa"
+        },
+        {
+          "given": "Hassan",
+          "family": "Harb"
+        },
+        {
+          "given": "Nathan D.",
+          "family": "Harms"
+        },
+        {
+          "given": "Abdullah Al",
+          "family": "Hasan"
+        },
+        {
+          "given": "Abir",
+          "family": "Hassan"
+        },
+        {
+          "given": "Qiyao",
+          "family": "He"
+        },
+        {
+          "given": "Andrés",
+          "family": "Henao-Aristizábal"
+        },
+        {
+          "given": "Bram",
+          "family": "Hoex"
+        },
+        {
+          "given": "Sungil",
+          "family": "Hong"
+        },
+        {
+          "given": "Alexander J.",
+          "family": "Horvath"
+        },
+        {
+          "given": "Md. Shaib",
+          "family": "Hossain"
+        },
+        {
+          "given": "Yanqi",
+          "family": "Huang"
+        },
+        {
+          "given": "Yuqing",
+          "family": "Huang"
+        },
+        {
+          "given": "Kostiantyn",
+          "family": "Hubaiev"
+        },
+        {
+          "given": "Donald",
+          "family": "Intal"
+        },
+        {
+          "given": "Katherine",
+          "family": "Inzani"
+        },
+        {
+          "given": "Kevin",
+          "family": "Ishimwe"
+        },
+        {
+          "given": "Tugba",
+          "family": "Isik"
+        },
+        {
+          "given": "Gopal R.",
+          "family": "Iyer"
+        },
+        {
+          "given": "Katharina",
+          "family": "Jager"
+        },
+        {
+          "given": "Jan",
+          "family": "Janssen"
+        },
+        {
+          "given": "Hyewon",
+          "family": "Jeong"
+        },
+        {
+          "given": "Michael",
+          "family": "Jirasek"
+        },
+        {
+          "given": "Tyler R.",
+          "family": "Josephson"
+        },
+        {
+          "given": "Nisarg",
+          "family": "Joshi"
+        },
+        {
+          "given": "Yassir Ben",
+          "family": "Kacem"
+        },
+        {
+          "given": "Remya A. M.",
+          "family": "Kalapurakal"
+        },
+        {
+          "given": "Rakesh R.",
+          "family": "Kamath"
+        },
+        {
+          "given": "Sugan",
+          "family": "Kanagasenthinathan"
+        },
+        {
+          "given": "Dohun",
+          "family": "Kang"
+        },
+        {
+          "given": "Jason",
+          "family": "Kantorow"
+        },
+        {
+          "given": "Kübra",
+          "family": "Kaygisiz"
+        },
+        {
+          "given": "Murat",
+          "family": "Keceli"
+        },
+        {
+          "given": "Farhana",
+          "family": "Keya"
+        },
+        {
+          "given": "Muhammad U.",
+          "family": "Khan"
+        },
+        {
+          "given": "Sartaaj Takrim",
+          "family": "Khan"
+        },
+        {
+          "given": "Hyungjun",
+          "family": "Kim"
+        },
+        {
+          "given": "Alexander",
+          "family": "Kister"
+        },
+        {
+          "given": "Sascha",
+          "family": "Klawohn"
+        },
+        {
+          "given": "Collin",
+          "family": "Kovacs"
+        },
+        {
+          "given": "Pranav",
+          "family": "Krishnan"
+        },
+        {
+          "given": "Maurycy",
+          "family": "Kryzanowski"
+        },
+        {
+          "given": "Ritesh",
+          "family": "Kumar"
+        },
+        {
+          "given": "Suman",
+          "family": "Kumari"
+        },
+        {
+          "given": "Gourav",
+          "family": "Kumbhojkar"
+        },
+        {
+          "given": "Ryo",
+          "family": "Kuroki"
+        },
+        {
+          "given": "Shashank",
+          "family": "Kushwaha"
+        },
+        {
+          "given": "Magdalena",
+          "family": "Lederbauer"
+        },
+        {
+          "given": "Jaejun",
+          "family": "Lee"
+        },
+        {
+          "given": "Seunghan",
+          "family": "Lee"
+        },
+        {
+          "given": "Jeonghwan",
+          "family": "Lee"
+        },
+        {
+          "given": "Bingcan",
+          "family": "Li"
+        },
+        {
+          "given": "Calvin",
+          "family": "Li"
+        },
+        {
+          "given": "Zhanzhao",
+          "family": "Li"
+        },
+        {
+          "given": "Shi",
+          "family": "Li"
+        },
+        {
+          "given": "Shicheng",
+          "family": "Li"
+        },
+        {
+          "given": "Chengyan",
+          "family": "Liu"
+        },
+        {
+          "given": "Hao",
+          "family": "Liu"
+        },
+        {
+          "given": "Tung Yan",
+          "family": "Liu"
+        },
+        {
+          "given": "Yutong",
+          "family": "Liu"
+        },
+        {
+          "given": "Lucia",
+          "family": "Vina-Lopez"
+        },
+        {
+          "given": "Chayaphol",
+          "family": "Lortaraparsert"
+        },
+        {
+          "given": "Andre K. Y.",
+          "family": "Low"
+        },
+        {
+          "given": "Saffron",
+          "family": "Luxford"
+        },
+        {
+          "given": "Carlos",
+          "family": "Madariaga"
+        },
+        {
+          "given": "Rishikesh",
+          "family": "Magar"
+        },
+        {
+          "given": "Piyush R.",
+          "family": "Maharana"
+        },
+        {
+          "given": "Rahul",
+          "family": "Mallela"
+        },
+        {
+          "given": "Shoaib",
+          "family": "Mahmud"
+        },
+        {
+          "given": "Natesan",
+          "family": "Mani"
+        },
+        {
+          "given": "Umair",
+          "family": "Mansoor"
+        },
+        {
+          "given": "Omar B.",
+          "family": "Mansour"
+        },
+        {
+          "given": "Cassandra",
+          "family": "Masschelein"
+        },
+        {
+          "given": "Kinga O.",
+          "family": "Mastej"
+        },
+        {
+          "given": "Ankit",
+          "family": "Mathanker"
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Meng"
+        },
+        {
+          "given": "Omran",
+          "family": "Mezghani"
+        },
+        {
+          "given": "Yidong",
+          "family": "Ming"
+        },
+        {
+          "given": "Rishav",
+          "family": "Mitra"
+        },
+        {
+          "given": "Michail",
+          "family": "Mitsakis"
+        },
+        {
+          "given": "Matthew",
+          "family": "Miyagishima"
+        },
+        {
+          "given": "Ravikumar",
+          "family": "Mohan"
+        },
+        {
+          "given": "Naveen R.",
+          "family": "Mohanraj"
+        },
+        {
+          "given": "Trupti",
+          "family": "Mohanty"
+        },
+        {
+          "given": "Bernadette",
+          "family": "Mohr"
+        },
+        {
+          "given": "Francisco A.",
+          "family": "Molina-Bakhos"
+        },
+        {
+          "given": "Jeremy",
+          "family": "Monat"
+        },
+        {
+          "given": "Seyed Mohamad",
+          "family": "Moosavi"
+        },
+        {
+          "given": "Shayan",
+          "family": "Mousavi"
+        },
+        {
+          "given": "Arman",
+          "family": "Moussavi"
+        },
+        {
+          "given": "Rubel",
+          "family": "Mozumber"
+        },
+        {
+          "given": "Muhammad J.",
+          "family": "Mufti"
+        },
+        {
+          "given": "Diyana",
+          "family": "Muhammed"
+        },
+        {
+          "given": "Ram",
+          "family": "Munde"
+        },
+        {
+          "given": "Mrigi",
+          "family": "Munjal"
+        },
+        {
+          "given": "José A.",
+          "family": "Márquez"
+        },
+        {
+          "given": "Shankha",
+          "family": "Nag"
+        },
+        {
+          "given": "Giacomo",
+          "family": "Nagaro"
+        },
+        {
+          "given": "Juno",
+          "family": "Nam"
+        },
+        {
+          "given": "Jose M.",
+          "family": "Napoles-Duarte"
+        },
+        {
+          "given": "Ry",
+          "family": "Nduma"
+        },
+        {
+          "given": "Xuan-Vu",
+          "family": "Nguyen"
+        },
+        {
+          "given": "Ebrahim",
+          "family": "Norouzi"
+        },
+        {
+          "given": "Oluwatosin",
+          "family": "Ohiro"
+        },
+        {
+          "given": "Ryotaro",
+          "family": "Okabe"
+        },
+        {
+          "given": "Viejay",
+          "family": "Ordillo"
+        },
+        {
+          "given": "Shuichiro",
+          "family": "Ozawa"
+        },
+        {
+          "given": "Sebastian",
+          "family": "Pagel"
+        },
+        {
+          "given": "Daniel",
+          "family": "Palmer"
+        },
+        {
+          "given": "Angela",
+          "family": "Pan"
+        },
+        {
+          "given": "Akash",
+          "family": "Pandey"
+        },
+        {
+          "given": "Vivek",
+          "family": "Pandit"
+        },
+        {
+          "given": "Prakul",
+          "family": "Pandit"
+        },
+        {
+          "given": "Chiku",
+          "family": "Parida"
+        },
+        {
+          "given": "Jaehee",
+          "family": "Park"
+        },
+        {
+          "given": "Hyunsoo",
+          "family": "Park"
+        },
+        {
+          "given": "Hemangi",
+          "family": "Patel"
+        },
+        {
+          "given": "Shakul",
+          "family": "Pathak"
+        },
+        {
+          "given": "Taradutt",
+          "family": "Pattnaik"
+        },
+        {
+          "given": "Elena",
+          "family": "Patyukova"
+        },
+        {
+          "given": "Noah",
+          "family": "Paulson"
+        },
+        {
+          "given": "Deepak S.",
+          "family": "Pendyala"
+        },
+        {
+          "given": "Erick S.",
+          "family": "Pepek"
+        },
+        {
+          "given": "Martin H.",
+          "family": "Petersen"
+        },
+        {
+          "given": "Thang D.",
+          "family": "Pham"
+        },
+        {
+          "given": "Aniket",
+          "family": "Phutane"
+        },
+        {
+          "given": "Sabila K.",
+          "family": "Pinky"
+        },
+        {
+          "given": "Étienne",
+          "family": "Polack"
+        },
+        {
+          "given": "Alison",
+          "family": "Polasik"
+        },
+        {
+          "given": "Maria",
+          "family": "Politi"
+        },
+        {
+          "given": "Tim",
+          "family": "Pongratz"
+        },
+        {
+          "given": "Akhila",
+          "family": "Ponugoti"
+        },
+        {
+          "given": "Fabio",
+          "family": "Priante"
+        },
+        {
+          "given": "Thomas Michael",
+          "family": "Pruyn"
+        },
+        {
+          "given": "Sai S.",
+          "family": "Puppala"
+        },
+        {
+          "given": "Mohammad A.",
+          "family": "Qazi"
+        },
+        {
+          "given": "Heike",
+          "family": "Quosdorf"
+        },
+        {
+          "given": "Gollam",
+          "family": "Rabby"
+        },
+        {
+          "given": "Mohammad J.",
+          "family": "Raei"
+        },
+        {
+          "given": "Md. Habibur",
+          "family": "Rahman"
+        },
+        {
+          "given": "A. B. M. Ashikur",
+          "family": "Rahman"
+        },
+        {
+          "given": "Subhashree",
+          "family": "Rajasekaran"
+        },
+        {
+          "given": "Tawfiqur",
+          "family": "Rakib"
+        },
+        {
+          "given": "Hemanth N.",
+          "family": "Ramesh"
+        },
+        {
+          "given": "Vrushali",
+          "family": "Ranadive"
+        },
+        {
+          "given": "Karnamohit",
+          "family": "Ranka"
+        },
+        {
+          "given": "Bojana",
+          "family": "Rankovic"
+        },
+        {
+          "given": "Adwaith",
+          "family": "Ravichandran"
+        },
+        {
+          "given": "Ilija",
+          "family": "Rašović"
+        },
+        {
+          "given": "Sergei",
+          "family": "Rigin"
+        },
+        {
+          "given": "Tatem",
+          "family": "Rios"
+        },
+        {
+          "given": "Varun",
+          "family": "Rishi"
+        },
+        {
+          "given": "Victor Naden",
+          "family": "Robinson"
+        },
+        {
+          "given": "Lucas S.",
+          "family": "Rodrigues"
+        },
+        {
+          "given": "Oswaldo",
+          "family": "Rodriguez"
+        },
+        {
+          "given": "Mahule",
+          "family": "Roy"
+        },
+        {
+          "given": "Diptendu",
+          "family": "Roy"
+        },
+        {
+          "given": "Subhas",
+          "family": "Roy"
+        },
+        {
+          "given": "Arokia Anto Royan",
+          "family": "M"
+        },
+        {
+          "given": "Joseph F.",
+          "family": "Rudzinski"
+        },
+        {
+          "given": "Muhammad",
+          "family": "Sabih"
+        },
+        {
+          "given": "Subramanyam",
+          "family": "Sahoo"
+        },
+        {
+          "given": "Srusti Bheem",
+          "family": "Sain"
+        },
+        {
+          "given": "Thahira",
+          "family": "Saliya"
+        },
+        {
+          "given": "Vignesh",
+          "family": "Sampath"
+        },
+        {
+          "given": "Jesus Diaz",
+          "family": "Sanchez"
+        },
+        {
+          "given": "Arthur S. S.",
+          "family": "Santos"
+        },
+        {
+          "given": "Muliady",
+          "family": "Satria"
+        },
+        {
+          "given": "Hasan M.",
+          "family": "Sayeed"
+        },
+        {
+          "given": "Jörg",
+          "family": "Schaarschmidt"
+        },
+        {
+          "given": "Philippe",
+          "family": "Schwaller"
+        },
+        {
+          "given": "Nofit",
+          "family": "Segal"
+        },
+        {
+          "given": "Abhishec",
+          "family": "Senthilvel"
+        },
+        {
+          "given": "Sherjeel",
+          "family": "Shabih"
+        },
+        {
+          "given": "Devanshu",
+          "family": "Shah"
+        },
+        {
+          "given": "Faezeh",
+          "family": "Shahmoradi"
+        },
+        {
+          "given": "Samiha",
+          "family": "Sharlin"
+        },
+        {
+          "given": "Killian",
+          "family": "Sheriff"
+        },
+        {
+          "given": "Qiuyu",
+          "family": "Shi"
+        },
+        {
+          "given": "Abubakar D.",
+          "family": "Shuaibu"
+        },
+        {
+          "given": "Ayesha",
+          "family": "Siddiqua"
+        },
+        {
+          "given": "M. A. Shadab",
+          "family": "Siddiqui"
+        },
+        {
+          "given": "Darian",
+          "family": "Smalley"
+        },
+        {
+          "given": "Benjamin",
+          "family": "Smith"
+        },
+        {
+          "given": "Taylor D.",
+          "family": "Sparks"
+        },
+        {
+          "given": "Daniel T.",
+          "family": "Speckhard"
+        },
+        {
+          "given": "Elena",
+          "family": "Stojanovska"
+        },
+        {
+          "given": "Akshay",
+          "family": "Subramanian"
+        },
+        {
+          "given": "Jiwon",
+          "family": "Sun"
+        },
+        {
+          "given": "Yunkai",
+          "family": "Sun"
+        },
+        {
+          "given": "Abdul W.",
+          "family": "Syed"
+        },
+        {
+          "given": "Souvik",
+          "family": "Ta"
+        },
+        {
+          "given": "Izumi",
+          "family": "Takahara"
+        },
+        {
+          "given": "Kelly",
+          "family": "Tallau"
+        },
+        {
+          "given": "Guannan",
+          "family": "Tang"
+        },
+        {
+          "given": "Ans B.",
+          "family": "Tariq"
+        },
+        {
+          "given": "Sui X.",
+          "family": "Tay"
+        },
+        {
+          "given": "Nurlybek",
+          "family": "Temirbay"
+        },
+        {
+          "given": "Surya P.",
+          "family": "Tiwari"
+        },
+        {
+          "given": "Febin",
+          "family": "Tom"
+        },
+        {
+          "given": "Tajah",
+          "family": "Trapier"
+        },
+        {
+          "given": "Kasidet J.",
+          "family": "Trerayapiwat"
+        },
+        {
+          "given": "Samanvya",
+          "family": "Tripathi"
+        },
+        {
+          "given": "Hawra H.",
+          "family": "Tuhaifa"
+        },
+        {
+          "given": "Mustafa",
+          "family": "Unal"
+        },
+        {
+          "given": "Mohammad",
+          "family": "Uzair"
+        },
+        {
+          "given": "Vallabh",
+          "family": "Vasudevan"
+        },
+        {
+          "given": "Estefania",
+          "family": "Vazquez"
+        },
+        {
+          "given": "Victor",
+          "family": "Venturi"
+        },
+        {
+          "given": "Rahul",
+          "family": "Verma"
+        },
+        {
+          "given": "Ashwini",
+          "family": "Verma"
+        },
+        {
+          "given": "Alvaro",
+          "family": "Vazquez-Mayagoitia"
+        },
+        {
+          "given": "Nicholas",
+          "family": "Wagner"
+        },
+        {
+          "given": "Araki",
+          "family": "Wakiuchi"
+        },
+        {
+          "given": "Hao",
+          "family": "Wan"
+        },
+        {
+          "given": "Liaoyaqi",
+          "family": "Wang"
+        },
+        {
+          "given": "Wolfgang",
+          "family": "Wenzel"
+        },
+        {
+          "given": "Alexander",
+          "family": "Wieczorek"
+        },
+        {
+          "given": "Sze H.",
+          "family": "Wong"
+        },
+        {
+          "given": "Yue",
+          "family": "Wu"
+        },
+        {
+          "given": "Tong",
+          "family": "Xie"
+        },
+        {
+          "given": "Andrew",
+          "family": "Yi"
+        },
+        {
+          "given": "Ziqi",
+          "family": "Yin"
+        },
+        {
+          "given": "Jodie A.",
+          "family": "Yuwono"
+        },
+        {
+          "given": "Nahed A.",
+          "family": "Zaid"
+        },
+        {
+          "given": "Mohd",
+          "family": "Zaki"
+        },
+        {
+          "given": "Shehtab",
+          "family": "Zaman"
+        },
+        {
+          "given": "Maimuna U.",
+          "family": "Zarewa"
+        },
+        {
+          "given": "Mahtab",
+          "family": "Zehtab"
+        },
+        {
+          "given": "Baosen",
+          "family": "Zhang"
+        },
+        {
+          "given": "Wenyu",
+          "family": "Zhang"
+        },
+        {
+          "given": "Melody",
+          "family": "Zhang"
+        },
+        {
+          "given": "Yangfan",
+          "family": "Zhang"
+        },
+        {
+          "given": "Yuwen",
+          "family": "Zhang"
+        },
+        {
+          "given": "Runze",
+          "family": "Zhang"
+        },
+        {
+          "given": "Zongmin",
+          "family": "Zhang"
+        },
+        {
+          "given": "Huanhuan",
+          "family": "Zhao"
+        },
+        {
+          "given": "Yuanlong Bill",
+          "family": "Zheng"
+        },
+        {
+          "given": "Ramzi",
+          "family": "Zidani"
+        },
+        {
+          "given": "Xue",
+          "family": "Zong"
+        },
+        {
+          "given": "Ian",
+          "family": "Foster"
+        },
+        {
+          "given": "Ben",
+          "family": "Blaiszik"
+        }
+      ],
+      "container-title": [
+        "arXiv Preprint"
+      ],
+      "year": "2026",
+      "publisher": "arXiv",
+      "arxivId": "2605.03205",
+      "primaryClass": ""
+    },
+    "processedInfo": {
+      "doi": "10.48550/ARXIV.2605.03205",
+      "arxivId": "2605.03205",
+      "isArxivDoi": true,
+      "journalTitle": "arXiv Preprint",
+      "year": "2026",
+      "month": "05",
+      "authors": [
+        {
+          "given": "Aritra",
+          "family": "Roy"
+        },
+        {
+          "given": "Kevin",
+          "family": "Shen"
+        },
+        {
+          "given": "Andrew",
+          "family": "MacBride"
+        },
+        {
+          "given": "Awwal",
+          "family": "Oladipupo"
+        },
+        {
+          "given": "Mudassra",
+          "family": "Taskeen"
+        },
+        {
+          "given": "Wojtek",
+          "family": "Treyde"
+        },
+        {
+          "given": "Ruaa A. E. A.",
+          "family": "Abakar"
+        },
+        {
+          "given": "Ahmad D.",
+          "family": "Abbas"
+        },
+        {
+          "given": "Elsayed",
+          "family": "Abdelfatah"
+        },
+        {
+          "given": "Abbas A.",
+          "family": "Abdullahi"
+        },
+        {
+          "given": "Seham S.",
+          "family": "Abyah"
+        },
+        {
+          "given": "Chahd Rahyl",
+          "family": "Adjmi"
+        },
+        {
+          "given": "Fariha",
+          "family": "Agbere"
+        },
+        {
+          "given": "Savyasanchi",
+          "family": "Aggarwal"
+        },
+        {
+          "given": "Muhammad",
+          "family": "Ahmed"
+        },
+        {
+          "given": "Tasnim",
+          "family": "Ahmed"
+        },
+        {
+          "given": "Motasem",
+          "family": "Ajlouni"
+        },
+        {
+          "given": "Mattias",
+          "family": "Akke"
+        },
+        {
+          "given": "Hussein",
+          "family": "AlAdwan"
+        },
+        {
+          "given": "Anwaar S.",
+          "family": "Alazani"
+        },
+        {
+          "given": "Zahra A.",
+          "family": "Alharbi"
+        },
+        {
+          "given": "Wajd A.",
+          "family": "Aljulyhi"
+        },
+        {
+          "given": "Mohammed A.",
+          "family": "AlKubaish"
+        },
+        {
+          "given": "Fatima A.",
+          "family": "Almahri"
+        },
+        {
+          "given": "Sayed A.",
+          "family": "Almohri"
+        },
+        {
+          "given": "David Obeh",
+          "family": "Alobo"
+        },
+        {
+          "given": "Mohammed",
+          "family": "Alouni"
+        },
+        {
+          "given": "Azizah S.",
+          "family": "Alqahtani"
+        },
+        {
+          "given": "Omar",
+          "family": "Alsaigh"
+        },
+        {
+          "given": "Husain",
+          "family": "Althagafi"
+        },
+        {
+          "given": "Md. Aqib",
+          "family": "Aman"
+        },
+        {
+          "given": "Lena",
+          "family": "Ara"
+        },
+        {
+          "given": "",
+          "family": "Arifin"
+        },
+        {
+          "given": "Ignacio",
+          "family": "Arretche"
+        },
+        {
+          "given": "Abdulaziz",
+          "family": "Ashy"
+        },
+        {
+          "given": "Syeda A.",
+          "family": "Asim"
+        },
+        {
+          "given": "Amro",
+          "family": "Aswad"
+        },
+        {
+          "given": "Adeel",
+          "family": "Atta"
+        },
+        {
+          "given": "Sören",
+          "family": "Auer"
+        },
+        {
+          "given": "Abdullah al",
+          "family": "Azmi"
+        },
+        {
+          "given": "Toheeb",
+          "family": "Balogun"
+        },
+        {
+          "given": "Suvo",
+          "family": "Banik"
+        },
+        {
+          "given": "Viktoriia",
+          "family": "Baibakova"
+        },
+        {
+          "given": "Shakira A.",
+          "family": "Baksh"
+        },
+        {
+          "given": "Neus G.",
+          "family": "Bastús"
+        },
+        {
+          "given": "Christina J.",
+          "family": "Bayard"
+        },
+        {
+          "given": "Adib",
+          "family": "Bazgir"
+        },
+        {
+          "given": "Louis",
+          "family": "Beal"
+        },
+        {
+          "given": "Lejla",
+          "family": "Biberić"
+        },
+        {
+          "given": "Wahid",
+          "family": "Billah"
+        },
+        {
+          "given": "Ankita",
+          "family": "Biswas"
+        },
+        {
+          "given": "Joshua",
+          "family": "Bocarsly"
+        },
+        {
+          "given": "Montassar T.",
+          "family": "Bouzidi"
+        },
+        {
+          "given": "Esma B.",
+          "family": "Boydas"
+        },
+        {
+          "given": "Youssef",
+          "family": "Briki"
+        },
+        {
+          "given": "Cailin",
+          "family": "Buchanan"
+        },
+        {
+          "given": "Mauricio",
+          "family": "Cafiero"
+        },
+        {
+          "given": "Damien",
+          "family": "Caliste"
+        },
+        {
+          "given": "Yi",
+          "family": "Cao"
+        },
+        {
+          "given": "Rafael E.",
+          "family": "Castañeda"
+        },
+        {
+          "given": "Sruthy K.",
+          "family": "Chandy"
+        },
+        {
+          "given": "Benjamin",
+          "family": "Charmes"
+        },
+        {
+          "given": "Shayantan",
+          "family": "Chaudhuri"
+        },
+        {
+          "given": "Yiming",
+          "family": "Chen"
+        },
+        {
+          "given": "Alexander",
+          "family": "Chen"
+        },
+        {
+          "given": "Jieneng",
+          "family": "Chen"
+        },
+        {
+          "given": "Min-Hsueh",
+          "family": "Chiu"
+        },
+        {
+          "given": "Defne",
+          "family": "Circi"
+        },
+        {
+          "given": "Cinthya H.",
+          "family": "Contreras"
+        },
+        {
+          "given": "Yoann",
+          "family": "Cure"
+        },
+        {
+          "given": "Nathan",
+          "family": "Daelman"
+        },
+        {
+          "given": "Roshini",
+          "family": "Dantuluri"
+        },
+        {
+          "given": "Thomas",
+          "family": "Davy"
+        },
+        {
+          "given": "William",
+          "family": "Dawson"
+        },
+        {
+          "given": "Leonid",
+          "family": "Didukh"
+        },
+        {
+          "given": "Rui",
+          "family": "Ding"
+        },
+        {
+          "given": "Aminu R.",
+          "family": "Doguwa"
+        },
+        {
+          "given": "Claudia",
+          "family": "Draxl"
+        },
+        {
+          "given": "Sathya",
+          "family": "Edamadaka"
+        },
+        {
+          "given": "Oulaya",
+          "family": "Elargab"
+        },
+        {
+          "given": "Christina",
+          "family": "Ertural"
+        },
+        {
+          "given": "Matthew L.",
+          "family": "Evans"
+        },
+        {
+          "given": "Edvin",
+          "family": "Fako"
+        },
+        {
+          "given": "Hossam",
+          "family": "Farag"
+        },
+        {
+          "given": "Nur A.",
+          "family": "Fathurrahman"
+        },
+        {
+          "given": "Merve",
+          "family": "Fedai"
+        },
+        {
+          "given": "Rodrigo P.",
+          "family": "Ferreira"
+        },
+        {
+          "given": "Giuseppe",
+          "family": "Fisicaro"
+        },
+        {
+          "given": "Thomas",
+          "family": "Frank"
+        },
+        {
+          "given": "Sasi K.",
+          "family": "Gaddipati"
+        },
+        {
+          "given": "Abhijeet",
+          "family": "Gangan"
+        },
+        {
+          "given": "Jennifer",
+          "family": "Garland"
+        },
+        {
+          "given": "James",
+          "family": "Garrick"
+        },
+        {
+          "given": "Luigi",
+          "family": "Genovese"
+        },
+        {
+          "given": "Maryam",
+          "family": "Ghadrdran"
+        },
+        {
+          "given": "Sandip",
+          "family": "Giri"
+        },
+        {
+          "given": "Maxime",
+          "family": "Goulet"
+        },
+        {
+          "given": "Jeremy",
+          "family": "Goumaz"
+        },
+        {
+          "given": "Sara U.",
+          "family": "Gracia"
+        },
+        {
+          "given": "Jacob",
+          "family": "Graham"
+        },
+        {
+          "given": "Gabriel",
+          "family": "Graves"
+        },
+        {
+          "given": "Kevin P.",
+          "family": "Greenman"
+        },
+        {
+          "given": "Tim",
+          "family": "Greitemeier"
+        },
+        {
+          "given": "Cameron",
+          "family": "Gruich"
+        },
+        {
+          "given": "Sophie",
+          "family": "Gu"
+        },
+        {
+          "given": "Salomé",
+          "family": "Guilbert"
+        },
+        {
+          "given": "Hans",
+          "family": "Gundlach"
+        },
+        {
+          "given": "Muriel F.",
+          "family": "Gusta"
+        },
+        {
+          "given": "Mourad El",
+          "family": "Haddaoui"
+        },
+        {
+          "given": "Alexander J.",
+          "family": "Haibel"
+        },
+        {
+          "given": "Anubhab",
+          "family": "Haldar"
+        },
+        {
+          "given": "Vehaan",
+          "family": "Handa"
+        },
+        {
+          "given": "Hassan",
+          "family": "Harb"
+        },
+        {
+          "given": "Nathan D.",
+          "family": "Harms"
+        },
+        {
+          "given": "Abdullah Al",
+          "family": "Hasan"
+        },
+        {
+          "given": "Abir",
+          "family": "Hassan"
+        },
+        {
+          "given": "Qiyao",
+          "family": "He"
+        },
+        {
+          "given": "Andrés",
+          "family": "Henao-Aristizábal"
+        },
+        {
+          "given": "Bram",
+          "family": "Hoex"
+        },
+        {
+          "given": "Sungil",
+          "family": "Hong"
+        },
+        {
+          "given": "Alexander J.",
+          "family": "Horvath"
+        },
+        {
+          "given": "Md. Shaib",
+          "family": "Hossain"
+        },
+        {
+          "given": "Yanqi",
+          "family": "Huang"
+        },
+        {
+          "given": "Yuqing",
+          "family": "Huang"
+        },
+        {
+          "given": "Kostiantyn",
+          "family": "Hubaiev"
+        },
+        {
+          "given": "Donald",
+          "family": "Intal"
+        },
+        {
+          "given": "Katherine",
+          "family": "Inzani"
+        },
+        {
+          "given": "Kevin",
+          "family": "Ishimwe"
+        },
+        {
+          "given": "Tugba",
+          "family": "Isik"
+        },
+        {
+          "given": "Gopal R.",
+          "family": "Iyer"
+        },
+        {
+          "given": "Katharina",
+          "family": "Jager"
+        },
+        {
+          "given": "Jan",
+          "family": "Janssen"
+        },
+        {
+          "given": "Hyewon",
+          "family": "Jeong"
+        },
+        {
+          "given": "Michael",
+          "family": "Jirasek"
+        },
+        {
+          "given": "Tyler R.",
+          "family": "Josephson"
+        },
+        {
+          "given": "Nisarg",
+          "family": "Joshi"
+        },
+        {
+          "given": "Yassir Ben",
+          "family": "Kacem"
+        },
+        {
+          "given": "Remya A. M.",
+          "family": "Kalapurakal"
+        },
+        {
+          "given": "Rakesh R.",
+          "family": "Kamath"
+        },
+        {
+          "given": "Sugan",
+          "family": "Kanagasenthinathan"
+        },
+        {
+          "given": "Dohun",
+          "family": "Kang"
+        },
+        {
+          "given": "Jason",
+          "family": "Kantorow"
+        },
+        {
+          "given": "Kübra",
+          "family": "Kaygisiz"
+        },
+        {
+          "given": "Murat",
+          "family": "Keceli"
+        },
+        {
+          "given": "Farhana",
+          "family": "Keya"
+        },
+        {
+          "given": "Muhammad U.",
+          "family": "Khan"
+        },
+        {
+          "given": "Sartaaj Takrim",
+          "family": "Khan"
+        },
+        {
+          "given": "Hyungjun",
+          "family": "Kim"
+        },
+        {
+          "given": "Alexander",
+          "family": "Kister"
+        },
+        {
+          "given": "Sascha",
+          "family": "Klawohn"
+        },
+        {
+          "given": "Collin",
+          "family": "Kovacs"
+        },
+        {
+          "given": "Pranav",
+          "family": "Krishnan"
+        },
+        {
+          "given": "Maurycy",
+          "family": "Kryzanowski"
+        },
+        {
+          "given": "Ritesh",
+          "family": "Kumar"
+        },
+        {
+          "given": "Suman",
+          "family": "Kumari"
+        },
+        {
+          "given": "Gourav",
+          "family": "Kumbhojkar"
+        },
+        {
+          "given": "Ryo",
+          "family": "Kuroki"
+        },
+        {
+          "given": "Shashank",
+          "family": "Kushwaha"
+        },
+        {
+          "given": "Magdalena",
+          "family": "Lederbauer"
+        },
+        {
+          "given": "Jaejun",
+          "family": "Lee"
+        },
+        {
+          "given": "Seunghan",
+          "family": "Lee"
+        },
+        {
+          "given": "Jeonghwan",
+          "family": "Lee"
+        },
+        {
+          "given": "Bingcan",
+          "family": "Li"
+        },
+        {
+          "given": "Calvin",
+          "family": "Li"
+        },
+        {
+          "given": "Zhanzhao",
+          "family": "Li"
+        },
+        {
+          "given": "Shi",
+          "family": "Li"
+        },
+        {
+          "given": "Shicheng",
+          "family": "Li"
+        },
+        {
+          "given": "Chengyan",
+          "family": "Liu"
+        },
+        {
+          "given": "Hao",
+          "family": "Liu"
+        },
+        {
+          "given": "Tung Yan",
+          "family": "Liu"
+        },
+        {
+          "given": "Yutong",
+          "family": "Liu"
+        },
+        {
+          "given": "Lucia",
+          "family": "Vina-Lopez"
+        },
+        {
+          "given": "Chayaphol",
+          "family": "Lortaraparsert"
+        },
+        {
+          "given": "Andre K. Y.",
+          "family": "Low"
+        },
+        {
+          "given": "Saffron",
+          "family": "Luxford"
+        },
+        {
+          "given": "Carlos",
+          "family": "Madariaga"
+        },
+        {
+          "given": "Rishikesh",
+          "family": "Magar"
+        },
+        {
+          "given": "Piyush R.",
+          "family": "Maharana"
+        },
+        {
+          "given": "Rahul",
+          "family": "Mallela"
+        },
+        {
+          "given": "Shoaib",
+          "family": "Mahmud"
+        },
+        {
+          "given": "Natesan",
+          "family": "Mani"
+        },
+        {
+          "given": "Umair",
+          "family": "Mansoor"
+        },
+        {
+          "given": "Omar B.",
+          "family": "Mansour"
+        },
+        {
+          "given": "Cassandra",
+          "family": "Masschelein"
+        },
+        {
+          "given": "Kinga O.",
+          "family": "Mastej"
+        },
+        {
+          "given": "Ankit",
+          "family": "Mathanker"
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Meng"
+        },
+        {
+          "given": "Omran",
+          "family": "Mezghani"
+        },
+        {
+          "given": "Yidong",
+          "family": "Ming"
+        },
+        {
+          "given": "Rishav",
+          "family": "Mitra"
+        },
+        {
+          "given": "Michail",
+          "family": "Mitsakis"
+        },
+        {
+          "given": "Matthew",
+          "family": "Miyagishima"
+        },
+        {
+          "given": "Ravikumar",
+          "family": "Mohan"
+        },
+        {
+          "given": "Naveen R.",
+          "family": "Mohanraj"
+        },
+        {
+          "given": "Trupti",
+          "family": "Mohanty"
+        },
+        {
+          "given": "Bernadette",
+          "family": "Mohr"
+        },
+        {
+          "given": "Francisco A.",
+          "family": "Molina-Bakhos"
+        },
+        {
+          "given": "Jeremy",
+          "family": "Monat"
+        },
+        {
+          "given": "Seyed Mohamad",
+          "family": "Moosavi"
+        },
+        {
+          "given": "Shayan",
+          "family": "Mousavi"
+        },
+        {
+          "given": "Arman",
+          "family": "Moussavi"
+        },
+        {
+          "given": "Rubel",
+          "family": "Mozumber"
+        },
+        {
+          "given": "Muhammad J.",
+          "family": "Mufti"
+        },
+        {
+          "given": "Diyana",
+          "family": "Muhammed"
+        },
+        {
+          "given": "Ram",
+          "family": "Munde"
+        },
+        {
+          "given": "Mrigi",
+          "family": "Munjal"
+        },
+        {
+          "given": "José A.",
+          "family": "Márquez"
+        },
+        {
+          "given": "Shankha",
+          "family": "Nag"
+        },
+        {
+          "given": "Giacomo",
+          "family": "Nagaro"
+        },
+        {
+          "given": "Juno",
+          "family": "Nam"
+        },
+        {
+          "given": "Jose M.",
+          "family": "Napoles-Duarte"
+        },
+        {
+          "given": "Ry",
+          "family": "Nduma"
+        },
+        {
+          "given": "Xuan-Vu",
+          "family": "Nguyen"
+        },
+        {
+          "given": "Ebrahim",
+          "family": "Norouzi"
+        },
+        {
+          "given": "Oluwatosin",
+          "family": "Ohiro"
+        },
+        {
+          "given": "Ryotaro",
+          "family": "Okabe"
+        },
+        {
+          "given": "Viejay",
+          "family": "Ordillo"
+        },
+        {
+          "given": "Shuichiro",
+          "family": "Ozawa"
+        },
+        {
+          "given": "Sebastian",
+          "family": "Pagel"
+        },
+        {
+          "given": "Daniel",
+          "family": "Palmer"
+        },
+        {
+          "given": "Angela",
+          "family": "Pan"
+        },
+        {
+          "given": "Akash",
+          "family": "Pandey"
+        },
+        {
+          "given": "Vivek",
+          "family": "Pandit"
+        },
+        {
+          "given": "Prakul",
+          "family": "Pandit"
+        },
+        {
+          "given": "Chiku",
+          "family": "Parida"
+        },
+        {
+          "given": "Jaehee",
+          "family": "Park"
+        },
+        {
+          "given": "Hyunsoo",
+          "family": "Park"
+        },
+        {
+          "given": "Hemangi",
+          "family": "Patel"
+        },
+        {
+          "given": "Shakul",
+          "family": "Pathak"
+        },
+        {
+          "given": "Taradutt",
+          "family": "Pattnaik"
+        },
+        {
+          "given": "Elena",
+          "family": "Patyukova"
+        },
+        {
+          "given": "Noah",
+          "family": "Paulson"
+        },
+        {
+          "given": "Deepak S.",
+          "family": "Pendyala"
+        },
+        {
+          "given": "Erick S.",
+          "family": "Pepek"
+        },
+        {
+          "given": "Martin H.",
+          "family": "Petersen"
+        },
+        {
+          "given": "Thang D.",
+          "family": "Pham"
+        },
+        {
+          "given": "Aniket",
+          "family": "Phutane"
+        },
+        {
+          "given": "Sabila K.",
+          "family": "Pinky"
+        },
+        {
+          "given": "Étienne",
+          "family": "Polack"
+        },
+        {
+          "given": "Alison",
+          "family": "Polasik"
+        },
+        {
+          "given": "Maria",
+          "family": "Politi"
+        },
+        {
+          "given": "Tim",
+          "family": "Pongratz"
+        },
+        {
+          "given": "Akhila",
+          "family": "Ponugoti"
+        },
+        {
+          "given": "Fabio",
+          "family": "Priante"
+        },
+        {
+          "given": "Thomas Michael",
+          "family": "Pruyn"
+        },
+        {
+          "given": "Sai S.",
+          "family": "Puppala"
+        },
+        {
+          "given": "Mohammad A.",
+          "family": "Qazi"
+        },
+        {
+          "given": "Heike",
+          "family": "Quosdorf"
+        },
+        {
+          "given": "Gollam",
+          "family": "Rabby"
+        },
+        {
+          "given": "Mohammad J.",
+          "family": "Raei"
+        },
+        {
+          "given": "Md. Habibur",
+          "family": "Rahman"
+        },
+        {
+          "given": "A. B. M. Ashikur",
+          "family": "Rahman"
+        },
+        {
+          "given": "Subhashree",
+          "family": "Rajasekaran"
+        },
+        {
+          "given": "Tawfiqur",
+          "family": "Rakib"
+        },
+        {
+          "given": "Hemanth N.",
+          "family": "Ramesh"
+        },
+        {
+          "given": "Vrushali",
+          "family": "Ranadive"
+        },
+        {
+          "given": "Karnamohit",
+          "family": "Ranka"
+        },
+        {
+          "given": "Bojana",
+          "family": "Rankovic"
+        },
+        {
+          "given": "Adwaith",
+          "family": "Ravichandran"
+        },
+        {
+          "given": "Ilija",
+          "family": "Rašović"
+        },
+        {
+          "given": "Sergei",
+          "family": "Rigin"
+        },
+        {
+          "given": "Tatem",
+          "family": "Rios"
+        },
+        {
+          "given": "Varun",
+          "family": "Rishi"
+        },
+        {
+          "given": "Victor Naden",
+          "family": "Robinson"
+        },
+        {
+          "given": "Lucas S.",
+          "family": "Rodrigues"
+        },
+        {
+          "given": "Oswaldo",
+          "family": "Rodriguez"
+        },
+        {
+          "given": "Mahule",
+          "family": "Roy"
+        },
+        {
+          "given": "Diptendu",
+          "family": "Roy"
+        },
+        {
+          "given": "Subhas",
+          "family": "Roy"
+        },
+        {
+          "given": "Arokia Anto Royan",
+          "family": "M"
+        },
+        {
+          "given": "Joseph F.",
+          "family": "Rudzinski"
+        },
+        {
+          "given": "Muhammad",
+          "family": "Sabih"
+        },
+        {
+          "given": "Subramanyam",
+          "family": "Sahoo"
+        },
+        {
+          "given": "Srusti Bheem",
+          "family": "Sain"
+        },
+        {
+          "given": "Thahira",
+          "family": "Saliya"
+        },
+        {
+          "given": "Vignesh",
+          "family": "Sampath"
+        },
+        {
+          "given": "Jesus Diaz",
+          "family": "Sanchez"
+        },
+        {
+          "given": "Arthur S. S.",
+          "family": "Santos"
+        },
+        {
+          "given": "Muliady",
+          "family": "Satria"
+        },
+        {
+          "given": "Hasan M.",
+          "family": "Sayeed"
+        },
+        {
+          "given": "Jörg",
+          "family": "Schaarschmidt"
+        },
+        {
+          "given": "Philippe",
+          "family": "Schwaller"
+        },
+        {
+          "given": "Nofit",
+          "family": "Segal"
+        },
+        {
+          "given": "Abhishec",
+          "family": "Senthilvel"
+        },
+        {
+          "given": "Sherjeel",
+          "family": "Shabih"
+        },
+        {
+          "given": "Devanshu",
+          "family": "Shah"
+        },
+        {
+          "given": "Faezeh",
+          "family": "Shahmoradi"
+        },
+        {
+          "given": "Samiha",
+          "family": "Sharlin"
+        },
+        {
+          "given": "Killian",
+          "family": "Sheriff"
+        },
+        {
+          "given": "Qiuyu",
+          "family": "Shi"
+        },
+        {
+          "given": "Abubakar D.",
+          "family": "Shuaibu"
+        },
+        {
+          "given": "Ayesha",
+          "family": "Siddiqua"
+        },
+        {
+          "given": "M. A. Shadab",
+          "family": "Siddiqui"
+        },
+        {
+          "given": "Darian",
+          "family": "Smalley"
+        },
+        {
+          "given": "Benjamin",
+          "family": "Smith"
+        },
+        {
+          "given": "Taylor D.",
+          "family": "Sparks"
+        },
+        {
+          "given": "Daniel T.",
+          "family": "Speckhard"
+        },
+        {
+          "given": "Elena",
+          "family": "Stojanovska"
+        },
+        {
+          "given": "Akshay",
+          "family": "Subramanian"
+        },
+        {
+          "given": "Jiwon",
+          "family": "Sun"
+        },
+        {
+          "given": "Yunkai",
+          "family": "Sun"
+        },
+        {
+          "given": "Abdul W.",
+          "family": "Syed"
+        },
+        {
+          "given": "Souvik",
+          "family": "Ta"
+        },
+        {
+          "given": "Izumi",
+          "family": "Takahara"
+        },
+        {
+          "given": "Kelly",
+          "family": "Tallau"
+        },
+        {
+          "given": "Guannan",
+          "family": "Tang"
+        },
+        {
+          "given": "Ans B.",
+          "family": "Tariq"
+        },
+        {
+          "given": "Sui X.",
+          "family": "Tay"
+        },
+        {
+          "given": "Nurlybek",
+          "family": "Temirbay"
+        },
+        {
+          "given": "Surya P.",
+          "family": "Tiwari"
+        },
+        {
+          "given": "Febin",
+          "family": "Tom"
+        },
+        {
+          "given": "Tajah",
+          "family": "Trapier"
+        },
+        {
+          "given": "Kasidet J.",
+          "family": "Trerayapiwat"
+        },
+        {
+          "given": "Samanvya",
+          "family": "Tripathi"
+        },
+        {
+          "given": "Hawra H.",
+          "family": "Tuhaifa"
+        },
+        {
+          "given": "Mustafa",
+          "family": "Unal"
+        },
+        {
+          "given": "Mohammad",
+          "family": "Uzair"
+        },
+        {
+          "given": "Vallabh",
+          "family": "Vasudevan"
+        },
+        {
+          "given": "Estefania",
+          "family": "Vazquez"
+        },
+        {
+          "given": "Victor",
+          "family": "Venturi"
+        },
+        {
+          "given": "Rahul",
+          "family": "Verma"
+        },
+        {
+          "given": "Ashwini",
+          "family": "Verma"
+        },
+        {
+          "given": "Alvaro",
+          "family": "Vazquez-Mayagoitia"
+        },
+        {
+          "given": "Nicholas",
+          "family": "Wagner"
+        },
+        {
+          "given": "Araki",
+          "family": "Wakiuchi"
+        },
+        {
+          "given": "Hao",
+          "family": "Wan"
+        },
+        {
+          "given": "Liaoyaqi",
+          "family": "Wang"
+        },
+        {
+          "given": "Wolfgang",
+          "family": "Wenzel"
+        },
+        {
+          "given": "Alexander",
+          "family": "Wieczorek"
+        },
+        {
+          "given": "Sze H.",
+          "family": "Wong"
+        },
+        {
+          "given": "Yue",
+          "family": "Wu"
+        },
+        {
+          "given": "Tong",
+          "family": "Xie"
+        },
+        {
+          "given": "Andrew",
+          "family": "Yi"
+        },
+        {
+          "given": "Ziqi",
+          "family": "Yin"
+        },
+        {
+          "given": "Jodie A.",
+          "family": "Yuwono"
+        },
+        {
+          "given": "Nahed A.",
+          "family": "Zaid"
+        },
+        {
+          "given": "Mohd",
+          "family": "Zaki"
+        },
+        {
+          "given": "Shehtab",
+          "family": "Zaman"
+        },
+        {
+          "given": "Maimuna U.",
+          "family": "Zarewa"
+        },
+        {
+          "given": "Mahtab",
+          "family": "Zehtab"
+        },
+        {
+          "given": "Baosen",
+          "family": "Zhang"
+        },
+        {
+          "given": "Wenyu",
+          "family": "Zhang"
+        },
+        {
+          "given": "Melody",
+          "family": "Zhang"
+        },
+        {
+          "given": "Yangfan",
+          "family": "Zhang"
+        },
+        {
+          "given": "Yuwen",
+          "family": "Zhang"
+        },
+        {
+          "given": "Runze",
+          "family": "Zhang"
+        },
+        {
+          "given": "Zongmin",
+          "family": "Zhang"
+        },
+        {
+          "given": "Huanhuan",
+          "family": "Zhao"
+        },
+        {
+          "given": "Yuanlong Bill",
+          "family": "Zheng"
+        },
+        {
+          "given": "Ramzi",
+          "family": "Zidani"
+        },
+        {
+          "given": "Xue",
+          "family": "Zong"
+        },
+        {
+          "given": "Ian",
+          "family": "Foster"
+        },
+        {
+          "given": "Ben",
+          "family": "Blaiszik"
+        }
+      ]
+    }
+  },
+  {
+    "put-code": 226471547,
+    "created-date": {
+      "value": 1789166349843
+    },
+    "last-modified-date": {
+      "value": 1789166368312
+    },
+    "source": {
+      "source-orcid": {
+        "uri": "https://orcid.org/0000-0003-0243-9124",
+        "path": "0000-0003-0243-9124",
+        "host": "orcid.org"
+      },
+      "source-client-id": null,
+      "source-name": {
+        "value": "Aritra Roy"
+      },
+      "assertion-origin-orcid": null,
+      "assertion-origin-client-id": null,
+      "assertion-origin-name": null
+    },
+    "title": {
+      "title": {
+        "value": "Beyond Text and Tables: Vision-Language Model Integration in ComProScanner for Extracting Materials Data from Scientific Figures with High Accuracy"
+      },
+      "subtitle": null,
+      "translated-title": null
+    },
+    "external-ids": {
+      "external-id": [
+        {
+          "external-id-type": "doi",
+          "external-id-value": "10.48550/ARXIV.2606.00065",
+          "external-id-normalized": {
+            "value": "10.48550/arxiv.2606.00065",
+            "transient": true
+          },
+          "external-id-normalized-error": null,
+          "external-id-url": {
+            "value": "https://doi.org/10.48550/arxiv.2606.00065"
+          },
+          "external-id-relationship": "self"
+        }
+      ]
+    },
+    "url": {
+      "value": "https://arxiv.org/abs/2606.00065"
+    },
+    "type": "preprint",
+    "publication-date": {
+      "year": {
+        "value": "2026"
+      },
+      "month": null,
+      "day": null
+    },
+    "journal-title": {
+      "value": "arXiv Preprint"
+    },
+    "visibility": "public",
+    "path": "/0000-0003-0243-9124/work/226471547",
+    "display-index": "0",
+    "metadata": {
+      "type": "arxiv",
+      "title": "Beyond Text and Tables: Vision-Language Model Integration in ComProScanner for Extracting Materials Data from Scientific Figures with High Accuracy",
+      "author": [
+        {
+          "given": "Aritra",
+          "family": "Roy"
+        },
+        {
+          "given": "Enrico",
+          "family": "Grisan"
+        },
+        {
+          "given": "Chiara",
+          "family": "Gattinoni"
+        },
+        {
+          "given": "John",
+          "family": "Buckeridge"
+        }
+      ],
+      "container-title": [
+        "arXiv Preprint"
+      ],
+      "year": "2026",
+      "publisher": "arXiv",
+      "arxivId": "2606.00065",
+      "primaryClass": ""
+    },
+    "processedInfo": {
+      "doi": "10.48550/ARXIV.2606.00065",
+      "arxivId": "2606.00065",
+      "isArxivDoi": true,
+      "journalTitle": "arXiv Preprint",
+      "year": "2026",
+      "month": "",
+      "authors": [
+        {
+          "given": "Aritra",
+          "family": "Roy"
+        },
+        {
+          "given": "Enrico",
+          "family": "Grisan"
+        },
+        {
+          "given": "Chiara",
+          "family": "Gattinoni"
+        },
+        {
+          "given": "John",
+          "family": "Buckeridge"
+        }
+      ]
+    }
+  },
   {
     "put-code": 210456540,
     "created-date": {
@@ -71,13 +3103,13 @@ const publications = [
         "date-parts": [
           [
             2026,
-            4,
-            22
+            7,
+            2
           ]
         ],
-        "date-time": "2026-04-22T16:57:40Z",
-        "timestamp": 1776877060687,
-        "version": "3.51.2"
+        "date-time": "2026-07-02T05:35:33Z",
+        "timestamp": 1782970533379,
+        "version": "3.54.5"
       },
       "reference-count": 75,
       "publisher": "Royal Society of Chemistry (RSC)",
@@ -170,6 +3202,12 @@ const publications = [
             {
               "name": "School of Engineering and Design, London South Bank University, London SE1 0AA, UK"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -181,6 +3219,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Bioscience and Bioengineering Research Centre, London South Bank University, London SE1 0AA, UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -197,6 +3241,12 @@ const publications = [
             {
               "name": "School of Engineering and Design, London South Bank University, London SE1 0AA, UK"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -208,6 +3258,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Physics, King's College London, London WC2R 2LS, UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
@@ -845,17 +3901,17 @@ const publications = [
         "date-parts": [
           [
             2026,
-            4,
-            22
+            7,
+            2
           ]
         ],
-        "date-time": "2026-04-22T16:22:41Z",
-        "timestamp": 1776874961000
+        "date-time": "2026-07-02T04:21:59Z",
+        "timestamp": 1782966119000
       },
       "score": 1,
       "resource": {
         "primary": {
-          "URL": "https://xlink.rsc.org/?DOI=D5DD00521C"
+          "URL": "https://pubs.rsc.org/dd/article/5/4/1794-1808/1231138"
         }
       },
       "subtitle": [],
@@ -974,6 +4030,12 @@ const publications = [
             {
               "name": "School of Engineering and Design, London South Bank University, London SE1 0AA, UK"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -985,6 +4047,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Bioscience and Bioengineering Research Centre, London South Bank University, London SE1 0AA, UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -1001,6 +4069,12 @@ const publications = [
             {
               "name": "School of Engineering and Design, London South Bank University, London SE1 0AA, UK"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -1012,6 +4086,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Physics, King's College London, London WC2R 2LS, UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
@@ -1086,13 +4166,13 @@ const publications = [
         "date-parts": [
           [
             2026,
-            2,
-            26
+            7,
+            2
           ]
         ],
-        "date-time": "2026-02-26T20:15:42Z",
-        "timestamp": 1772136942020,
-        "version": "3.50.1"
+        "date-time": "2026-07-02T05:34:21Z",
+        "timestamp": 1782970461662,
+        "version": "3.54.5"
       },
       "reference-count": 84,
       "publisher": "Royal Society of Chemistry (RSC)",
@@ -1211,7 +4291,7 @@ const publications = [
       "page": "317-326",
       "update-policy": "https://doi.org/10.1039/rsc_crossmark_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 0,
+      "is-referenced-by-count": 1,
       "title": [
         "Engineering high-capacity hydrogen storage in pristine Ca\n                    <sub>12</sub>\n                    O\n                    <sub>12</sub>\n                    nanocages\n                    <i>via</i>\n                    cooperative adsorption"
       ],
@@ -1228,6 +4308,12 @@ const publications = [
             {
               "name": "Departament de Ciència de Materials i Química Física & Institut de Química Teòrica i Computacional (IQTCUB), Universitat de Barcelona, C/ Martí i Franquès 1, Barcelona 08028, Spain"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -1239,6 +4325,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Chemical and Energy Engineering, London South Bank University, 103 Borough Rd, London SE1 0AA, UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -1252,6 +4344,12 @@ const publications = [
             {
               "name": "Departament de Ciència de Materials i Química Física & Institut de Química Teòrica i Computacional (IQTCUB), Universitat de Barcelona, C/ Martí i Franquès 1, Barcelona 08028, Spain"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -1263,6 +4361,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Chemistry and Forensic Science, School of Natural Sciences, University of Kent, Park Wood Rd, Canterbury CT2 7NH, UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
@@ -2109,17 +5213,17 @@ const publications = [
         "date-parts": [
           [
             2026,
-            1,
-            5
+            7,
+            2
           ]
         ],
-        "date-time": "2026-01-05T12:04:07Z",
-        "timestamp": 1767614647000
+        "date-time": "2026-07-02T04:21:47Z",
+        "timestamp": 1782966107000
       },
       "score": 1,
       "resource": {
         "primary": {
-          "URL": "https://xlink.rsc.org/?DOI=D5NJ04215A"
+          "URL": "https://pubs.rsc.org/nj/article/50/1/317-326/900235"
         }
       },
       "subtitle": [],
@@ -2205,6 +5309,12 @@ const publications = [
             {
               "name": "Departament de Ciència de Materials i Química Física & Institut de Química Teòrica i Computacional (IQTCUB), Universitat de Barcelona, C/ Martí i Franquès 1, Barcelona 08028, Spain"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -2216,6 +5326,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Chemical and Energy Engineering, London South Bank University, 103 Borough Rd, London SE1 0AA, UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -2229,6 +5345,12 @@ const publications = [
             {
               "name": "Departament de Ciència de Materials i Química Física & Institut de Química Teòrica i Computacional (IQTCUB), Universitat de Barcelona, C/ Martí i Franquès 1, Barcelona 08028, Spain"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -2240,6 +5362,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Chemistry and Forensic Science, School of Natural Sciences, University of Kent, Park Wood Rd, Canterbury CT2 7NH, UK"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
@@ -2318,13 +5446,13 @@ const publications = [
         "date-parts": [
           [
             2026,
-            1,
-            23
+            9,
+            4
           ]
         ],
-        "date-time": "2026-01-23T08:38:59Z",
-        "timestamp": 1769157539840,
-        "version": "3.49.0"
+        "date-time": "2026-09-04T03:54:38Z",
+        "timestamp": 1788494078133,
+        "version": "build-2803163510"
       },
       "reference-count": 60,
       "publisher": "American Chemical Society (ACS)",
@@ -2424,7 +5552,7 @@ const publications = [
       },
       "page": "20463-20476",
       "source": "Crossref",
-      "is-referenced-by-count": 1,
+      "is-referenced-by-count": 4,
       "title": [
         "Pristine Nanostructured α-Ni(OH)\n                    <sub>2</sub>\n                    as a Nonenzymatic Electrochemical Strip Sensor for Trace Detection of Phenolic Compounds"
       ],
@@ -2448,6 +5576,12 @@ const publications = [
                 "Gandhinagar, India"
               ]
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -2459,6 +5593,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Chemical and Energy Engineering, London South Bank University, 103 Borough Road, London SE1 0AA, U.K."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -2481,6 +5621,12 @@ const publications = [
                 "Donostia-San Sebastián, Spain"
               ]
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -2492,6 +5638,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Chemistry and Forensic Science, School of Natural Sciences, University of Kent, Park Wood Rd, Canterbury CT2 7NH, U.K."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -2511,6 +5663,12 @@ const publications = [
               "place": [
                 "Gandhinagar, India"
               ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -2532,6 +5690,12 @@ const publications = [
               "place": [
                 "Gandhinagar, India"
               ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
@@ -2965,6 +6129,12 @@ const publications = [
                 "Gandhinagar, India"
               ]
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -2976,6 +6146,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Chemical and Energy Engineering, London South Bank University, 103 Borough Road, London SE1 0AA, U.K."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -2998,6 +6174,12 @@ const publications = [
                 "Donostia-San Sebastián, Spain"
               ]
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -3009,6 +6191,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Chemistry and Forensic Science, School of Natural Sciences, University of Kent, Park Wood Rd, Canterbury CT2 7NH, U.K."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -3028,6 +6216,12 @@ const publications = [
               "place": [
                 "Gandhinagar, India"
               ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -3049,6 +6243,12 @@ const publications = [
               "place": [
                 "Gandhinagar, India"
               ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
@@ -3140,13 +6340,13 @@ const publications = [
         "date-parts": [
           [
             2026,
-            4,
-            26
+            9,
+            11
           ]
         ],
-        "date-time": "2026-04-26T03:43:24Z",
-        "timestamp": 1777175004857,
-        "version": "3.51.4"
+        "date-time": "2026-09-11T17:35:12Z",
+        "timestamp": 1789148112428,
+        "version": "build-2803163510"
       },
       "reference-count": 125,
       "publisher": "IOP Publishing",
@@ -3266,7 +6466,7 @@ const publications = [
       "page": "030701",
       "update-policy": "https://doi.org/10.1088/crossmark-policy",
       "source": "Crossref",
-      "is-referenced-by-count": 9,
+      "is-referenced-by-count": 17,
       "title": [
         "32 examples of LLM applications in materials science and chemistry: towards automation, assistants, agents, and accelerated scientific discovery"
       ],
@@ -3279,7 +6479,13 @@ const publications = [
           "given": "Yoel",
           "family": "Zimmermann",
           "sequence": "first",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-6475-8505",
@@ -3287,7 +6493,13 @@ const publications = [
           "given": "Adib",
           "family": "Bazgir",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0004-8377-7049",
@@ -3295,7 +6507,13 @@ const publications = [
           "given": "Alexander",
           "family": "Al-Feghali",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-5696-9193",
@@ -3303,7 +6521,13 @@ const publications = [
           "given": "Mehrad",
           "family": "Ansari",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-7523-152X",
@@ -3311,7 +6535,13 @@ const publications = [
           "given": "Joshua",
           "family": "Bocarsly",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-2551-1563",
@@ -3319,7 +6549,13 @@ const publications = [
           "given": "L Catherine",
           "family": "Brinson",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-4017-7084",
@@ -3327,7 +6563,13 @@ const publications = [
           "given": "Yuan",
           "family": "Chiang",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-5761-0198",
@@ -3335,7 +6577,13 @@ const publications = [
           "given": "Defne",
           "family": "Circi",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-0637-7856",
@@ -3343,7 +6591,13 @@ const publications = [
           "given": "Min-Hsueh",
           "family": "Chiu",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-7647-1816",
@@ -3351,7 +6605,13 @@ const publications = [
           "given": "Nathan",
           "family": "Daelman",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-1182-9098",
@@ -3359,13 +6619,25 @@ const publications = [
           "given": "Matthew L",
           "family": "Evans",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Abhijeet S",
           "family": "Gangan",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-8907-0336",
@@ -3373,7 +6645,13 @@ const publications = [
           "given": "Janine",
           "family": "George",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-6016-3122",
@@ -3381,7 +6659,13 @@ const publications = [
           "given": "Hassan",
           "family": "Harb",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0005-2476-8043",
@@ -3389,7 +6673,13 @@ const publications = [
           "given": "Ghazal",
           "family": "Khalighinejad",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0009-2131-9700",
@@ -3397,7 +6687,13 @@ const publications = [
           "given": "Sartaaj",
           "family": "Takrim Khan",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-4850-776X",
@@ -3405,7 +6701,13 @@ const publications = [
           "given": "Sascha",
           "family": "Klawohn",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0008-0665-1839",
@@ -3413,7 +6715,13 @@ const publications = [
           "given": "Magdalena",
           "family": "Lederbauer",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-8879-5431",
@@ -3421,7 +6729,13 @@ const publications = [
           "given": "Soroush",
           "family": "Mahjoubi",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-0903-0073",
@@ -3429,7 +6743,13 @@ const publications = [
           "given": "Bernadette",
           "family": "Mohr",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-0357-5729",
@@ -3437,7 +6757,13 @@ const publications = [
           "given": "Seyed",
           "family": "Mohamad Moosavi",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-6071-6786",
@@ -3445,7 +6771,13 @@ const publications = [
           "given": "Aakash",
           "family": "Naik",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-0281-3860",
@@ -3453,7 +6785,13 @@ const publications = [
           "given": "Aleyna",
           "family": "Beste Ozhan",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-8906-8447",
@@ -3461,7 +6799,13 @@ const publications = [
           "given": "Dieter",
           "family": "Plessers",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-0243-9124",
@@ -3469,13 +6813,25 @@ const publications = [
           "given": "Aritra",
           "family": "Roy",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Fabian",
           "family": "Schöppach",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-3046-6576",
@@ -3483,7 +6839,13 @@ const publications = [
           "given": "Philippe",
           "family": "Schwaller",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0004-3786-0773",
@@ -3491,7 +6853,13 @@ const publications = [
           "given": "Carla",
           "family": "Terboven",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0003-2967-1182",
@@ -3499,7 +6867,13 @@ const publications = [
           "given": "Katharina",
           "family": "Ueltzen",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-2874-8267",
@@ -3507,7 +6881,13 @@ const publications = [
           "given": "Yue",
           "family": "Wu",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-8433-8599",
@@ -3515,7 +6895,13 @@ const publications = [
           "given": "Shang",
           "family": "Zhu",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-9948-7119",
@@ -3523,13 +6909,25 @@ const publications = [
           "given": "Jan",
           "family": "Janssen",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Calvin",
           "family": "Li",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-2129-5269",
@@ -3537,7 +6935,13 @@ const publications = [
           "given": "Ian",
           "family": "Foster",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-5326-4902",
@@ -3545,7 +6949,13 @@ const publications = [
           "given": "Ben",
           "family": "Blaiszik",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         }
       ],
       "member": "266",
@@ -4882,7 +8292,13 @@ const publications = [
           "given": "Yoel",
           "family": "Zimmermann",
           "sequence": "first",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-6475-8505",
@@ -4890,7 +8306,13 @@ const publications = [
           "given": "Adib",
           "family": "Bazgir",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0004-8377-7049",
@@ -4898,7 +8320,13 @@ const publications = [
           "given": "Alexander",
           "family": "Al-Feghali",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-5696-9193",
@@ -4906,7 +8334,13 @@ const publications = [
           "given": "Mehrad",
           "family": "Ansari",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-7523-152X",
@@ -4914,7 +8348,13 @@ const publications = [
           "given": "Joshua",
           "family": "Bocarsly",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-2551-1563",
@@ -4922,7 +8362,13 @@ const publications = [
           "given": "L Catherine",
           "family": "Brinson",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-4017-7084",
@@ -4930,7 +8376,13 @@ const publications = [
           "given": "Yuan",
           "family": "Chiang",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-5761-0198",
@@ -4938,7 +8390,13 @@ const publications = [
           "given": "Defne",
           "family": "Circi",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-0637-7856",
@@ -4946,7 +8404,13 @@ const publications = [
           "given": "Min-Hsueh",
           "family": "Chiu",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-7647-1816",
@@ -4954,7 +8418,13 @@ const publications = [
           "given": "Nathan",
           "family": "Daelman",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-1182-9098",
@@ -4962,13 +8432,25 @@ const publications = [
           "given": "Matthew L",
           "family": "Evans",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Abhijeet S",
           "family": "Gangan",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-8907-0336",
@@ -4976,7 +8458,13 @@ const publications = [
           "given": "Janine",
           "family": "George",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-6016-3122",
@@ -4984,7 +8472,13 @@ const publications = [
           "given": "Hassan",
           "family": "Harb",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0005-2476-8043",
@@ -4992,7 +8486,13 @@ const publications = [
           "given": "Ghazal",
           "family": "Khalighinejad",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0009-2131-9700",
@@ -5000,7 +8500,13 @@ const publications = [
           "given": "Sartaaj",
           "family": "Takrim Khan",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-4850-776X",
@@ -5008,7 +8514,13 @@ const publications = [
           "given": "Sascha",
           "family": "Klawohn",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0008-0665-1839",
@@ -5016,7 +8528,13 @@ const publications = [
           "given": "Magdalena",
           "family": "Lederbauer",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-8879-5431",
@@ -5024,7 +8542,13 @@ const publications = [
           "given": "Soroush",
           "family": "Mahjoubi",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-0903-0073",
@@ -5032,7 +8556,13 @@ const publications = [
           "given": "Bernadette",
           "family": "Mohr",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-0357-5729",
@@ -5040,7 +8570,13 @@ const publications = [
           "given": "Seyed",
           "family": "Mohamad Moosavi",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-6071-6786",
@@ -5048,7 +8584,13 @@ const publications = [
           "given": "Aakash",
           "family": "Naik",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-0281-3860",
@@ -5056,7 +8598,13 @@ const publications = [
           "given": "Aleyna",
           "family": "Beste Ozhan",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-8906-8447",
@@ -5064,7 +8612,13 @@ const publications = [
           "given": "Dieter",
           "family": "Plessers",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-0243-9124",
@@ -5072,13 +8626,25 @@ const publications = [
           "given": "Aritra",
           "family": "Roy",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Fabian",
           "family": "Schöppach",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-3046-6576",
@@ -5086,7 +8652,13 @@ const publications = [
           "given": "Philippe",
           "family": "Schwaller",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0004-3786-0773",
@@ -5094,7 +8666,13 @@ const publications = [
           "given": "Carla",
           "family": "Terboven",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0009-0003-2967-1182",
@@ -5102,7 +8680,13 @@ const publications = [
           "given": "Katharina",
           "family": "Ueltzen",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-2874-8267",
@@ -5110,7 +8694,13 @@ const publications = [
           "given": "Yue",
           "family": "Wu",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-8433-8599",
@@ -5118,7 +8708,13 @@ const publications = [
           "given": "Shang",
           "family": "Zhu",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-9948-7119",
@@ -5126,13 +8722,25 @@ const publications = [
           "given": "Jan",
           "family": "Janssen",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Calvin",
           "family": "Li",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-2129-5269",
@@ -5140,7 +8748,13 @@ const publications = [
           "given": "Ian",
           "family": "Foster",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-5326-4902",
@@ -5148,7 +8762,13 @@ const publications = [
           "given": "Ben",
           "family": "Blaiszik",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         }
       ]
     }
@@ -5223,13 +8843,13 @@ const publications = [
         "date-parts": [
           [
             2026,
-            2,
-            6
+            9,
+            3
           ]
         ],
-        "date-time": "2026-02-06T06:34:46Z",
-        "timestamp": 1770359686623,
-        "version": "3.49.0"
+        "date-time": "2026-09-03T04:55:28Z",
+        "timestamp": 1788411328496,
+        "version": "build-2803163510"
       },
       "reference-count": 111,
       "publisher": "Elsevier BV",
@@ -5381,13 +9001,13 @@ const publications = [
             13
           ]
         ],
-        "date-time": "2024-11-13T07:57:49Z",
-        "timestamp": 1731484669000
+        "date-time": "2024-11-13T02:57:49Z",
+        "timestamp": 1731466669000
       },
       "page": "116154",
       "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 7,
+      "is-referenced-by-count": 8,
       "special_numbering": "C",
       "title": [
         "A copper complex receptor for nanomolar sulfide sensing and applications in DNA/BSA binding"
@@ -5399,7 +9019,13 @@ const publications = [
           "given": "Dipankar",
           "family": "Das",
           "sequence": "first",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-0243-9124",
@@ -5407,7 +9033,13 @@ const publications = [
           "given": "Aritra",
           "family": "Roy",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-5545-004X",
@@ -5415,13 +9047,25 @@ const publications = [
           "given": "Cauê P.",
           "family": "Souza",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Somnath",
           "family": "Mondal",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-3905-4394",
@@ -5429,13 +9073,25 @@ const publications = [
           "given": "Sourav",
           "family": "Sutradhar",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Parnashabari",
           "family": "Sarkar",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-8200-8262",
@@ -5443,13 +9099,25 @@ const publications = [
           "given": "Felipe",
           "family": "Fantuzzi",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Biswa Nath",
           "family": "Ghosh",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         }
       ],
       "member": "78",
@@ -6662,13 +10330,13 @@ const publications = [
       "deposited": {
         "date-parts": [
           [
-            2024,
-            12,
-            12
+            2026,
+            5,
+            14
           ]
         ],
-        "date-time": "2024-12-12T08:51:14Z",
-        "timestamp": 1733993474000
+        "date-time": "2026-05-14T21:31:05Z",
+        "timestamp": 1778794265000
       },
       "score": 1,
       "resource": {
@@ -6756,7 +10424,13 @@ const publications = [
           "given": "Dipankar",
           "family": "Das",
           "sequence": "first",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0003-0243-9124",
@@ -6764,7 +10438,13 @@ const publications = [
           "given": "Aritra",
           "family": "Roy",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0001-5545-004X",
@@ -6772,13 +10452,25 @@ const publications = [
           "given": "Cauê P.",
           "family": "Souza",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Somnath",
           "family": "Mondal",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-3905-4394",
@@ -6786,13 +10478,25 @@ const publications = [
           "given": "Sourav",
           "family": "Sutradhar",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Parnashabari",
           "family": "Sarkar",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "ORCID": "https://orcid.org/0000-0002-8200-8262",
@@ -6800,13 +10504,25 @@ const publications = [
           "given": "Felipe",
           "family": "Fantuzzi",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         },
         {
           "given": "Biswa Nath",
           "family": "Ghosh",
           "sequence": "additional",
-          "affiliation": []
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
         }
       ]
     }
@@ -7162,6 +10878,12 @@ const publications = [
             {
               "name": "Institute for Sustainable Chemistry & Catalysis with Boron, Julius-Maximilians-Universität Würzburg, Am Hubland, 97074 Würzburg, Germany"
             }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
           ]
         },
         {
@@ -7180,6 +10902,12 @@ const publications = [
             {
               "name": "Institute for Physical and Theoretical Chemistry, Julius-Maximilians-Universität Würzburg, Emil-Fischer-Str. 42, 97074 Würzburg, Germany"
             }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
           ]
         },
         {
@@ -7191,6 +10919,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Chemical and Energy Engineering, London South Bank University, 103 Borough Road, London SE1 0AA, U.K."
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
             }
           ]
         },
@@ -7207,6 +10941,12 @@ const publications = [
             {
               "name": "Institute for Sustainable Chemistry & Catalysis with Boron, Julius-Maximilians-Universität Würzburg, Am Hubland, 97074 Würzburg, Germany"
             }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
           ]
         },
         {
@@ -7220,6 +10960,12 @@ const publications = [
             {
               "name": "Institute for Sustainable Chemistry & Catalysis with Boron, Julius-Maximilians-Universität Würzburg, Am Hubland, 97074 Würzburg, Germany"
             }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
           ]
         },
         {
@@ -7231,6 +10977,12 @@ const publications = [
           "affiliation": [
             {
               "name": "School of Chemistry and Forensic Science, University of Kent, Park Wood Rd, Canterbury CT2 7NH, U.K."
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
             }
           ]
         },
@@ -7246,6 +10998,12 @@ const publications = [
             },
             {
               "name": "Institute for Sustainable Chemistry & Catalysis with Boron, Julius-Maximilians-Universität Würzburg, Am Hubland, 97074 Würzburg, Germany"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
             }
           ]
         }
@@ -7683,6 +11441,12 @@ const publications = [
             {
               "name": "Institute for Sustainable Chemistry & Catalysis with Boron, Julius-Maximilians-Universität Würzburg, Am Hubland, 97074 Würzburg, Germany"
             }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
           ]
         },
         {
@@ -7701,6 +11465,12 @@ const publications = [
             {
               "name": "Institute for Physical and Theoretical Chemistry, Julius-Maximilians-Universität Würzburg, Emil-Fischer-Str. 42, 97074 Würzburg, Germany"
             }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
           ]
         },
         {
@@ -7712,6 +11482,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Chemical and Energy Engineering, London South Bank University, 103 Borough Road, London SE1 0AA, U.K."
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
             }
           ]
         },
@@ -7728,6 +11504,12 @@ const publications = [
             {
               "name": "Institute for Sustainable Chemistry & Catalysis with Boron, Julius-Maximilians-Universität Würzburg, Am Hubland, 97074 Würzburg, Germany"
             }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
           ]
         },
         {
@@ -7741,6 +11523,12 @@ const publications = [
             {
               "name": "Institute for Sustainable Chemistry & Catalysis with Boron, Julius-Maximilians-Universität Würzburg, Am Hubland, 97074 Würzburg, Germany"
             }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
+            }
           ]
         },
         {
@@ -7752,6 +11540,12 @@ const publications = [
           "affiliation": [
             {
               "name": "School of Chemistry and Forensic Science, University of Kent, Park Wood Rd, Canterbury CT2 7NH, U.K."
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
             }
           ]
         },
@@ -7767,6 +11561,12 @@ const publications = [
             },
             {
               "name": "Institute for Sustainable Chemistry & Catalysis with Boron, Julius-Maximilians-Universität Würzburg, Am Hubland, 97074 Würzburg, Germany"
+            }
+          ],
+          "role": [
+            {
+              "role": "author",
+              "vocabulary": "crossref"
             }
           ]
         }
@@ -9097,13 +12897,13 @@ const publications = [
         "date-parts": [
           [
             2026,
-            3,
-            6
+            7,
+            22
           ]
         ],
-        "date-time": "2026-03-06T01:26:31Z",
-        "timestamp": 1772760391729,
-        "version": "3.50.1"
+        "date-time": "2026-07-22T19:55:43Z",
+        "timestamp": 1784750143810,
+        "version": "3.55.0"
       },
       "reference-count": 115,
       "publisher": "Royal Society of Chemistry (RSC)",
@@ -9159,7 +12959,7 @@ const publications = [
       "short-container-title": [
         "Sens. Diagn."
       ],
-      "abstract": "<jats:p>A novel copper(<jats:sc>ii</jats:sc>)-dppy receptor enables rapid and sensitive detection of <jats:sc>l</jats:sc>-cysteine and <jats:sc>l</jats:sc>-histidine, exhibiting exceptional selectivity and early-stage identification potential.</jats:p>",
+      "abstract": "<jats:p>\n                    A novel copper(\n                    <jats:sc>ii</jats:sc>\n                    )-dppy receptor enables rapid and sensitive detection of\n                    <jats:sc>l</jats:sc>\n                    -cysteine and\n                    <jats:sc>l</jats:sc>\n                    -histidine, exhibiting exceptional selectivity and early-stage identification potential.\n                  </jats:p>",
       "DOI": "10.1039/d3sd00183k",
       "type": "journal-article",
       "created": {
@@ -9170,15 +12970,15 @@ const publications = [
             21
           ]
         ],
-        "date-time": "2023-10-21T10:01:20Z",
-        "timestamp": 1697882480000
+        "date-time": "2023-10-21T06:01:20Z",
+        "timestamp": 1697868080000
       },
       "page": "1649-1657",
       "update-policy": "https://doi.org/10.1039/rsc_crossmark_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 14,
+      "is-referenced-by-count": 16,
       "title": [
-        "A simple copper(<scp>ii</scp>) dppy-based receptor for sensing of <scp>l</scp>-cysteine and <scp>l</scp>-histidine in aqueous acetonitrile medium"
+        "A simple copper(\n                    <scp>ii</scp>\n                    ) dppy-based receptor for sensing of\n                    <scp>l</scp>\n                    -cysteine and\n                    <scp>l</scp>\n                    -histidine in aqueous acetonitrile medium"
       ],
       "prefix": "10.1039",
       "volume": "2",
@@ -9193,6 +12993,12 @@ const publications = [
             {
               "name": "Department of Chemistry, National Institute of Technology Silchar, Silchar-788010, Assam, India"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -9204,6 +13010,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Chemistry, Pondicherry University, Pondicherry 605014, India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -9217,6 +13029,12 @@ const publications = [
             {
               "name": "Department of Chemistry, National Institute of Technology Silchar, Silchar-788010, Assam, India"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -9229,6 +13047,12 @@ const publications = [
             {
               "name": "School of Chemistry and Forensic Science, University of Kent, Park Wood Rd, Canterbury CT2 7NH, UK"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -9240,6 +13064,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Chemistry, National Institute of Technology Silchar, Silchar-788010, Assam, India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
@@ -10408,18 +14238,18 @@ const publications = [
       "deposited": {
         "date-parts": [
           [
-            2024,
-            4,
-            17
+            2026,
+            6,
+            30
           ]
         ],
-        "date-time": "2024-04-17T20:44:22Z",
-        "timestamp": 1713386662000
+        "date-time": "2026-06-30T20:25:08Z",
+        "timestamp": 1782851108000
       },
       "score": 1,
       "resource": {
         "primary": {
-          "URL": "https://xlink.rsc.org/?DOI=D3SD00183K"
+          "URL": "https://pubs.rsc.org/sd/article/2/6/1649-1657/828412"
         }
       },
       "subtitle": [],
@@ -10482,6 +14312,12 @@ const publications = [
             {
               "name": "Department of Chemistry, National Institute of Technology Silchar, Silchar-788010, Assam, India"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -10493,6 +14329,12 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Chemistry, Pondicherry University, Pondicherry 605014, India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         },
@@ -10506,6 +14348,12 @@ const publications = [
             {
               "name": "Department of Chemistry, National Institute of Technology Silchar, Silchar-788010, Assam, India"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -10518,6 +14366,12 @@ const publications = [
             {
               "name": "School of Chemistry and Forensic Science, University of Kent, Park Wood Rd, Canterbury CT2 7NH, UK"
             }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
           ]
         },
         {
@@ -10529,6 +14383,260 @@ const publications = [
           "affiliation": [
             {
               "name": "Department of Chemistry, National Institute of Technology Silchar, Silchar-788010, Assam, India"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "put-code": 223765760,
+    "created-date": {
+      "value": 1786715299917
+    },
+    "last-modified-date": {
+      "value": 1786715299917
+    },
+    "source": {
+      "source-orcid": null,
+      "source-client-id": {
+        "uri": "https://orcid.org/client/0000-0001-9884-1913",
+        "path": "0000-0001-9884-1913",
+        "host": "orcid.org"
+      },
+      "source-name": {
+        "value": "Crossref"
+      },
+      "assertion-origin-orcid": null,
+      "assertion-origin-client-id": null,
+      "assertion-origin-name": null
+    },
+    "title": {
+      "title": {
+        "value": "First-Principles Study of Co Gas Sensing on Elite Metal-Oxides"
+      },
+      "subtitle": null,
+      "translated-title": null
+    },
+    "external-ids": {
+      "external-id": [
+        {
+          "external-id-type": "doi",
+          "external-id-value": "10.2139/ssrn.4166226",
+          "external-id-normalized": {
+            "value": "10.2139/ssrn.4166226",
+            "transient": true
+          },
+          "external-id-normalized-error": null,
+          "external-id-url": {
+            "value": "https://doi.org/10.2139/ssrn.4166226"
+          },
+          "external-id-relationship": "self"
+        }
+      ]
+    },
+    "url": {
+      "value": "https://doi.org/10.2139/ssrn.4166226"
+    },
+    "type": "preprint",
+    "publication-date": {
+      "year": {
+        "value": "2022"
+      },
+      "month": null,
+      "day": null
+    },
+    "journal-title": null,
+    "visibility": "public",
+    "path": "/0000-0003-0243-9124/work/223765760",
+    "display-index": "1",
+    "metadata": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            14
+          ]
+        ],
+        "date-time": "2026-08-14T11:42:14Z",
+        "timestamp": 1786707734486,
+        "version": "build-2736575974"
+      },
+      "posted": {
+        "date-parts": [
+          [
+            2022
+          ]
+        ]
+      },
+      "group-title": "SSRN",
+      "reference-count": 0,
+      "publisher": "Elsevier BV",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [],
+      "abstract": "<jats:p>Due to facile synthesis and potential application of metal-oxides (MOs) based gas sensors, researchers have been attracted to study the high sensitivity and fast selectivity of MOs for toxic gases like carbon monoxide (CO) gas sensing. Metal-oxide-based gas sensors effectively sense CO, a toxic, colorless, and odorless gas. Here we study the sensing mechanism of CO on SnO  2  [110], ZnO [0002], ZnO/SnO  2  , CuO/SnO  2  , AgO/SnO  2  , and CdO/SnO  2  surface, and the selectivity of MOs towards CO gas sensing by first-principle calculations. The calculated SnO  2  material shows a high response towards CO sensing, confirmed through response time. The metal dopped SnO  2  model approximated the MOs /SnO  2  heterostructure. Computed results show that the CO reacts with the pre-adsorbed oxygen site on the MOs and MOs /SnO  2  lattice. CO gets attached to the pre-adsorbed oxygen site in the lattice and is released as carbon dioxide (CO  2  ). The release of CO as CO  2  creates oxygen vacancy, atmospheric oxygen takes the vacant site, and the lattice gets ready for the next cycle of CO sensing. We explain the improved sensing performance based on the selectivity, sensitivity, adsorption energy, and response time calculations.</jats:p>",
+      "DOI": "10.2139/ssrn.4166226",
+      "type": "posted-content",
+      "created": {
+        "date-parts": [
+          [
+            2022,
+            7,
+            19
+          ]
+        ],
+        "date-time": "2022-07-19T11:19:51Z",
+        "timestamp": 1658229591000
+      },
+      "source": "Crossref",
+      "is-referenced-by-count": 0,
+      "title": [
+        "First-Principles Study of Co Gas Sensing on Elite Metal-Oxides"
+      ],
+      "prefix": "10.2139",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-9600-6890",
+          "authenticated-orcid": true,
+          "given": "Dr. Gaurav",
+          "family": "Jhaa",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-0243-9124",
+          "authenticated-orcid": true,
+          "given": "Aritra",
+          "family": "Roy",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-5998-337X",
+          "authenticated-orcid": true,
+          "given": "Nilanjan",
+          "family": "Santra",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "78",
+      "container-title": [],
+      "original-title": [],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            14
+          ]
+        ],
+        "date-time": "2026-08-14T11:20:40Z",
+        "timestamp": 1786706440000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.ssrn.com/abstract=4166226"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2022
+          ]
+        ]
+      },
+      "references-count": 0,
+      "URL": "https://doi.org/10.2139/ssrn.4166226",
+      "relation": {},
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2022
+          ]
+        ]
+      },
+      "subtype": "preprint"
+    },
+    "processedInfo": {
+      "doi": "10.2139/ssrn.4166226",
+      "arxivId": null,
+      "isArxivDoi": false,
+      "journalTitle": "",
+      "year": "2022",
+      "month": "",
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-9600-6890",
+          "authenticated-orcid": true,
+          "given": "Dr. Gaurav",
+          "family": "Jhaa",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-0243-9124",
+          "authenticated-orcid": true,
+          "given": "Aritra",
+          "family": "Roy",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-5998-337X",
+          "authenticated-orcid": true,
+          "given": "Nilanjan",
+          "family": "Santra",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
             }
           ]
         }
