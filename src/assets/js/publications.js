@@ -188,6 +188,16 @@ function dedupePublicationsByTitlePreferJournal(works) {
     return Array.from(byTitle.values());
 }
 
+// How many leading authors to show before collapsing the rest.
+const VISIBLE_AUTHORS = 3;
+
+// "A, B and C" / "A and B" / "A"
+function joinNames(names) {
+    if (names.length === 1) return names[0];
+    if (names.length === 2) return names.join(' and ');
+    return names.slice(0, -1).join(', ') + ', and ' + names[names.length - 1];
+}
+
 // Format authors list with highlight for user's name
 function formatAuthors(authors) {
     if (!authors || authors.length === 0) return '';
@@ -198,28 +208,34 @@ function formatAuthors(authors) {
         const fullName = `${given} ${family}`.trim();
 
         if (fullName === USER_NAME) {
-            return `<span style="color: #64ffda;">${fullName}</span>`;
+            return `<span class="author-self">${fullName}</span>`;
         }
         return fullName;
     });
 
-    if (formattedAuthors.length > 50) {
-        const first50 = formattedAuthors.slice(0, 50);
-        const remaining = formattedAuthors.slice(50);
-        let html = first50.join(', ') + ', ' + first50.pop();
-
-        const uniqueId = 'authors-' + Math.random().toString(36).substr(2, 9);
-        let remainingHtml = ', ' + remaining.join(', ') + ', and ' + remaining.pop();
-
-        html += `<span class="authors-full-list" id="${uniqueId}">${remainingHtml}</span> <button class="show-all-authors-btn" onclick="toggleAuthorsList('${uniqueId}')">... show full author list</button>`;
-        return html;
+    // Short lists read better written out in full.
+    if (formattedAuthors.length <= VISIBLE_AUTHORS + 1) {
+        return joinNames(formattedAuthors);
     }
 
-    if (formattedAuthors.length === 1) return formattedAuthors[0];
-    if (formattedAuthors.length === 2) return formattedAuthors.join(' and ');
-    
-    const lastAuthor = formattedAuthors.pop();
-    return formattedAuthors.join(', ') + ', and ' + lastAuthor;
+    const shown = formattedAuthors.slice(0, VISIBLE_AUTHORS);
+    const selfIndex = formattedAuthors.findIndex(name => name.includes('class="author-self"'));
+
+    // Always surface the site owner, even when buried far down a long author list.
+    let summary = shown.join(', ');
+    let hiddenCount = formattedAuthors.length - VISIBLE_AUTHORS;
+    if (selfIndex >= VISIBLE_AUTHORS) {
+        summary += ' … ' + formattedAuthors[selfIndex];
+        hiddenCount -= 1;
+    }
+
+    const uniqueId = 'authors-' + Math.random().toString(36).slice(2, 11);
+    const others = `${hiddenCount} other${hiddenCount === 1 ? '' : 's'}`;
+
+    return `<span class="authors-summary" id="${uniqueId}-summary">${summary}</span>` +
+        `<span class="authors-full-list" id="${uniqueId}-full">${joinNames(formattedAuthors)}</span> ` +
+        `<button class="show-all-authors-btn" type="button" aria-expanded="false" ` +
+        `data-target="${uniqueId}" data-collapsed-label="and ${others}">and ${others}</button>`;
 }
 
 // Create individual publication item
@@ -359,24 +375,22 @@ function generateBibtex(data) {
     return bibtex;
 }
 
-// Toggle authors list visibility
-window.toggleAuthorsList = function(id) {
-    const authorsList = document.getElementById(id);
-    const button = event.target;
-    if (authorsList) {
-        if (authorsList.classList.contains('visible')) {
-            authorsList.classList.remove('visible');
-            button.textContent = '... show full author list';
-        } else {
-            authorsList.classList.add('visible');
-            button.textContent = '... hide full author list';
-        }
-    }
-};
-
 // Initialize bibtex toggle and copy functionality
 function initializeCollapseButtons() {
     document.addEventListener('click', function (e) {
+        if (e.target.closest('.show-all-authors-btn')) {
+            const btn = e.target.closest('.show-all-authors-btn');
+            const id = btn.dataset.target;
+            const summary = document.getElementById(`${id}-summary`);
+            const full = document.getElementById(`${id}-full`);
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+
+            summary.classList.toggle('is-hidden', !expanded);
+            full.classList.toggle('visible', !expanded);
+            btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+            btn.textContent = expanded ? btn.dataset.collapsedLabel : 'show less';
+        }
+
         if (e.target.closest('.bibtex-toggle-btn')) {
             const btn = e.target.closest('.bibtex-toggle-btn');
             const publicationItem = btn.closest('.publication-item');

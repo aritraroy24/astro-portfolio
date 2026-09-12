@@ -188,9 +188,17 @@
         }
     }
 
+    // The site owner's own name, highlighted wherever it appears in the list.
+    .author-self {
+        color: #64ffda;
+    }
+
+    .authors-summary.is-hidden {
+        display: none;
+    }
+
     .authors-full-list {
         display: none;
-        margin-top: 5px;
     }
 
     .authors-full-list.visible {
