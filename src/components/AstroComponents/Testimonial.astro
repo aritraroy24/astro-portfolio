@@ -10,86 +10,166 @@ import testimonials from "@js/data/testimonials";
 import "./styles/Testimonial.scss";
 ---
 
-<section class="Testimonial">
-  <div class="section-center">
-    <button
-      title="Previous Testimonial"
-      class="prev"
-      onclick="
-      plusSlides(-1)
-      "
-    >
-      <Icon class="navigationSign" name="others/keyboard-arrow-left" />
-    </button>
+<section
+  class="testimonial"
+  aria-roledescription="carousel"
+  aria-label="Testimonials"
+>
+  <div class="testimonial__track">
     {
-      testimonials.map((person: any, index) => {
+      testimonials.map((person: any, index: number) => {
         const { image, name, title, quote } = person;
-        const isFirst = index === 0;
         return (
-          <div class={isFirst ? "slide active" : "slide"}>
-            <Image
-              src={image}
-              height={250}
-              width={250}
-              alt={name}
-              class="person-img"
-            />
-            <h4>{name}</h4>
-            <p class="title">{title}</p>
-            <p class="text">{quote}</p>
-          </div>
+          <article
+            class:list={["testimonial__slide", { "is-active": index === 0 }]}
+            role="group"
+            aria-roledescription="slide"
+            aria-label={`${index + 1} of ${testimonials.length}`}
+            aria-hidden={index === 0 ? "false" : "true"}
+          >
+            <blockquote class="testimonial__quote">{quote}</blockquote>
+
+            <footer class="testimonial__person">
+              <Image
+                src={image}
+                height={128}
+                width={128}
+                alt=""
+                loading={index === 0 ? "eager" : "lazy"}
+                class="testimonial__avatar"
+              />
+              <div class="testimonial__who">
+                <span class="testimonial__name">{name}</span>
+                <span class="testimonial__role">{title}</span>
+              </div>
+            </footer>
+          </article>
         );
       })
     }
-    <button title="Next Testimonial" class="next" onclick="plusSlides(1)">
-      <Icon class="navigationSign" name="others/keyboard-arrow-right" />
+  </div>
+
+  <div class="testimonial__controls">
+    <button type="button" class="testimonial__nav" data-step="-1" aria-label="Previous testimonial">
+      <Icon name="others/keyboard-arrow-left" />
+    </button>
+
+    <div class="testimonial__dots" role="tablist" aria-label="Choose testimonial">
+      {
+        testimonials.map((person: any, index: number) => (
+          <button
+            type="button"
+            role="tab"
+            class:list={["testimonial__dot", { "is-active": index === 0 }]}
+            data-index={index}
+            aria-selected={index === 0 ? "true" : "false"}
+            aria-label={person.name}
+          />
+        ))
+      }
+    </div>
+
+    <button type="button" class="testimonial__nav" data-step="1" aria-label="Next testimonial">
+      <Icon name="others/keyboard-arrow-right" />
     </button>
   </div>
 </section>
 
 <script>
-  const slides = document.querySelectorAll<HTMLDivElement>(".slide");
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
-  let slideInterval: number;
-  let slideIndex = 0;
-  function plusSlides(n: number) {
-    showSlides((slideIndex += n));
-  }
-  function showSlides(n: any) {
-    if (n >= slides.length) {
-      slideIndex = 0;
-    }
-    if (n < 0) {
-      slideIndex = slides.length - 1;
-    }
-    slides.forEach((slide: any, index: number) => {
-      if (index === slideIndex) {
-        slide.style.display = "block";
-      } else {
-        slide.style.display = "none";
+  const AUTOPLAY_MS = 7000;
+
+  document.querySelectorAll<HTMLElement>(".testimonial").forEach((root) => {
+    const slides = [...root.querySelectorAll<HTMLElement>(".testimonial__slide")];
+    const dots = [...root.querySelectorAll<HTMLElement>(".testimonial__dot")];
+    if (slides.length < 2) return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let current = 0;
+    let timer: number | undefined;
+    let paused = false;
+    let visible = true;
+
+    const show = (next: number) => {
+      current = (next + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        const active = i === current;
+        slide.classList.toggle("is-active", active);
+        slide.setAttribute("aria-hidden", active ? "false" : "true");
+      });
+      dots.forEach((dot, i) => {
+        const active = i === current;
+        dot.classList.toggle("is-active", active);
+        dot.setAttribute("aria-selected", active ? "true" : "false");
+      });
+    };
+
+    const stop = () => {
+      window.clearInterval(timer);
+      timer = undefined;
+    };
+
+    // Only run while the section is on screen, the tab is focused, and the user
+    // is not interacting with it -- an interval left running behind a hidden tab
+    // just burns frames.
+    const sync = () => {
+      const shouldRun = visible && !paused && !reduceMotion.matches;
+      if (shouldRun && timer === undefined) {
+        timer = window.setInterval(() => show(current + 1), AUTOPLAY_MS);
+      } else if (!shouldRun) {
+        stop();
       }
+    };
+
+    const advance = (step: number) => {
+      show(current + step);
+      stop();
+      sync();
+    };
+
+    root.querySelectorAll<HTMLElement>(".testimonial__nav").forEach((button) => {
+      button.addEventListener("click", () => advance(Number(button.dataset.step)));
     });
-    resetTimer();
-  }
-  function startSlideshow() {
-    slideInterval = window.setInterval(function () {
-      plusSlides(1);
-    }, 5000);
-  }
-  function resetTimer() {
-    window.clearInterval(slideInterval);
-    startSlideshow();
-  }
-  startSlideshow();
-  if (prevButton !== null) {
-    prevButton.addEventListener("click", () => {
-      plusSlides(-1);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        show(index);
+        stop();
+        sync();
+      });
     });
-  }
-  if (nextButton !== null) {
-    nextButton.addEventListener("click", () => {
-      plusSlides(1);
+
+    root.addEventListener("keydown", (event: KeyboardEvent) => {
+      if (event.key === "ArrowLeft") advance(-1);
+      if (event.key === "ArrowRight") advance(1);
     });
-  }
+
+    ["mouseenter", "focusin"].forEach((type) =>
+      root.addEventListener(type, () => {
+        paused = true;
+        sync();
+      })
+    );
+    ["mouseleave", "focusout"].forEach((type) =>
+      root.addEventListener(type, () => {
+        paused = false;
+        sync();
+      })
+    );
+
+    document.addEventListener("visibilitychange", () => {
+      paused = document.hidden;
+      sync();
+    });
+
+    new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting;
+        sync();
+      },
+      { threshold: 0.2 }
+    ).observe(root);
+
+    reduceMotion.addEventListener("change", sync);
+    sync();
+  });
 </script>
